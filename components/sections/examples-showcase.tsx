@@ -70,7 +70,7 @@ export function ExamplesShowcaseSection() {
               </div>
 
               {/* Badge */}
-              <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[var(--brand-purple)]/90 backdrop-blur-lg text-xs font-medium text-white">
+              <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-[var(--brand-primary)]/90 backdrop-blur-lg text-xs font-medium text-white">
                 {example.badge}
               </div>
 
@@ -82,7 +82,7 @@ export function ExamplesShowcaseSection() {
 
             {/* Info */}
             <div>
-              <div className="text-sm text-[var(--brand-purple)] font-medium mb-1">
+              <div className="text-sm text-[var(--brand-primary)] font-medium mb-1">
                 {example.category}
               </div>
               <h3 className="text-lg font-semibold text-white mb-3">

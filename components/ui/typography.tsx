@@ -21,7 +21,7 @@ export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
           Tag === "h4" && "text-xl md:text-2xl lg:text-3xl",
           Tag === "h5" && "text-lg md:text-xl lg:text-2xl",
           Tag === "h6" && "text-base md:text-lg lg:text-xl",
-          gradient && "bg-gradient-to-r from-[var(--brand-purple)] to-[var(--brand-pink)] bg-clip-text text-transparent",
+          gradient && "bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-cyan)] bg-clip-text text-transparent",
           !gradient && "text-white",
           className
         )}

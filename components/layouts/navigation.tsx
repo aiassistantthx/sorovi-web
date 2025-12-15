@@ -47,7 +47,7 @@ export function Navigation() {
             href="/"
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
           >
-            <div className="text-2xl font-bold bg-gradient-to-r from-[var(--brand-purple)] to-[var(--brand-pink)] bg-clip-text text-transparent">
+            <div className="text-2xl font-bold text-white">
               Sorovi
             </div>
           </Link>

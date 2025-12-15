@@ -7,15 +7,15 @@ export function HeroSection() {
     <Section spacing="xl" className="relative overflow-hidden">
       {/* Background gradient effects */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand-purple)]/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--brand-pink)]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-[var(--neon-blue)]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand-primary)]/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--accent-cyan)]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-[var(--brand-secondary)]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
       </div>
 
       <div className="max-w-4xl mx-auto text-center">
         {/* Badge */}
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 backdrop-blur-lg border border-white/10 mb-8 hover:border-white/20 transition-colors">
-          <span className="text-sm font-medium bg-gradient-to-r from-[var(--brand-purple)] to-[var(--brand-pink)] bg-clip-text text-transparent">
+          <span className="text-sm font-medium text-[var(--accent-blue)]">
             ✨ #1 AI Video Generation App
           </span>
         </div>
@@ -48,7 +48,7 @@ export function HeroSection() {
               {[1, 2, 3, 4, 5].map((i) => (
                 <div
                   key={i}
-                  className="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--brand-purple)] to-[var(--brand-pink)] border-2 border-[var(--bg-dark)]"
+                  className="w-8 h-8 rounded-full bg-gradient-to-br from-[var(--brand-primary)] to-[var(--accent-cyan)] border-2 border-[var(--bg-dark)]"
                 />
               ))}
             </div>

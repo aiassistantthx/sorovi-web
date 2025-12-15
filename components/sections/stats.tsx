@@ -14,7 +14,7 @@ export function StatsSection() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((stat, index) => (
           <div key={index} className="text-center">
-            <div className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[var(--brand-purple)] to-[var(--brand-pink)] bg-clip-text text-transparent mb-2">
+            <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
               {stat.value}
             </div>
             <Text variant="small" className="text-[var(--text-gray-300)]">

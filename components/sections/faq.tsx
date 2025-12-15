@@ -57,11 +57,11 @@ export function FAQSection() {
         <div className="mt-12 text-center">
           <Text variant="small">
             Still have questions?{" "}
-            <Link href="/support" className="text-[var(--brand-purple)] hover:text-[var(--brand-pink)] transition-colors">
+            <Link href="/support" className="text-[var(--brand-primary)] hover:text-[var(--accent-blue)] transition-colors">
               Visit our Help Center
             </Link>
             {" "}or{" "}
-            <Link href="/contact" className="text-[var(--brand-purple)] hover:text-[var(--brand-pink)] transition-colors">
+            <Link href="/contact" className="text-[var(--brand-primary)] hover:text-[var(--accent-blue)] transition-colors">
               contact support
             </Link>
           </Text>

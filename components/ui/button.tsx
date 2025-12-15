@@ -22,12 +22,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
           // Variant styles
           variant === "primary" && [
-            "bg-gradient-to-r from-[var(--brand-purple)] to-[var(--brand-pink)]",
+            "bg-[var(--brand-primary)]",
             "text-white",
-            "shadow-lg shadow-[var(--brand-purple)]/40",
-            "hover:shadow-xl hover:shadow-[var(--brand-purple)]/60",
+            "shadow-lg shadow-[var(--brand-primary)]/30",
+            "hover:shadow-xl hover:shadow-[var(--brand-primary)]/50",
+            "hover:bg-[var(--accent-blue)]",
             "hover:-translate-y-0.5",
-            "focus:ring-[var(--brand-purple)]",
+            "focus:ring-[var(--brand-primary)]",
           ],
 
           variant === "secondary" && [
@@ -40,10 +41,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
           variant === "outline" && [
             "bg-transparent",
-            "border-2 border-[var(--brand-purple)]",
-            "text-[var(--brand-purple)]",
-            "hover:bg-[var(--brand-purple)] hover:text-white",
-            "focus:ring-[var(--brand-purple)]",
+            "border-2 border-[var(--brand-primary)]",
+            "text-[var(--brand-primary)]",
+            "hover:bg-[var(--brand-primary)] hover:text-white",
+            "focus:ring-[var(--brand-primary)]",
           ],
 
           variant === "ghost" && [

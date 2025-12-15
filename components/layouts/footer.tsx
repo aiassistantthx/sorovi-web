@@ -109,7 +109,7 @@ export function Footer() {
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               {/* Logo & Copyright */}
               <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
-                <div className="text-xl font-bold bg-gradient-to-r from-[var(--brand-purple)] to-[var(--brand-pink)] bg-clip-text text-transparent">
+                <div className="text-xl font-bold text-white">
                   Sorovi
                 </div>
                 <span className="text-[var(--text-gray-500)] text-sm">

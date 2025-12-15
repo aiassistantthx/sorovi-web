@@ -40,8 +40,8 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
             "hover:transform hover:scale-[1.02]",
             "hover:shadow-2xl",
             variant === "glass" && "hover:bg-white/10 hover:border-white/20",
-            variant === "solid" && "hover:border-[var(--brand-purple)]/50",
-            variant === "bordered" && "hover:border-[var(--brand-purple)]",
+            variant === "solid" && "hover:border-[var(--brand-primary)]/50",
+            variant === "bordered" && "hover:border-[var(--brand-primary)]",
           ],
 
           className

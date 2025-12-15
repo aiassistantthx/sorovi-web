@@ -50,7 +50,7 @@ export function FeaturesSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, index) => (
           <Card key={index} variant="glass">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--brand-purple)] to-[var(--brand-pink)] flex items-center justify-center mb-4">
+            <div className="w-12 h-12 rounded-xl bg-[var(--brand-primary)] flex items-center justify-center mb-4">
               <span className="text-2xl">{feature.icon}</span>
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">

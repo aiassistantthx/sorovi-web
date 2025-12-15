@@ -24,7 +24,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
             "border border-white/10",
             "text-white placeholder:text-[var(--text-gray-500)]",
             "transition-all duration-200",
-            "focus:outline-none focus:ring-2 focus:ring-[var(--brand-purple)] focus:border-transparent",
+            "focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] focus:border-transparent",
             "focus:bg-white/10",
             "hover:border-white/20",
             "resize-none",

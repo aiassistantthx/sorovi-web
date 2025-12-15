@@ -15,7 +15,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
     <div
       className={cn(
         "border border-white/10 rounded-xl overflow-hidden transition-all duration-300",
-        isOpen && "border-[var(--brand-purple)]/50"
+        isOpen && "border-[var(--brand-primary)]/50"
       )}
     >
       <button
@@ -25,7 +25,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
         <span className="text-lg font-medium text-white pr-4">{question}</span>
         <svg
           className={cn(
-            "w-5 h-5 text-[var(--brand-purple)] transition-transform duration-300 flex-shrink-0",
+            "w-5 h-5 text-[var(--brand-primary)] transition-transform duration-300 flex-shrink-0",
             isOpen && "rotate-180"
           )}
           fill="none"
