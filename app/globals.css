@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors */
+  --brand-purple: #8B5CF6;
+  --brand-pink: #EC4899;
+
+  /* Backgrounds */
+  --bg-dark: #0F0F1E;
+  --surface-dark: #1A1A2E;
+
+  /* Accent Colors */
+  --neon-blue: #3B82F6;
+  --neon-green: #10B981;
+  --neon-orange: #F97316;
+
+  /* Text Colors */
+  --text-white: #FFFFFF;
+  --text-gray-100: #F3F4F6;
+  --text-gray-300: #D1D5DB;
+  --text-gray-500: #6B7280;
+  --text-gray-700: #374151;
+  --text-gray-900: #111827;
+
+  /* Base */
+  --background: var(--bg-dark);
+  --foreground: var(--text-white);
 }
 
 @theme inline {
+  /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-brand-purple: var(--brand-purple);
+  --color-brand-pink: var(--brand-pink);
+  --color-surface-dark: var(--surface-dark);
+  --color-neon-blue: var(--neon-blue);
+  --color-neon-green: var(--neon-green);
+  --color-neon-orange: var(--neon-orange);
+
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Spacing - 8px base unit */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  --spacing-4xl: 96px;
+  --spacing-5xl: 128px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--surface-dark);
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-purple);
 }
