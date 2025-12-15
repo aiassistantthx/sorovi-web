@@ -42,7 +42,7 @@ export function FAQSection() {
   return (
     <Section spacing="xl">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <Heading as="h2" className="mb-4">
             Frequently Asked Questions
           </Heading>

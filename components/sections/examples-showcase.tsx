@@ -45,7 +45,7 @@ const examples = [
 export function ExamplesShowcaseSection() {
   return (
     <Section spacing="xl" className="bg-[var(--surface-dark)]/30">
-      <div className="text-center mb-16">
+      <div className="text-center mb-10">
         <Heading as="h2" className="mb-4">
           240,909+ Videos Created by Creators Like You
         </Heading>
@@ -55,11 +55,11 @@ export function ExamplesShowcaseSection() {
         </Text>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {examples.map((example, index) => (
           <Card key={index} variant="glass" className="group cursor-pointer">
             {/* Video Placeholder */}
-            <div className="relative aspect-[9/16] bg-gradient-to-br from-[var(--brand-purple)]/20 to-[var(--brand-pink)]/20 rounded-xl mb-4 overflow-hidden">
+            <div className="relative aspect-[9/16] bg-gradient-to-br from-[var(--brand-primary)]/20 to-[var(--accent-cyan)]/20 rounded-xl mb-4 overflow-hidden">
               {/* Play button overlay */}
               <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/50 transition-colors">
                 <div className="w-16 h-16 rounded-full bg-white/20 backdrop-blur-lg border border-white/30 flex items-center justify-center group-hover:scale-110 transition-transform">

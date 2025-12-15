@@ -31,7 +31,7 @@ const steps = [
 export function HowItWorksSection() {
   return (
     <Section spacing="xl">
-      <div className="text-center mb-16">
+      <div className="text-center mb-10">
         <Heading as="h2" className="mb-4">
           Four Easy Steps to Create Your Video
         </Heading>

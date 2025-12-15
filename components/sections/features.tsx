@@ -38,7 +38,7 @@ const features = [
 export function FeaturesSection() {
   return (
     <Section spacing="xl" className="bg-[var(--surface-dark)]/30">
-      <div className="text-center mb-16">
+      <div className="text-center mb-10">
         <Heading as="h2" className="mb-4">
           Everything You Need to Create Amazing Videos
         </Heading>

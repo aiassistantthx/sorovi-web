@@ -32,10 +32,10 @@ export const Section = React.forwardRef<HTMLElement, SectionProps>(
         ref={ref}
         className={cn(
           "w-full",
-          spacing === "sm" && "py-8 md:py-12",
-          spacing === "md" && "py-12 md:py-16",
-          spacing === "lg" && "py-16 md:py-24",
-          spacing === "xl" && "py-24 md:py-32",
+          spacing === "sm" && "py-6 md:py-10",
+          spacing === "md" && "py-10 md:py-14",
+          spacing === "lg" && "py-14 md:py-20",
+          spacing === "xl" && "py-20 md:py-28",
           className
         )}
         {...props}

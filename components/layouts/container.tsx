@@ -16,7 +16,7 @@ export const Container = React.forwardRef<HTMLDivElement, ContainerProps>(
           size === "sm" && "max-w-3xl",
           size === "md" && "max-w-5xl",
           size === "lg" && "max-w-6xl",
-          size === "xl" && "max-w-7xl",
+          size === "xl" && "max-w-[1400px]",
           size === "full" && "max-w-none",
           className
         )}

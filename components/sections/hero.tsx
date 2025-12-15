@@ -12,7 +12,7 @@ export function HeroSection() {
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-[var(--brand-secondary)]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
       </div>
 
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto text-center">
         {/* Badge */}
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 backdrop-blur-lg border border-white/10 mb-8 hover:border-white/20 transition-colors">
           <span className="text-sm font-medium text-[var(--accent-blue)]">
@@ -21,20 +21,18 @@ export function HeroSection() {
         </div>
 
         {/* Hero Heading */}
-        <Heading as="h1" gradient className="mb-6">
-          Create Viral Videos
-          <br />
-          in Minutes with AI
+        <Heading as="h1" gradient className="mb-4">
+          Create Viral Videos in Minutes with AI
         </Heading>
 
         {/* Hero Description */}
-        <Text variant="large" className="mb-8 max-w-2xl mx-auto">
+        <Text variant="large" className="mb-6 max-w-3xl mx-auto">
           Transform your ideas into stunning TikTok, Instagram Reels, and YouTube Shorts
           with the power of AI. No editing skills required.
         </Text>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <Button size="lg">Download for iOS</Button>
           <Button size="lg" variant="secondary">
             Download for Android

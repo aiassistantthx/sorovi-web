@@ -15,7 +15,7 @@ export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
         ref={ref as any}
         className={cn(
           "font-bold leading-tight tracking-tight",
-          Tag === "h1" && "text-4xl md:text-5xl lg:text-6xl",
+          Tag === "h1" && "text-5xl md:text-6xl lg:text-7xl",
           Tag === "h2" && "text-3xl md:text-4xl lg:text-5xl",
           Tag === "h3" && "text-2xl md:text-3xl lg:text-4xl",
           Tag === "h4" && "text-xl md:text-2xl lg:text-3xl",

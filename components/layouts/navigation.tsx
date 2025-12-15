@@ -41,7 +41,7 @@ export function Navigation() {
       )}
     >
       <Container>
-        <nav className="flex items-center justify-between h-20">
+        <nav className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link
             href="/"

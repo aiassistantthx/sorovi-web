@@ -38,7 +38,7 @@ const benefits = [
 export function BenefitsSection() {
   return (
     <Section spacing="xl" className="bg-gradient-to-b from-transparent via-[var(--surface-dark)]/30 to-transparent">
-      <div className="text-center mb-16">
+      <div className="text-center mb-10">
         <Heading as="h2" className="mb-4">
           Why Creators Love Sorovi
         </Heading>
