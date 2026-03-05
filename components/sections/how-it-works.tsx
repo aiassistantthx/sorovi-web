@@ -35,7 +35,7 @@ export function HowItWorksSection() {
         <Heading as="h2" className="mb-4">
           Four Easy Steps to Create Your Video
         </Heading>
-        <Text variant="large" className="max-w-2xl mx-auto">
+        <Text variant="large">
           From idea to viral video in minutes. No editing experience needed.
         </Text>
       </div>
@@ -43,15 +43,12 @@ export function HowItWorksSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {steps.map((step, index) => (
           <div key={index} className="relative">
-            {/* Connector line - hidden on mobile, shown on larger screens */}
-            {index < steps.length - 1 && (
-              <div className="hidden lg:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-[var(--brand-primary)] to-transparent -translate-x-4" />
-            )}
-
-            {/* Step number */}
-            <div className="relative">
-              <div className="text-6xl font-bold text-[var(--text-gray-700)] mb-4">
-                {step.number}
+            {/* Step number badge */}
+            <div className="mb-4">
+              <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[var(--brand-primary)]/10 border border-[var(--brand-primary)]/30">
+                <span className="text-2xl font-bold text-[var(--brand-primary)]">
+                  {step.number}
+                </span>
               </div>
             </div>
 

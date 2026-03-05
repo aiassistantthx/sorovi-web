@@ -42,7 +42,7 @@ export function FeaturesSection() {
         <Heading as="h2" className="mb-4">
           Everything You Need to Create Amazing Videos
         </Heading>
-        <Text variant="large" className="max-w-2xl mx-auto">
+        <Text variant="large">
           Powerful AI tools combined with simple editing—all in one place
         </Text>
       </div>

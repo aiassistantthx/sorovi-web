@@ -41,16 +41,16 @@ const faqs = [
 export function FAQSection() {
   return (
     <Section spacing="xl">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-8">
-          <Heading as="h2" className="mb-4">
-            Frequently Asked Questions
-          </Heading>
-          <Text variant="large">
-            Everything you need to know about Sorovi
-          </Text>
-        </div>
+      <div className="text-center mb-8">
+        <Heading as="h2" className="mb-4">
+          Frequently Asked Questions
+        </Heading>
+        <Text variant="large">
+          Everything you need to know about Sorovi
+        </Text>
+      </div>
 
+      <div className="max-w-6xl mx-auto">
         <Accordion items={faqs} />
 
         {/* Links to more resources */}

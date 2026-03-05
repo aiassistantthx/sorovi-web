@@ -20,12 +20,12 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
     >
       <button
         onClick={onToggle}
-        className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
+        className="w-full px-6 py-5 flex items-start justify-between gap-4 text-left hover:bg-white/5 transition-colors"
       >
-        <span className="text-lg font-medium text-white pr-4">{question}</span>
+        <span className="text-lg font-medium text-white flex-1">{question}</span>
         <svg
           className={cn(
-            "w-5 h-5 text-[var(--brand-primary)] transition-transform duration-300 flex-shrink-0",
+            "w-5 h-5 text-[var(--brand-primary)] transition-transform duration-300 flex-shrink-0 mt-1",
             isOpen && "rotate-180"
           )}
           fill="none"

@@ -49,9 +49,8 @@ export function ExamplesShowcaseSection() {
         <Heading as="h2" className="mb-4">
           240,909+ Videos Created by Creators Like You
         </Heading>
-        <Text variant="large" className="max-w-3xl mx-auto">
-          From product reviews to educational content, see what's possible with Sorovi.
-          Every video below was created with our AI tools in under 5 minutes.
+        <Text variant="large">
+          From product reviews to educational content, see what's possible with Sorovi. Every video below was created with our AI tools in under 5 minutes.
         </Text>
       </div>
 

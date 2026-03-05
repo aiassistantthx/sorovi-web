@@ -8,16 +8,15 @@ export function CTASection() {
       {/* Background decorative elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[var(--brand-primary)] to-transparent" />
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[var(--accent-cyan)] to-transparent" />
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[var(--accent-green)] to-transparent" />
       </div>
 
-      <div className="max-w-3xl mx-auto text-center">
+      <div className="text-center">
         <Heading as="h2" className="mb-4">
           Your Stories Deserve More Views
         </Heading>
         <Text variant="large" className="mb-8">
-          Join 14,258+ creators who are already making viral content with Sorovi.
-          Start creating professional videos in minutes, not hours.
+          Join 14,258+ creators who are already making viral content with Sorovi. Start creating professional videos in minutes, not hours.
         </Text>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">

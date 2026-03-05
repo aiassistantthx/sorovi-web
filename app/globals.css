@@ -2,7 +2,7 @@
 
 :root {
   /* Brand Colors */
-  --brand-primary: #3B82F6;
+  --brand-primary: #84CC16;
   --brand-secondary: #10B981;
 
   /* Backgrounds */
@@ -10,9 +10,13 @@
   --surface-dark: #171717;
 
   /* Accent Colors */
-  --accent-blue: #60A5FA;
-  --accent-cyan: #22D3EE;
-  --accent-green: #34D399;
+  --accent-lime: #A3E635;
+  --accent-green: #22C55E;
+  --accent-teal: #14B8A6;
+
+  /* Legacy aliases for backward compatibility */
+  --accent-blue: #84CC16;
+  --accent-cyan: #22C55E;
 
   /* Text Colors */
   --text-white: #FFFFFF;
@@ -34,9 +38,11 @@
   --color-brand-primary: var(--brand-primary);
   --color-brand-secondary: var(--brand-secondary);
   --color-surface-dark: var(--surface-dark);
+  --color-accent-lime: var(--accent-lime);
+  --color-accent-green: var(--accent-green);
+  --color-accent-teal: var(--accent-teal);
   --color-accent-blue: var(--accent-blue);
   --color-accent-cyan: var(--accent-cyan);
-  --color-accent-green: var(--accent-green);
 
   /* Fonts */
   --font-sans: var(--font-inter);

@@ -8,14 +8,14 @@ export function HeroSection() {
       {/* Background gradient effects */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand-primary)]/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--accent-cyan)]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-[var(--brand-secondary)]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--accent-green)]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-[var(--accent-teal)]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }} />
       </div>
 
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="text-center">
         {/* Badge */}
         <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 backdrop-blur-lg border border-white/10 mb-8 hover:border-white/20 transition-colors">
-          <span className="text-sm font-medium text-[var(--accent-blue)]">
+          <span className="text-sm font-medium text-[var(--brand-primary)]">
             ✨ #1 AI Video Generation App
           </span>
         </div>
@@ -26,9 +26,8 @@ export function HeroSection() {
         </Heading>
 
         {/* Hero Description */}
-        <Text variant="large" className="mb-6 max-w-3xl mx-auto">
-          Transform your ideas into stunning TikTok, Instagram Reels, and YouTube Shorts
-          with the power of AI. No editing skills required.
+        <Text variant="large" className="mb-6">
+          Transform your ideas into stunning TikTok, Instagram Reels, and YouTube Shorts with the power of AI. No editing skills required.
         </Text>
 
         {/* CTA Buttons */}

@@ -13,9 +13,9 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { label: "Tools", href: "/tools" },
-  { label: "Templates", href: "/templates" },
-  { label: "Use Cases", href: "/use-cases" },
-  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/about" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export function Navigation() {

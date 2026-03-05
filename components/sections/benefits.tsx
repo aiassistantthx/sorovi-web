@@ -42,7 +42,7 @@ export function BenefitsSection() {
         <Heading as="h2" className="mb-4">
           Why Creators Love Sorovi
         </Heading>
-        <Text variant="large" className="max-w-2xl mx-auto">
+        <Text variant="large">
           Everything you need to create, edit, and publish viral videos—all in one place
         </Text>
       </div>

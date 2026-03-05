@@ -5,13 +5,11 @@ import { Container } from "./container";
 const footerLinks = {
   product: [
     { label: "Tools", href: "/tools" },
-    { label: "Templates", href: "/templates" },
-    { label: "Use Cases", href: "/use-cases" },
     { label: "Pricing", href: "/pricing" },
+    { label: "Features", href: "/#features" },
   ],
   company: [
     { label: "About", href: "/about" },
-    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [
