@@ -115,7 +115,7 @@ export default function PricingPage() {
             <Card
               key={index}
               variant="glass"
-              className={`relative ${
+              className={`relative overflow-visible ${
                 plan.popular
                   ? "border-[var(--brand-primary)] shadow-lg shadow-[var(--brand-primary)]/20"
                   : ""
@@ -197,8 +197,8 @@ export default function PricingPage() {
                 <th className="text-center py-4 px-4 text-white font-semibold">
                   Free
                 </th>
-                <th className="text-center py-4 px-4 text-white font-semibold">
-                  Creator
+                <th className="text-center py-4 px-4 text-white font-semibold bg-[var(--brand-primary)]/10 border-x border-[var(--brand-primary)]/30">
+                  Creator ⭐
                 </th>
                 <th className="text-center py-4 px-4 text-white font-semibold">
                   Business
@@ -222,7 +222,7 @@ export default function PricingPage() {
                   <td className="py-4 px-4 text-center text-[var(--text-gray-400)]">
                     {row[1]}
                   </td>
-                  <td className="py-4 px-4 text-center text-white font-medium">
+                  <td className="py-4 px-4 text-center text-white font-medium bg-[var(--brand-primary)]/5 border-x border-[var(--brand-primary)]/20">
                     {row[2]}
                   </td>
                   <td className="py-4 px-4 text-center text-white font-medium">

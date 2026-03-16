@@ -35,7 +35,7 @@ export const Section = React.forwardRef<HTMLElement, SectionProps>(
           spacing === "sm" && "py-6 md:py-10",
           spacing === "md" && "py-10 md:py-14",
           spacing === "lg" && "py-14 md:py-20",
-          spacing === "xl" && "py-20 md:py-28",
+          spacing === "xl" && "py-16 md:py-28",
           className
         )}
         {...props}

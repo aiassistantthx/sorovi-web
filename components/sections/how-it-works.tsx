@@ -40,11 +40,16 @@ export function HowItWorksSection() {
         </Text>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
         {steps.map((step, index) => (
           <div key={index} className="relative">
+            {/* Connector line (hidden on mobile, shown on lg) */}
+            {index < steps.length - 1 && (
+              <div className="hidden lg:block absolute top-7 left-[calc(100%-1rem)] w-[calc(100%-3rem)] h-0.5 bg-gradient-to-r from-[var(--brand-primary)]/50 to-[var(--brand-primary)]/20 z-0" />
+            )}
+
             {/* Step number badge */}
-            <div className="mb-4">
+            <div className="mb-4 relative z-10">
               <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[var(--brand-primary)]/10 border border-[var(--brand-primary)]/30">
                 <span className="text-2xl font-bold text-[var(--brand-primary)]">
                   {step.number}

@@ -31,9 +31,9 @@ export function HeroSection() {
         </Text>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <Button size="lg">Download for iOS</Button>
-          <Button size="lg" variant="secondary">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8">
+          <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3">Download for iOS</Button>
+          <Button size="lg" variant="secondary" className="text-base sm:text-lg px-6 sm:px-8 py-2.5 sm:py-3">
             Download for Android
           </Button>
         </div>

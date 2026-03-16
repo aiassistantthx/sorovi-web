@@ -4,8 +4,14 @@ import { Section } from "@/components/layouts/section";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion } from "@/components/ui/accordion";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { tools, getToolBySlug, type Tool } from "@/lib/tools";
+import {
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  generateHowToSchema,
+} from "@/lib/schema";
 
 // Generate static params for all tools
 export async function generateStaticParams() {
@@ -39,8 +45,33 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
     notFound();
   }
 
+  const faqSchema = generateFAQSchema(tool.faqs);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Tools", url: "/tools" },
+    { name: tool.name, url: `/tools/${tool.slug}` },
+  ]);
+  const howToSchema = generateHowToSchema({
+    name: `How to Use ${tool.name}`,
+    description: tool.description,
+    steps: tool.howItWorks.map((s) => ({ title: s.title, description: s.description })),
+  });
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+
       {/* Hero Section */}
       <Section spacing="xl" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
@@ -49,6 +80,14 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
         </div>
 
         <div className="text-center">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Tools", href: "/tools" },
+              { label: tool.name },
+            ]}
+            className="justify-center mb-6"
+          />
           {/* Category Badge */}
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 backdrop-blur-lg border border-white/10 mb-6">
             <span className="text-sm font-medium text-[var(--brand-primary)]">
@@ -76,12 +115,10 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       </Section>
 
       {/* Detailed Description */}
-      <Section spacing="lg" className="bg-[var(--surface-dark)]/30">
-        <div className="max-w-4xl mx-auto">
-          <Text variant="large" className="text-center leading-relaxed">
-            {tool.detailedDescription}
-          </Text>
-        </div>
+      <Section spacing="lg" className="bg-[var(--surface-dark)]/30" containerSize="md">
+        <Text variant="large" className="text-center">
+          {tool.detailedDescription}
+        </Text>
       </Section>
 
       {/* How It Works */}
@@ -140,17 +177,17 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
       {/* Benefits & Use Cases */}
       <Section spacing="xl" className="bg-[var(--surface-dark)]/30">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Benefits */}
-          <div>
-            <Heading as="h2" className="mb-6">
+          <Card variant="glass">
+            <Heading as="h3" className="mb-6">
               Why Use {tool.name}?
             </Heading>
             <ul className="space-y-4">
               {tool.benefits.map((benefit, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <svg
-                    className="w-6 h-6 text-[var(--brand-primary)] flex-shrink-0 mt-1"
+                    className="w-5 h-5 text-[var(--brand-primary)] flex-shrink-0 mt-0.5"
                     fill="none"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -160,24 +197,24 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   >
                     <path d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-lg text-[var(--text-gray-100)]">
+                  <span className="text-base text-[var(--text-gray-100)]">
                     {benefit}
                   </span>
                 </li>
               ))}
             </ul>
-          </div>
+          </Card>
 
           {/* Use Cases */}
-          <div>
-            <Heading as="h2" className="mb-6">
+          <Card variant="glass">
+            <Heading as="h3" className="mb-6">
               Perfect For
             </Heading>
             <ul className="space-y-4">
               {tool.useCases.map((useCase, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <svg
-                    className="w-6 h-6 text-[var(--accent-green)] flex-shrink-0 mt-1"
+                    className="w-5 h-5 text-[var(--accent-green)] flex-shrink-0 mt-0.5"
                     fill="none"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -187,77 +224,67 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   >
                     <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <span className="text-lg text-[var(--text-gray-100)]">
+                  <span className="text-base text-[var(--text-gray-100)]">
                     {useCase}
                   </span>
                 </li>
               ))}
             </ul>
-          </div>
+          </Card>
         </div>
       </Section>
 
       {/* Why Choose This Tool */}
       <Section spacing="xl">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <Heading as="h2" className="mb-4">
-              Why {tool.name} is Essential for Content Creators
-            </Heading>
-            <Text variant="large">
-              Discover how this tool transforms your video creation workflow
+        <div className="text-center mb-12">
+          <Heading as="h2" className="mb-4">
+            Why {tool.name} is Essential for Content Creators
+          </Heading>
+          <Text variant="large">
+            Discover how this tool transforms your video creation workflow
+          </Text>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <Card variant="glass">
+            <h3 className="text-xl font-bold text-white mb-3">
+              Save Time & Resources
+            </h3>
+            <Text variant="small" className="leading-relaxed">
+              What used to take hours now takes minutes. {tool.name} automates the most time-consuming
+              parts of video production, allowing you to focus on creativity and strategy.
             </Text>
-          </div>
+          </Card>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-3">
-                  Save Time & Resources
-                </h3>
-                <Text variant="small" className="leading-relaxed">
-                  What used to take hours now takes minutes. {tool.name} automates the most time-consuming
-                  parts of video production, allowing you to focus on creativity and strategy. Whether you're
-                  a solo creator or managing a team, you'll dramatically increase your content output without
-                  compromising quality.
-                </Text>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-3">
-                  Professional Quality
-                </h3>
-                <Text variant="small" className="leading-relaxed">
-                  Get studio-grade results without the studio-grade price tag. Our advanced AI technology
-                  delivers professional-quality output that rivals content created by experienced teams with
-                  expensive equipment. Every aspect is optimized for engagement and viewer retention.
-                </Text>
-              </div>
-            </div>
+          <Card variant="glass">
+            <h3 className="text-xl font-bold text-white mb-3">
+              Professional Quality
+            </h3>
+            <Text variant="small" className="leading-relaxed">
+              Get studio-grade results without the studio-grade price tag. Our advanced AI technology
+              delivers professional-quality output that rivals content created by experienced teams.
+            </Text>
+          </Card>
 
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-3">
-                  Scale Your Content
-                </h3>
-                <Text variant="small" className="leading-relaxed">
-                  Create multiple videos per day across different platforms and formats. {tool.name} makes it
-                  easy to maintain a consistent posting schedule, test different content styles, and reach
-                  broader audiences. Perfect for content creators, marketers, and businesses looking to expand
-                  their digital presence.
-                </Text>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-3">
-                  Always Improving
-                </h3>
-                <Text variant="small" className="leading-relaxed">
-                  Our AI models are continuously updated with the latest trends and best practices in video
-                  content. You automatically benefit from improvements in quality, new features, and expanded
-                  capabilities—keeping your content competitive and engaging.
-                </Text>
-              </div>
-            </div>
-          </div>
+          <Card variant="glass">
+            <h3 className="text-xl font-bold text-white mb-3">
+              Scale Your Content
+            </h3>
+            <Text variant="small" className="leading-relaxed">
+              Create multiple videos per day across different platforms. Maintain a consistent posting
+              schedule and reach broader audiences with ease.
+            </Text>
+          </Card>
+
+          <Card variant="glass">
+            <h3 className="text-xl font-bold text-white mb-3">
+              Always Improving
+            </h3>
+            <Text variant="small" className="leading-relaxed">
+              Our AI models are continuously updated with the latest trends and best practices.
+              Automatically benefit from improvements in quality and new features.
+            </Text>
+          </Card>
         </div>
       </Section>
 

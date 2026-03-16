@@ -13,7 +13,8 @@ interface NavLink {
 
 const navLinks: NavLink[] = [
   { label: "Tools", href: "/tools" },
-  { label: "About", href: "/about" },
+  { label: "Use Cases", href: "/use-cases" },
+  { label: "Blog", href: "/blog" },
   { label: "Pricing", href: "/pricing" },
   { label: "Contact", href: "/contact" },
 ];
@@ -36,7 +37,7 @@ export function Navigation() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-[var(--bg-dark)]/80 backdrop-blur-lg border-b border-white/10 shadow-lg"
+          ? "bg-[var(--bg-dark)]/90 backdrop-blur-xl border-b border-white/10 shadow-xl shadow-black/20"
           : "bg-transparent"
       )}
     >

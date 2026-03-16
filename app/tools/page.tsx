@@ -73,21 +73,21 @@ export default function ToolsPage() {
               </Text>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
               {categoryTools.map((tool, index) => (
                 <Card key={index} variant="glass" className="group cursor-pointer hover:border-[var(--brand-primary)]/50 transition-all">
                   <Link href={`/tools/${tool.slug}`}>
-                    <div className="text-5xl mb-4">{tool.icon}</div>
-                    <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-[var(--brand-primary)] transition-colors">
+                    <div className="text-3xl md:text-5xl mb-2 md:mb-4">{tool.icon}</div>
+                    <h3 className="text-base md:text-xl font-semibold text-white mb-1 md:mb-2 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">
                       {tool.name}
                     </h3>
-                    <Text variant="small" className="mb-4">
+                    <Text variant="small" className="mb-2 md:mb-4 line-clamp-2 hidden sm:block">
                       {tool.tagline}
                     </Text>
-                    <div className="flex items-center gap-2 text-[var(--brand-primary)] text-sm font-medium">
+                    <div className="flex items-center gap-1 md:gap-2 text-[var(--brand-primary)] text-xs md:text-sm font-medium">
                       Learn More
                       <svg
-                        className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                        className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform"
                         fill="none"
                         strokeLinecap="round"
                         strokeLinejoin="round"

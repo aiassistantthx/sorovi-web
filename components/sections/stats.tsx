@@ -4,8 +4,8 @@ import { Section } from "@/components/layouts/section";
 const stats = [
   { value: "240,909+", label: "Videos Created" },
   { value: "14,258+", label: "Active Creators" },
-  { value: "400+", label: "Creators with 100K+ Views" },
-  { value: "32", label: "Languages Supported" },
+  { value: "400+", label: "Viral Creators" },
+  { value: "32", label: "Languages" },
 ];
 
 export function StatsSection() {
@@ -14,7 +14,7 @@ export function StatsSection() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((stat, index) => (
           <div key={index} className="text-center">
-            <div className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
+            <div className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
               {stat.value}
             </div>
             <Text variant="small" className="text-[var(--text-gray-300)]">
