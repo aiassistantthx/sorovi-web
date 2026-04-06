@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "Sorovi - AI Video Generator | Turn Photos into Viral Videos",
+    "description": "Create viral TikTok, Instagram Reels, and YouTube Shorts from photos in minutes. AI-powered video effects, no editing skills needed. Start free."
+  },
+  "nav": {
+    "tools": "Tools",
+    "templates": "Templates",
+    "useCases": "Use Cases",
+    "industries": "Industries",
+    "pricing": "Pricing",
+    "downloadApp": "Download App"
+  },
+  "hero": {
+    "title": "Turn Photos Into",
+    "titleHighlight": "Viral Videos",
+    "titleEnd": "in Minutes",
+    "description": "No editing skills needed. Sorovi's AI creates scroll-stopping TikToks, Reels, and Shorts from a single photo.",
+    "cta": "Start Creating"
+  },
+  "features": {
+    "title": "Why Creators Love Sorovi",
+    "subtitle": "Professional video creation without the learning curve",
+    "items": [
+      {
+        "title": "Photo to Video AI",
+        "description": "Upload any photo and watch our AI transform it into a dynamic video with cinematic motion effects."
+      },
+      {
+        "title": "Cinematic Effects",
+        "description": "Professional zoom, orbit, parallax, and follow effects that make your content stand out."
+      },
+      {
+        "title": "Platform Optimized",
+        "description": "Export in perfect formats for TikTok, Instagram Reels, YouTube Shorts, and more."
+      },
+      {
+        "title": "AI Voice & Music",
+        "description": "Add professional voiceovers and background music to complete your videos."
+      },
+      {
+        "title": "Lightning Fast",
+        "description": "Create professional videos in seconds, not hours. Perfect for daily content creation."
+      },
+      {
+        "title": "No Watermark",
+        "description": "Clean, professional videos ready for your brand. No watermarks on paid plans."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Create Videos in 3 Steps",
+    "subtitle": "From photo to viral video in under a minute",
+    "steps": [
+      {
+        "title": "Upload Your Photo",
+        "description": "Choose any photo from your camera roll or library"
+      },
+      {
+        "title": "Choose an Effect",
+        "description": "Select from zoom, orbit, parallax, and more AI effects"
+      },
+      {
+        "title": "Export & Share",
+        "description": "Download or share directly to TikTok, Instagram, YouTube"
+      }
+    ]
+  },
+  "stats": {
+    "videos": "Videos Created",
+    "creators": "Active Creators",
+    "rating": "App Store Rating",
+    "countries": "Countries"
+  },
+  "cta": {
+    "title": "Ready to Create Viral Content?",
+    "description": "Join thousands of creators making scroll-stopping videos with AI. Start free — no credit card required.",
+    "primary": "Start Creating Free",
+    "secondary": "View Pricing"
+  },
+  "footer": {
+    "tagline": "AI-powered video creation for creators, brands, and businesses.",
+    "product": "Product",
+    "resources": "Resources",
+    "company": "Company",
+    "legal": "Legal",
+    "copyright": "All rights reserved."
+  }
+}

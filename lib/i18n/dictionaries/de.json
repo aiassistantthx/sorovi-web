@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "Sorovi - KI-Videogenerator | Verwandle Fotos in Virale Videos",
+    "description": "Erstelle virale TikToks, Instagram Reels und YouTube Shorts aus Fotos in Minuten. KI-gestützte Videoeffekte, keine Bearbeitungskenntnisse erforderlich. Starte kostenlos."
+  },
+  "nav": {
+    "tools": "Tools",
+    "templates": "Vorlagen",
+    "useCases": "Anwendungsfälle",
+    "industries": "Branchen",
+    "pricing": "Preise",
+    "downloadApp": "App Herunterladen"
+  },
+  "hero": {
+    "title": "Verwandle Fotos in",
+    "titleHighlight": "Virale Videos",
+    "titleEnd": "in Minuten",
+    "description": "Keine Bearbeitungskenntnisse erforderlich. Sorovis KI erstellt scroll-stoppende TikToks, Reels und Shorts aus einem einzigen Foto.",
+    "cta": "Jetzt Erstellen"
+  },
+  "features": {
+    "title": "Warum Creator Sorovi Lieben",
+    "subtitle": "Professionelle Videoerstellung ohne Lernkurve",
+    "items": [
+      {
+        "title": "Foto-zu-Video KI",
+        "description": "Lade ein beliebiges Foto hoch und sieh zu, wie unsere KI es in ein dynamisches Video mit filmischen Bewegungseffekten verwandelt."
+      },
+      {
+        "title": "Filmische Effekte",
+        "description": "Professioneller Zoom, Orbit, Parallax und Follow-Effekte, die deinen Content hervorheben."
+      },
+      {
+        "title": "Plattform-Optimiert",
+        "description": "Exportiere in perfekten Formaten für TikTok, Instagram Reels, YouTube Shorts und mehr."
+      },
+      {
+        "title": "KI-Stimme & Musik",
+        "description": "Füge professionelle Voiceovers und Hintergrundmusik hinzu, um deine Videos zu vervollständigen."
+      },
+      {
+        "title": "Blitzschnell",
+        "description": "Erstelle professionelle Videos in Sekunden, nicht Stunden. Perfekt für tägliche Content-Erstellung."
+      },
+      {
+        "title": "Kein Wasserzeichen",
+        "description": "Saubere, professionelle Videos bereit für deine Marke. Keine Wasserzeichen bei kostenpflichtigen Plänen."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Erstelle Videos in 3 Schritten",
+    "subtitle": "Vom Foto zum viralen Video in unter einer Minute",
+    "steps": [
+      {
+        "title": "Lade Dein Foto Hoch",
+        "description": "Wähle ein beliebiges Foto aus deiner Kamerarolle oder Bibliothek"
+      },
+      {
+        "title": "Wähle einen Effekt",
+        "description": "Wähle aus Zoom, Orbit, Parallax und weiteren KI-Effekten"
+      },
+      {
+        "title": "Exportiere & Teile",
+        "description": "Lade herunter oder teile direkt auf TikTok, Instagram, YouTube"
+      }
+    ]
+  },
+  "stats": {
+    "videos": "Erstellte Videos",
+    "creators": "Aktive Creator",
+    "rating": "App Store Bewertung",
+    "countries": "Länder"
+  },
+  "cta": {
+    "title": "Bereit Viralen Content zu Erstellen?",
+    "description": "Schließe dich Tausenden von Creatorn an, die scroll-stoppende Videos mit KI erstellen. Starte kostenlos — keine Kreditkarte erforderlich.",
+    "primary": "Kostenlos Starten",
+    "secondary": "Preise Ansehen"
+  },
+  "footer": {
+    "tagline": "KI-gestützte Videoerstellung für Creator, Marken und Unternehmen.",
+    "product": "Produkt",
+    "resources": "Ressourcen",
+    "company": "Unternehmen",
+    "legal": "Rechtliches",
+    "copyright": "Alle Rechte vorbehalten."
+  }
+}

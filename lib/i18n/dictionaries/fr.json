@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "Sorovi - Générateur Vidéo IA | Transformez Vos Photos en Vidéos Virales",
+    "description": "Créez des TikToks viraux, Instagram Reels et YouTube Shorts à partir de photos en quelques minutes. Effets vidéo IA, sans compétences de montage. Commencez gratuitement."
+  },
+  "nav": {
+    "tools": "Outils",
+    "templates": "Modèles",
+    "useCases": "Cas d'Usage",
+    "industries": "Industries",
+    "pricing": "Tarifs",
+    "downloadApp": "Télécharger l'App"
+  },
+  "hero": {
+    "title": "Transformez Vos Photos en",
+    "titleHighlight": "Vidéos Virales",
+    "titleEnd": "en Minutes",
+    "description": "Aucune compétence de montage requise. L'IA de Sorovi crée des TikToks, Reels et Shorts captivants à partir d'une seule photo.",
+    "cta": "Commencer à Créer"
+  },
+  "features": {
+    "title": "Pourquoi les Créateurs Adorent Sorovi",
+    "subtitle": "Création vidéo professionnelle sans courbe d'apprentissage",
+    "items": [
+      {
+        "title": "IA Photo vers Vidéo",
+        "description": "Téléchargez n'importe quelle photo et regardez notre IA la transformer en vidéo dynamique avec des effets de mouvement cinématographiques."
+      },
+      {
+        "title": "Effets Cinématographiques",
+        "description": "Zoom professionnel, orbite, parallaxe et effets de suivi qui font ressortir votre contenu."
+      },
+      {
+        "title": "Optimisé par Plateforme",
+        "description": "Exportez dans des formats parfaits pour TikTok, Instagram Reels, YouTube Shorts et plus."
+      },
+      {
+        "title": "Voix IA & Musique",
+        "description": "Ajoutez des voix-off professionnelles et de la musique de fond pour compléter vos vidéos."
+      },
+      {
+        "title": "Ultra Rapide",
+        "description": "Créez des vidéos professionnelles en secondes, pas en heures. Parfait pour la création de contenu quotidienne."
+      },
+      {
+        "title": "Sans Filigrane",
+        "description": "Vidéos propres et professionnelles prêtes pour votre marque. Sans filigrane sur les plans payants."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Créez des Vidéos en 3 Étapes",
+    "subtitle": "De la photo à la vidéo virale en moins d'une minute",
+    "steps": [
+      {
+        "title": "Téléchargez Votre Photo",
+        "description": "Choisissez n'importe quelle photo de votre galerie ou bibliothèque"
+      },
+      {
+        "title": "Choisissez un Effet",
+        "description": "Sélectionnez parmi zoom, orbite, parallaxe et plus d'effets IA"
+      },
+      {
+        "title": "Exportez & Partagez",
+        "description": "Téléchargez ou partagez directement sur TikTok, Instagram, YouTube"
+      }
+    ]
+  },
+  "stats": {
+    "videos": "Vidéos Créées",
+    "creators": "Créateurs Actifs",
+    "rating": "Note App Store",
+    "countries": "Pays"
+  },
+  "cta": {
+    "title": "Prêt à Créer du Contenu Viral?",
+    "description": "Rejoignez des milliers de créateurs qui font des vidéos captivantes avec l'IA. Commencez gratuitement — sans carte de crédit.",
+    "primary": "Commencer Gratuitement",
+    "secondary": "Voir les Tarifs"
+  },
+  "footer": {
+    "tagline": "Création vidéo propulsée par IA pour créateurs, marques et entreprises.",
+    "product": "Produit",
+    "resources": "Ressources",
+    "company": "Entreprise",
+    "legal": "Mentions Légales",
+    "copyright": "Tous droits réservés."
+  }
+}
