@@ -38,12 +38,12 @@ export async function generateMetadata({
     title: `${tool.name} | Hyreel`,
     description: tool.description,
     alternates: {
-      canonical: `https://hyreel.app/tools/${tool.slug}`,
+      canonical: `https://hyreel.com/tools/${tool.slug}`,
     },
     openGraph: {
       title: `${tool.name} — ${tool.tagline}`,
       description: tool.description,
-      url: `https://hyreel.app/tools/${tool.slug}`,
+      url: `https://hyreel.com/tools/${tool.slug}`,
       type: "website",
       siteName: "Hyreel",
     },

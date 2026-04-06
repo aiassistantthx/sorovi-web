@@ -4,7 +4,7 @@ import { alternatives } from "@/lib/alternatives";
 import { useCases } from "@/lib/use-cases";
 import { blogPosts } from "@/lib/blog";
 
-const SITE_URL = "https://hyreel.app";
+const SITE_URL = "https://hyreel.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [

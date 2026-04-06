@@ -35,7 +35,7 @@ export async function generateMetadata({
     title: industry.metaTitle,
     description: industry.metaDescription,
     alternates: {
-      canonical: `https://hyreel.app/industries/${industry.slug}`,
+      canonical: `https://hyreel.com/industries/${industry.slug}`,
     },
   };
 }

@@ -1,4 +1,4 @@
-const SITE_URL = "https://hyreel.app";
+const SITE_URL = "https://hyreel.com";
 const SITE_NAME = "Hyreel";
 
 export function generateSoftwareApplicationSchema() {

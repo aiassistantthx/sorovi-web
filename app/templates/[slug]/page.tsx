@@ -34,7 +34,7 @@ export async function generateMetadata({
     title: template.metaTitle,
     description: template.metaDescription,
     alternates: {
-      canonical: `https://hyreel.app/templates/${template.slug}`,
+      canonical: `https://hyreel.com/templates/${template.slug}`,
     },
   };
 }
