@@ -18,12 +18,12 @@ export default function ToolsPage() {
       {/* Hero Section */}
       <Section spacing="xl" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand-primary)]/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--accent-green)]/10 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand-primary)]/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--accent-green)]/5 rounded-full blur-3xl" />
         </div>
 
         <div className="text-center">
-          <Heading as="h1" gradient className="mb-6">
+          <Heading as="h1" className="mb-6">
             AI Video Creation Tools
           </Heading>
           <Text variant="large" className="mb-8">
@@ -34,7 +34,7 @@ export default function ToolsPage() {
       </Section>
 
       {/* Stats */}
-      <Section spacing="lg" className="bg-[var(--surface-dark)]/30">
+      <Section spacing="lg" className="bg-[var(--surface-light)]">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { value: "100+", label: "AI Tools" },
@@ -43,10 +43,10 @@ export default function ToolsPage() {
             { value: "32", label: "Languages" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-2">
                 {stat.value}
               </div>
-              <Text variant="small" className="text-[var(--text-gray-300)]">
+              <Text variant="small" className="text-[var(--text-secondary)]">
                 {stat.label}
               </Text>
             </div>
@@ -62,7 +62,7 @@ export default function ToolsPage() {
           <Section
             key={categoryIndex}
             spacing="xl"
-            className={categoryIndex % 2 === 0 ? "bg-[var(--surface-dark)]/30" : ""}
+            className={categoryIndex % 2 === 0 ? "bg-[var(--surface-light)]" : ""}
           >
             <div className="mb-10">
               <Heading as="h2" className="mb-4">
@@ -75,10 +75,10 @@ export default function ToolsPage() {
 
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
               {categoryTools.map((tool, index) => (
-                <Card key={index} variant="glass" className="group cursor-pointer hover:border-[var(--brand-primary)]/50 transition-all">
+                <Card key={index} variant="elevated" className="group cursor-pointer hover:border-[var(--brand-primary)]/30 transition-all">
                   <Link href={`/tools/${tool.slug}`}>
                     <div className="text-3xl md:text-5xl mb-2 md:mb-4">{tool.icon}</div>
-                    <h3 className="text-base md:text-xl font-semibold text-white mb-1 md:mb-2 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">
+                    <h3 className="text-base md:text-xl font-semibold text-[var(--text-primary)] mb-1 md:mb-2 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">
                       {tool.name}
                     </h3>
                     <Text variant="small" className="mb-2 md:mb-4 line-clamp-2 hidden sm:block">
@@ -107,7 +107,7 @@ export default function ToolsPage() {
       })}
 
       {/* CTA Section */}
-      <Section spacing="xl" className="bg-gradient-to-b from-transparent via-[var(--surface-dark)]/30 to-transparent">
+      <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
             Ready to Create Amazing Videos?

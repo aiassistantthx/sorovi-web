@@ -30,20 +30,20 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[var(--surface-dark)] border-t border-white/10">
+    <footer className="bg-[var(--surface-light)] border-t border-[var(--border-color)]">
       <Container>
         <div className="py-12 md:py-16">
           {/* Top Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {/* Product */}
             <div>
-              <h3 className="text-white font-semibold mb-4">Product</h3>
+              <span className="block text-[var(--text-primary)] font-semibold mb-4">Product</span>
               <ul className="space-y-3">
                 {footerLinks.product.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-[var(--text-gray-300)] hover:text-white transition-colors text-sm"
+                      className="text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors text-sm"
                     >
                       {link.label}
                     </Link>
@@ -54,13 +54,13 @@ export function Footer() {
 
             {/* Resources */}
             <div>
-              <h3 className="text-white font-semibold mb-4">Resources</h3>
+              <span className="block text-[var(--text-primary)] font-semibold mb-4">Resources</span>
               <ul className="space-y-3">
                 {footerLinks.resources.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-[var(--text-gray-300)] hover:text-white transition-colors text-sm"
+                      className="text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors text-sm"
                     >
                       {link.label}
                     </Link>
@@ -71,13 +71,13 @@ export function Footer() {
 
             {/* Alternatives */}
             <div>
-              <h3 className="text-white font-semibold mb-4">Alternatives</h3>
+              <span className="block text-[var(--text-primary)] font-semibold mb-4">Alternatives</span>
               <ul className="space-y-3">
                 {footerLinks.alternatives.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-[var(--text-gray-300)] hover:text-white transition-colors text-sm"
+                      className="text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors text-sm"
                     >
                       {link.label}
                     </Link>
@@ -88,13 +88,13 @@ export function Footer() {
 
             {/* Legal */}
             <div>
-              <h3 className="text-white font-semibold mb-4">Legal</h3>
+              <span className="block text-[var(--text-primary)] font-semibold mb-4">Legal</span>
               <ul className="space-y-3">
                 {footerLinks.legal.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-[var(--text-gray-300)] hover:text-white transition-colors text-sm"
+                      className="text-[var(--text-secondary)] hover:text-[var(--brand-primary)] transition-colors text-sm"
                     >
                       {link.label}
                     </Link>
@@ -105,14 +105,14 @@ export function Footer() {
           </div>
 
           {/* Bottom Section */}
-          <div className="pt-8 border-t border-white/10">
+          <div className="pt-8 border-t border-[var(--border-color)]">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               {/* Logo & Copyright */}
               <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
-                <div className="text-xl font-bold text-white">
+                <div className="text-xl font-bold text-[var(--text-primary)]">
                   Sorovi
                 </div>
-                <span className="text-[var(--text-gray-500)] text-sm">
+                <span className="text-[var(--text-muted)] text-sm">
                   © {currentYear} Sorovi. All rights reserved.
                 </span>
               </div>
@@ -123,7 +123,7 @@ export function Footer() {
                   href="https://twitter.com/soroviapp"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--text-gray-400)] hover:text-white transition-colors"
+                  className="text-[var(--text-muted)] hover:text-[var(--brand-primary)] transition-colors"
                   aria-label="Twitter"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -134,7 +134,7 @@ export function Footer() {
                   href="https://instagram.com/soroviapp"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--text-gray-400)] hover:text-white transition-colors"
+                  className="text-[var(--text-muted)] hover:text-[var(--brand-primary)] transition-colors"
                   aria-label="Instagram"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -145,7 +145,7 @@ export function Footer() {
                   href="https://tiktok.com/@soroviapp"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--text-gray-400)] hover:text-white transition-colors"
+                  className="text-[var(--text-muted)] hover:text-[var(--brand-primary)] transition-colors"
                   aria-label="TikTok"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -156,7 +156,7 @@ export function Footer() {
                   href="https://youtube.com/@soroviapp"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--text-gray-400)] hover:text-white transition-colors"
+                  className="text-[var(--text-muted)] hover:text-[var(--brand-primary)] transition-colors"
                   aria-label="YouTube"
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">

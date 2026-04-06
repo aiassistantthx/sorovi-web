@@ -1,37 +1,37 @@
 import { HeroSection } from "@/components/sections/hero";
-import { StatsSection } from "@/components/sections/stats";
 import { FeaturesSection } from "@/components/sections/features";
 import { ExamplesShowcaseSection } from "@/components/sections/examples-showcase";
 import { HowItWorksSection } from "@/components/sections/how-it-works";
 import { BenefitsSection } from "@/components/sections/benefits";
+import { TestimonialsSection } from "@/components/sections/testimonials";
 import { FAQSection } from "@/components/sections/faq";
 import { CTASection } from "@/components/sections/cta";
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section - Above the fold */}
+      {/* Hero - Problem statement + immediate value prop */}
       <HeroSection />
 
-      {/* Statistics - Social proof */}
-      <StatsSection />
-
-      {/* Features - What we offer */}
-      <FeaturesSection />
-
-      {/* Examples - Showcase what's possible */}
+      {/* Examples - Visual proof of results (show before explain) */}
       <ExamplesShowcaseSection />
 
-      {/* How It Works - Clear process */}
+      {/* How It Works - Simple 4-step process */}
       <HowItWorksSection />
 
-      {/* Benefits - Why choose us */}
+      {/* Features - Deep dive into capabilities */}
+      <FeaturesSection />
+
+      {/* Benefits - Why choose us over alternatives */}
       <BenefitsSection />
 
-      {/* FAQ - Answer common questions */}
+      {/* Testimonials - Real creator success stories */}
+      <TestimonialsSection />
+
+      {/* FAQ - Handle objections and reduce friction */}
       <FAQSection />
 
-      {/* Final CTA - Convert visitors */}
+      {/* Final CTA - Convert warm visitors */}
       <CTASection />
     </>
   );

@@ -28,8 +28,8 @@ export function BlogFilter({ posts, categories }: BlogFilterProps) {
           onClick={() => setActiveCategory("All")}
           className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
             activeCategory === "All"
-              ? "bg-[var(--brand-primary)] text-white shadow-lg shadow-[var(--brand-primary)]/30"
-              : "bg-white/5 text-[var(--text-gray-300)] border border-white/10 hover:bg-white/10 hover:text-white"
+              ? "bg-[var(--brand-primary)] text-white shadow-lg shadow-[var(--brand-primary)]/20"
+              : "bg-[var(--surface-light)] text-[var(--text-secondary)] border border-[var(--border-color)] hover:bg-[var(--surface-alt)] hover:text-[var(--text-primary)]"
           }`}
         >
           All
@@ -40,8 +40,8 @@ export function BlogFilter({ posts, categories }: BlogFilterProps) {
             onClick={() => setActiveCategory(category)}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
               activeCategory === category
-                ? "bg-[var(--brand-primary)] text-white shadow-lg shadow-[var(--brand-primary)]/30"
-                : "bg-white/5 text-[var(--text-gray-300)] border border-white/10 hover:bg-white/10 hover:text-white"
+                ? "bg-[var(--brand-primary)] text-white shadow-lg shadow-[var(--brand-primary)]/20"
+                : "bg-[var(--surface-light)] text-[var(--text-secondary)] border border-[var(--border-color)] hover:bg-[var(--surface-alt)] hover:text-[var(--text-primary)]"
             }`}
           >
             {category}
@@ -54,19 +54,19 @@ export function BlogFilter({ posts, categories }: BlogFilterProps) {
         {filteredPosts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`}>
             <Card
-              variant="glass"
-              className="group cursor-pointer h-full flex flex-col hover:border-[var(--brand-primary)]/50 transition-all"
+              variant="elevated"
+              className="group cursor-pointer h-full flex flex-col hover:border-[var(--brand-primary)]/30 transition-all"
             >
               {/* Category and Reading Time */}
               <div className="flex items-center justify-between mb-4">
                 <Badge variant="primary">{post.category}</Badge>
-                <span className="text-xs text-[var(--text-gray-500)]">
+                <span className="text-xs text-[var(--text-muted)]">
                   {post.readingTime} min read
                 </span>
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">
+              <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-3 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">
                 {post.title}
               </h3>
 
@@ -76,8 +76,8 @@ export function BlogFilter({ posts, categories }: BlogFilterProps) {
               </Text>
 
               {/* Footer: Date and Arrow */}
-              <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/5">
-                <time className="text-xs text-[var(--text-gray-500)]">
+              <div className="flex items-center justify-between mt-auto pt-4 border-t border-[var(--border-color)]">
+                <time className="text-xs text-[var(--text-muted)]">
                   {new Date(post.publishedAt).toLocaleDateString("en-US", {
                     year: "numeric",
                     month: "short",
@@ -107,7 +107,7 @@ export function BlogFilter({ posts, categories }: BlogFilterProps) {
       {/* Empty State */}
       {filteredPosts.length === 0 && (
         <div className="text-center py-16">
-          <Text variant="large" className="text-[var(--text-gray-500)]">
+          <Text variant="large" className="text-[var(--text-muted)]">
             No posts found in this category.
           </Text>
         </div>

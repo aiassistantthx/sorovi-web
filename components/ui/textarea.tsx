@@ -12,7 +12,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
     return (
       <div className="w-full">
         {label && (
-          <label className="block text-sm font-medium text-[var(--text-gray-300)] mb-2">
+          <label className="block text-sm font-medium text-[var(--text-secondary)] mb-2">
             {label}
           </label>
         )}
@@ -20,13 +20,12 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           ref={ref}
           className={cn(
             "w-full px-4 py-3 rounded-xl",
-            "bg-white/5 backdrop-blur-lg",
-            "border border-white/10",
-            "text-white placeholder:text-[var(--text-gray-500)]",
+            "bg-white",
+            "border border-[var(--border-color)]",
+            "text-[var(--text-primary)] placeholder:text-[var(--text-muted)]",
             "transition-all duration-200",
             "focus:outline-none focus:ring-2 focus:ring-[var(--brand-primary)] focus:border-transparent",
-            "focus:bg-white/10",
-            "hover:border-white/20",
+            "hover:border-[var(--border-strong)]",
             "resize-none",
             error && "border-red-500 focus:ring-red-500",
             className
@@ -34,7 +33,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           {...props}
         />
         {error && (
-          <p className="mt-2 text-sm text-red-400">{error}</p>
+          <p className="mt-2 text-sm text-red-600">{error}</p>
         )}
       </div>
     );

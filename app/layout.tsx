@@ -3,6 +3,10 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/layouts/navigation";
 import { Footer } from "@/components/layouts/footer";
+import {
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/lib/schema";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -36,6 +40,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateOrganizationSchema()),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(generateWebSiteSchema()),
+          }}
+        />
+      </head>
       <body className="antialiased font-sans">
         <Navigation />
         <main className="min-h-screen pt-16">

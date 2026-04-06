@@ -1,6 +1,7 @@
 import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 export const metadata = {
   title: "About Us - Sorovi",
@@ -43,12 +44,12 @@ export default function AboutPage() {
       {/* Hero Section */}
       <Section spacing="xl" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand-primary)]/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--accent-green)]/10 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand-primary)]/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--accent-green)]/5 rounded-full blur-3xl" />
         </div>
 
         <div className="text-center">
-          <Heading as="h1" gradient className="mb-6">
+          <Heading as="h1" className="mb-6">
             Making Video Creation Accessible to Everyone
           </Heading>
           <Text variant="large">
@@ -58,14 +59,14 @@ export default function AboutPage() {
       </Section>
 
       {/* Stats Section */}
-      <Section spacing="lg" className="bg-[var(--surface-dark)]/30">
+      <Section spacing="lg" className="bg-[var(--surface-light)]">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-2">
                 {stat.value}
               </div>
-              <Text variant="small" className="text-[var(--text-gray-300)]">
+              <Text variant="small" className="text-[var(--text-secondary)]">
                 {stat.label}
               </Text>
             </div>
@@ -78,7 +79,7 @@ export default function AboutPage() {
         <Heading as="h2" className="mb-6 text-center">
           Our Story
         </Heading>
-        <div className="space-y-6">
+        <div className="max-w-3xl mx-auto space-y-6">
           <Text variant="body">
             In 2023, our founders noticed a growing gap: social media was exploding with video content, but creating quality videos remained expensive and time-consuming. Small businesses, content creators, and educators were left behind.
           </Text>
@@ -92,7 +93,7 @@ export default function AboutPage() {
       </Section>
 
       {/* Values Section */}
-      <Section spacing="xl" className="bg-[var(--surface-dark)]/30">
+      <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
             What We Stand For
@@ -104,9 +105,9 @@ export default function AboutPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {teamValues.map((value, index) => (
-            <Card key={index} variant="glass">
+            <Card key={index} variant="elevated">
               <div className="text-5xl mb-4">{value.icon}</div>
-              <h3 className="text-xl font-semibold text-white mb-3">
+              <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-3">
                 {value.title}
               </h3>
               <Text variant="small">{value.description}</Text>
@@ -121,13 +122,13 @@ export default function AboutPage() {
           <Heading as="h2" className="mb-6">
             Powered by Cutting-Edge AI
           </Heading>
-          <Text variant="body" className="mb-8">
+          <Text variant="body" className="mb-8 max-w-3xl mx-auto">
             Our platform combines multiple AI technologies to deliver a seamless video creation experience. From script generation to voice synthesis, visual creation to editing, every step is powered by advanced machine learning models.
           </Text>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto">
             {["GPT-4", "Stable Diffusion", "ElevenLabs", "Custom Models"].map((tech, index) => (
-              <Card key={index} variant="glass" className="text-center">
-                <Text variant="small" className="font-semibold text-white">
+              <Card key={index} variant="elevated" className="text-center">
+                <Text variant="small" className="font-semibold text-[var(--text-primary)]">
                   {tech}
                 </Text>
               </Card>
@@ -137,7 +138,7 @@ export default function AboutPage() {
       </Section>
 
       {/* CTA Section */}
-      <Section spacing="xl" className="bg-gradient-to-b from-transparent via-[var(--surface-dark)]/30 to-transparent">
+      <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
             Join Our Community
@@ -146,18 +147,12 @@ export default function AboutPage() {
             Be part of the AI video revolution. Start creating professional content today.
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="/"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[var(--brand-primary)] text-white font-medium hover:bg-[var(--accent-lime)] transition-colors"
-            >
+            <Button size="lg">
               Get Started Free
-            </a>
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white/10 text-white font-medium hover:bg-white/20 transition-colors"
-            >
+            </Button>
+            <Button size="lg" variant="secondary">
               Contact Us
-            </a>
+            </Button>
           </div>
         </div>
       </Section>

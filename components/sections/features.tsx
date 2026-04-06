@@ -4,56 +4,74 @@ import { Section } from "@/components/layouts/section";
 
 const features = [
   {
-    icon: "🤖",
-    title: "AI Script Generator",
-    description: "Generate engaging scripts for your videos with AI in seconds. Just provide a topic and let our AI create compelling narratives.",
+    icon: "📸",
+    title: "Photo-to-Video AI",
+    description: "Upload a single photo and watch AI turn it into a dynamic video with motion, transitions, and effects. Perfect for product shots and selfies.",
+    highlight: "Most Popular",
+  },
+  {
+    icon: "✍️",
+    title: "AI Script Writer",
+    description: "Tell AI your topic and get a viral-ready script in seconds. Optimized for hooks, retention, and call-to-actions that convert.",
+    highlight: null,
   },
   {
     icon: "🎭",
-    title: "AI Avatars & Actors",
-    description: "Choose from 100+ AI avatars or create your own custom avatar. No need for cameras or actors—our AI brings your content to life.",
+    title: "100+ AI Avatars",
+    description: "Choose from realistic AI presenters or create your own digital twin. No camera, no filming, no awkward retakes.",
+    highlight: null,
   },
   {
-    icon: "🎨",
-    title: "Video Templates & Styles",
-    description: "100+ professional templates for every type of content. From product reviews to educational videos, we've got you covered.",
+    icon: "🎙️",
+    title: "50+ AI Voices",
+    description: "Natural-sounding voiceovers in 32 languages. Clone your own voice or pick from our library of professional tones.",
+    highlight: null,
   },
   {
-    icon: "🎵",
-    title: "AI Voice & Music",
-    description: "50+ unique AI voices in 32 languages plus AI-generated background music. Create the perfect audio for your videos.",
+    icon: "🎬",
+    title: "One-Tap Templates",
+    description: "100+ templates for every niche: product reviews, tutorials, stories, memes, educational content, and more.",
+    highlight: null,
   },
   {
-    icon: "✂️",
-    title: "Super-Simple Editor",
-    description: "Intuitive drag-and-drop editor with AI-powered suggestions. Edit like a pro without any experience.",
-  },
-  {
-    icon: "📱",
-    title: "Multi-Platform Export",
-    description: "Export for TikTok, Instagram, YouTube, and more. Publish directly or download in HD quality with no watermarks.",
+    icon: "📲",
+    title: "Direct Publishing",
+    description: "Export in HD to TikTok, Instagram, YouTube, and more. No watermarks on paid plans. Schedule posts directly from the app.",
+    highlight: null,
   },
 ];
 
 export function FeaturesSection() {
   return (
-    <Section spacing="xl" className="bg-[var(--surface-dark)]/30">
-      <div className="text-center mb-10">
+    <Section spacing="xl" className="bg-[var(--surface-light)]">
+      <div className="text-center mb-12">
+        <div className="inline-flex items-center px-3 py-1 rounded-full bg-[var(--brand-primary)]/10 border border-[var(--brand-primary)]/20 mb-4">
+          <span className="text-xs font-medium text-[var(--brand-primary)] uppercase tracking-wider">
+            Features
+          </span>
+        </div>
         <Heading as="h2" className="mb-4">
-          Everything You Need to Create Amazing Videos
+          Everything You Need to Go Viral
         </Heading>
-        <Text variant="large">
-          Powerful AI tools combined with simple editing—all in one place
+        <Text variant="large" className="max-w-2xl mx-auto">
+          Professional video creation tools that used to cost thousands, now powered by AI and available on your phone.
         </Text>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {features.map((feature, index) => (
-          <Card key={index} variant="glass">
-            <div className="w-12 h-12 rounded-xl bg-[var(--brand-primary)] flex items-center justify-center mb-4">
+          <Card key={index} variant="elevated" className="relative">
+            {feature.highlight && (
+              <div className="absolute -top-3 left-4">
+                <span className="px-3 py-1 rounded-full bg-[var(--brand-primary)] text-white text-xs font-medium">
+                  {feature.highlight}
+                </span>
+              </div>
+            )}
+            <div className="w-12 h-12 rounded-xl bg-[var(--brand-primary)]/10 flex items-center justify-center mb-4">
               <span className="text-2xl">{feature.icon}</span>
             </div>
-            <h3 className="text-xl font-semibold text-white mb-2">
+            <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">
               {feature.title}
             </h3>
             <Text variant="small">{feature.description}</Text>

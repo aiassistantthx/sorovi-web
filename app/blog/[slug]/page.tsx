@@ -109,9 +109,9 @@ export default async function BlogPostPage({
       />
 
       {/* Breadcrumb Navigation */}
-      <Section spacing="sm" className="border-b border-white/5">
-        <nav className="flex items-center gap-2 text-sm text-[var(--text-gray-500)]">
-          <Link href="/" className="hover:text-white transition-colors">
+      <Section spacing="sm" className="border-b border-[var(--border-color)]">
+        <nav className="flex items-center gap-2 text-sm text-[var(--text-muted)]">
+          <Link href="/" className="hover:text-[var(--text-primary)] transition-colors">
             Home
           </Link>
           <svg
@@ -125,7 +125,7 @@ export default async function BlogPostPage({
           >
             <path d="M9 5l7 7-7 7" />
           </svg>
-          <Link href="/blog" className="hover:text-white transition-colors">
+          <Link href="/blog" className="hover:text-[var(--text-primary)] transition-colors">
             Blog
           </Link>
           <svg
@@ -139,33 +139,33 @@ export default async function BlogPostPage({
           >
             <path d="M9 5l7 7-7 7" />
           </svg>
-          <span className="text-[var(--text-gray-300)] line-clamp-1">
+          <span className="text-[var(--text-secondary)] line-clamp-1">
             {post.title}
           </span>
         </nav>
       </Section>
 
       {/* Article Header */}
-      <Section spacing="lg" className="relative overflow-hidden">
+      <Section spacing="xl" className="relative overflow-hidden pb-0 md:pb-0">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand-primary)]/5 rounded-full blur-3xl" />
         </div>
 
         <div className="max-w-3xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
+          <div className="flex items-center justify-center gap-3 mb-8">
             <Badge variant="primary">{post.category}</Badge>
-            <span className="text-sm text-[var(--text-gray-500)]">
+            <span className="text-sm text-[var(--text-muted)]">
               {post.readingTime} min read
             </span>
           </div>
 
-          <Heading as="h1" className="mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] leading-[1.1] tracking-tight mb-8">
             {post.title}
-          </Heading>
+          </h1>
 
-          <div className="flex items-center justify-center gap-4 text-sm text-[var(--text-gray-500)]">
+          <div className="flex items-center justify-center gap-4 text-base text-[var(--text-muted)]">
             <span>{post.author}</span>
-            <span className="w-1 h-1 rounded-full bg-[var(--text-gray-500)]" />
+            <span className="w-1 h-1 rounded-full bg-[var(--text-muted)]" />
             <time dateTime={post.publishedAt}>{formattedDate}</time>
           </div>
 
@@ -180,16 +180,21 @@ export default async function BlogPostPage({
         </div>
       </Section>
 
+      {/* Divider */}
+      <div className="max-w-xl mx-auto px-6">
+        <div className="border-t border-[var(--border-color)] my-10 md:my-14" />
+      </div>
+
       {/* Article Content */}
-      <Section spacing="lg" containerSize="md">
-        <article className="max-w-3xl mx-auto">
+      <Section spacing="lg" containerSize="md" className="pt-0 md:pt-0">
+        <article className="max-w-[680px] mx-auto">
           <MarkdownRenderer content={post.content} />
         </article>
       </Section>
 
       {/* Related Tools */}
       {relatedTools.length > 0 && (
-        <Section spacing="lg" className="bg-[var(--surface-dark)]/30">
+        <Section spacing="lg" className="bg-[var(--surface-light)]">
           <div className="max-w-4xl mx-auto">
             <Heading as="h2" className="mb-2 text-center">
               Related Tools
@@ -202,11 +207,11 @@ export default async function BlogPostPage({
               {relatedTools.map((tool) => (
                 <Link key={tool.slug} href={`/tools/${tool.slug}`}>
                   <Card
-                    variant="glass"
-                    className="group cursor-pointer h-full hover:border-[var(--brand-primary)]/50 transition-all"
+                    variant="elevated"
+                    className="group cursor-pointer h-full hover:border-[var(--brand-primary)]/30 transition-all"
                   >
                     <div className="text-3xl mb-3">{tool.icon}</div>
-                    <h3 className="text-base font-semibold text-white mb-2 group-hover:text-[var(--brand-primary)] transition-colors">
+                    <h3 className="text-base font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors">
                       {tool.name}
                     </h3>
                     <Text variant="small" className="line-clamp-2">
@@ -238,16 +243,16 @@ export default async function BlogPostPage({
                   href={`/blog/${relatedPost.slug}`}
                 >
                   <Card
-                    variant="glass"
-                    className="group cursor-pointer h-full flex flex-col hover:border-[var(--brand-primary)]/50 transition-all"
+                    variant="elevated"
+                    className="group cursor-pointer h-full flex flex-col hover:border-[var(--brand-primary)]/30 transition-all"
                   >
                     <div className="flex items-center justify-between mb-3">
                       <Badge variant="primary">{relatedPost.category}</Badge>
-                      <span className="text-xs text-[var(--text-gray-500)]">
+                      <span className="text-xs text-[var(--text-muted)]">
                         {relatedPost.readingTime} min
                       </span>
                     </div>
-                    <h3 className="text-base font-semibold text-white mb-2 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">
+                    <h3 className="text-base font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">
                       {relatedPost.title}
                     </h3>
                     <Text variant="small" className="line-clamp-2 flex-grow">
@@ -264,7 +269,7 @@ export default async function BlogPostPage({
       {/* CTA Section */}
       <Section
         spacing="xl"
-        className="bg-gradient-to-b from-transparent via-[var(--surface-dark)]/30 to-transparent"
+        className="bg-[var(--surface-light)]"
       >
         <div className="text-center">
           <Heading as="h2" className="mb-6">

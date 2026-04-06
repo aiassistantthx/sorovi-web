@@ -37,8 +37,8 @@ export function Navigation() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-[var(--bg-dark)]/90 backdrop-blur-xl border-b border-white/10 shadow-xl shadow-black/20"
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-sm border-b border-[var(--border-color)] shadow-sm"
+          : "bg-white"
       )}
     >
       <Container>
@@ -48,7 +48,7 @@ export function Navigation() {
             href="/"
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
           >
-            <div className="text-2xl font-bold text-white">
+            <div className="text-2xl font-bold text-[var(--text-primary)]">
               Sorovi
             </div>
           </Link>
@@ -59,7 +59,7 @@ export function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-[var(--text-gray-300)] hover:text-white transition-colors text-sm font-medium"
+                className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-medium"
               >
                 {link.label}
               </Link>
@@ -73,7 +73,7 @@ export function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-white"
+            className="md:hidden p-2 text-[var(--text-primary)]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -97,13 +97,13 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 border-t border-white/10">
+          <div className="md:hidden py-4 border-t border-[var(--border-color)]">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-[var(--text-gray-300)] hover:text-white transition-colors text-sm font-medium"
+                  className="text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}

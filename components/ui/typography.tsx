@@ -22,7 +22,7 @@ export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
           Tag === "h5" && "text-lg md:text-xl lg:text-2xl",
           Tag === "h6" && "text-base md:text-lg lg:text-xl",
           gradient && "bg-gradient-to-r from-[var(--brand-primary)] to-[var(--accent-green)] bg-clip-text text-transparent",
-          !gradient && "text-white",
+          !gradient && "text-[var(--text-primary)]",
           className
         )}
         {...props}
@@ -48,10 +48,10 @@ export const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
         ref={ref}
         className={cn(
           "leading-relaxed",
-          variant === "large" && "text-lg md:text-xl text-[var(--text-gray-100)]",
-          variant === "body" && "text-base md:text-lg text-[var(--text-gray-300)]",
-          variant === "small" && "text-sm md:text-base text-[var(--text-gray-300)]",
-          variant === "muted" && "text-sm md:text-base text-[var(--text-gray-500)]",
+          variant === "large" && "text-lg md:text-xl text-[var(--text-secondary)]",
+          variant === "body" && "text-base md:text-lg text-[var(--text-secondary)]",
+          variant === "small" && "text-sm md:text-base text-[var(--text-secondary)]",
+          variant === "muted" && "text-sm md:text-base text-[var(--text-muted)]",
           className
         )}
         {...props}

@@ -14,15 +14,15 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
   return (
     <div
       className={cn(
-        "border border-white/10 rounded-xl overflow-hidden transition-all duration-300",
-        isOpen && "border-[var(--brand-primary)]/50"
+        "border border-[var(--border-color)] rounded-xl overflow-hidden transition-all duration-300",
+        isOpen && "border-[var(--brand-primary)]/50 shadow-md"
       )}
     >
       <button
         onClick={onToggle}
-        className="w-full px-6 py-5 flex items-start justify-between gap-4 text-left hover:bg-white/5 transition-colors"
+        className="w-full px-6 py-5 flex items-start justify-between gap-4 text-left hover:bg-[var(--surface-light)] transition-colors"
       >
-        <span className="text-lg font-medium text-white flex-1">{question}</span>
+        <span className="text-lg font-medium text-[var(--text-primary)] flex-1">{question}</span>
         <svg
           className={cn(
             "w-5 h-5 text-[var(--brand-primary)] transition-transform duration-300 flex-shrink-0 mt-1",
@@ -44,7 +44,7 @@ function AccordionItem({ question, answer, isOpen, onToggle }: AccordionItemProp
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
         )}
       >
-        <div className="px-6 pb-5 text-[var(--text-gray-300)] leading-relaxed">
+        <div className="px-6 pb-5 text-[var(--text-secondary)] leading-relaxed">
           {answer}
         </div>
       </div>

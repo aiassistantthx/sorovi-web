@@ -94,12 +94,12 @@ export default function PricingPage() {
       {/* Hero Section */}
       <Section spacing="xl" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/3 w-96 h-96 bg-[var(--brand-primary)]/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-[var(--accent-green)]/10 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/3 w-96 h-96 bg-[var(--brand-primary)]/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-[var(--accent-green)]/5 rounded-full blur-3xl" />
         </div>
 
         <div className="text-center">
-          <Heading as="h1" gradient className="mb-6">
+          <Heading as="h1" className="mb-6">
             Simple, Transparent Pricing
           </Heading>
           <Text variant="large">
@@ -114,10 +114,10 @@ export default function PricingPage() {
           {plans.map((plan, index) => (
             <Card
               key={index}
-              variant="glass"
+              variant="elevated"
               className={`relative overflow-visible ${
                 plan.popular
-                  ? "border-[var(--brand-primary)] shadow-lg shadow-[var(--brand-primary)]/20"
+                  ? "border-[var(--brand-primary)] shadow-lg shadow-[var(--brand-primary)]/10"
                   : ""
               }`}
             >
@@ -130,14 +130,14 @@ export default function PricingPage() {
               )}
 
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-white mb-2">
+                <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-2">
                   {plan.name}
                 </h3>
                 <div className="flex items-baseline justify-center gap-1 mb-2">
-                  <span className="text-5xl font-bold text-white">
+                  <span className="text-5xl font-bold text-[var(--text-primary)]">
                     {plan.price}
                   </span>
-                  <span className="text-[var(--text-gray-400)]">
+                  <span className="text-[var(--text-muted)]">
                     /{plan.period}
                   </span>
                 </div>
@@ -165,7 +165,7 @@ export default function PricingPage() {
                     >
                       <path d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-sm text-[var(--text-gray-300)]">
+                    <span className="text-sm text-[var(--text-secondary)]">
                       {feature}
                     </span>
                   </li>
@@ -177,7 +177,7 @@ export default function PricingPage() {
       </Section>
 
       {/* Comparison Section */}
-      <Section spacing="xl" className="bg-[var(--surface-dark)]/30">
+      <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
             Compare All Features
@@ -190,17 +190,17 @@ export default function PricingPage() {
         <div className="overflow-x-auto">
           <table className="w-full max-w-6xl mx-auto">
             <thead>
-              <tr className="border-b border-white/10">
-                <th className="text-left py-4 px-4 text-white font-semibold">
+              <tr className="border-b border-[var(--border-color)]">
+                <th className="text-left py-4 px-4 text-[var(--text-primary)] font-semibold">
                   Feature
                 </th>
-                <th className="text-center py-4 px-4 text-white font-semibold">
+                <th className="text-center py-4 px-4 text-[var(--text-primary)] font-semibold">
                   Free
                 </th>
-                <th className="text-center py-4 px-4 text-white font-semibold bg-[var(--brand-primary)]/10 border-x border-[var(--brand-primary)]/30">
-                  Creator ⭐
+                <th className="text-center py-4 px-4 text-[var(--text-primary)] font-semibold bg-[var(--brand-primary)]/5 border-x border-[var(--brand-primary)]/20">
+                  Creator
                 </th>
-                <th className="text-center py-4 px-4 text-white font-semibold">
+                <th className="text-center py-4 px-4 text-[var(--text-primary)] font-semibold">
                   Business
                 </th>
               </tr>
@@ -215,17 +215,17 @@ export default function PricingPage() {
                 ["Team members", "1", "1", "5"],
                 ["Support", "Community", "Priority", "Dedicated"],
               ].map((row, index) => (
-                <tr key={index} className="border-b border-white/5">
-                  <td className="py-4 px-4 text-[var(--text-gray-300)]">
+                <tr key={index} className="border-b border-[var(--border-color)]">
+                  <td className="py-4 px-4 text-[var(--text-secondary)]">
                     {row[0]}
                   </td>
-                  <td className="py-4 px-4 text-center text-[var(--text-gray-400)]">
+                  <td className="py-4 px-4 text-center text-[var(--text-muted)]">
                     {row[1]}
                   </td>
-                  <td className="py-4 px-4 text-center text-white font-medium bg-[var(--brand-primary)]/5 border-x border-[var(--brand-primary)]/20">
+                  <td className="py-4 px-4 text-center text-[var(--text-primary)] font-medium bg-[var(--brand-primary)]/5 border-x border-[var(--brand-primary)]/10">
                     {row[2]}
                   </td>
-                  <td className="py-4 px-4 text-center text-white font-medium">
+                  <td className="py-4 px-4 text-center text-[var(--text-primary)] font-medium">
                     {row[3]}
                   </td>
                 </tr>
@@ -248,8 +248,8 @@ export default function PricingPage() {
 
         <div className="max-w-6xl mx-auto space-y-6">
           {faqs.map((faq, index) => (
-            <Card key={index} variant="glass">
-              <h3 className="text-lg font-semibold text-white mb-3">
+            <Card key={index} variant="elevated">
+              <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-3">
                 {faq.q}
               </h3>
               <Text variant="small">{faq.a}</Text>
@@ -259,7 +259,7 @@ export default function PricingPage() {
       </Section>
 
       {/* CTA Section */}
-      <Section spacing="xl" className="bg-gradient-to-b from-transparent via-[var(--surface-dark)]/30 to-transparent">
+      <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
             Start Creating Today
@@ -268,7 +268,7 @@ export default function PricingPage() {
             Join 14,258+ creators making viral content with Sorovi
           </Text>
           <Button size="lg">Get Started Free</Button>
-          <Text variant="small" className="mt-4 text-[var(--text-gray-500)]">
+          <Text variant="small" className="mt-4 text-[var(--text-muted)]">
             No credit card required • Cancel anytime
           </Text>
         </div>

@@ -20,18 +20,18 @@ export default function UseCasesPage() {
       {/* Hero Section */}
       <Section spacing="xl" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand-primary)]/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--accent-green)]/10 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand-primary)]/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[var(--accent-green)]/5 rounded-full blur-3xl" />
         </div>
 
         <div className="text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/5 backdrop-blur-lg border border-white/10 mb-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-[var(--brand-primary)]/10 border border-[var(--brand-primary)]/20 mb-6">
             <span className="text-sm font-medium text-[var(--brand-primary)]">
               Use Cases
             </span>
           </div>
 
-          <Heading as="h1" gradient className="mb-6">
+          <Heading as="h1" className="mb-6">
             AI Video for Every Industry
           </Heading>
           <Text variant="large" className="mb-8 max-w-3xl mx-auto">
@@ -44,7 +44,7 @@ export default function UseCasesPage() {
       </Section>
 
       {/* Stats */}
-      <Section spacing="lg" className="bg-[var(--surface-dark)]/30">
+      <Section spacing="lg" className="bg-[var(--surface-light)]">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { value: "10+", label: "Industries Served" },
@@ -53,10 +53,10 @@ export default function UseCasesPage() {
             { value: "10x", label: "Faster Content Creation" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">
+              <div className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-2">
                 {stat.value}
               </div>
-              <Text variant="small" className="text-[var(--text-gray-300)]">
+              <Text variant="small" className="text-[var(--text-secondary)]">
                 {stat.label}
               </Text>
             </div>
@@ -75,7 +75,7 @@ export default function UseCasesPage() {
             key={industryIndex}
             spacing="xl"
             className={
-              industryIndex % 2 === 0 ? "bg-[var(--surface-dark)]/30" : ""
+              industryIndex % 2 === 0 ? "bg-[var(--surface-light)]" : ""
             }
           >
             <div className="mb-10">
@@ -91,8 +91,8 @@ export default function UseCasesPage() {
               {industryUseCases.map((useCase, index) => (
                 <Card
                   key={index}
-                  variant="glass"
-                  className="group cursor-pointer hover:border-[var(--brand-primary)]/50 transition-all"
+                  variant="elevated"
+                  className="group cursor-pointer hover:border-[var(--brand-primary)]/30 transition-all"
                 >
                   <Link href={`/use-cases/${useCase.slug}`}>
                     <div className="flex items-start justify-between mb-4">
@@ -101,7 +101,7 @@ export default function UseCasesPage() {
                       </div>
                       <Badge variant="primary">{useCase.industry}</Badge>
                     </div>
-                    <h3 className="text-base md:text-xl font-semibold text-white mb-2 group-hover:text-[var(--brand-primary)] transition-colors">
+                    <h3 className="text-base md:text-xl font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors">
                       {useCase.name}
                     </h3>
                     <Text variant="small" className="mb-4 line-clamp-3">
@@ -132,7 +132,7 @@ export default function UseCasesPage() {
       {/* CTA Section */}
       <Section
         spacing="xl"
-        className="bg-gradient-to-b from-transparent via-[var(--surface-dark)]/30 to-transparent"
+        className="bg-[var(--surface-light)]"
       >
         <div className="text-center">
           <Heading as="h2" className="mb-6">

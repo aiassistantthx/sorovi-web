@@ -335,7 +335,7 @@ export const tools: Tool[] = [
     name: "Image to Video AI",
     tagline: "Transform any photo into stunning AI video in seconds",
     description: "Turn your photos into professional AI-generated videos with cinematic motion effects. Create viral TikTok, Instagram Reels, and YouTube Shorts from a single image.",
-    detailedDescription: "Transform still images into captivating videos with Sorovi's powerful Image to Video AI technology. Our advanced AI analyzes your photos and creates smooth, professional-quality videos with realistic camera movements including zoom, orbit, follow, and 3D parallax effects. Perfect for content creators, e-commerce sellers, social media marketers, and anyone who wants to bring their photos to life. No video editing skills required—just upload your image and watch our AI create magic. Sorovi's iOS app makes it easy to create viral content for TikTok, Instagram Reels, and YouTube Shorts directly from your phone. Join over 500,000 creators who trust Sorovi to transform their images into scroll-stopping videos.",
+    detailedDescription: "Transform still images into captivating videos with Sorovi's powerful Image to Video AI technology. Our advanced AI analyzes your photos and creates smooth, professional-quality videos with realistic camera movements including zoom, orbit, follow, and 3D parallax effects. Perfect for content creators and anyone who wants to bring their photos to life. No video editing skills required—just upload your image and watch our AI create magic. Sorovi's iOS app makes it easy to create viral content for TikTok, Instagram Reels, and YouTube Shorts directly from your phone.",
     icon: "🎬",
     category: "Video Generation",
     howItWorks: [
@@ -357,7 +357,7 @@ export const tools: Tool[] = [
       {
         step: "4",
         title: "Generate & Share",
-        description: "AI generates your video in seconds. Export directly to TikTok, Instagram, YouTube, or save to your device."
+        description: "AI generates your video in seconds. Share to TikTok, Instagram, YouTube via iOS share sheet, or save to your device."
       }
     ],
     features: [
@@ -401,7 +401,7 @@ export const tools: Tool[] = [
       "Works with any image type—products, portraits, landscapes"
     ],
     useCases: [
-      "E-commerce product videos for Amazon, Shopify, Etsy",
+      "E-commerce product videos for online stores",
       "TikTok and Instagram Reels content creation",
       "Real estate property showcases",
       "Fashion and beauty brand marketing",
@@ -475,7 +475,7 @@ export const tools: Tool[] = [
       {
         step: "4",
         title: "Export to TikTok",
-        description: "One-tap export directly to TikTok app. Perfect format, perfect quality, ready for the FYP."
+        description: "Export in perfect TikTok format. Share via iOS share sheet, ready for the FYP."
       }
     ],
     features: [
@@ -501,8 +501,8 @@ export const tools: Tool[] = [
       },
       {
         icon: "📤",
-        title: "One-Tap TikTok Export",
-        description: "Share directly to TikTok without leaving Sorovi"
+        title: "Easy TikTok Sharing",
+        description: "Export and share to TikTok via iOS share sheet"
       },
       {
         icon: "💬",
@@ -514,7 +514,7 @@ export const tools: Tool[] = [
       "Create content faster than your competition",
       "No video editing experience required",
       "Effects optimized for algorithm engagement",
-      "Consistent posting schedule made easy",
+      "Create multiple videos quickly for consistent posting",
       "Professional quality from any photo"
     ],
     useCases: [
@@ -528,7 +528,7 @@ export const tools: Tool[] = [
     pricing: {
       free: "5 TikTok videos per day",
       creator: "Unlimited videos, all effects",
-      business: "Unlimited + analytics, scheduling"
+      business: "Unlimited + commercial license"
     },
     faqs: [
       {
@@ -584,7 +584,7 @@ export const tools: Tool[] = [
       {
         step: "4",
         title: "Share to Instagram",
-        description: "Export in perfect Reels format (9:16). Post directly or schedule for later."
+        description: "Export in perfect Reels format (9:16). Share to Instagram via the iOS share sheet."
       }
     ],
     features: [
@@ -605,8 +605,8 @@ export const tools: Tool[] = [
       },
       {
         icon: "🔗",
-        title: "Direct Instagram Share",
-        description: "One-tap sharing to Instagram Reels and Stories"
+        title: "Easy Instagram Sharing",
+        description: "Export and share to Instagram Reels and Stories via iOS share sheet"
       },
       {
         icon: "📝",
@@ -637,7 +637,7 @@ export const tools: Tool[] = [
     pricing: {
       free: "5 Reels per day, watermark",
       creator: "Unlimited Reels, no watermark",
-      business: "Unlimited + brand kit, analytics"
+      business: "Unlimited + commercial license"
     },
     faqs: [
       {
@@ -850,12 +850,12 @@ export const tools: Tool[] = [
       "Real estate property tours",
       "Art and photography showcases",
       "Social media content",
-      "E-commerce product videos"
+      "Product showcase videos"
     ],
     pricing: {
       free: "5 zoom videos per day",
       creator: "Unlimited, all zoom styles",
-      business: "Unlimited + batch processing"
+      business: "Unlimited + commercial license"
     },
     faqs: [
       {
@@ -954,7 +954,7 @@ export const tools: Tool[] = [
       "Professional quality in seconds"
     ],
     useCases: [
-      "E-commerce product 360° views",
+      "Product 360° showcase views",
       "Jewelry and watch showcases",
       "Art and collectible displays",
       "Portrait and headshot reveals",
@@ -964,7 +964,7 @@ export const tools: Tool[] = [
     pricing: {
       free: "3 orbit videos per day",
       creator: "Unlimited orbits, all angles",
-      business: "Unlimited + batch processing"
+      business: "Unlimited + commercial license"
     },
     faqs: [
       {
@@ -994,11 +994,120 @@ export const tools: Tool[] = [
     ]
   },
   {
+    slug: "ai-parallax-video-effect",
+    name: "AI Parallax Video Effect",
+    tagline: "Add cinematic depth and 3D motion to any photo",
+    description: "Create stunning parallax videos that add multi-layer depth to your images using AI. Transform flat photos into immersive, 3D-like clips with natural camera movement.",
+    detailedDescription: "Sorovi's AI Parallax Video Effect brings your still images to life by creating realistic depth-based motion. The AI analyzes your photo, separates it into multiple depth layers, and moves them at different speeds to create a convincing 3D parallax effect. This is the same technique used in professional film and TV production to add cinematic depth to still imagery. Whether you are working with landscape photos, portraits, product shots, or architectural images, the parallax effect adds a premium feel that captures attention. The foreground moves faster than the background, creating natural depth perception that makes viewers feel like they are looking through a window rather than at a flat image.",
+    icon: "🖼️",
+    category: "Effects",
+    howItWorks: [
+      {
+        step: "1",
+        title: "Upload Your Photo",
+        description: "Choose any image — landscapes, portraits, products, architecture. Higher resolution gives sharper results."
+      },
+      {
+        step: "2",
+        title: "AI Creates Depth Map",
+        description: "Our AI analyzes the image and generates a multi-layer depth map, separating foreground, midground, and background."
+      },
+      {
+        step: "3",
+        title: "Choose Motion Style",
+        description: "Select from horizontal pan, vertical drift, zoom reveal, or subtle float. Adjust speed and intensity."
+      },
+      {
+        step: "4",
+        title: "Export Your Video",
+        description: "AI renders smooth parallax motion. Download in HD and share on any platform."
+      }
+    ],
+    features: [
+      {
+        icon: "🔍",
+        title: "AI Depth Detection",
+        description: "Automatically separates images into multiple depth layers for realistic parallax"
+      },
+      {
+        icon: "🎬",
+        title: "Multiple Motion Styles",
+        description: "Horizontal pan, vertical drift, zoom reveal, and subtle float effects"
+      },
+      {
+        icon: "🎚️",
+        title: "Adjustable Intensity",
+        description: "Control how much depth separation and movement speed to apply"
+      },
+      {
+        icon: "🏔️",
+        title: "Multi-Layer Separation",
+        description: "Up to 5 depth layers for smooth, natural-looking parallax motion"
+      },
+      {
+        icon: "🔁",
+        title: "Seamless Looping",
+        description: "Create perfect loops for social media posts and stories"
+      },
+      {
+        icon: "📱",
+        title: "All Aspect Ratios",
+        description: "Export in portrait, landscape, or square for any platform"
+      }
+    ],
+    benefits: [
+      "Turn flat photos into immersive 3D-like videos",
+      "Cinematic depth effect without any 3D software",
+      "Works with any type of image — landscapes, portraits, products",
+      "Create scroll-stopping content in seconds",
+      "Professional film-quality effect from your phone"
+    ],
+    useCases: [
+      "Landscape and travel photo reveals",
+      "Real estate property showcases",
+      "Product highlight videos with depth",
+      "Portrait and headshot animations",
+      "Social media story content",
+      "Architectural and interior design showcases"
+    ],
+    pricing: {
+      free: "3 parallax videos per day",
+      creator: "Unlimited parallax, all motion styles",
+      business: "Unlimited + commercial license"
+    },
+    faqs: [
+      {
+        question: "How does AI parallax work from a single photo?",
+        answer: "Sorovi's AI uses depth estimation to analyze your image and separate it into multiple layers at different distances. It then moves these layers at different speeds — foreground faster, background slower — creating convincing 3D depth motion from a flat 2D image."
+      },
+      {
+        question: "What types of photos work best for parallax?",
+        answer: "Photos with clear depth — landscapes with foreground and background elements, portraits with background separation, products on surfaces, and architectural shots. Images where you can naturally see 'near' and 'far' elements produce the most dramatic results."
+      },
+      {
+        question: "What is the difference between parallax and orbit effects?",
+        answer: "Parallax creates depth by moving layers at different speeds, like looking out a car window. Orbit creates the illusion of a camera rotating around the subject. Parallax works best for landscapes and scenes with depth. Orbit works best for products and subjects you want to showcase from multiple angles."
+      },
+      {
+        question: "Can I control the direction of parallax movement?",
+        answer: "Yes. You can choose horizontal pan (left-right), vertical drift (up-down), zoom reveal (front-back), or subtle float. You can also adjust the speed and intensity of the movement."
+      },
+      {
+        question: "Is the parallax effect available on the free plan?",
+        answer: "Yes! Free users get 3 parallax videos per day. Upgrade to Creator for unlimited parallax videos and access to all motion styles and customization options."
+      },
+      {
+        question: "Can I use parallax videos for commercial purposes?",
+        answer: "Creator plan videos are for personal and social media use. For commercial use such as advertising, client work, or product listings, the Business plan includes a commercial license."
+      }
+    ]
+  },
+  {
     slug: "ai-product-video-maker",
     name: "AI Product Video Maker",
     tagline: "Turn product photos into sales-driving videos",
-    description: "Create professional product videos from still photos using AI. Perfect for Amazon, Shopify, Etsy, and e-commerce sellers who want to boost conversions.",
-    detailedDescription: "Sorovi's AI Product Video Maker is the ultimate tool for e-commerce sellers who want to increase sales with compelling product videos. Upload any product photo and our AI instantly generates a polished, conversion-optimized video with cinematic motion, dynamic angles, and professional lighting effects. Whether you sell on Amazon, Shopify, Etsy, or your own store, product videos consistently outperform static images in click-through rates and conversions. Sorovi eliminates the need for expensive product videography sessions, studio rentals, and professional editing. Create videos that highlight product details, showcase features from multiple angles, and present your items in the best possible light. Batch-process your entire catalog in minutes instead of days, and keep your listings fresh with seasonal variations and A/B test versions. Trusted by over 50,000 e-commerce sellers worldwide.",
+    description: "Create professional product videos from still photos using AI. Turn product photos into dynamic videos with cinematic motion effects that help boost conversions.",
+    detailedDescription: "Sorovi's AI Product Video Maker helps e-commerce sellers create compelling product videos from existing photos. Upload any product photo and our AI generates a polished video with cinematic motion, dynamic angles, and professional effects. Product videos consistently outperform static images in click-through rates and conversions. Sorovi eliminates the need for expensive product videography sessions, studio rentals, and professional editing. Create videos that highlight product details, showcase features from multiple angles, and present your items in the best possible light.",
     icon: "🛒",
     category: "E-commerce",
     howItWorks: [
@@ -1015,7 +1124,7 @@ export const tools: Tool[] = [
       {
         step: "3",
         title: "Customize for Your Store",
-        description: "Add your brand logo, price callouts, feature badges, and choose platform-specific aspect ratios for Amazon, Shopify, or social ads."
+        description: "Add your brand logo, price callouts, feature badges, and choose the right aspect ratio for your listing or social ads."
       },
       {
         step: "4",
@@ -1031,8 +1140,8 @@ export const tools: Tool[] = [
       },
       {
         icon: "🏪",
-        title: "Marketplace Templates",
-        description: "Pre-built templates optimized for Amazon, Shopify, Etsy, and eBay listings"
+        title: "E-commerce Templates",
+        description: "Pre-built templates optimized for product listings and online store videos"
       },
       {
         icon: "🏷️",
@@ -1046,8 +1155,8 @@ export const tools: Tool[] = [
       },
       {
         icon: "⚡",
-        title: "Batch Processing",
-        description: "Process your entire product catalog at once—hundreds of videos in minutes"
+        title: "Fast Generation",
+        description: "Create product videos in seconds, not hours—no editing skills required"
       },
       {
         icon: "🔄",
@@ -1056,28 +1165,28 @@ export const tools: Tool[] = [
       }
     ],
     benefits: [
-      "Increase product listing conversion rates by up to 80%",
-      "Save thousands on professional product videography",
-      "Create videos for your entire catalog in one session",
+      "Save on professional product videography costs",
+      "Create dynamic videos from existing product photos",
       "Stand out from competitors using only static images",
-      "Boost ad performance with dynamic product creatives"
+      "Boost ad performance with dynamic product creatives",
+      "No video editing skills or equipment needed"
     ],
     useCases: [
-      "Amazon product listing videos",
-      "Shopify store product showcases",
+      "Online store product listing videos",
+      "Product showcase videos for social media",
       "Facebook and Instagram product ads",
-      "Etsy listing enhancements",
-      "Product launch announcements"
+      "Product launch announcements",
+      "E-commerce marketing content"
     ],
     pricing: {
       free: "3 product videos per day, watermark",
       creator: "Unlimited videos, no watermark",
-      business: "Unlimited + batch processing, brand kit"
+      business: "Unlimited + brand kit, commercial license"
     },
     faqs: [
       {
         question: "Does product video really increase sales?",
-        answer: "Yes. Studies consistently show that product listings with video see 20-80% higher conversion rates compared to static images alone. Video helps shoppers understand products better and builds trust in your brand."
+        answer: "Industry research consistently shows that product listings with video tend to see higher conversion rates compared to static images alone. Video helps shoppers understand products better and builds trust in your brand."
       },
       {
         question: "What product photos work best?",
@@ -1088,8 +1197,8 @@ export const tools: Tool[] = [
         answer: "Absolutely! Add your logo, brand colors, price tags, feature badges, sale banners, and custom text overlays. Business plan includes a full brand kit for consistent styling across all videos."
       },
       {
-        question: "What video formats do Amazon and Shopify support?",
-        answer: "Sorovi exports in all marketplace-compatible formats. Amazon accepts MP4 up to 500MB in 16:9 or 1:1. Shopify supports any format. We auto-optimize resolution and file size for each platform."
+        question: "What video formats does Sorovi export?",
+        answer: "Sorovi exports in MP4 format with options for 16:9, 1:1, and 9:16 aspect ratios. We optimize resolution and file size for common e-commerce and social media platforms."
       }
     ]
   },
@@ -1172,7 +1281,7 @@ export const tools: Tool[] = [
     pricing: {
       free: "5 AI videos per day, standard quality",
       creator: "Unlimited videos, HD quality",
-      business: "Unlimited + 4K quality, API access"
+      business: "Unlimited + 4K quality, commercial license"
     },
     faqs: [
       {
@@ -1272,7 +1381,7 @@ export const tools: Tool[] = [
     pricing: {
       free: "3 multi-platform exports per day",
       creator: "Unlimited exports, all platforms",
-      business: "Unlimited + scheduling, team collaboration"
+      business: "Unlimited + brand kit, commercial license"
     },
     faqs: [
       {
@@ -1288,8 +1397,8 @@ export const tools: Tool[] = [
         answer: "Sorovi supports TikTok (9:16), Instagram Reels/Stories (9:16), Instagram Feed (1:1, 4:5), YouTube Shorts (9:16), Facebook Feed (16:9, 1:1), Pinterest (2:3), LinkedIn (16:9), and Twitter/X (16:9, 1:1)."
       },
       {
-        question: "Can I schedule posts directly from Sorovi?",
-        answer: "Business plan includes scheduling capabilities. For free and Creator plans, you can download all platform versions and use your preferred scheduling tool to post them."
+        question: "Can I post directly from Sorovi?",
+        answer: "Sorovi exports videos optimized for each platform. Use the iOS share sheet to send videos directly to any social media app, or save and upload them using your preferred workflow."
       }
     ]
   },
@@ -1298,7 +1407,7 @@ export const tools: Tool[] = [
     name: "AI Video Generator App",
     tagline: "The #1 AI video generator app for iPhone",
     description: "Create professional AI-generated videos right from your iPhone. Sorovi is the top-rated iOS app for transforming photos into stunning videos with AI-powered effects.",
-    detailedDescription: "Sorovi is the highest-rated AI video generator app on the App Store, designed from the ground up for iPhone and iPad. Unlike web-based tools that feel clunky on mobile, Sorovi delivers a native iOS experience with instant camera roll integration, haptic feedback, intuitive gesture controls, and optimized performance that takes full advantage of Apple's Neural Engine. Create professional-quality AI videos in seconds, right from your phone. No uploads to sketchy servers, no waiting for cloud processing—Sorovi's on-device AI processes your images locally for faster results and complete privacy. With over 500,000 downloads and a 4.8-star rating, Sorovi is the go-to app for creators, marketers, and everyday users who want to create scroll-stopping video content. Available exclusively on iOS with features including real-time preview, one-tap social sharing, iCloud sync, and Apple Watch companion for remote triggering.",
+    detailedDescription: "Sorovi is a top-rated AI video generator app on the App Store, designed from the ground up for iPhone and iPad. Unlike web-based tools that feel clunky on mobile, Sorovi delivers a native iOS experience with instant camera roll integration, haptic feedback, and intuitive gesture controls. Create professional-quality AI videos in seconds, right from your phone. Sorovi processes your images quickly for fast results. Available on iOS with features including real-time preview, one-tap social sharing via the native share sheet, and iCloud sync across your devices.",
     icon: "📱",
     category: "Video Generation",
     howItWorks: [
@@ -1327,7 +1436,7 @@ export const tools: Tool[] = [
       {
         icon: "🍎",
         title: "Native iOS Experience",
-        description: "Built for iPhone with haptic feedback, gestures, and Apple Neural Engine optimization"
+        description: "Built for iPhone with haptic feedback, gestures, and optimized performance"
       },
       {
         icon: "🔒",
@@ -1351,8 +1460,8 @@ export const tools: Tool[] = [
       },
       {
         icon: "⚡",
-        title: "Neural Engine Speed",
-        description: "Leverages Apple's Neural Engine for AI processing up to 10x faster than cloud"
+        title: "Fast Processing",
+        description: "Optimized AI processing for quick video generation on your device"
       }
     ],
     benefits: [
@@ -1360,7 +1469,7 @@ export const tools: Tool[] = [
       "No internet connection needed for basic effects",
       "Privacy-first with on-device AI processing",
       "Seamless integration with iOS ecosystem",
-      "Fastest AI video generation on any mobile platform"
+      "Quick AI video generation right from your phone"
     ],
     useCases: [
       "On-the-go content creation for social media",
@@ -1385,11 +1494,11 @@ export const tools: Tool[] = [
       },
       {
         question: "Does Sorovi work offline?",
-        answer: "Basic AI effects work entirely offline using on-device processing. Some advanced generative effects require an internet connection for cloud AI processing. Offline mode is great for creating content while traveling."
+        answer: "Some effects work offline while others require an internet connection. The app will indicate which features are available in each mode."
       },
       {
         question: "How does Sorovi compare to other AI video apps?",
-        answer: "Sorovi is the only AI video generator app with full on-device processing, meaning faster results and better privacy. Our 4.8-star App Store rating and 500,000+ downloads reflect the quality difference. We also offer more AI effect types than any competing app."
+        answer: "Sorovi is designed specifically for turning photos into videos with AI motion effects. It offers a native iOS experience with real-time previews, multiple AI effects (zoom, orbit, follow, parallax), and easy sharing. Try it free and see the difference."
       }
     ]
   },
@@ -1398,7 +1507,7 @@ export const tools: Tool[] = [
     name: "AI Faceless Video Generator",
     tagline: "Create viral videos without showing your face",
     description: "Generate engaging faceless video content using AI. Perfect for creators who want to build an audience and monetize content without appearing on camera.",
-    detailedDescription: "Sorovi's AI Faceless Video Generator empowers a new generation of content creators who prefer to stay behind the scenes. Not everyone wants to be on camera, and that should never limit your creative potential or earning ability. Our AI transforms your images, ideas, and concepts into polished, engaging videos that captivate audiences without requiring you to show your face. Create compelling content for faceless YouTube channels, anonymous TikTok accounts, educational content, product reviews, motivational pages, and niche topic channels. Sorovi's AI handles the visual storytelling through dynamic image animations, cinematic motion effects, and intelligent scene composition. Pair these visuals with our AI voiceover tool for complete faceless videos that rival traditional on-camera content in engagement and watch time. Thousands of creators are building six-figure faceless channels using Sorovi's AI video technology. Join the faceless content revolution and start creating today.",
+    detailedDescription: "Sorovi's AI Faceless Video Generator empowers content creators who prefer to stay behind the scenes. Not everyone wants to be on camera, and that should never limit your creative potential. Our AI transforms your images, ideas, and concepts into polished, engaging videos that captivate audiences without requiring you to show your face. Create compelling content for faceless YouTube channels, anonymous TikTok accounts, educational content, product reviews, motivational pages, and niche topic channels. Sorovi's AI handles the visual storytelling through dynamic image animations, cinematic motion effects, and intelligent scene composition. Pair these visuals with our AI voiceover tool for complete faceless videos.",
     icon: "🎭",
     category: "Content Creation",
     howItWorks: [
@@ -1472,7 +1581,7 @@ export const tools: Tool[] = [
     pricing: {
       free: "3 faceless videos per day",
       creator: "Unlimited videos, all AI voices",
-      business: "Unlimited + batch creation, scheduling"
+      business: "Unlimited + all voices, commercial license"
     },
     faqs: [
       {
@@ -1498,7 +1607,7 @@ export const tools: Tool[] = [
     name: "AI Short Video Maker",
     tagline: "Create viral short-form videos in seconds",
     description: "Generate attention-grabbing short videos optimized for virality. AI creates the perfect hook, pacing, and motion to maximize views on TikTok, Reels, and Shorts.",
-    detailedDescription: "Short-form video is the most powerful content format in social media today, and Sorovi's AI Short Video Maker helps you master it. Our AI is trained on millions of viral short videos to understand exactly what makes content go viral: the perfect hook timing, optimal pacing, attention-retaining motion patterns, and engagement-driving effects. Upload any photo and Sorovi generates a short video engineered for maximum watch time and shareability. The AI automatically structures your video with a strong opening hook in the first 0.5 seconds, maintains visual interest throughout with dynamic motion, and creates a satisfying conclusion that encourages replays and shares. Whether you're building a following, promoting a brand, or just creating for fun, Sorovi takes the guesswork out of short-form video creation. Our users report an average 3x increase in engagement after switching to Sorovi-generated short videos compared to static posts.",
+    detailedDescription: "Short-form video is the most powerful content format in social media today, and Sorovi's AI Short Video Maker helps you master it. Our AI understands what makes short-form content engaging: strong opening hooks, optimal pacing, attention-retaining motion patterns, and dynamic effects. Upload any photo and Sorovi generates a short video designed for watch time and shareability. The AI structures your video with a strong opening, maintains visual interest with dynamic motion, and creates a satisfying loop that encourages replays. Whether you're building a following, promoting a brand, or just creating for fun, Sorovi takes the guesswork out of short-form video creation.",
     icon: "⚡",
     category: "Social Media",
     howItWorks: [
@@ -1572,7 +1681,7 @@ export const tools: Tool[] = [
     pricing: {
       free: "5 short videos per day",
       creator: "Unlimited shorts, virality scoring",
-      business: "Unlimited + trend analytics, team features"
+      business: "Unlimited + all effects, commercial license"
     },
     faqs: [
       {
@@ -1598,14 +1707,14 @@ export const tools: Tool[] = [
     name: "AI E-commerce Video Creator",
     tagline: "Product videos that sell — powered by AI",
     description: "Create conversion-optimized product videos, ad creatives, and marketing content for your online store. Built specifically for e-commerce brands and sellers.",
-    detailedDescription: "Sorovi's AI E-commerce Video Creator is purpose-built for online retailers who understand that video content drives sales. Our AI goes beyond simple product animation—it creates strategically crafted marketing videos designed to convert browsers into buyers. Generate hero product videos for your homepage, lifestyle context videos showing products in use, feature highlight reels that communicate value, comparison videos, seasonal promotional content, and retargeting ad creatives—all from your existing product photography. The AI understands e-commerce best practices: it highlights product details at the right moment, creates urgency with dynamic motion, and presents your products with the visual quality of a professional studio shoot. Integrate with your Shopify, WooCommerce, or BigCommerce store to pull product images automatically and generate videos at scale. Our e-commerce customers report an average 35% increase in conversion rates and 25% reduction in return rates when adding AI-generated product videos to their listings.",
+    detailedDescription: "Sorovi's AI E-commerce Video Creator helps online sellers create compelling product videos from existing photos. Upload product images and our AI generates professional marketing videos with cinematic motion effects, dynamic angles, and polished presentation. Create hero product videos, feature highlight reels, and promotional content—all from your existing product photography. The AI highlights product details with strategic motion and presents your products with professional visual quality. Video content consistently outperforms static images in e-commerce, and Sorovi makes it easy to create product videos without a studio or video team.",
     icon: "💰",
     category: "E-commerce",
     howItWorks: [
       {
         step: "1",
-        title: "Connect Your Store or Upload",
-        description: "Link your Shopify, WooCommerce, or BigCommerce store for automatic product import, or upload images manually."
+        title: "Upload Product Images",
+        description: "Upload your product photos directly. Clean product-on-white backgrounds work great, but any photo will do."
       },
       {
         step: "2",
@@ -1620,14 +1729,14 @@ export const tools: Tool[] = [
       {
         step: "4",
         title: "Deploy Across Channels",
-        description: "Export for your product pages, social ads, email campaigns, or marketplace listings. Track performance metrics."
+        description: "Export for your product pages, social ads, email campaigns, or marketplace listings."
       }
     ],
     features: [
       {
         icon: "🛍️",
-        title: "Store Integration",
-        description: "Direct integration with Shopify, WooCommerce, and BigCommerce for automatic product import"
+        title: "Product-Focused AI",
+        description: "AI trained on product photography to create effective showcase videos"
       },
       {
         icon: "🎯",
@@ -1636,8 +1745,8 @@ export const tools: Tool[] = [
       },
       {
         icon: "📣",
-        title: "Ad Creative Generator",
-        description: "Create Facebook, Instagram, and Google Shopping ad creatives in bulk"
+        title: "Ad-Ready Exports",
+        description: "Export videos in formats ready for Facebook, Instagram, and other ad platforms"
       },
       {
         icon: "🏷️",
@@ -1645,43 +1754,43 @@ export const tools: Tool[] = [
         description: "Auto-generate sale badges, price comparisons, and limited-time offer graphics"
       },
       {
-        icon: "📊",
-        title: "Performance Analytics",
-        description: "Track which video styles drive the most conversions for your products"
+        icon: "📐",
+        title: "Multi-Format Export",
+        description: "Export in square, landscape, or vertical formats for any platform"
       },
       {
         icon: "🔄",
-        title: "Seasonal Auto-Updates",
-        description: "Automatically refresh videos with seasonal themes, holiday branding, and sale events"
+        title: "Multiple Variations",
+        description: "Generate different video versions from the same product to find what works best"
       }
     ],
     benefits: [
-      "Increase product page conversion rates by up to 35%",
-      "Reduce return rates with better product visualization",
-      "Scale video content across thousands of SKUs",
-      "Create ad creatives faster than agencies at a fraction of the cost",
-      "Keep listings fresh with seasonal and promotional variations"
+      "Enhance product listings with dynamic video content",
+      "Help customers visualize products better before buying",
+      "Create professional product videos without a studio",
+      "Save compared to hiring product videographers",
+      "Stand out from competitors with video-enhanced listings"
     ],
     useCases: [
-      "Shopify and WooCommerce product page videos",
-      "Facebook and Instagram dynamic product ads",
-      "Google Shopping video listings",
+      "Online store product page videos",
+      "Facebook and Instagram product ads",
+      "Product showcase videos for social media",
       "Email marketing product showcases",
-      "Amazon and marketplace enhanced listings"
+      "Marketplace listing enhancements"
     ],
     pricing: {
       free: "3 e-commerce videos per day",
-      creator: "Unlimited videos, store integration",
-      business: "Unlimited + analytics, API, bulk generation"
+      creator: "Unlimited videos, no watermark",
+      business: "Unlimited + brand kit, commercial license"
     },
     faqs: [
       {
-        question: "How does Sorovi integrate with my Shopify store?",
-        answer: "Install the Sorovi Shopify app from the App Store, connect your account, and your product catalog syncs automatically. Select any product and Sorovi pulls its images to generate videos. You can also push finished videos directly back to your product pages."
+        question: "How do I create videos for my products?",
+        answer: "Simply upload your product photos in the Sorovi app, choose a video style, and the AI generates a professional product video in seconds. Export the video and add it to your product listings on any platform."
       },
       {
-        question: "Can I create videos for my entire product catalog?",
-        answer: "Yes! Business plan includes bulk generation. Upload your catalog or connect your store, and Sorovi generates videos for every product. Process hundreds of SKUs in a single session with consistent quality and branding."
+        question: "Can I create videos for multiple products?",
+        answer: "Yes! You can create videos for as many products as you like. Upload product photos one at a time and generate professional videos for each. Creator and Business plans offer unlimited video generation."
       },
       {
         question: "What types of e-commerce videos can I create?",
@@ -1689,7 +1798,7 @@ export const tools: Tool[] = [
       },
       {
         question: "Do product videos really reduce return rates?",
-        answer: "Yes. Research shows that product videos help customers understand size, color, texture, and functionality better than photos alone. This leads to more informed purchase decisions and fewer returns. Our customers report 15-25% fewer returns after adding product videos."
+        answer: "Research shows that product videos help customers understand size, color, texture, and functionality better than photos alone. This leads to more informed purchase decisions. Video content generally helps reduce returns by setting accurate expectations."
       }
     ]
   },
@@ -1772,7 +1881,7 @@ export const tools: Tool[] = [
     pricing: {
       free: "5 animations per day, standard quality",
       creator: "Unlimited animations, HD quality",
-      business: "Unlimited + 4K, batch animation, API"
+      business: "Unlimited + 4K quality, commercial license"
     },
     faqs: [
       {
@@ -1872,7 +1981,7 @@ export const tools: Tool[] = [
     pricing: {
       free: "3 3D videos per day, standard depth",
       creator: "Unlimited, advanced depth control",
-      business: "Unlimited + 4K parallax, batch processing"
+      business: "Unlimited + 4K parallax, commercial license"
     },
     faqs: [
       {
@@ -1972,7 +2081,7 @@ export const tools: Tool[] = [
     pricing: {
       free: "3 follow videos per day",
       creator: "Unlimited, all follow styles",
-      business: "Unlimited + multi-subject tracking, batch"
+      business: "Unlimited + multi-subject tracking, commercial license"
     },
     faqs: [
       {

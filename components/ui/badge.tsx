@@ -12,9 +12,9 @@ export function Badge({ children, variant = "default", className }: BadgeProps) 
       className={cn(
         "inline-flex items-center px-3 py-1 rounded-full text-xs font-medium",
         variant === "default" &&
-          "bg-white/10 text-[var(--text-gray-100)] border border-white/10",
+          "bg-[var(--surface-light)] text-[var(--text-secondary)] border border-[var(--border-color)]",
         variant === "outline" &&
-          "bg-transparent text-[var(--text-gray-300)] border border-white/20",
+          "bg-transparent text-[var(--text-secondary)] border border-[var(--border-color)]",
         variant === "primary" &&
           "bg-[var(--brand-primary)]/10 text-[var(--brand-primary)] border border-[var(--brand-primary)]/30",
         className

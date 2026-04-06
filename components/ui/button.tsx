@@ -17,26 +17,26 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           // Base styles
           "inline-flex items-center justify-center rounded-xl font-semibold",
           "transition-all duration-200 ease-in-out",
-          "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[var(--bg-dark)]",
+          "focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white",
           "disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none",
 
           // Variant styles
           variant === "primary" && [
             "bg-[var(--brand-primary)]",
             "text-white",
-            "shadow-lg shadow-[var(--brand-primary)]/30",
-            "hover:shadow-xl hover:shadow-[var(--brand-primary)]/50",
-            "hover:bg-[var(--accent-blue)]",
+            "shadow-lg shadow-[var(--brand-primary)]/20",
+            "hover:shadow-xl hover:shadow-[var(--brand-primary)]/30",
+            "hover:bg-[var(--brand-primary-hover)]",
             "hover:-translate-y-0.5",
             "focus:ring-[var(--brand-primary)]",
           ],
 
           variant === "secondary" && [
-            "bg-white/10 backdrop-blur-lg",
-            "border border-white/20",
-            "text-white",
-            "hover:bg-white/20 hover:border-white/30",
-            "focus:ring-white/50",
+            "bg-[var(--surface-light)]",
+            "border border-[var(--border-color)]",
+            "text-[var(--text-primary)]",
+            "hover:bg-[var(--surface-alt)] hover:border-[var(--border-strong)]",
+            "focus:ring-[var(--border-strong)]",
           ],
 
           variant === "outline" && [
@@ -49,9 +49,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 
           variant === "ghost" && [
             "bg-transparent",
-            "text-[var(--text-gray-300)]",
-            "hover:bg-white/10 hover:text-white",
-            "focus:ring-white/50",
+            "text-[var(--text-secondary)]",
+            "hover:bg-[var(--surface-light)] hover:text-[var(--text-primary)]",
+            "focus:ring-[var(--border-color)]",
           ],
 
           // Size styles

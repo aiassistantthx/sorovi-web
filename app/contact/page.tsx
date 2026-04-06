@@ -47,12 +47,12 @@ export default function ContactPage() {
       {/* Hero Section */}
       <Section spacing="xl" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/3 w-96 h-96 bg-[var(--brand-primary)]/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-[var(--accent-green)]/10 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/3 w-96 h-96 bg-[var(--brand-primary)]/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-[var(--accent-green)]/5 rounded-full blur-3xl" />
         </div>
 
         <div className="text-center">
-          <Heading as="h1" gradient className="mb-6">
+          <Heading as="h1" className="mb-6">
             Get in Touch
           </Heading>
           <Text variant="large">
@@ -62,12 +62,12 @@ export default function ContactPage() {
       </Section>
 
       {/* Contact Methods */}
-      <Section spacing="lg" className="bg-[var(--surface-dark)]/30">
+      <Section spacing="lg" className="bg-[var(--surface-light)]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {contactMethods.map((method, index) => (
-            <Card key={index} variant="glass" className="text-center">
+            <Card key={index} variant="elevated" className="text-center">
               <div className="text-4xl mb-4">{method.icon}</div>
-              <h3 className="text-lg font-semibold text-white mb-2">
+              <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">
                 {method.title}
               </h3>
               <Text variant="small" className="mb-3">
@@ -92,25 +92,25 @@ export default function ContactPage() {
               </Heading>
               <form className="space-y-6">
                 <div>
-                  <label className="block text-sm font-medium text-white mb-2">
+                  <label className="block text-sm font-medium text-[var(--text-primary)] mb-2">
                     Name
                   </label>
                   <Input placeholder="Your name" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-white mb-2">
+                  <label className="block text-sm font-medium text-[var(--text-primary)] mb-2">
                     Email
                   </label>
                   <Input type="email" placeholder="your@email.com" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-white mb-2">
+                  <label className="block text-sm font-medium text-[var(--text-primary)] mb-2">
                     Subject
                   </label>
                   <Input placeholder="How can we help?" />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-white mb-2">
+                  <label className="block text-sm font-medium text-[var(--text-primary)] mb-2">
                     Message
                   </label>
                   <Textarea
@@ -130,8 +130,8 @@ export default function ContactPage() {
                 <Heading as="h3" className="mb-4">
                   Quick Answers
                 </Heading>
-                <Card variant="glass" className="mb-4">
-                  <h4 className="font-semibold text-white mb-2">
+                <Card variant="elevated" className="mb-4">
+                  <h4 className="font-semibold text-[var(--text-primary)] mb-2">
                     Sales Inquiries
                   </h4>
                   <Text variant="small">
@@ -144,8 +144,8 @@ export default function ContactPage() {
                     </a>
                   </Text>
                 </Card>
-                <Card variant="glass" className="mb-4">
-                  <h4 className="font-semibold text-white mb-2">
+                <Card variant="elevated" className="mb-4">
+                  <h4 className="font-semibold text-[var(--text-primary)] mb-2">
                     Technical Support
                   </h4>
                   <Text variant="small">
@@ -158,8 +158,8 @@ export default function ContactPage() {
                     </a>
                   </Text>
                 </Card>
-                <Card variant="glass">
-                  <h4 className="font-semibold text-white mb-2">
+                <Card variant="elevated">
+                  <h4 className="font-semibold text-[var(--text-primary)] mb-2">
                     Press & Media
                   </h4>
                   <Text variant="small">
@@ -178,7 +178,7 @@ export default function ContactPage() {
       </Section>
 
       {/* FAQ CTA */}
-      <Section spacing="xl">
+      <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
             Looking for Quick Answers?
