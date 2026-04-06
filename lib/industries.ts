@@ -24,7 +24,7 @@ export const industries: Industry[] = [
     slug: "e-commerce",
     name: "E-commerce",
     icon: "🛒",
-    metaTitle: "AI Video Marketing for E-commerce | Sorovi",
+    metaTitle: "AI Video Marketing for E-commerce | Hyreel",
     metaDescription: "Create product videos that sell. Transform product photos into scroll-stopping videos for Amazon, Shopify, and Etsy. Boost conversions by 30%.",
     heroHeadline: "AI Video Marketing for E-commerce",
     heroSubheadline: "Turn product photos into high-converting videos for Amazon, Shopify, Etsy, and more. Create professional product showcases in seconds, not days.",
@@ -104,12 +104,12 @@ export const industries: Industry[] = [
     relatedUseCases: ["product-videos-for-ecommerce", "amazon-product-videos", "shopify-store-videos"],
     faqs: [
       {
-        question: "What e-commerce platforms support Sorovi videos?",
-        answer: "Sorovi videos work on all major platforms including Amazon, Shopify, Etsy, eBay, WooCommerce, BigCommerce, and Walmart. Videos export as standard MP4 files accepted everywhere."
+        question: "What e-commerce platforms support Hyreel videos?",
+        answer: "Hyreel videos work on all major platforms including Amazon, Shopify, Etsy, eBay, WooCommerce, BigCommerce, and Walmart. Videos export as standard MP4 files accepted everywhere."
       },
       {
         question: "Can I create videos for my entire product catalog?",
-        answer: "Yes! Sorovi is designed for scale. Many sellers create videos for hundreds of SKUs in a single day. Our unlimited plans make it affordable to cover your entire inventory."
+        answer: "Yes! Hyreel is designed for scale. Many sellers create videos for hundreds of SKUs in a single day. Our unlimited plans make it affordable to cover your entire inventory."
       },
       {
         question: "What kind of product photos work best?",
@@ -121,7 +121,7 @@ export const industries: Industry[] = [
       },
       {
         question: "How do I upload videos to Amazon?",
-        answer: "Export your video from Sorovi, then upload to Amazon through Seller Central > Manage Inventory > Edit > Product Videos. Sorovi exports in Amazon's required format automatically."
+        answer: "Export your video from Hyreel, then upload to Amazon through Seller Central > Manage Inventory > Edit > Product Videos. Hyreel exports in Amazon's required format automatically."
       }
     ],
     ctaText: "Create Product Videos Free"
@@ -130,7 +130,7 @@ export const industries: Industry[] = [
     slug: "real-estate",
     name: "Real Estate",
     icon: "🏠",
-    metaTitle: "AI Video for Real Estate Agents & Brokers | Sorovi",
+    metaTitle: "AI Video for Real Estate Agents & Brokers | Hyreel",
     metaDescription: "Create stunning property tour videos from listing photos. Generate professional real estate videos in seconds. Perfect for MLS, Zillow, and social media.",
     heroHeadline: "AI Video for Real Estate Professionals",
     heroSubheadline: "Transform listing photos into cinematic property tour videos. Create professional real estate content for MLS, Zillow, and social media in seconds.",
@@ -210,16 +210,16 @@ export const industries: Industry[] = [
     relatedUseCases: ["real-estate-listing-videos", "property-tour-videos"],
     faqs: [
       {
-        question: "Can I use Sorovi videos on MLS and Zillow?",
-        answer: "Yes! Sorovi exports standard MP4 videos that are accepted on all MLS systems, Zillow, Realtor.com, Redfin, and every major real estate platform."
+        question: "Can I use Hyreel videos on MLS and Zillow?",
+        answer: "Yes! Hyreel exports standard MP4 videos that are accepted on all MLS systems, Zillow, Realtor.com, Redfin, and every major real estate platform."
       },
       {
         question: "What photo quality do I need for good results?",
-        answer: "Standard real estate listing photos work great. If you have professional photography, even better. Sorovi's AI enhances motion regardless of starting quality."
+        answer: "Standard real estate listing photos work great. If you have professional photography, even better. Hyreel's AI enhances motion regardless of starting quality."
       },
       {
         question: "Can I add my branding and contact info?",
-        answer: "Yes. Sorovi supports custom branding including your logo, name, phone number, and brokerage info on all videos."
+        answer: "Yes. Hyreel supports custom branding including your logo, name, phone number, and brokerage info on all videos."
       },
       {
         question: "How long are the property tour videos?",
@@ -227,7 +227,7 @@ export const industries: Industry[] = [
       },
       {
         question: "Is this better than hiring a videographer?",
-        answer: "For most listings, yes. You save hundreds of dollars and get results immediately. For luxury properties, Sorovi videos complement drone footage and professional tours."
+        answer: "For most listings, yes. You save hundreds of dollars and get results immediately. For luxury properties, Hyreel videos complement drone footage and professional tours."
       }
     ],
     ctaText: "Create Property Videos Free"
@@ -236,7 +236,7 @@ export const industries: Industry[] = [
     slug: "fashion-apparel",
     name: "Fashion & Apparel",
     icon: "👗",
-    metaTitle: "AI Video for Fashion Brands & Clothing Stores | Sorovi",
+    metaTitle: "AI Video for Fashion Brands & Clothing Stores | Hyreel",
     metaDescription: "Create stunning fashion videos from product photos. Show clothing in motion, highlight details, and boost sales with AI-generated video content.",
     heroHeadline: "AI Video for Fashion & Apparel Brands",
     heroSubheadline: "Transform flat-lay and model photos into dynamic fashion videos. Show how clothing moves, fits, and feels — without expensive video shoots.",
@@ -308,7 +308,7 @@ export const industries: Industry[] = [
       { value: "50%", label: "Lower return rates" }
     ],
     testimonial: {
-      quote: "Our TikTok engagement went up 5x after we started using Sorovi. We now create video for every new arrival — something impossible before.",
+      quote: "Our TikTok engagement went up 5x after we started using Hyreel. We now create video for every new arrival — something impossible before.",
       author: "Emma L.",
       role: "Marketing Director, Fashion Brand"
     },
@@ -316,20 +316,20 @@ export const industries: Industry[] = [
     relatedUseCases: ["fashion-brand-videos", "clothing-store-videos"],
     faqs: [
       {
-        question: "Does Sorovi work with flat-lay photos?",
-        answer: "Yes! Sorovi works great with flat-lays, on-model shots, hanger photos, and lifestyle imagery. Each photo type creates different motion effects."
+        question: "Does Hyreel work with flat-lay photos?",
+        answer: "Yes! Hyreel works great with flat-lays, on-model shots, hanger photos, and lifestyle imagery. Each photo type creates different motion effects."
       },
       {
         question: "Can I show fabric movement?",
-        answer: "Sorovi's AI adds natural motion that suggests fabric flow and drape. While it's not the same as actual video, customers get a much better sense of the garment than static photos."
+        answer: "Hyreel's AI adds natural motion that suggests fabric flow and drape. While it's not the same as actual video, customers get a much better sense of the garment than static photos."
       },
       {
         question: "What video formats work best for fashion?",
-        answer: "Vertical 9:16 for TikTok and Reels, square 1:1 for Instagram feed, and 16:9 for website and YouTube. Sorovi exports in all formats."
+        answer: "Vertical 9:16 for TikTok and Reels, square 1:1 for Instagram feed, and 16:9 for website and YouTube. Hyreel exports in all formats."
       },
       {
         question: "How do I create content for my entire catalog?",
-        answer: "Sorovi is built for scale. Fashion brands create videos for hundreds of SKUs in a single session. Batch process your product photos efficiently."
+        answer: "Hyreel is built for scale. Fashion brands create videos for hundreds of SKUs in a single session. Batch process your product photos efficiently."
       },
       {
         question: "Can I add music and branding?",
@@ -342,7 +342,7 @@ export const industries: Industry[] = [
     slug: "food-restaurant",
     name: "Food & Restaurant",
     icon: "🍽️",
-    metaTitle: "AI Video for Restaurants & Food Brands | Sorovi",
+    metaTitle: "AI Video for Restaurants & Food Brands | Hyreel",
     metaDescription: "Create mouth-watering food videos from photos. Perfect for restaurant menus, food delivery apps, and social media marketing.",
     heroHeadline: "AI Video for Food & Restaurant Marketing",
     heroSubheadline: "Transform food photography into scroll-stopping videos that make customers hungry. Perfect for menus, delivery apps, and social media.",
@@ -414,7 +414,7 @@ export const industries: Industry[] = [
       { value: "3x", label: "More social shares" }
     ],
     testimonial: {
-      quote: "Our Instagram went from 500 to 15,000 followers after we started posting Sorovi food videos daily. Orders from social are up 40%.",
+      quote: "Our Instagram went from 500 to 15,000 followers after we started posting Hyreel food videos daily. Orders from social are up 40%.",
       author: "Chef Marco D.",
       role: "Restaurant Owner"
     },
@@ -426,20 +426,20 @@ export const industries: Industry[] = [
         answer: "Well-lit, overhead or 45-degree angle food photography works best. Professional food photos are ideal, but even good smartphone shots produce great results."
       },
       {
-        question: "Can Sorovi add steam or motion effects to food?",
-        answer: "Sorovi adds subtle motion that makes food look more appetizing — smooth zooms, gentle movements, and detail highlights. It suggests steam and freshness through motion."
+        question: "Can Hyreel add steam or motion effects to food?",
+        answer: "Hyreel adds subtle motion that makes food look more appetizing — smooth zooms, gentle movements, and detail highlights. It suggests steam and freshness through motion."
       },
       {
         question: "How do I use videos on DoorDash or Uber Eats?",
-        answer: "Export your Sorovi videos and upload them to your merchant dashboard. Video listings get significantly more views and orders than photo-only listings."
+        answer: "Export your Hyreel videos and upload them to your merchant dashboard. Video listings get significantly more views and orders than photo-only listings."
       },
       {
         question: "How often should I post food videos?",
-        answer: "For social media, daily posting drives the best results. With Sorovi, you can create a week's worth of content in one session."
+        answer: "For social media, daily posting drives the best results. With Hyreel, you can create a week's worth of content in one session."
       },
       {
         question: "Can I create videos for my entire menu?",
-        answer: "Yes! Many restaurants create videos for every menu item. It's fast and affordable to cover your full menu with Sorovi."
+        answer: "Yes! Many restaurants create videos for every menu item. It's fast and affordable to cover your full menu with Hyreel."
       }
     ],
     ctaText: "Create Food Videos Free"
@@ -448,7 +448,7 @@ export const industries: Industry[] = [
     slug: "beauty-cosmetics",
     name: "Beauty & Cosmetics",
     icon: "💄",
-    metaTitle: "AI Video for Beauty & Cosmetic Brands | Sorovi",
+    metaTitle: "AI Video for Beauty & Cosmetic Brands | Hyreel",
     metaDescription: "Create stunning beauty videos from product photos. Show makeup, skincare, and cosmetics in motion. Perfect for social media and e-commerce.",
     heroHeadline: "AI Video for Beauty & Cosmetics",
     heroSubheadline: "Transform product photos into glamorous beauty videos. Show textures, swatches, and products in motion — without expensive shoots.",
@@ -520,7 +520,7 @@ export const industries: Industry[] = [
       { value: "4x", label: "Social engagement lift" }
     ],
     testimonial: {
-      quote: "We create video for every single shade now. Our TikTok went viral three times last month. Sorovi changed our content game completely.",
+      quote: "We create video for every single shade now. Our TikTok went viral three times last month. Hyreel changed our content game completely.",
       author: "Jessica K.",
       role: "Social Media Manager, Beauty Brand"
     },
@@ -528,24 +528,24 @@ export const industries: Industry[] = [
     relatedUseCases: ["beauty-brand-videos", "cosmetics-marketing-videos"],
     faqs: [
       {
-        question: "Can Sorovi capture product shimmer and sparkle?",
+        question: "Can Hyreel capture product shimmer and sparkle?",
         answer: "Yes! The motion effects highlight reflective surfaces, shimmer particles, and texture in ways static photos can't. Customers see how products actually look."
       },
       {
         question: "How do I create videos for all my shades?",
-        answer: "Sorovi handles scale easily. Create videos for your entire shade range in one session. Many beauty brands process 50+ products in an afternoon."
+        answer: "Hyreel handles scale easily. Create videos for your entire shade range in one session. Many beauty brands process 50+ products in an afternoon."
       },
       {
         question: "What video styles work best for beauty?",
-        answer: "Slow zooms for texture, orbits for packaging, and quick cuts for social perform best. Sorovi supports all these styles."
+        answer: "Slow zooms for texture, orbits for packaging, and quick cuts for social perform best. Hyreel supports all these styles."
       },
       {
         question: "Can I use these on my e-commerce site?",
-        answer: "Absolutely. Sorovi videos work on Shopify, Sephora, Ulta vendor portals, Amazon, and all beauty retail platforms."
+        answer: "Absolutely. Hyreel videos work on Shopify, Sephora, Ulta vendor portals, Amazon, and all beauty retail platforms."
       },
       {
         question: "Do I need professional product photography?",
-        answer: "Professional photos produce the best results, but Sorovi works with any clear product image. Good lighting is the key factor."
+        answer: "Professional photos produce the best results, but Hyreel works with any clear product image. Good lighting is the key factor."
       }
     ],
     ctaText: "Create Beauty Videos Free"
@@ -554,7 +554,7 @@ export const industries: Industry[] = [
     slug: "fitness-wellness",
     name: "Fitness & Wellness",
     icon: "💪",
-    metaTitle: "AI Video for Fitness Brands & Gyms | Sorovi",
+    metaTitle: "AI Video for Fitness Brands & Gyms | Hyreel",
     metaDescription: "Create engaging fitness videos from photos. Perfect for gyms, personal trainers, supplement brands, and wellness businesses.",
     heroHeadline: "AI Video for Fitness & Wellness",
     heroSubheadline: "Transform workout photos and product shots into motivating video content. Perfect for gyms, trainers, and supplement brands.",
@@ -626,7 +626,7 @@ export const industries: Industry[] = [
       { value: "Daily", label: "Posting now possible" }
     ],
     testimonial: {
-      quote: "I used to spend Sundays filming content. Now I create a week's worth in 30 minutes with Sorovi. My client inquiries doubled.",
+      quote: "I used to spend Sundays filming content. Now I create a week's worth in 30 minutes with Hyreel. My client inquiries doubled.",
       author: "Marcus T.",
       role: "Personal Trainer & Gym Owner"
     },
@@ -635,10 +635,10 @@ export const industries: Industry[] = [
     faqs: [
       {
         question: "Can I create workout videos from photos?",
-        answer: "Yes! While Sorovi doesn't replace actual workout demonstrations, it creates engaging teasers, announcements, and promotional content from your training photos."
+        answer: "Yes! While Hyreel doesn't replace actual workout demonstrations, it creates engaging teasers, announcements, and promotional content from your training photos."
       },
       {
-        question: "How do gyms use Sorovi?",
+        question: "How do gyms use Hyreel?",
         answer: "Gyms create facility tours, equipment showcases, class announcements, and member success stories. It's perfect for social media marketing and website content."
       },
       {
@@ -647,11 +647,11 @@ export const industries: Industry[] = [
       },
       {
         question: "What about supplement and product videos?",
-        answer: "Sorovi works great for supplement brands. Create product showcases, ingredient highlights, and promotional content from your product photography."
+        answer: "Hyreel works great for supplement brands. Create product showcases, ingredient highlights, and promotional content from your product photography."
       },
       {
         question: "Is this good for personal trainers?",
-        answer: "Yes! Personal trainers use Sorovi for social content, client progress videos, promotional material, and building their personal brand online."
+        answer: "Yes! Personal trainers use Hyreel for social content, client progress videos, promotional material, and building their personal brand online."
       }
     ],
     ctaText: "Create Fitness Videos Free"
@@ -660,7 +660,7 @@ export const industries: Industry[] = [
     slug: "travel-hospitality",
     name: "Travel & Hospitality",
     icon: "✈️",
-    metaTitle: "AI Video for Hotels, Travel & Tourism | Sorovi",
+    metaTitle: "AI Video for Hotels, Travel & Tourism | Hyreel",
     metaDescription: "Create stunning destination videos from photos. Perfect for hotels, resorts, travel agencies, and tourism marketing.",
     heroHeadline: "AI Video for Travel & Hospitality",
     heroSubheadline: "Transform destination photos into cinematic travel videos. Perfect for hotels, resorts, travel agencies, and tourism boards.",
@@ -741,23 +741,23 @@ export const industries: Industry[] = [
     faqs: [
       {
         question: "Can hotels create videos for every room type?",
-        answer: "Yes! Sorovi makes it affordable and fast to create video tours for every room category, suite, and property. Many hotels cover their entire inventory in one day."
+        answer: "Yes! Hyreel makes it affordable and fast to create video tours for every room category, suite, and property. Many hotels cover their entire inventory in one day."
       },
       {
-        question: "What destinations work best for Sorovi?",
+        question: "What destinations work best for Hyreel?",
         answer: "Any destination with good photography works well. Beach resorts, mountain lodges, city hotels, tours, and attractions all create beautiful video content."
       },
       {
         question: "Can I use these on booking platforms?",
-        answer: "Yes. Sorovi videos work on Booking.com, Expedia, Airbnb, your own website, and all travel platforms that support video."
+        answer: "Yes. Hyreel videos work on Booking.com, Expedia, Airbnb, your own website, and all travel platforms that support video."
       },
       {
-        question: "How do travel agencies use Sorovi?",
+        question: "How do travel agencies use Hyreel?",
         answer: "Agencies create destination showcase videos, package promotions, and social content from supplier photography. It's perfect for selling the dream."
       },
       {
         question: "What about seasonal content?",
-        answer: "Sorovi makes seasonal content easy. Create winter, summer, holiday, and special event content from your photo library without new shoots."
+        answer: "Hyreel makes seasonal content easy. Create winter, summer, holiday, and special event content from your photo library without new shoots."
       }
     ],
     ctaText: "Create Travel Videos Free"
@@ -766,7 +766,7 @@ export const industries: Industry[] = [
     slug: "education-online-courses",
     name: "Education & Online Courses",
     icon: "📚",
-    metaTitle: "AI Video for Online Courses & Education | Sorovi",
+    metaTitle: "AI Video for Online Courses & Education | Hyreel",
     metaDescription: "Create engaging educational videos from slides and images. Perfect for course creators, educators, and e-learning platforms.",
     heroHeadline: "AI Video for Education & Online Courses",
     heroSubheadline: "Transform slides, diagrams, and images into engaging educational videos. Perfect for course creators and online educators.",
@@ -847,7 +847,7 @@ export const industries: Industry[] = [
     faqs: [
       {
         question: "Can I convert PowerPoint slides to video?",
-        answer: "Yes! Export slides as images and Sorovi transforms them into engaging video content with professional motion effects. Perfect for lecture videos."
+        answer: "Yes! Export slides as images and Hyreel transforms them into engaging video content with professional motion effects. Perfect for lecture videos."
       },
       {
         question: "How does video improve course completion?",
@@ -859,7 +859,7 @@ export const industries: Industry[] = [
       },
       {
         question: "What about course promo videos?",
-        answer: "Sorovi creates excellent course promotional videos. Use course screenshots, testimonial photos, and results imagery for compelling sales page content."
+        answer: "Hyreel creates excellent course promotional videos. Use course screenshots, testimonial photos, and results imagery for compelling sales page content."
       },
       {
         question: "Does this work for live courses too?",

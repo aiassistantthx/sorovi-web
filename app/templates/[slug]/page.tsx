@@ -26,7 +26,7 @@ export async function generateMetadata({
 
   if (!template) {
     return {
-      title: "Template Not Found - Sorovi",
+      title: "Template Not Found - Hyreel",
     };
   }
 
@@ -34,7 +34,7 @@ export async function generateMetadata({
     title: template.metaTitle,
     description: template.metaDescription,
     alternates: {
-      canonical: `https://sorovi.app/templates/${template.slug}`,
+      canonical: `https://hyreel.app/templates/${template.slug}`,
     },
   };
 }
@@ -308,7 +308,7 @@ export default async function TemplatePage({
       {/* CTA Section */}
       <FinalCTA
         title={`Start Creating ${template.name}`}
-        description={`Join thousands of creators using Sorovi templates to create professional video content.`}
+        description={`Join thousands of creators using Hyreel templates to create professional video content.`}
         primaryCta={{ text: template.ctaText }}
         secondaryCta={{ text: "View All Templates", href: "/templates" }}
       />

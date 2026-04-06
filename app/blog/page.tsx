@@ -4,7 +4,7 @@ import { BlogFilter } from "@/components/blog/blog-filter";
 import { blogPosts, getAllBlogCategories } from "@/lib/blog";
 
 export const metadata = {
-  title: "Blog - AI Video Creation Tips, Guides & Tutorials | Sorovi",
+  title: "Blog - AI Video Creation Tips, Guides & Tutorials | Hyreel",
   description:
     "Learn how to create stunning AI-generated videos. Tips, tutorials, and guides on photo-to-video AI, TikTok content, Instagram Reels, e-commerce video, and more.",
 };
@@ -29,7 +29,7 @@ export default function BlogPage() {
 
         <div className="text-center">
           <Heading as="h1" className="mb-6">
-            Sorovi Blog
+            Hyreel Blog
           </Heading>
           <Text variant="large" className="max-w-2xl mx-auto">
             Tips, tutorials, and guides to help you create better AI-generated

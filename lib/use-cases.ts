@@ -10,7 +10,7 @@ export interface UseCase {
   industry: string;
   description: string;
   painPoints: Array<{ icon: string; title: string; description: string }>;
-  howSoroviHelps: Array<{ icon: string; title: string; description: string }>;
+  howHyreelHelps: Array<{ icon: string; title: string; description: string }>;
   benefits: string[];
   testimonial: { quote: string; author: string; role: string };
   relatedTools: string[];
@@ -23,8 +23,8 @@ export const useCases: UseCase[] = [
     slug: "product-videos-for-ecommerce",
     name: "Product Videos for E-commerce",
     title: "AI Product Videos for E-commerce",
-    metaTitle: "AI Product Videos for E-commerce | Sorovi - Boost Sales with Video",
-    metaDescription: "Create stunning product videos for your online store in seconds. Turn product photos into scroll-stopping videos for Amazon, Shopify, and Etsy with Sorovi's AI.",
+    metaTitle: "AI Product Videos for E-commerce | Hyreel - Boost Sales with Video",
+    metaDescription: "Create stunning product videos for your online store in seconds. Turn product photos into scroll-stopping videos for Amazon, Shopify, and Etsy with Hyreel's AI.",
     heroHeadline: "Turn Product Photos into Sales-Driving Videos",
     heroSubheadline: "Create professional product showcase videos for Amazon, Shopify, and Etsy in seconds. No videographer needed -- just upload your product photos and let AI do the rest.",
     icon: "🛒",
@@ -52,11 +52,11 @@ export const useCases: UseCase[] = [
         description: "Creating individual videos for large catalogs is nearly impossible with traditional methods, forcing sellers to choose which products get video content."
       }
     ],
-    howSoroviHelps: [
+    howHyreelHelps: [
       {
         icon: "📸",
         title: "Photo-to-Video in Seconds",
-        description: "Upload any product photo and Sorovi's AI generates a professional video with cinematic motion effects -- zoom, orbit, parallax -- instantly."
+        description: "Upload any product photo and Hyreel's AI generates a professional video with cinematic motion effects -- zoom, orbit, parallax -- instantly."
       },
       {
         icon: "💰",
@@ -82,23 +82,23 @@ export const useCases: UseCase[] = [
       "Reduce returns with better product visualization"
     ],
     testimonial: {
-      quote: "We went from having videos on 5% of our listings to 100% in a single weekend. Our conversion rate jumped 24% in the first month. Sorovi paid for itself on day one.",
+      quote: "We went from having videos on 5% of our listings to 100% in a single weekend. Our conversion rate jumped 24% in the first month. Hyreel paid for itself on day one.",
       author: "Sarah M.",
       role: "Shopify Store Owner, 500+ SKUs"
     },
     relatedTools: ["image-to-video-ai", "ai-zoom-video-effect", "ai-orbit-video-effect", "ai-ecommerce-video-creator"],
     faqs: [
       {
-        question: "What e-commerce platforms support Sorovi product videos?",
-        answer: "Sorovi videos work on all major e-commerce platforms including Amazon, Shopify, Etsy, eBay, WooCommerce, and BigCommerce. Videos are exported in standard MP4 format that's accepted everywhere."
+        question: "What e-commerce platforms support Hyreel product videos?",
+        answer: "Hyreel videos work on all major e-commerce platforms including Amazon, Shopify, Etsy, eBay, WooCommerce, and BigCommerce. Videos are exported in standard MP4 format that's accepted everywhere."
       },
       {
         question: "What product photo quality do I need?",
-        answer: "Sorovi works best with clear, well-lit product photos. Standard product photography on a white or clean background produces excellent results. Even smartphone photos work well if the product is clearly visible."
+        answer: "Hyreel works best with clear, well-lit product photos. Standard product photography on a white or clean background produces excellent results. Even smartphone photos work well if the product is clearly visible."
       },
       {
         question: "Can I create videos for all my products at once?",
-        answer: "Yes! Sorovi supports batch processing so you can upload multiple product photos and generate videos for your entire catalog efficiently. Business plan users get priority batch processing."
+        answer: "Yes! Hyreel supports batch processing so you can upload multiple product photos and generate videos for your entire catalog efficiently. Business plan users get priority batch processing."
       },
       {
         question: "Do product videos actually increase sales?",
@@ -111,8 +111,8 @@ export const useCases: UseCase[] = [
     slug: "tiktok-content-creation",
     name: "TikTok Content Creation",
     title: "AI TikTok Content Creation",
-    metaTitle: "AI TikTok Video Creator | Sorovi - Create Viral TikTok Content",
-    metaDescription: "Create viral TikTok videos from photos in seconds. AI-powered effects optimized for the For You Page. Join thousands of creators growing on TikTok with Sorovi.",
+    metaTitle: "AI TikTok Video Creator | Hyreel - Create Viral TikTok Content",
+    metaDescription: "Create viral TikTok videos from photos in seconds. AI-powered effects optimized for the For You Page. Join thousands of creators growing on TikTok with Hyreel.",
     heroHeadline: "Create Viral TikTok Content in Seconds",
     heroSubheadline: "Stop spending hours editing. Transform your photos into scroll-stopping TikTok videos with AI effects proven to boost FYP placement and engagement.",
     icon: "🎵",
@@ -140,7 +140,7 @@ export const useCases: UseCase[] = [
         description: "The algorithm rewards consistency, but creating enough quality content to post 1-3 times daily is exhausting and unsustainable."
       }
     ],
-    howSoroviHelps: [
+    howHyreelHelps: [
       {
         icon: "⚡",
         title: "Videos in Under 10 Seconds",
@@ -149,7 +149,7 @@ export const useCases: UseCase[] = [
       {
         icon: "🔥",
         title: "FYP-Optimized Effects",
-        description: "Sorovi's AI effects are designed around what the TikTok algorithm rewards -- dynamic motion, strong hooks, and high watch-time retention."
+        description: "Hyreel's AI effects are designed around what the TikTok algorithm rewards -- dynamic motion, strong hooks, and high watch-time retention."
       },
       {
         icon: "📐",
@@ -170,27 +170,27 @@ export const useCases: UseCase[] = [
       "Stand out in the feed with cinematic motion effects"
     ],
     testimonial: {
-      quote: "I went from posting twice a week to three times a day. My follower count grew from 2K to 45K in two months. Sorovi is the secret weapon every TikTok creator needs.",
+      quote: "I went from posting twice a week to three times a day. My follower count grew from 2K to 45K in two months. Hyreel is the secret weapon every TikTok creator needs.",
       author: "Jake R.",
       role: "TikTok Creator, 45K Followers"
     },
     relatedTools: ["ai-tiktok-video-generator", "image-to-video-ai", "ai-zoom-video-effect", "ai-short-video-maker"],
     faqs: [
       {
-        question: "Will Sorovi videos perform well on TikTok's algorithm?",
-        answer: "Yes! Sorovi's effects are specifically designed to maximize watch time and engagement -- two key signals the TikTok algorithm uses to push content to the For You Page. Dynamic motion effects keep viewers watching longer."
+        question: "Will Hyreel videos perform well on TikTok's algorithm?",
+        answer: "Yes! Hyreel's effects are specifically designed to maximize watch time and engagement -- two key signals the TikTok algorithm uses to push content to the For You Page. Dynamic motion effects keep viewers watching longer."
       },
       {
-        question: "Can I add trending TikTok sounds to Sorovi videos?",
-        answer: "You can add trending sounds directly in TikTok after importing your Sorovi video. Sorovi also includes royalty-free music you can add before exporting."
+        question: "Can I add trending TikTok sounds to Hyreel videos?",
+        answer: "You can add trending sounds directly in TikTok after importing your Hyreel video. Hyreel also includes royalty-free music you can add before exporting."
       },
       {
         question: "How many TikTok videos can I create per day?",
         answer: "Free users can create 5 videos per day. Creator and Business plans offer unlimited video creation, perfect for maintaining a consistent daily posting schedule."
       },
       {
-        question: "Do I need video editing experience to use Sorovi for TikTok?",
-        answer: "Not at all. Sorovi is designed for creators of all skill levels. Upload a photo, tap an effect, and your video is ready. The AI handles all the complex editing automatically."
+        question: "Do I need video editing experience to use Hyreel for TikTok?",
+        answer: "Not at all. Hyreel is designed for creators of all skill levels. Upload a photo, tap an effect, and your video is ready. The AI handles all the complex editing automatically."
       }
     ],
     ctaText: "Start Creating TikTok Videos Free"
@@ -199,7 +199,7 @@ export const useCases: UseCase[] = [
     slug: "instagram-reels-for-business",
     name: "Instagram Reels for Business",
     title: "AI Instagram Reels for Business",
-    metaTitle: "AI Instagram Reels for Business | Sorovi - Professional Reels in Seconds",
+    metaTitle: "AI Instagram Reels for Business | Hyreel - Professional Reels in Seconds",
     metaDescription: "Create professional Instagram Reels for your business in seconds. AI-powered video creation optimized for engagement, reach, and brand consistency on Instagram.",
     heroHeadline: "Professional Instagram Reels for Your Business",
     heroSubheadline: "Turn your brand photos into polished, engaging Instagram Reels with AI. Build a consistent aesthetic, boost reach, and drive sales -- all without a video production team.",
@@ -228,7 +228,7 @@ export const useCases: UseCase[] = [
         description: "Business Reels often look corporate and stiff compared to native creator content, leading to low engagement and poor performance."
       }
     ],
-    howSoroviHelps: [
+    howHyreelHelps: [
       {
         icon: "✨",
         title: "Professional Results, Zero Production",
@@ -242,7 +242,7 @@ export const useCases: UseCase[] = [
       {
         icon: "📈",
         title: "Algorithm-Friendly Content",
-        description: "Sorovi's effects maximize watch time and engagement -- the signals Instagram uses to push Reels to more viewers in Explore and Reels feeds."
+        description: "Hyreel's effects maximize watch time and engagement -- the signals Instagram uses to push Reels to more viewers in Explore and Reels feeds."
       },
       {
         icon: "⏱️",
@@ -258,7 +258,7 @@ export const useCases: UseCase[] = [
       "Keep up with competitors investing heavily in Reels content"
     ],
     testimonial: {
-      quote: "We struggled with Reels for months -- our content looked amateur compared to competitors. Sorovi transformed our Instagram presence. Engagement is up 3x and we're saving $2,000/month on video production.",
+      quote: "We struggled with Reels for months -- our content looked amateur compared to competitors. Hyreel transformed our Instagram presence. Engagement is up 3x and we're saving $2,000/month on video production.",
       author: "Lisa T.",
       role: "Marketing Director, DTC Beauty Brand"
     },
@@ -269,16 +269,16 @@ export const useCases: UseCase[] = [
         answer: "Instagram Reels receive 2-3x more reach than static posts. They appear in the Explore feed, Reels tab, and followers' feeds, giving your business significantly more visibility to potential customers."
       },
       {
-        question: "What types of business Reels can I create with Sorovi?",
+        question: "What types of business Reels can I create with Hyreel?",
         answer: "Product showcases, behind-the-scenes reveals, before/after transformations, new arrival announcements, seasonal promotions, and brand storytelling. Any product or brand photo can become an engaging Reel."
       },
       {
         question: "Can I maintain my brand colors and style?",
-        answer: "Absolutely. Sorovi lets you apply consistent effects, add text overlays with brand fonts, and maintain a cohesive aesthetic across all your Reels content."
+        answer: "Absolutely. Hyreel lets you apply consistent effects, add text overlays with brand fonts, and maintain a cohesive aesthetic across all your Reels content."
       },
       {
         question: "How often should my business post Reels?",
-        answer: "Instagram recommends 3-5 Reels per week for business accounts. With Sorovi, you can easily create this volume of content in under an hour, making consistent posting achievable."
+        answer: "Instagram recommends 3-5 Reels per week for business accounts. With Hyreel, you can easily create this volume of content in under an hour, making consistent posting achievable."
       }
     ],
     ctaText: "Start Creating Business Reels Free"
@@ -287,8 +287,8 @@ export const useCases: UseCase[] = [
     slug: "real-estate-video-marketing",
     name: "Real Estate Video Marketing",
     title: "AI Video Marketing for Real Estate",
-    metaTitle: "AI Real Estate Video Marketing | Sorovi - Property Videos in Seconds",
-    metaDescription: "Create stunning real estate property videos from listing photos. Virtual tours, property showcases, and social media content for agents and brokerages with Sorovi AI.",
+    metaTitle: "AI Real Estate Video Marketing | Hyreel - Property Videos in Seconds",
+    metaDescription: "Create stunning real estate property videos from listing photos. Virtual tours, property showcases, and social media content for agents and brokerages with Hyreel AI.",
     heroHeadline: "Sell Properties Faster with AI Video",
     heroSubheadline: "Transform listing photos into cinematic property videos in seconds. Create virtual tours, social media content, and video listings that attract more buyers and close deals faster.",
     icon: "🏠",
@@ -316,11 +316,11 @@ export const useCases: UseCase[] = [
         description: "Buyers increasingly discover properties on Instagram and TikTok, but agents struggle to create enough video content for social media marketing."
       }
     ],
-    howSoroviHelps: [
+    howHyreelHelps: [
       {
         icon: "🏡",
         title: "Listing Photos to Video Instantly",
-        description: "Upload your MLS listing photos and Sorovi creates cinematic property videos with smooth zoom, orbit, and parallax effects that showcase every room."
+        description: "Upload your MLS listing photos and Hyreel creates cinematic property videos with smooth zoom, orbit, and parallax effects that showcase every room."
       },
       {
         icon: "💵",
@@ -353,8 +353,8 @@ export const useCases: UseCase[] = [
     relatedTools: ["image-to-video-ai", "ai-zoom-video-effect", "ai-orbit-video-effect", "ai-social-media-video-maker"],
     faqs: [
       {
-        question: "Can Sorovi create virtual tour-style videos from listing photos?",
-        answer: "Yes! Sorovi's zoom and orbit effects create engaging property walkthroughs from standard listing photos. While not a full 3D virtual tour, the cinematic motion gives buyers a dynamic feel for the space."
+        question: "Can Hyreel create virtual tour-style videos from listing photos?",
+        answer: "Yes! Hyreel's zoom and orbit effects create engaging property walkthroughs from standard listing photos. While not a full 3D virtual tour, the cinematic motion gives buyers a dynamic feel for the space."
       },
       {
         question: "What listing photo formats work best?",
@@ -365,8 +365,8 @@ export const useCases: UseCase[] = [
         answer: "Yes! You can add text overlays with property details, pricing, and your contact information. Create branded videos that drive inquiries directly to you."
       },
       {
-        question: "How do real estate agents use Sorovi on social media?",
-        answer: "Top-performing agents use Sorovi to create daily property showcase Reels and TikToks, new listing announcement videos, open house promotions, and neighborhood spotlight content."
+        question: "How do real estate agents use Hyreel on social media?",
+        answer: "Top-performing agents use Hyreel to create daily property showcase Reels and TikToks, new listing announcement videos, open house promotions, and neighborhood spotlight content."
       }
     ],
     ctaText: "Start Creating Property Videos Free"
@@ -375,7 +375,7 @@ export const useCases: UseCase[] = [
     slug: "fashion-brand-videos",
     name: "Fashion Brand Videos",
     title: "AI Video for Fashion Brands",
-    metaTitle: "AI Fashion Brand Videos | Sorovi - Lookbook & Product Videos",
+    metaTitle: "AI Fashion Brand Videos | Hyreel - Lookbook & Product Videos",
     metaDescription: "Create stunning fashion lookbook videos, product showcases, and social media content from product photos. AI-powered video for fashion brands and designers.",
     heroHeadline: "Bring Your Fashion Brand to Life with AI Video",
     heroSubheadline: "Transform lookbook photos and product shots into captivating fashion videos. Create runway-worthy content for social media, e-commerce, and marketing without a production crew.",
@@ -404,7 +404,7 @@ export const useCases: UseCase[] = [
         description: "Translating a brand's carefully curated visual identity into video content consistently is challenging without a dedicated creative team."
       }
     ],
-    howSoroviHelps: [
+    howHyreelHelps: [
       {
         icon: "✨",
         title: "Editorial Photos to Fashion Video",
@@ -441,20 +441,20 @@ export const useCases: UseCase[] = [
     relatedTools: ["image-to-video-ai", "ai-orbit-video-effect", "ai-instagram-reels-maker", "ai-product-video-maker"],
     faqs: [
       {
-        question: "What types of fashion photos work best with Sorovi?",
+        question: "What types of fashion photos work best with Hyreel?",
         answer: "Lookbook shots, flat lays, on-model photography, and product detail shots all work beautifully. High-resolution images with clean backgrounds produce the most polished fashion videos."
       },
       {
         question: "Can I showcase fabric texture and details?",
-        answer: "Yes! Sorovi's zoom effects are perfect for highlighting fabric texture, stitching details, and design elements. The AI creates smooth close-up movements that draw attention to craftsmanship."
+        answer: "Yes! Hyreel's zoom effects are perfect for highlighting fabric texture, stitching details, and design elements. The AI creates smooth close-up movements that draw attention to craftsmanship."
       },
       {
-        question: "Is Sorovi suitable for luxury fashion brands?",
-        answer: "Absolutely. Sorovi's cinematic motion effects create elevated, polished content that meets luxury brand standards. Many fashion brands use Sorovi to maintain their premium visual identity at scale."
+        question: "Is Hyreel suitable for luxury fashion brands?",
+        answer: "Absolutely. Hyreel's cinematic motion effects create elevated, polished content that meets luxury brand standards. Many fashion brands use Hyreel to maintain their premium visual identity at scale."
       },
       {
-        question: "Can I create Pinterest Video Pins with Sorovi?",
-        answer: "Yes! Sorovi exports in formats compatible with Pinterest Video Pins. Fashion content performs exceptionally well on Pinterest, and video pins receive significantly more engagement than static pins."
+        question: "Can I create Pinterest Video Pins with Hyreel?",
+        answer: "Yes! Hyreel exports in formats compatible with Pinterest Video Pins. Fashion content performs exceptionally well on Pinterest, and video pins receive significantly more engagement than static pins."
       }
     ],
     ctaText: "Start Creating Fashion Videos Free"
@@ -463,7 +463,7 @@ export const useCases: UseCase[] = [
     slug: "food-and-restaurant-marketing",
     name: "Food & Restaurant Marketing",
     title: "AI Video for Food & Restaurant Marketing",
-    metaTitle: "AI Food & Restaurant Videos | Sorovi - Make Dishes Look Irresistible",
+    metaTitle: "AI Food & Restaurant Videos | Hyreel - Make Dishes Look Irresistible",
     metaDescription: "Create mouthwatering food videos from photos for your restaurant or food brand. AI-powered video marketing that drives orders, reservations, and social media engagement.",
     heroHeadline: "Make Every Dish Look Irresistible",
     heroSubheadline: "Transform food photography into drool-worthy videos that drive orders and reservations. Create social media content, menu videos, and marketing campaigns with AI -- no videographer needed.",
@@ -492,7 +492,7 @@ export const useCases: UseCase[] = [
         description: "Customers discover restaurants on Instagram and TikTok, but creating the volume of video content needed to stay visible is overwhelming."
       }
     ],
-    howSoroviHelps: [
+    howHyreelHelps: [
       {
         icon: "🍔",
         title: "Food Photos to Video Instantly",
@@ -522,7 +522,7 @@ export const useCases: UseCase[] = [
       "Build a library of video content for all your dishes"
     ],
     testimonial: {
-      quote: "Our Instagram went from 200 to 3,000 followers in 3 months just by posting Sorovi food videos daily. We're fully booked on weekends now. Best marketing investment we've ever made.",
+      quote: "Our Instagram went from 200 to 3,000 followers in 3 months just by posting Hyreel food videos daily. We're fully booked on weekends now. Best marketing investment we've ever made.",
       author: "Marco P.",
       role: "Owner, Italian Restaurant"
     },
@@ -534,10 +534,10 @@ export const useCases: UseCase[] = [
       },
       {
         question: "Can I create videos for delivery app listings?",
-        answer: "Yes! Sorovi videos work perfectly on DoorDash, Uber Eats, Grubhub, and other delivery platforms that support video content. Video listings receive significantly more orders than photo-only listings."
+        answer: "Yes! Hyreel videos work perfectly on DoorDash, Uber Eats, Grubhub, and other delivery platforms that support video content. Video listings receive significantly more orders than photo-only listings."
       },
       {
-        question: "How can restaurants use Sorovi for social media?",
+        question: "How can restaurants use Hyreel for social media?",
         answer: "Post daily specials as Reels, create TikTok content around signature dishes, share behind-the-kitchen videos, highlight seasonal menu items, and showcase customer-favorite dishes with dynamic video effects."
       },
       {
@@ -551,7 +551,7 @@ export const useCases: UseCase[] = [
     slug: "ugc-style-video-ads",
     name: "UGC-Style Video Ads",
     title: "AI UGC-Style Video Ads",
-    metaTitle: "AI UGC-Style Video Ads | Sorovi - Authentic Ad Creatives at Scale",
+    metaTitle: "AI UGC-Style Video Ads | Hyreel - Authentic Ad Creatives at Scale",
     metaDescription: "Create authentic UGC-style video ads without hiring creators. AI-powered video ads that look organic, perform like paid media, and scale across campaigns.",
     heroHeadline: "Create Authentic UGC-Style Ads at Scale",
     heroSubheadline: "Generate user-generated content style video ads without hiring UGC creators. Create authentic-looking ad creatives that outperform polished studio ads on every paid media platform.",
@@ -580,7 +580,7 @@ export const useCases: UseCase[] = [
         description: "Ads stop performing after a few weeks. Refreshing creatives constantly requires an unsustainable production pipeline."
       }
     ],
-    howSoroviHelps: [
+    howHyreelHelps: [
       {
         icon: "🎯",
         title: "UGC Aesthetic Without the UGC Process",
@@ -610,7 +610,7 @@ export const useCases: UseCase[] = [
       "Full creative control with unlimited revisions"
     ],
     testimonial: {
-      quote: "We replaced 70% of our UGC creator spend with Sorovi. Our CPAs actually improved because we can test 5x more variations. We're spending less on creatives and more on scaling winners.",
+      quote: "We replaced 70% of our UGC creator spend with Hyreel. Our CPAs actually improved because we can test 5x more variations. We're spending less on creatives and more on scaling winners.",
       author: "Ryan S.",
       role: "Performance Marketing Lead, DTC Brand"
     },
@@ -621,16 +621,16 @@ export const useCases: UseCase[] = [
         answer: "Many brands report equal or better performance with AI-generated UGC-style ads because they can test more variations and optimize faster. The authentic motion and product focus drives strong engagement on paid platforms."
       },
       {
-        question: "What ad platforms work with Sorovi video ads?",
-        answer: "Sorovi videos work perfectly on Meta Ads (Facebook & Instagram), TikTok Ads, Google Ads (YouTube, Display), Pinterest Ads, and Snapchat Ads. Videos export in formats optimized for each platform."
+        question: "What ad platforms work with Hyreel video ads?",
+        answer: "Hyreel videos work perfectly on Meta Ads (Facebook & Instagram), TikTok Ads, Google Ads (YouTube, Display), Pinterest Ads, and Snapchat Ads. Videos export in formats optimized for each platform."
       },
       {
         question: "How many ad variations can I create?",
         answer: "Unlimited on Creator and Business plans. From a single product photo, you can create dozens of variations with different effects, speeds, and focal areas -- perfect for A/B testing at scale."
       },
       {
-        question: "Can I use Sorovi ads for TikTok Spark Ads?",
-        answer: "Yes! Create organic-looking TikTok content with Sorovi, post it to your TikTok account, and boost it as a Spark Ad. The authentic feel performs exceptionally well in the TikTok Ads format."
+        question: "Can I use Hyreel ads for TikTok Spark Ads?",
+        answer: "Yes! Create organic-looking TikTok content with Hyreel, post it to your TikTok account, and boost it as a Spark Ad. The authentic feel performs exceptionally well in the TikTok Ads format."
       }
     ],
     ctaText: "Start Creating Video Ads Free"
@@ -639,8 +639,8 @@ export const useCases: UseCase[] = [
     slug: "youtube-channel-growth",
     name: "YouTube Channel Growth",
     title: "AI Videos for YouTube Channel Growth",
-    metaTitle: "Grow Your YouTube Channel with AI Shorts | Sorovi - YouTube Growth Tool",
-    metaDescription: "Grow your YouTube channel faster with AI-generated Shorts. Create professional short-form content from photos, boost subscribers, and reach new audiences with Sorovi.",
+    metaTitle: "Grow Your YouTube Channel with AI Shorts | Hyreel - YouTube Growth Tool",
+    metaDescription: "Grow your YouTube channel faster with AI-generated Shorts. Create professional short-form content from photos, boost subscribers, and reach new audiences with Hyreel.",
     heroHeadline: "Grow Your YouTube Channel with AI Shorts",
     heroSubheadline: "Create professional YouTube Shorts from photos in seconds. Boost subscriber growth, expand your reach, and dominate YouTube's fastest-growing content format with AI.",
     icon: "▶️",
@@ -668,7 +668,7 @@ export const useCases: UseCase[] = [
         description: "YouTube rewards consistent uploading, but maintaining a regular schedule for both long-form and Shorts content is exhausting."
       }
     ],
-    howSoroviHelps: [
+    howHyreelHelps: [
       {
         icon: "⚡",
         title: "Shorts from Thumbnails and Photos",
@@ -677,7 +677,7 @@ export const useCases: UseCase[] = [
       {
         icon: "📈",
         title: "Algorithm-Optimized for Discovery",
-        description: "Sorovi's effects maximize watch time and completion rate -- the key metrics YouTube uses to recommend Shorts to new audiences."
+        description: "Hyreel's effects maximize watch time and completion rate -- the key metrics YouTube uses to recommend Shorts to new audiences."
       },
       {
         icon: "🔔",
@@ -698,7 +698,7 @@ export const useCases: UseCase[] = [
       "Repurpose existing content into short-form video effortlessly"
     ],
     testimonial: {
-      quote: "Adding Sorovi Shorts between my regular uploads tripled my subscriber growth. I gained 10K subscribers in one month just from Shorts. It's the easiest growth hack I've found.",
+      quote: "Adding Hyreel Shorts between my regular uploads tripled my subscriber growth. I gained 10K subscribers in one month just from Shorts. It's the easiest growth hack I've found.",
       author: "Alex M.",
       role: "YouTube Creator, 85K Subscribers"
     },
@@ -710,15 +710,15 @@ export const useCases: UseCase[] = [
       },
       {
         question: "What content works best for YouTube Shorts?",
-        answer: "Tips, previews, highlights, behind-the-scenes, and standalone visual content all perform well. With Sorovi, any compelling image can become an engaging Short with cinematic motion effects."
+        answer: "Tips, previews, highlights, behind-the-scenes, and standalone visual content all perform well. With Hyreel, any compelling image can become an engaging Short with cinematic motion effects."
       },
       {
-        question: "Can I monetize YouTube Shorts made with Sorovi?",
-        answer: "Yes! Shorts made with Sorovi Creator and Business plans are fully monetizable through YouTube's Shorts monetization program. You own the content and all revenue rights."
+        question: "Can I monetize YouTube Shorts made with Hyreel?",
+        answer: "Yes! Shorts made with Hyreel Creator and Business plans are fully monetizable through YouTube's Shorts monetization program. You own the content and all revenue rights."
       },
       {
         question: "How often should I post YouTube Shorts?",
-        answer: "YouTube rewards consistency. Posting 3-7 Shorts per week is ideal for growth. With Sorovi, you can create a full week of Shorts in under 30 minutes."
+        answer: "YouTube rewards consistency. Posting 3-7 Shorts per week is ideal for growth. With Hyreel, you can create a full week of Shorts in under 30 minutes."
       }
     ],
     ctaText: "Start Growing Your Channel Free"
@@ -727,7 +727,7 @@ export const useCases: UseCase[] = [
     slug: "digital-marketing-agency",
     name: "Digital Marketing Agency",
     title: "AI Video for Digital Marketing Agencies",
-    metaTitle: "AI Video for Marketing Agencies | Sorovi - Client Video Content at Scale",
+    metaTitle: "AI Video for Marketing Agencies | Hyreel - Client Video Content at Scale",
     metaDescription: "Scale video content production for all your clients. AI-powered video creation for marketing agencies -- deliver more content, faster, with higher margins.",
     heroHeadline: "Scale Client Video Content Without Scaling Costs",
     heroSubheadline: "Deliver professional video content for every client without hiring more editors. Create scroll-stopping social media videos, product showcases, and ad creatives at scale with AI.",
@@ -756,7 +756,7 @@ export const useCases: UseCase[] = [
         description: "Clients want more video content but question the cost. Agencies need affordable ways to deliver video that proves its value through performance."
       }
     ],
-    howSoroviHelps: [
+    howHyreelHelps: [
       {
         icon: "🚀",
         title: "10x Your Content Output",
@@ -786,27 +786,27 @@ export const useCases: UseCase[] = [
       "Scale your agency's video capabilities without scaling overhead"
     ],
     testimonial: {
-      quote: "Sorovi turned video from our most unprofitable service into our highest-margin offering. We produce 200+ client videos per month with a team of two. Our clients think we have a full video department.",
+      quote: "Hyreel turned video from our most unprofitable service into our highest-margin offering. We produce 200+ client videos per month with a team of two. Our clients think we have a full video department.",
       author: "Michael L.",
       role: "Founder, Social Media Marketing Agency"
     },
     relatedTools: ["image-to-video-ai", "ai-social-media-video-maker", "ai-instagram-reels-maker", "ai-tiktok-video-generator"],
     faqs: [
       {
-        question: "Can I white-label Sorovi videos for my agency clients?",
-        answer: "Business plan videos have no Sorovi branding or watermarks. You can present the videos as your agency's own production. Your clients see professional results, not the tool behind them."
+        question: "Can I white-label Hyreel videos for my agency clients?",
+        answer: "Business plan videos have no Hyreel branding or watermarks. You can present the videos as your agency's own production. Your clients see professional results, not the tool behind them."
       },
       {
-        question: "How do agencies typically use Sorovi?",
-        answer: "Agencies use Sorovi for social media content calendars, ad creative production, product video for e-commerce clients, property videos for real estate clients, and food content for restaurant clients."
+        question: "How do agencies typically use Hyreel?",
+        answer: "Agencies use Hyreel for social media content calendars, ad creative production, product video for e-commerce clients, property videos for real estate clients, and food content for restaurant clients."
       },
       {
         question: "Can multiple team members use one agency account?",
         answer: "Business plan includes team collaboration features. Multiple team members can create content, manage client projects, and maintain brand consistency across the agency."
       },
       {
-        question: "Does Sorovi integrate with social media management tools?",
-        answer: "Sorovi exports standard video files that work with all social media management platforms like Hootsuite, Later, Buffer, and Sprout Social. Export and upload to your scheduling tool of choice."
+        question: "Does Hyreel integrate with social media management tools?",
+        answer: "Hyreel exports standard video files that work with all social media management platforms like Hootsuite, Later, Buffer, and Sprout Social. Export and upload to your scheduling tool of choice."
       }
     ],
     ctaText: "Start Your Agency Free Trial"
@@ -815,7 +815,7 @@ export const useCases: UseCase[] = [
     slug: "social-media-management",
     name: "Social Media Management",
     title: "AI Video for Social Media Management",
-    metaTitle: "AI Video for Social Media Managers | Sorovi - Multi-Platform Content",
+    metaTitle: "AI Video for Social Media Managers | Hyreel - Multi-Platform Content",
     metaDescription: "Create video content for multiple social media accounts in minutes. AI-powered video creation for social media managers handling multiple brands and platforms.",
     heroHeadline: "Create Video Content for Every Account, Every Platform",
     heroSubheadline: "Managing multiple social media accounts? Create professional video content for all your brands across TikTok, Instagram, YouTube, and more -- all in one tool, all in minutes.",
@@ -844,7 +844,7 @@ export const useCases: UseCase[] = [
         description: "Planning 30+ days of video content across multiple accounts leads to gaps, rushed content, and inconsistent quality."
       }
     ],
-    howSoroviHelps: [
+    howHyreelHelps: [
       {
         icon: "⚡",
         title: "Rapid Multi-Account Content Creation",
@@ -874,7 +874,7 @@ export const useCases: UseCase[] = [
       "Focus on strategy and engagement instead of video production"
     ],
     testimonial: {
-      quote: "I manage 12 social media accounts and Sorovi is the only reason I'm not losing my mind. I create a full week of video content for all accounts in one Monday morning session. It's transformed how I work.",
+      quote: "I manage 12 social media accounts and Hyreel is the only reason I'm not losing my mind. I create a full week of video content for all accounts in one Monday morning session. It's transformed how I work.",
       author: "Christina N.",
       role: "Freelance Social Media Manager"
     },
@@ -882,15 +882,15 @@ export const useCases: UseCase[] = [
     faqs: [
       {
         question: "Can I create content for multiple brands in one account?",
-        answer: "Yes! Sorovi Business plan supports managing content for multiple brands. Save different presets and styles for each brand to maintain consistency while working efficiently."
+        answer: "Yes! Hyreel Business plan supports managing content for multiple brands. Save different presets and styles for each brand to maintain consistency while working efficiently."
       },
       {
-        question: "What social media platforms does Sorovi support?",
-        answer: "Sorovi creates videos optimized for TikTok, Instagram (Reels & Stories), YouTube Shorts, Pinterest, Facebook, LinkedIn, and X (Twitter). Videos export in the correct format for each platform."
+        question: "What social media platforms does Hyreel support?",
+        answer: "Hyreel creates videos optimized for TikTok, Instagram (Reels & Stories), YouTube Shorts, Pinterest, Facebook, LinkedIn, and X (Twitter). Videos export in the correct format for each platform."
       },
       {
-        question: "How does Sorovi help with content planning?",
-        answer: "Sorovi's batch creation capability lets you produce multiple videos at once, making it easy to plan and create content calendars in advance. Create, export, and schedule through your preferred management tool."
+        question: "How does Hyreel help with content planning?",
+        answer: "Hyreel's batch creation capability lets you produce multiple videos at once, making it easy to plan and create content calendars in advance. Create, export, and schedule through your preferred management tool."
       },
       {
         question: "Can I repurpose one video across multiple platforms?",

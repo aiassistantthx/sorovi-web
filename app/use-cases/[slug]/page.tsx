@@ -27,7 +27,7 @@ export async function generateMetadata({
 
   if (!useCase) {
     return {
-      title: "Use Case Not Found - Sorovi",
+      title: "Use Case Not Found - Hyreel",
     };
   }
 
@@ -116,11 +116,11 @@ export default async function UseCasePage({
         </div>
       </Section>
 
-      {/* How Sorovi Helps Section */}
+      {/* How Hyreel Helps Section */}
       <Section spacing="xl">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            How Sorovi Helps
+            How Hyreel Helps
           </Heading>
           <Text variant="large">
             AI-powered solutions for {useCase.industry.toLowerCase()} video
@@ -129,7 +129,7 @@ export default async function UseCasePage({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {useCase.howSoroviHelps.map((item, index) => (
+          {useCase.howHyreelHelps.map((item, index) => (
             <Card
               key={index}
               variant="elevated"
@@ -150,7 +150,7 @@ export default async function UseCasePage({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div>
             <Heading as="h2" className="mb-6">
-              Why {useCase.industry} Professionals Choose Sorovi
+              Why {useCase.industry} Professionals Choose Hyreel
             </Heading>
             <Text variant="large" className="mb-8">
               Real benefits that drive real results for your business.
@@ -207,7 +207,7 @@ export default async function UseCasePage({
       {relatedTools.length > 0 && (
         <RelatedContent
           title="Recommended Tools"
-          subtitle={`The best Sorovi tools for ${useCase.industry.toLowerCase()} professionals`}
+          subtitle={`The best Hyreel tools for ${useCase.industry.toLowerCase()} professionals`}
           items={relatedTools.map((tool) => ({
             title: tool!.name,
             description: tool!.tagline,
@@ -223,7 +223,7 @@ export default async function UseCasePage({
       {/* FAQ Section */}
       <PageFAQ
         title="Frequently Asked Questions"
-        description={`Common questions about Sorovi for ${useCase.industry.toLowerCase()}`}
+        description={`Common questions about Hyreel for ${useCase.industry.toLowerCase()}`}
         items={useCase.faqs}
         variant="light"
       />
@@ -231,7 +231,7 @@ export default async function UseCasePage({
       {/* CTA Section */}
       <FinalCTA
         title="Ready to Get Started?"
-        description={`Join thousands of ${useCase.industry.toLowerCase()} professionals using Sorovi to create amazing video content.`}
+        description={`Join thousands of ${useCase.industry.toLowerCase()} professionals using Hyreel to create amazing video content.`}
         primaryCta={{ text: useCase.ctaText }}
         secondaryCta={{ text: "View All Use Cases", href: "/use-cases" }}
       />

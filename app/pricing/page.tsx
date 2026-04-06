@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-  title: "Pricing - Sorovi",
+  title: "Pricing - Hyreel",
   description: "Choose the perfect plan for your video creation needs. Start free, upgrade anytime.",
 };
 
@@ -13,12 +13,12 @@ const plans = [
     name: "Free",
     price: "$0",
     period: "forever",
-    description: "Perfect for trying out Sorovi",
+    description: "Perfect for trying out Hyreel",
     features: [
       "3 videos per month",
       "720p quality",
       "Basic AI features",
-      "Sorovi watermark",
+      "Hyreel watermark",
       "Limited templates",
       "Community support",
     ],
@@ -265,7 +265,7 @@ export default function PricingPage() {
             Start Creating Today
           </Heading>
           <Text variant="large" className="mb-8">
-            Join 14,258+ creators making viral content with Sorovi
+            Join 14,258+ creators making viral content with Hyreel
           </Text>
           <Button size="lg">Get Started Free</Button>
           <Text variant="small" className="mt-4 text-[var(--text-muted)]">

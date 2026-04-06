@@ -2,8 +2,8 @@ import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
 
 export const metadata = {
-  title: "Terms of Service - Sorovi",
-  description: "Read the terms and conditions for using the Sorovi platform",
+  title: "Terms of Service - Hyreel",
+  description: "Read the terms and conditions for using the Hyreel platform",
 };
 
 export default function TermsPage() {
@@ -29,7 +29,7 @@ export default function TermsPage() {
                 1. Acceptance of Terms
               </Heading>
               <Text variant="body" className="mb-4">
-                By accessing or using Sorovi's AI video creation platform, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our service.
+                By accessing or using Hyreel's AI video creation platform, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our service.
               </Text>
               <Text variant="body">
                 We reserve the right to modify these terms at any time. Continued use of the service after changes constitutes acceptance of the updated terms.
@@ -41,7 +41,7 @@ export default function TermsPage() {
                 2. Service Description
               </Heading>
               <Text variant="body" className="mb-4">
-                Sorovi provides an AI-powered video creation platform that allows users to:
+                Hyreel provides an AI-powered video creation platform that allows users to:
               </Text>
               <ul className="space-y-2 mb-4 list-disc list-inside text-[var(--text-gray-300)]">
                 <li>Generate video scripts using AI</li>
@@ -57,7 +57,7 @@ export default function TermsPage() {
                 3. Account Registration
               </Heading>
               <Text variant="body" className="mb-4">
-                To use Sorovi, you must:
+                To use Hyreel, you must:
               </Text>
               <ul className="space-y-2 mb-4 list-disc list-inside text-[var(--text-gray-300)]">
                 <li>Be at least 13 years of age</li>
@@ -79,7 +79,7 @@ export default function TermsPage() {
                 4.1 Plans and Pricing
               </Heading>
               <Text variant="body" className="mb-4">
-                Sorovi offers various subscription plans with different features and limitations. Current pricing is available on our pricing page. We reserve the right to change prices with 30 days notice.
+                Hyreel offers various subscription plans with different features and limitations. Current pricing is available on our pricing page. We reserve the right to change prices with 30 days notice.
               </Text>
 
               <Heading as="h3" className="mb-3">
@@ -105,14 +105,14 @@ export default function TermsPage() {
                 5.1 Your Content
               </Heading>
               <Text variant="body" className="mb-4">
-                You retain all ownership rights to the videos and content you create using Sorovi. You may use your content for any purpose, including commercial use.
+                You retain all ownership rights to the videos and content you create using Hyreel. You may use your content for any purpose, including commercial use.
               </Text>
 
               <Heading as="h3" className="mb-3">
-                5.2 License to Sorovi
+                5.2 License to Hyreel
               </Heading>
               <Text variant="body" className="mb-4">
-                By uploading content to Sorovi, you grant us a limited license to:
+                By uploading content to Hyreel, you grant us a limited license to:
               </Text>
               <ul className="space-y-2 mb-4 list-disc list-inside text-[var(--text-gray-300)]">
                 <li>Store and process your content to provide the service</li>
@@ -121,10 +121,10 @@ export default function TermsPage() {
               </ul>
 
               <Heading as="h3" className="mb-3">
-                5.3 Sorovi's Content
+                5.3 Hyreel's Content
               </Heading>
               <Text variant="body">
-                All templates, tools, software, and other materials provided by Sorovi remain our property. You may not copy, modify, or redistribute our content without permission.
+                All templates, tools, software, and other materials provided by Hyreel remain our property. You may not copy, modify, or redistribute our content without permission.
               </Text>
             </div>
 
@@ -133,7 +133,7 @@ export default function TermsPage() {
                 6. Acceptable Use Policy
               </Heading>
               <Text variant="body" className="mb-4">
-                You agree not to use Sorovi to:
+                You agree not to use Hyreel to:
               </Text>
               <ul className="space-y-2 mb-4 list-disc list-inside text-[var(--text-gray-300)]">
                 <li>Create illegal, harmful, or offensive content</li>
@@ -181,7 +181,7 @@ export default function TermsPage() {
                 To the maximum extent permitted by law:
               </Text>
               <ul className="space-y-2 mb-4 list-disc list-inside text-[var(--text-gray-300)]">
-                <li>Sorovi is provided "as is" without warranties of any kind</li>
+                <li>Hyreel is provided "as is" without warranties of any kind</li>
                 <li>We are not liable for indirect, incidental, or consequential damages</li>
                 <li>Our total liability is limited to the fees you paid in the past 12 months</li>
                 <li>You use our service at your own risk</li>
@@ -193,7 +193,7 @@ export default function TermsPage() {
                 10. Indemnification
               </Heading>
               <Text variant="body">
-                You agree to indemnify and hold Sorovi harmless from any claims, damages, or expenses arising from your use of the service, your content, or your violation of these terms.
+                You agree to indemnify and hold Hyreel harmless from any claims, damages, or expenses arising from your use of the service, your content, or your violation of these terms.
               </Text>
             </div>
 
@@ -232,7 +232,7 @@ export default function TermsPage() {
                 For questions about these terms, contact us at:
               </Text>
               <ul className="space-y-2 list-none text-[var(--text-gray-300)]">
-                <li>Email: legal@sorovi.com</li>
+                <li>Email: legal@hyreel.com</li>
                 <li>Address: 123 Market Street, Suite 400, San Francisco, CA 94103</li>
               </ul>
             </div>

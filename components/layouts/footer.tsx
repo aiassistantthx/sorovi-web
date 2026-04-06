@@ -110,17 +110,17 @@ export function Footer() {
               {/* Logo & Copyright */}
               <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
                 <div className="text-xl font-bold text-[var(--text-primary)]">
-                  Sorovi
+                  Hyreel
                 </div>
                 <span className="text-[var(--text-muted)] text-sm">
-                  © {currentYear} Sorovi. All rights reserved.
+                  © {currentYear} Hyreel. All rights reserved.
                 </span>
               </div>
 
               {/* Social Links */}
               <div className="flex items-center space-x-4">
                 <a
-                  href="https://twitter.com/soroviapp"
+                  href="https://twitter.com/hyreelapp"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[var(--text-muted)] hover:text-[var(--brand-primary)] transition-colors"
@@ -131,7 +131,7 @@ export function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://instagram.com/soroviapp"
+                  href="https://instagram.com/hyreelapp"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[var(--text-muted)] hover:text-[var(--brand-primary)] transition-colors"
@@ -142,7 +142,7 @@ export function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://tiktok.com/@soroviapp"
+                  href="https://tiktok.com/@hyreelapp"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[var(--text-muted)] hover:text-[var(--brand-primary)] transition-colors"
@@ -153,7 +153,7 @@ export function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://youtube.com/@soroviapp"
+                  href="https://youtube.com/@hyreelapp"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[var(--text-muted)] hover:text-[var(--brand-primary)] transition-colors"

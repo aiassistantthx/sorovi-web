@@ -7,9 +7,9 @@ import Link from "next/link";
 import { useCases, getAllIndustries } from "@/lib/use-cases";
 
 export const metadata = {
-  title: "Use Cases - How Businesses Use Sorovi AI Video | Sorovi",
+  title: "Use Cases - How Businesses Use Hyreel AI Video | Hyreel",
   description:
-    "Discover how businesses across e-commerce, social media, real estate, fashion, and more use Sorovi to create professional AI videos that drive results.",
+    "Discover how businesses across e-commerce, social media, real estate, fashion, and more use Hyreel to create professional AI videos that drive results.",
 };
 
 export default function UseCasesPage() {
@@ -35,7 +35,7 @@ export default function UseCasesPage() {
             AI Video for Every Industry
           </Heading>
           <Text variant="large" className="mb-8 max-w-3xl mx-auto">
-            See how businesses across industries use Sorovi to create
+            See how businesses across industries use Hyreel to create
             professional video content that drives engagement, conversions, and
             growth.
           </Text>
@@ -139,7 +139,7 @@ export default function UseCasesPage() {
             Ready to Transform Your Video Content?
           </Heading>
           <Text variant="large" className="mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses using Sorovi to create professional AI
+            Join thousands of businesses using Hyreel to create professional AI
             videos. Start free -- no credit card required.
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

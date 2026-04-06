@@ -4,8 +4,8 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-  title: "About Us - Sorovi",
-  description: "Learn about Sorovi's mission to democratize video creation with AI technology",
+  title: "About Us - Hyreel",
+  description: "Learn about Hyreel's mission to democratize video creation with AI technology",
 };
 
 const teamValues = [
@@ -53,7 +53,7 @@ export default function AboutPage() {
             Making Video Creation Accessible to Everyone
           </Heading>
           <Text variant="large">
-            Sorovi was born from a simple belief: everyone has stories worth sharing, but not everyone has the time, skills, or budget to create professional videos. We're changing that with AI.
+            Hyreel was born from a simple belief: everyone has stories worth sharing, but not everyone has the time, skills, or budget to create professional videos. We're changing that with AI.
           </Text>
         </div>
       </Section>
@@ -84,10 +84,10 @@ export default function AboutPage() {
             In 2023, our founders noticed a growing gap: social media was exploding with video content, but creating quality videos remained expensive and time-consuming. Small businesses, content creators, and educators were left behind.
           </Text>
           <Text variant="body">
-            We built Sorovi to level the playing field. Using cutting-edge AI technology, we made it possible to create professional videos in minutes instead of hours, at a fraction of traditional costs.
+            We built Hyreel to level the playing field. Using cutting-edge AI technology, we made it possible to create professional videos in minutes instead of hours, at a fraction of traditional costs.
           </Text>
           <Text variant="body">
-            Today, over 14,000 creators use Sorovi to share their stories, grow their businesses, and connect with audiences worldwide. From product reviews to educational content, our AI helps bring ideas to life.
+            Today, over 14,000 creators use Hyreel to share their stories, grow their businesses, and connect with audiences worldwide. From product reviews to educational content, our AI helps bring ideas to life.
           </Text>
         </div>
       </Section>

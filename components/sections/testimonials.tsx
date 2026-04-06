@@ -25,7 +25,7 @@ const testimonials = [
     stats: "$50K/mo",
   },
   {
-    quote: "My Reels engagement went up 400% after switching to Sorovi. The AI voiceover sounds natural.",
+    quote: "My Reels engagement went up 400% after switching to Hyreel. The AI voiceover sounds natural.",
     author: "David L.",
     role: "Fitness Coach",
     avatar: "DL",
@@ -39,7 +39,7 @@ const testimonials = [
     stats: "890K views",
   },
   {
-    quote: "Went viral on TikTok within a week of using Sorovi. My agency clients are blown away.",
+    quote: "Went viral on TikTok within a week of using Hyreel. My agency clients are blown away.",
     author: "James T.",
     role: "Marketing Agency",
     avatar: "JT",

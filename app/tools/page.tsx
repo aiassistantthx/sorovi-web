@@ -6,7 +6,7 @@ import Link from "next/link";
 import { tools, getAllCategories } from "@/lib/tools";
 
 export const metadata = {
-  title: "AI Video Tools - Sorovi",
+  title: "AI Video Tools - Hyreel",
   description: "Explore our suite of AI-powered video creation tools. Script generators, voice AI, avatars, and more.",
 };
 

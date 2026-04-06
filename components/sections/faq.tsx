@@ -6,11 +6,11 @@ import Link from "next/link";
 const faqs = [
   {
     question: "How does photo-to-video AI work?",
-    answer: "Upload any photo (selfie, product shot, stock image) and Sorovi's AI adds realistic motion, transitions, and effects. It can animate faces, create zoom effects, add parallax motion, and more — transforming static images into scroll-stopping videos in seconds.",
+    answer: "Upload any photo (selfie, product shot, stock image) and Hyreel's AI adds realistic motion, transitions, and effects. It can animate faces, create zoom effects, add parallax motion, and more — transforming static images into scroll-stopping videos in seconds.",
   },
   {
     question: "Do I need any video editing experience?",
-    answer: "None at all. Sorovi is built for complete beginners. If you can tap a button, you can create professional videos. Our AI handles all the technical stuff — you just pick what looks good and hit export.",
+    answer: "None at all. Hyreel is built for complete beginners. If you can tap a button, you can create professional videos. Our AI handles all the technical stuff — you just pick what looks good and hit export.",
   },
   {
     question: "What social platforms are supported?",
@@ -22,7 +22,7 @@ const faqs = [
   },
   {
     question: "Is there a watermark on free videos?",
-    answer: "The free plan includes a small Sorovi watermark. Premium plans (starting at $39/month) remove all watermarks, unlock HD exports, and give you access to all 100+ AI features. All videos are 100% yours to use commercially.",
+    answer: "The free plan includes a small Hyreel watermark. Premium plans (starting at $39/month) remove all watermarks, unlock HD exports, and give you access to all 100+ AI features. All videos are 100% yours to use commercially.",
   },
   {
     question: "What languages does the AI support?",
@@ -71,7 +71,7 @@ export function FAQSection() {
           Questions? We&apos;ve Got Answers
         </Heading>
         <Text variant="large" className="max-w-2xl mx-auto">
-          Everything you need to know about creating videos with Sorovi
+          Everything you need to know about creating videos with Hyreel
         </Text>
       </div>
 

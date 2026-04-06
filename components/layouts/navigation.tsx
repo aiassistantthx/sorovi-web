@@ -49,7 +49,7 @@ export function Navigation() {
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
           >
             <div className="text-2xl font-bold text-[var(--text-primary)]">
-              Sorovi
+              Hyreel
             </div>
           </Link>
 

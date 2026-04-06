@@ -10,7 +10,7 @@ const benefits = [
       </svg>
     ),
     title: "Save 10+ Hours Per Video",
-    description: "What takes a day with traditional tools takes minutes with Sorovi. Focus on ideas, not editing.",
+    description: "What takes a day with traditional tools takes minutes with Hyreel. Focus on ideas, not editing.",
     stat: "5 min avg",
   },
   {
@@ -20,7 +20,7 @@ const benefits = [
       </svg>
     ),
     title: "Save $3,000+ Per Video",
-    description: "One agency video costs thousands. Sorovi gives you unlimited videos for a flat monthly fee.",
+    description: "One agency video costs thousands. Hyreel gives you unlimited videos for a flat monthly fee.",
     stat: "10x cheaper",
   },
   {
@@ -71,7 +71,7 @@ export function BenefitsSection() {
       <div className="text-center mb-12">
         <div className="inline-flex items-center px-3 py-1 rounded-full bg-[var(--brand-primary)]/10 border border-[var(--brand-primary)]/20 mb-4">
           <span className="text-xs font-medium text-[var(--brand-primary)] uppercase tracking-wider">
-            Why Sorovi
+            Why Hyreel
           </span>
         </div>
         <Heading as="h2" className="mb-4">

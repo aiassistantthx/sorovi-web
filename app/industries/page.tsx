@@ -6,9 +6,9 @@ import Link from "next/link";
 import { industries } from "@/lib/industries";
 
 export const metadata = {
-  title: "AI Video by Industry - Sorovi",
+  title: "AI Video by Industry - Hyreel",
   description:
-    "Discover how businesses across e-commerce, real estate, fashion, food, fitness, and more use Sorovi AI to create professional video content.",
+    "Discover how businesses across e-commerce, real estate, fashion, food, fitness, and more use Hyreel AI to create professional video content.",
 };
 
 export default function IndustriesPage() {
@@ -32,7 +32,7 @@ export default function IndustriesPage() {
             AI Video for Every Industry
           </Heading>
           <Text variant="large" className="mb-8 max-w-3xl mx-auto">
-            See how businesses across industries use Sorovi to create
+            See how businesses across industries use Hyreel to create
             professional video content that drives engagement, conversions, and
             growth.
           </Text>
@@ -68,7 +68,7 @@ export default function IndustriesPage() {
             Choose Your Industry
           </Heading>
           <Text variant="large">
-            Explore how Sorovi works for your specific business needs
+            Explore how Hyreel works for your specific business needs
           </Text>
         </div>
 
@@ -117,7 +117,7 @@ export default function IndustriesPage() {
             Ready to Transform Your Video Content?
           </Heading>
           <Text variant="large" className="mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses using Sorovi to create professional AI
+            Join thousands of businesses using Hyreel to create professional AI
             videos. Start free — no credit card required.
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

@@ -1,5 +1,5 @@
-const SITE_URL = "https://sorovi.app";
-const SITE_NAME = "Sorovi";
+const SITE_URL = "https://hyreel.app";
+const SITE_NAME = "Hyreel";
 
 export function generateSoftwareApplicationSchema() {
   return {
@@ -27,7 +27,7 @@ export function generateSoftwareApplicationSchema() {
       "Create viral videos in minutes with AI. Transform photos into stunning videos with cinematic motion effects.",
     url: SITE_URL,
     downloadUrl:
-      "https://apps.apple.com/app/sorovi-ai-video-generator/id6738042296",
+      "https://apps.apple.com/app/hyreel-ai-video-generator/id6738042296",
     author: {
       "@type": "Organization",
       name: SITE_NAME,
@@ -46,13 +46,13 @@ export function generateOrganizationSchema() {
       "@type": "ContactPoint",
       contactType: "customer support",
       url: `${SITE_URL}/contact`,
-      email: "support@sorovi.com",
+      email: "support@hyreel.com",
     },
     sameAs: [
-      "https://twitter.com/soroviapp",
-      "https://instagram.com/soroviapp",
-      "https://tiktok.com/@soroviapp",
-      "https://youtube.com/@soroviapp",
+      "https://twitter.com/hyreelapp",
+      "https://instagram.com/hyreelapp",
+      "https://tiktok.com/@hyreelapp",
+      "https://youtube.com/@hyreelapp",
     ],
     description:
       "AI-powered video generation app for creators and businesses.",

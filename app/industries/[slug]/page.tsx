@@ -27,7 +27,7 @@ export async function generateMetadata({
 
   if (!industry) {
     return {
-      title: "Industry Not Found - Sorovi",
+      title: "Industry Not Found - Hyreel",
     };
   }
 
@@ -35,7 +35,7 @@ export async function generateMetadata({
     title: industry.metaTitle,
     description: industry.metaDescription,
     alternates: {
-      canonical: `https://sorovi.app/industries/${industry.slug}`,
+      canonical: `https://hyreel.app/industries/${industry.slug}`,
     },
   };
 }
@@ -138,7 +138,7 @@ export default async function IndustryPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            How Sorovi Helps
+            How Hyreel Helps
           </Heading>
           <Text variant="large">
             AI-powered video solutions for {industry.name.toLowerCase()}
@@ -250,7 +250,7 @@ export default async function IndustryPage({
       {relatedTools.length > 0 && (
         <RelatedContent
           title="Recommended Tools"
-          subtitle={`The best Sorovi tools for ${industry.name.toLowerCase()}`}
+          subtitle={`The best Hyreel tools for ${industry.name.toLowerCase()}`}
           items={relatedTools.map((tool) => ({
             title: tool!.name,
             description: tool!.tagline,
@@ -266,7 +266,7 @@ export default async function IndustryPage({
       {/* FAQ Section */}
       <PageFAQ
         title="Frequently Asked Questions"
-        description={`Common questions about Sorovi for ${industry.name.toLowerCase()}`}
+        description={`Common questions about Hyreel for ${industry.name.toLowerCase()}`}
         items={industry.faqs}
         variant="light"
         includeSchema={true}
@@ -275,7 +275,7 @@ export default async function IndustryPage({
       {/* CTA Section */}
       <FinalCTA
         title={`Ready to Transform ${industry.name} Video?`}
-        description={`Join thousands of ${industry.name.toLowerCase()} businesses using Sorovi to create professional video content.`}
+        description={`Join thousands of ${industry.name.toLowerCase()} businesses using Hyreel to create professional video content.`}
         primaryCta={{ text: industry.ctaText }}
         secondaryCta={{ text: "View All Industries", href: "/industries" }}
       />

@@ -5,7 +5,7 @@ import { i18n, type Locale } from "@/lib/i18n/config";
 import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
-  title: "Sorovi - AI Video Generator",
+  title: "Hyreel - AI Video Generator",
   description: "Create viral videos from photos with AI",
 };
 

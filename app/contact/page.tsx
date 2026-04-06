@@ -6,8 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-  title: "Contact Us - Sorovi",
-  description: "Get in touch with the Sorovi team. We're here to help with any questions.",
+  title: "Contact Us - Hyreel",
+  description: "Get in touch with the Hyreel team. We're here to help with any questions.",
 };
 
 const contactMethods = [
@@ -15,7 +15,7 @@ const contactMethods = [
     icon: "📧",
     title: "Email Support",
     description: "Get help from our support team",
-    contact: "support@sorovi.com",
+    contact: "support@hyreel.com",
     response: "24-48 hours",
   },
   {
@@ -29,14 +29,14 @@ const contactMethods = [
     icon: "📚",
     title: "Help Center",
     description: "Browse articles and tutorials",
-    contact: "help.sorovi.com",
+    contact: "help.hyreel.com",
     response: "Self-service",
   },
   {
     icon: "🐦",
     title: "Social Media",
     description: "Follow us for updates",
-    contact: "@sorovi",
+    contact: "@hyreel",
     response: "Follow us",
   },
 ];
@@ -137,10 +137,10 @@ export default function ContactPage() {
                   <Text variant="small">
                     For business or enterprise plans, email{" "}
                     <a
-                      href="mailto:sales@sorovi.com"
+                      href="mailto:sales@hyreel.com"
                       className="text-[var(--brand-primary)] hover:underline"
                     >
-                      sales@sorovi.com
+                      sales@hyreel.com
                     </a>
                   </Text>
                 </Card>
@@ -151,10 +151,10 @@ export default function ContactPage() {
                   <Text variant="small">
                     For technical issues, use the live chat in the app or email{" "}
                     <a
-                      href="mailto:support@sorovi.com"
+                      href="mailto:support@hyreel.com"
                       className="text-[var(--brand-primary)] hover:underline"
                     >
-                      support@sorovi.com
+                      support@hyreel.com
                     </a>
                   </Text>
                 </Card>
@@ -165,10 +165,10 @@ export default function ContactPage() {
                   <Text variant="small">
                     For press inquiries, contact{" "}
                     <a
-                      href="mailto:press@sorovi.com"
+                      href="mailto:press@hyreel.com"
                       className="text-[var(--brand-primary)] hover:underline"
                     >
-                      press@sorovi.com
+                      press@hyreel.com
                     </a>
                   </Text>
                 </Card>
@@ -184,7 +184,7 @@ export default function ContactPage() {
             Looking for Quick Answers?
           </Heading>
           <Text variant="large" className="mb-8">
-            Check out our FAQ page for answers to common questions about Sorovi
+            Check out our FAQ page for answers to common questions about Hyreel
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" variant="secondary">

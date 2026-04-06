@@ -35,7 +35,7 @@ export async function generateMetadata({
 
   if (!post) {
     return {
-      title: "Post Not Found - Sorovi Blog",
+      title: "Post Not Found - Hyreel Blog",
     };
   }
 

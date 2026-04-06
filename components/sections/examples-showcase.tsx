@@ -59,7 +59,7 @@ export function ExamplesShowcaseSection() {
           </span>
         </div>
         <Heading as="h2" className="mb-4">
-          Created by Sorovi, Watched by Millions
+          Created by Hyreel, Watched by Millions
         </Heading>
         <Text variant="large" className="max-w-2xl mx-auto">
           Real videos from real creators. Each made in under 5 minutes using AI — no fancy equipment required.

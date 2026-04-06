@@ -31,13 +31,13 @@ export async function generateMetadata({
     title: dict.metadata.title,
     description: dict.metadata.description,
     alternates: {
-      canonical: `https://sorovi.app/${lang}`,
+      canonical: `https://hyreel.app/${lang}`,
       languages: Object.fromEntries(
         i18n.locales.map((locale) => [
           locale,
           locale === i18n.defaultLocale
-            ? "https://sorovi.app"
-            : `https://sorovi.app/${locale}`,
+            ? "https://hyreel.app"
+            : `https://hyreel.app/${locale}`,
         ])
       ),
     },

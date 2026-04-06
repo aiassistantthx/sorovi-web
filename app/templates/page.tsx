@@ -7,11 +7,11 @@ import Link from "next/link";
 import { templates, getAllTemplateCategories } from "@/lib/templates";
 
 export const metadata = {
-  title: "Video Templates - AI Video Templates for Every Platform | Sorovi",
+  title: "Video Templates - AI Video Templates for Every Platform | Hyreel",
   description:
     "Explore AI video templates for TikTok, Instagram Reels, YouTube Shorts, products, real estate, fashion, food, and more. Create professional videos from photos in seconds.",
   alternates: {
-    canonical: "https://sorovi.app/templates",
+    canonical: "https://hyreel.app/templates",
   },
 };
 

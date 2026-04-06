@@ -335,7 +335,7 @@ export const tools: Tool[] = [
     name: "Image to Video AI",
     tagline: "Transform any photo into stunning AI video in seconds",
     description: "Turn your photos into professional AI-generated videos with cinematic motion effects. Create viral TikTok, Instagram Reels, and YouTube Shorts from a single image.",
-    detailedDescription: "Transform still images into captivating videos with Sorovi's powerful Image to Video AI technology. Our advanced AI analyzes your photos and creates smooth, professional-quality videos with realistic camera movements including zoom, orbit, follow, and 3D parallax effects. Perfect for content creators and anyone who wants to bring their photos to life. No video editing skills required—just upload your image and watch our AI create magic. Sorovi's iOS app makes it easy to create viral content for TikTok, Instagram Reels, and YouTube Shorts directly from your phone.",
+    detailedDescription: "Transform still images into captivating videos with Hyreel's powerful Image to Video AI technology. Our advanced AI analyzes your photos and creates smooth, professional-quality videos with realistic camera movements including zoom, orbit, follow, and 3D parallax effects. Perfect for content creators and anyone who wants to bring their photos to life. No video editing skills required—just upload your image and watch our AI create magic. Hyreel's iOS app makes it easy to create viral content for TikTok, Instagram Reels, and YouTube Shorts directly from your phone.",
     icon: "🎬",
     category: "Video Generation",
     howItWorks: [
@@ -420,7 +420,7 @@ export const tools: Tool[] = [
       },
       {
         question: "What types of images work best for AI video generation?",
-        answer: "Sorovi works with any image, but best results come from high-resolution photos with clear subjects. Product photos, portraits, landscapes, and food photography all produce stunning results. Images with 3D depth elements create especially impressive parallax effects."
+        answer: "Hyreel works with any image, but best results come from high-resolution photos with clear subjects. Product photos, portraits, landscapes, and food photography all produce stunning results. Images with 3D depth elements create especially impressive parallax effects."
       },
       {
         question: "Can I create videos for commercial use?",
@@ -432,19 +432,19 @@ export const tools: Tool[] = [
       },
       {
         question: "Is there a free version of Image to Video AI?",
-        answer: "Yes! Sorovi offers 5 free AI videos per day. Free videos include a small watermark. Upgrade to Creator plan for unlimited videos without watermarks."
+        answer: "Yes! Hyreel offers 5 free AI videos per day. Free videos include a small watermark. Upgrade to Creator plan for unlimited videos without watermarks."
       },
       {
         question: "What motion effects are available?",
-        answer: "Sorovi offers multiple AI motion effects: Zoom In/Out, Orbit 360°, Follow Subject, 3D Parallax, Dolly Zoom, Pan, Tilt, and custom combinations. Each effect can be customized for speed and intensity."
+        answer: "Hyreel offers multiple AI motion effects: Zoom In/Out, Orbit 360°, Follow Subject, 3D Parallax, Dolly Zoom, Pan, Tilt, and custom combinations. Each effect can be customized for speed and intensity."
       },
       {
         question: "Can I add music to my AI videos?",
-        answer: "Absolutely! Sorovi includes a library of royalty-free music tracks, or you can add your own audio. Music is automatically synced to your video's motion for professional results."
+        answer: "Absolutely! Hyreel includes a library of royalty-free music tracks, or you can add your own audio. Music is automatically synced to your video's motion for professional results."
       },
       {
-        question: "Is Sorovi available on Android?",
-        answer: "Sorovi is currently available for iOS (iPhone and iPad). Android version is in development—join our waitlist to be notified when it launches."
+        question: "Is Hyreel available on Android?",
+        answer: "Hyreel is currently available for iOS (iPhone and iPad). Android version is in development—join our waitlist to be notified when it launches."
       }
     ]
   },
@@ -453,7 +453,7 @@ export const tools: Tool[] = [
     name: "AI TikTok Video Generator",
     tagline: "Create viral TikTok videos from photos instantly",
     description: "Transform your images into TikTok-ready AI videos with trending effects, perfect 9:16 format, and viral-optimized motion. No editing skills needed.",
-    detailedDescription: "Sorovi's AI TikTok Video Generator is built specifically for creators who want to dominate the For You Page. Our AI understands what makes TikTok content go viral—dynamic motion, eye-catching effects, and perfect pacing. Upload any photo and watch it transform into a scroll-stopping video optimized for the TikTok algorithm. Whether you're showcasing products, creating lifestyle content, or building your personal brand, Sorovi helps you create professional TikTok videos in seconds, not hours. Join thousands of creators who've gained millions of views using Sorovi's AI-powered video generation.",
+    detailedDescription: "Hyreel's AI TikTok Video Generator is built specifically for creators who want to dominate the For You Page. Our AI understands what makes TikTok content go viral—dynamic motion, eye-catching effects, and perfect pacing. Upload any photo and watch it transform into a scroll-stopping video optimized for the TikTok algorithm. Whether you're showcasing products, creating lifestyle content, or building your personal brand, Hyreel helps you create professional TikTok videos in seconds, not hours. Join thousands of creators who've gained millions of views using Hyreel's AI-powered video generation.",
     icon: "📱",
     category: "Social Media",
     howItWorks: [
@@ -532,28 +532,28 @@ export const tools: Tool[] = [
     },
     faqs: [
       {
-        question: "Is Sorovi better than CapCut for TikTok videos?",
-        answer: "Sorovi is designed specifically for turning photos into videos, while CapCut is a general editor. If you want to create dynamic videos from still images with AI motion effects, Sorovi produces better results faster. Many creators use both tools together."
+        question: "Is Hyreel better than CapCut for TikTok videos?",
+        answer: "Hyreel is designed specifically for turning photos into videos, while CapCut is a general editor. If you want to create dynamic videos from still images with AI motion effects, Hyreel produces better results faster. Many creators use both tools together."
       },
       {
         question: "What makes a TikTok video go viral?",
-        answer: "Viral TikToks typically have strong hooks in the first 1-2 seconds, dynamic motion, trending sounds, and emotional engagement. Sorovi's AI effects are designed to create attention-grabbing motion that keeps viewers watching."
+        answer: "Viral TikToks typically have strong hooks in the first 1-2 seconds, dynamic motion, trending sounds, and emotional engagement. Hyreel's AI effects are designed to create attention-grabbing motion that keeps viewers watching."
       },
       {
         question: "Can I use trending TikTok sounds?",
-        answer: "You can add any audio after exporting to TikTok. Sorovi also includes royalty-free music that's safe for monetization. For trending sounds, add them directly in TikTok after importing your video."
+        answer: "You can add any audio after exporting to TikTok. Hyreel also includes royalty-free music that's safe for monetization. For trending sounds, add them directly in TikTok after importing your video."
       },
       {
         question: "How often should I post on TikTok?",
-        answer: "Most successful creators post 1-3 times daily. With Sorovi, you can create a day's worth of content in minutes, making consistent posting achievable even with a busy schedule."
+        answer: "Most successful creators post 1-3 times daily. With Hyreel, you can create a day's worth of content in minutes, making consistent posting achievable even with a busy schedule."
       },
       {
-        question: "Does Sorovi add a watermark to TikTok videos?",
-        answer: "Free plan includes a small Sorovi watermark. Creator and Business plans remove all watermarks for professional, clean videos."
+        question: "Does Hyreel add a watermark to TikTok videos?",
+        answer: "Free plan includes a small Hyreel watermark. Creator and Business plans remove all watermarks for professional, clean videos."
       },
       {
         question: "Can I create product videos for TikTok Shop?",
-        answer: "Absolutely! Sorovi is perfect for TikTok Shop sellers. Create professional product videos that showcase your items with cinematic motion effects. Business plan includes commercial usage rights."
+        answer: "Absolutely! Hyreel is perfect for TikTok Shop sellers. Create professional product videos that showcase your items with cinematic motion effects. Business plan includes commercial usage rights."
       }
     ]
   },
@@ -562,14 +562,14 @@ export const tools: Tool[] = [
     name: "AI Instagram Reels Maker",
     tagline: "Create stunning Reels from photos with AI motion",
     description: "Transform your Instagram photos into eye-catching Reels with AI-powered motion effects. Professional quality, Reels-optimized format, instant creation.",
-    detailedDescription: "Stand out in the Instagram Reels feed with Sorovi's AI-powered video creation. Our intelligent algorithms transform your best photos into dynamic, scroll-stopping Reels with cinematic motion effects. Whether you're an influencer, brand, or casual creator, Sorovi helps you create professional Reels content without expensive equipment or editing software. The AI automatically optimizes for Instagram's algorithm—perfect aspect ratio, engaging motion, and attention-grabbing effects that boost engagement and reach. Create a week's worth of Reels content in minutes.",
+    detailedDescription: "Stand out in the Instagram Reels feed with Hyreel's AI-powered video creation. Our intelligent algorithms transform your best photos into dynamic, scroll-stopping Reels with cinematic motion effects. Whether you're an influencer, brand, or casual creator, Hyreel helps you create professional Reels content without expensive equipment or editing software. The AI automatically optimizes for Instagram's algorithm—perfect aspect ratio, engaging motion, and attention-grabbing effects that boost engagement and reach. Create a week's worth of Reels content in minutes.",
     icon: "📸",
     category: "Social Media",
     howItWorks: [
       {
         step: "1",
         title: "Select Your Best Photo",
-        description: "Choose any high-quality image. Products, portraits, travel shots—Sorovi makes them all Reels-ready."
+        description: "Choose any high-quality image. Products, portraits, travel shots—Hyreel makes them all Reels-ready."
       },
       {
         step: "2",
@@ -642,27 +642,27 @@ export const tools: Tool[] = [
     faqs: [
       {
         question: "What's the best video length for Instagram Reels?",
-        answer: "Instagram Reels perform best between 7-15 seconds for maximum engagement. Sorovi lets you create videos from 3-60 seconds, but we recommend keeping Reels short and impactful for best results."
+        answer: "Instagram Reels perform best between 7-15 seconds for maximum engagement. Hyreel lets you create videos from 3-60 seconds, but we recommend keeping Reels short and impactful for best results."
       },
       {
-        question: "Can I use Sorovi videos for Instagram Stories too?",
-        answer: "Yes! Sorovi videos are perfect for both Reels and Stories. The 9:16 format works for both, and you can easily share to either format directly from the app."
+        question: "Can I use Hyreel videos for Instagram Stories too?",
+        answer: "Yes! Hyreel videos are perfect for both Reels and Stories. The 9:16 format works for both, and you can easily share to either format directly from the app."
       },
       {
         question: "How do I get more views on Instagram Reels?",
-        answer: "Key factors include posting when your audience is active, using trending audio, creating hooks in the first second, and having dynamic motion that keeps viewers watching. Sorovi's AI effects are designed to maximize watch time."
+        answer: "Key factors include posting when your audience is active, using trending audio, creating hooks in the first second, and having dynamic motion that keeps viewers watching. Hyreel's AI effects are designed to maximize watch time."
       },
       {
-        question: "Does Sorovi work with Instagram's music library?",
-        answer: "After exporting your Sorovi video to Instagram, you can add any music from Instagram's library. Sorovi also includes royalty-free music if you prefer to add audio before posting."
+        question: "Does Hyreel work with Instagram's music library?",
+        answer: "After exporting your Hyreel video to Instagram, you can add any music from Instagram's library. Hyreel also includes royalty-free music if you prefer to add audio before posting."
       },
       {
         question: "Can I create carousel Reels?",
-        answer: "Sorovi creates single video Reels. For multi-image content, create separate videos from each image and combine them in Instagram or use our built-in merge feature."
+        answer: "Hyreel creates single video Reels. For multi-image content, create separate videos from each image and combine them in Instagram or use our built-in merge feature."
       },
       {
         question: "Is there a difference between Reels and TikTok video optimization?",
-        answer: "While both use 9:16 format, Sorovi optimizes effects slightly differently for each platform based on what performs best. Instagram favors slightly more polished, aesthetic content while TikTok rewards raw energy. Our AI adapts accordingly."
+        answer: "While both use 9:16 format, Hyreel optimizes effects slightly differently for each platform based on what performs best. Instagram favors slightly more polished, aesthetic content while TikTok rewards raw energy. Our AI adapts accordingly."
       }
     ]
   },
@@ -671,7 +671,7 @@ export const tools: Tool[] = [
     name: "AI YouTube Shorts Generator",
     tagline: "Create YouTube Shorts from images with AI",
     description: "Turn photos into engaging YouTube Shorts with AI-powered motion effects. Perfect format, high quality, optimized for YouTube's algorithm.",
-    detailedDescription: "Tap into YouTube's fastest-growing format with Sorovi's AI Shorts Generator. Transform any image into a captivating Short video that captures viewer attention and drives channel growth. Our AI creates smooth, professional motion effects that keep viewers watching—crucial for YouTube's watch-time algorithm. Whether you're growing a new channel or adding Shorts to your content mix, Sorovi helps you create more content faster without sacrificing quality. Perfect for product showcases, tutorials, reactions, and any content that starts with a compelling image.",
+    detailedDescription: "Tap into YouTube's fastest-growing format with Hyreel's AI Shorts Generator. Transform any image into a captivating Short video that captures viewer attention and drives channel growth. Our AI creates smooth, professional motion effects that keep viewers watching—crucial for YouTube's watch-time algorithm. Whether you're growing a new channel or adding Shorts to your content mix, Hyreel helps you create more content faster without sacrificing quality. Perfect for product showcases, tutorials, reactions, and any content that starts with a compelling image.",
     icon: "▶️",
     category: "Social Media",
     howItWorks: [
@@ -751,27 +751,27 @@ export const tools: Tool[] = [
     faqs: [
       {
         question: "What's the best length for YouTube Shorts?",
-        answer: "YouTube Shorts can be up to 60 seconds. For optimal engagement, we recommend 15-30 seconds for most content. Sorovi lets you create any length from 3-60 seconds."
+        answer: "YouTube Shorts can be up to 60 seconds. For optimal engagement, we recommend 15-30 seconds for most content. Hyreel lets you create any length from 3-60 seconds."
       },
       {
         question: "Do YouTube Shorts help channel growth?",
         answer: "Yes! Shorts are YouTube's fastest-growing format and can significantly boost subscriber counts. Many channels have gained thousands of subscribers from Shorts content reaching new audiences."
       },
       {
-        question: "Can I monetize Shorts made with Sorovi?",
-        answer: "Absolutely! Videos created with Sorovi Creator and Business plans are fully monetizable on YouTube. You own the content and all monetization rights."
+        question: "Can I monetize Shorts made with Hyreel?",
+        answer: "Absolutely! Videos created with Hyreel Creator and Business plans are fully monetizable on YouTube. You own the content and all monetization rights."
       },
       {
         question: "What resolution should YouTube Shorts be?",
-        answer: "YouTube recommends 1080x1920 (9:16 vertical) for Shorts. Sorovi exports in this exact format at full 1080p quality for optimal playback."
+        answer: "YouTube recommends 1080x1920 (9:16 vertical) for Shorts. Hyreel exports in this exact format at full 1080p quality for optimal playback."
       },
       {
         question: "Can I add voiceover to my Shorts?",
-        answer: "Yes! Use Sorovi's AI Voice Generator to add professional voiceovers to your Shorts. You can also record and add your own voice after exporting."
+        answer: "Yes! Use Hyreel's AI Voice Generator to add professional voiceovers to your Shorts. You can also record and add your own voice after exporting."
       },
       {
-        question: "How is Sorovi different from YouTube's built-in Shorts editor?",
-        answer: "YouTube's editor is basic—cut, crop, add music. Sorovi transforms static images into dynamic videos with AI motion effects that aren't possible in the YouTube app. Create cinematic content from any photo."
+        question: "How is Hyreel different from YouTube's built-in Shorts editor?",
+        answer: "YouTube's editor is basic—cut, crop, add music. Hyreel transforms static images into dynamic videos with AI motion effects that aren't possible in the YouTube app. Create cinematic content from any photo."
       }
     ]
   },
@@ -780,7 +780,7 @@ export const tools: Tool[] = [
     name: "AI Zoom Video Effect",
     tagline: "Cinematic zoom effects powered by AI",
     description: "Create stunning zoom in and zoom out videos from any photo with AI. Smooth, cinematic camera movements that bring your images to life.",
-    detailedDescription: "Add Hollywood-style zoom effects to your photos with Sorovi's AI Zoom Video Effect. Our advanced AI creates incredibly smooth, natural-looking zoom movements that transform static images into dynamic video content. Unlike basic ken burns effects, Sorovi's AI understands depth, subjects, and composition to create intelligent zoom paths that focus on what matters most in your image. Perfect for product reveals, dramatic intros, focus transitions, and creating that cinematic feeling that makes content stand out. Whether you're zooming in to highlight details or zooming out for the big reveal, Sorovi delivers professional results instantly.",
+    detailedDescription: "Add Hollywood-style zoom effects to your photos with Hyreel's AI Zoom Video Effect. Our advanced AI creates incredibly smooth, natural-looking zoom movements that transform static images into dynamic video content. Unlike basic ken burns effects, Hyreel's AI understands depth, subjects, and composition to create intelligent zoom paths that focus on what matters most in your image. Perfect for product reveals, dramatic intros, focus transitions, and creating that cinematic feeling that makes content stand out. Whether you're zooming in to highlight details or zooming out for the big reveal, Hyreel delivers professional results instantly.",
     icon: "🔍",
     category: "Effects",
     howItWorks: [
@@ -860,7 +860,7 @@ export const tools: Tool[] = [
     faqs: [
       {
         question: "What's the difference between AI zoom and Ken Burns effect?",
-        answer: "Traditional Ken Burns is simple linear movement. Sorovi's AI Zoom understands your image's depth and composition, creating intelligent zoom paths with natural acceleration curves and smart focal point detection. The result looks like professional camera movement, not a basic digital effect."
+        answer: "Traditional Ken Burns is simple linear movement. Hyreel's AI Zoom understands your image's depth and composition, creating intelligent zoom paths with natural acceleration curves and smart focal point detection. The result looks like professional camera movement, not a basic digital effect."
       },
       {
         question: "Can I control where the zoom focuses?",
@@ -868,7 +868,7 @@ export const tools: Tool[] = [
       },
       {
         question: "What is Dolly Zoom effect?",
-        answer: "Dolly Zoom (also called Vertigo effect) simultaneously zooms in while moving backward (or vice versa). It creates a dramatic perspective shift often used in films. Sorovi's AI can simulate this effect from a single photo."
+        answer: "Dolly Zoom (also called Vertigo effect) simultaneously zooms in while moving backward (or vice versa). It creates a dramatic perspective shift often used in films. Hyreel's AI can simulate this effect from a single photo."
       },
       {
         question: "How long can zoom videos be?",
@@ -880,7 +880,7 @@ export const tools: Tool[] = [
       },
       {
         question: "Does the zoom quality degrade on close-ups?",
-        answer: "Sorovi's AI uses super-resolution technology to maintain quality during extreme zooms. Start with high-resolution images for best results, but even standard photos produce great zoom videos."
+        answer: "Hyreel's AI uses super-resolution technology to maintain quality during extreme zooms. Start with high-resolution images for best results, but even standard photos produce great zoom videos."
       }
     ]
   },
@@ -889,7 +889,7 @@ export const tools: Tool[] = [
     name: "AI Orbit Video Effect",
     tagline: "360° orbital camera motion from any photo",
     description: "Create stunning 360° orbit videos that rotate around your subject using AI. Transform flat images into dynamic 3D-like showcases.",
-    detailedDescription: "Make your images come alive with Sorovi's revolutionary AI Orbit Video Effect. Our AI technology creates the illusion of a camera orbiting around your subject—from a single 2D photo. This effect, previously only achievable with expensive camera equipment and studio setups, is now available instantly from any image. Perfect for product showcases, portrait reveals, and creating that 'wow' factor that stops scrollers in their tracks. The AI intelligently separates foreground from background, creating realistic depth and perspective as the virtual camera moves around your subject. No 3D modeling required—just upload and watch the magic happen.",
+    detailedDescription: "Make your images come alive with Hyreel's revolutionary AI Orbit Video Effect. Our AI technology creates the illusion of a camera orbiting around your subject—from a single 2D photo. This effect, previously only achievable with expensive camera equipment and studio setups, is now available instantly from any image. Perfect for product showcases, portrait reveals, and creating that 'wow' factor that stops scrollers in their tracks. The AI intelligently separates foreground from background, creating realistic depth and perspective as the virtual camera moves around your subject. No 3D modeling required—just upload and watch the magic happen.",
     icon: "🌀",
     category: "Effects",
     howItWorks: [
@@ -969,7 +969,7 @@ export const tools: Tool[] = [
     faqs: [
       {
         question: "How does AI create orbit motion from a flat image?",
-        answer: "Sorovi's AI uses depth estimation and subject segmentation to understand the 3D structure of your image. It then generates new perspectives as if a camera were moving around the scene, filling in details using AI generation. The result is convincing orbital motion from a single photo."
+        answer: "Hyreel's AI uses depth estimation and subject segmentation to understand the 3D structure of your image. It then generates new perspectives as if a camera were moving around the scene, filling in details using AI generation. The result is convincing orbital motion from a single photo."
       },
       {
         question: "What images work best for orbit effect?",
@@ -985,7 +985,7 @@ export const tools: Tool[] = [
       },
       {
         question: "Can I use orbit effect for product videos?",
-        answer: "Absolutely—this is one of the most popular use cases! E-commerce sellers use Sorovi's orbit effect to create dynamic product showcases that dramatically outperform static images."
+        answer: "Absolutely—this is one of the most popular use cases! E-commerce sellers use Hyreel's orbit effect to create dynamic product showcases that dramatically outperform static images."
       },
       {
         question: "Is orbit effect available on the free plan?",
@@ -998,7 +998,7 @@ export const tools: Tool[] = [
     name: "AI Parallax Video Effect",
     tagline: "Add cinematic depth and 3D motion to any photo",
     description: "Create stunning parallax videos that add multi-layer depth to your images using AI. Transform flat photos into immersive, 3D-like clips with natural camera movement.",
-    detailedDescription: "Sorovi's AI Parallax Video Effect brings your still images to life by creating realistic depth-based motion. The AI analyzes your photo, separates it into multiple depth layers, and moves them at different speeds to create a convincing 3D parallax effect. This is the same technique used in professional film and TV production to add cinematic depth to still imagery. Whether you are working with landscape photos, portraits, product shots, or architectural images, the parallax effect adds a premium feel that captures attention. The foreground moves faster than the background, creating natural depth perception that makes viewers feel like they are looking through a window rather than at a flat image.",
+    detailedDescription: "Hyreel's AI Parallax Video Effect brings your still images to life by creating realistic depth-based motion. The AI analyzes your photo, separates it into multiple depth layers, and moves them at different speeds to create a convincing 3D parallax effect. This is the same technique used in professional film and TV production to add cinematic depth to still imagery. Whether you are working with landscape photos, portraits, product shots, or architectural images, the parallax effect adds a premium feel that captures attention. The foreground moves faster than the background, creating natural depth perception that makes viewers feel like they are looking through a window rather than at a flat image.",
     icon: "🖼️",
     category: "Effects",
     howItWorks: [
@@ -1078,7 +1078,7 @@ export const tools: Tool[] = [
     faqs: [
       {
         question: "How does AI parallax work from a single photo?",
-        answer: "Sorovi's AI uses depth estimation to analyze your image and separate it into multiple layers at different distances. It then moves these layers at different speeds — foreground faster, background slower — creating convincing 3D depth motion from a flat 2D image."
+        answer: "Hyreel's AI uses depth estimation to analyze your image and separate it into multiple layers at different distances. It then moves these layers at different speeds — foreground faster, background slower — creating convincing 3D depth motion from a flat 2D image."
       },
       {
         question: "What types of photos work best for parallax?",
@@ -1107,7 +1107,7 @@ export const tools: Tool[] = [
     name: "AI Product Video Maker",
     tagline: "Turn product photos into sales-driving videos",
     description: "Create professional product videos from still photos using AI. Turn product photos into dynamic videos with cinematic motion effects that help boost conversions.",
-    detailedDescription: "Sorovi's AI Product Video Maker helps e-commerce sellers create compelling product videos from existing photos. Upload any product photo and our AI generates a polished video with cinematic motion, dynamic angles, and professional effects. Product videos consistently outperform static images in click-through rates and conversions. Sorovi eliminates the need for expensive product videography sessions, studio rentals, and professional editing. Create videos that highlight product details, showcase features from multiple angles, and present your items in the best possible light.",
+    detailedDescription: "Hyreel's AI Product Video Maker helps e-commerce sellers create compelling product videos from existing photos. Upload any product photo and our AI generates a polished video with cinematic motion, dynamic angles, and professional effects. Product videos consistently outperform static images in click-through rates and conversions. Hyreel eliminates the need for expensive product videography sessions, studio rentals, and professional editing. Create videos that highlight product details, showcase features from multiple angles, and present your items in the best possible light.",
     icon: "🛒",
     category: "E-commerce",
     howItWorks: [
@@ -1190,15 +1190,15 @@ export const tools: Tool[] = [
       },
       {
         question: "What product photos work best?",
-        answer: "High-resolution images with clean backgrounds work best, but Sorovi's AI can handle any product photo. We recommend at least one clear front-facing shot. Multiple angles help create richer videos with more dynamic motion."
+        answer: "High-resolution images with clean backgrounds work best, but Hyreel's AI can handle any product photo. We recommend at least one clear front-facing shot. Multiple angles help create richer videos with more dynamic motion."
       },
       {
         question: "Can I add text and branding to product videos?",
         answer: "Absolutely! Add your logo, brand colors, price tags, feature badges, sale banners, and custom text overlays. Business plan includes a full brand kit for consistent styling across all videos."
       },
       {
-        question: "What video formats does Sorovi export?",
-        answer: "Sorovi exports in MP4 format with options for 16:9, 1:1, and 9:16 aspect ratios. We optimize resolution and file size for common e-commerce and social media platforms."
+        question: "What video formats does Hyreel export?",
+        answer: "Hyreel exports in MP4 format with options for 16:9, 1:1, and 9:16 aspect ratios. We optimize resolution and file size for common e-commerce and social media platforms."
       }
     ]
   },
@@ -1207,7 +1207,7 @@ export const tools: Tool[] = [
     name: "AI Video from Image",
     tagline: "Generate AI video from any image instantly",
     description: "Create stunning AI-generated videos from your photos. Advanced neural networks transform still images into fluid, natural-looking video clips with realistic motion.",
-    detailedDescription: "Sorovi's AI Video from Image technology represents the cutting edge of generative AI applied to video creation. Our proprietary neural network models analyze your input image to understand scene composition, subject matter, lighting conditions, and depth relationships, then synthesize entirely new video frames that extend your image into a believable, natural-looking video sequence. Unlike simple pan-and-zoom effects, Sorovi generates actual new visual content: leaves sway in the wind, water ripples realistically, hair moves naturally, and clouds drift across skies. The result is a video that looks like it was captured with a real camera. This technology opens creative possibilities that were previously impossible without professional videography. Perfect for artists, content creators, marketers, and anyone who wants to bring their images to life with AI-generated motion that looks and feels authentic.",
+    detailedDescription: "Hyreel's AI Video from Image technology represents the cutting edge of generative AI applied to video creation. Our proprietary neural network models analyze your input image to understand scene composition, subject matter, lighting conditions, and depth relationships, then synthesize entirely new video frames that extend your image into a believable, natural-looking video sequence. Unlike simple pan-and-zoom effects, Hyreel generates actual new visual content: leaves sway in the wind, water ripples realistically, hair moves naturally, and clouds drift across skies. The result is a video that looks like it was captured with a real camera. This technology opens creative possibilities that were previously impossible without professional videography. Perfect for artists, content creators, marketers, and anyone who wants to bring their images to life with AI-generated motion that looks and feels authentic.",
     icon: "🎞️",
     category: "Video Generation",
     howItWorks: [
@@ -1286,7 +1286,7 @@ export const tools: Tool[] = [
     faqs: [
       {
         question: "How is AI video from image different from simple video effects?",
-        answer: "Traditional effects just pan, zoom, or rotate your existing image. Sorovi's AI actually generates new video frames with real motion: water flows, hair moves, clouds drift. It creates content that didn't exist in your original photo, resulting in natural-looking video."
+        answer: "Traditional effects just pan, zoom, or rotate your existing image. Hyreel's AI actually generates new video frames with real motion: water flows, hair moves, clouds drift. It creates content that didn't exist in your original photo, resulting in natural-looking video."
       },
       {
         question: "What types of images produce the best AI videos?",
@@ -1307,7 +1307,7 @@ export const tools: Tool[] = [
     name: "AI Social Media Video Maker",
     tagline: "One photo, videos for every social platform",
     description: "Create platform-optimized videos for TikTok, Instagram, YouTube, Facebook, and more from a single image. AI handles formatting, effects, and optimization for each platform.",
-    detailedDescription: "Stop creating content separately for every social media platform. Sorovi's AI Social Media Video Maker lets you upload one photo and instantly generate optimized videos for TikTok, Instagram Reels, YouTube Shorts, Facebook, Pinterest, LinkedIn, and Twitter/X. Our AI understands what performs best on each platform—the ideal aspect ratio, video length, motion style, and pacing that drives engagement. Create a consistent multi-platform content strategy without spending hours reformatting and re-editing. Each platform gets its own tailored version: fast-paced and trendy for TikTok, polished and aesthetic for Instagram, professional for LinkedIn, and attention-grabbing for Facebook. Maintain brand consistency across channels while respecting each platform's unique audience expectations. Perfect for social media managers, small business owners, and creators who need to maintain an active presence across multiple platforms without a full production team.",
+    detailedDescription: "Stop creating content separately for every social media platform. Hyreel's AI Social Media Video Maker lets you upload one photo and instantly generate optimized videos for TikTok, Instagram Reels, YouTube Shorts, Facebook, Pinterest, LinkedIn, and Twitter/X. Our AI understands what performs best on each platform—the ideal aspect ratio, video length, motion style, and pacing that drives engagement. Create a consistent multi-platform content strategy without spending hours reformatting and re-editing. Each platform gets its own tailored version: fast-paced and trendy for TikTok, polished and aesthetic for Instagram, professional for LinkedIn, and attention-grabbing for Facebook. Maintain brand consistency across channels while respecting each platform's unique audience expectations. Perfect for social media managers, small business owners, and creators who need to maintain an active presence across multiple platforms without a full production team.",
     icon: "📲",
     category: "Social Media",
     howItWorks: [
@@ -1319,7 +1319,7 @@ export const tools: Tool[] = [
       {
         step: "2",
         title: "Select Your Platforms",
-        description: "Choose which social media platforms you want videos for. Select one or all—Sorovi optimizes each version independently."
+        description: "Choose which social media platforms you want videos for. Select one or all—Hyreel optimizes each version independently."
       },
       {
         step: "3",
@@ -1385,20 +1385,20 @@ export const tools: Tool[] = [
     },
     faqs: [
       {
-        question: "Does Sorovi create different videos for each platform?",
+        question: "Does Hyreel create different videos for each platform?",
         answer: "Yes! Each platform version is independently optimized. TikTok gets fast-paced, trendy effects. Instagram Reels gets polished, aesthetic motion. LinkedIn gets professional, subtle animation. Each version has the right aspect ratio, length, and style for its platform."
       },
       {
         question: "Can I customize each platform's version separately?",
-        answer: "Absolutely. While Sorovi auto-optimizes each version, you have full control to adjust effects, text, music, and duration for each platform individually. You can also exclude platforms you don't need."
+        answer: "Absolutely. While Hyreel auto-optimizes each version, you have full control to adjust effects, text, music, and duration for each platform individually. You can also exclude platforms you don't need."
       },
       {
         question: "What platforms are supported?",
-        answer: "Sorovi supports TikTok (9:16), Instagram Reels/Stories (9:16), Instagram Feed (1:1, 4:5), YouTube Shorts (9:16), Facebook Feed (16:9, 1:1), Pinterest (2:3), LinkedIn (16:9), and Twitter/X (16:9, 1:1)."
+        answer: "Hyreel supports TikTok (9:16), Instagram Reels/Stories (9:16), Instagram Feed (1:1, 4:5), YouTube Shorts (9:16), Facebook Feed (16:9, 1:1), Pinterest (2:3), LinkedIn (16:9), and Twitter/X (16:9, 1:1)."
       },
       {
-        question: "Can I post directly from Sorovi?",
-        answer: "Sorovi exports videos optimized for each platform. Use the iOS share sheet to send videos directly to any social media app, or save and upload them using your preferred workflow."
+        question: "Can I post directly from Hyreel?",
+        answer: "Hyreel exports videos optimized for each platform. Use the iOS share sheet to send videos directly to any social media app, or save and upload them using your preferred workflow."
       }
     ]
   },
@@ -1406,15 +1406,15 @@ export const tools: Tool[] = [
     slug: "ai-video-generator-app",
     name: "AI Video Generator App",
     tagline: "The #1 AI video generator app for iPhone",
-    description: "Create professional AI-generated videos right from your iPhone. Sorovi is the top-rated iOS app for transforming photos into stunning videos with AI-powered effects.",
-    detailedDescription: "Sorovi is a top-rated AI video generator app on the App Store, designed from the ground up for iPhone and iPad. Unlike web-based tools that feel clunky on mobile, Sorovi delivers a native iOS experience with instant camera roll integration, haptic feedback, and intuitive gesture controls. Create professional-quality AI videos in seconds, right from your phone. Sorovi processes your images quickly for fast results. Available on iOS with features including real-time preview, one-tap social sharing via the native share sheet, and iCloud sync across your devices.",
+    description: "Create professional AI-generated videos right from your iPhone. Hyreel is the top-rated iOS app for transforming photos into stunning videos with AI-powered effects.",
+    detailedDescription: "Hyreel is a top-rated AI video generator app on the App Store, designed from the ground up for iPhone and iPad. Unlike web-based tools that feel clunky on mobile, Hyreel delivers a native iOS experience with instant camera roll integration, haptic feedback, and intuitive gesture controls. Create professional-quality AI videos in seconds, right from your phone. Hyreel processes your images quickly for fast results. Available on iOS with features including real-time preview, one-tap social sharing via the native share sheet, and iCloud sync across your devices.",
     icon: "📱",
     category: "Video Generation",
     howItWorks: [
       {
         step: "1",
         title: "Download from App Store",
-        description: "Get Sorovi free from the App Store. Works on iPhone 12 and newer, iPad with M1 or later."
+        description: "Get Hyreel free from the App Store. Works on iPhone 12 and newer, iPad with M1 or later."
       },
       {
         step: "2",
@@ -1485,20 +1485,20 @@ export const tools: Tool[] = [
     },
     faqs: [
       {
-        question: "Is Sorovi free to download?",
-        answer: "Yes! Sorovi is free to download from the App Store. The free plan includes 5 videos per day with a small watermark. Upgrade to Creator or Business for unlimited videos and additional features."
+        question: "Is Hyreel free to download?",
+        answer: "Yes! Hyreel is free to download from the App Store. The free plan includes 5 videos per day with a small watermark. Upgrade to Creator or Business for unlimited videos and additional features."
       },
       {
         question: "What iPhone models are supported?",
-        answer: "Sorovi works on iPhone 12 and newer (A14 Bionic chip or later). For the best experience, we recommend iPhone 14 or newer. iPad with M1 chip or later is also supported."
+        answer: "Hyreel works on iPhone 12 and newer (A14 Bionic chip or later). For the best experience, we recommend iPhone 14 or newer. iPad with M1 chip or later is also supported."
       },
       {
-        question: "Does Sorovi work offline?",
+        question: "Does Hyreel work offline?",
         answer: "Some effects work offline while others require an internet connection. The app will indicate which features are available in each mode."
       },
       {
-        question: "How does Sorovi compare to other AI video apps?",
-        answer: "Sorovi is designed specifically for turning photos into videos with AI motion effects. It offers a native iOS experience with real-time previews, multiple AI effects (zoom, orbit, follow, parallax), and easy sharing. Try it free and see the difference."
+        question: "How does Hyreel compare to other AI video apps?",
+        answer: "Hyreel is designed specifically for turning photos into videos with AI motion effects. It offers a native iOS experience with real-time previews, multiple AI effects (zoom, orbit, follow, parallax), and easy sharing. Try it free and see the difference."
       }
     ]
   },
@@ -1507,7 +1507,7 @@ export const tools: Tool[] = [
     name: "AI Faceless Video Generator",
     tagline: "Create viral videos without showing your face",
     description: "Generate engaging faceless video content using AI. Perfect for creators who want to build an audience and monetize content without appearing on camera.",
-    detailedDescription: "Sorovi's AI Faceless Video Generator empowers content creators who prefer to stay behind the scenes. Not everyone wants to be on camera, and that should never limit your creative potential. Our AI transforms your images, ideas, and concepts into polished, engaging videos that captivate audiences without requiring you to show your face. Create compelling content for faceless YouTube channels, anonymous TikTok accounts, educational content, product reviews, motivational pages, and niche topic channels. Sorovi's AI handles the visual storytelling through dynamic image animations, cinematic motion effects, and intelligent scene composition. Pair these visuals with our AI voiceover tool for complete faceless videos.",
+    detailedDescription: "Hyreel's AI Faceless Video Generator empowers content creators who prefer to stay behind the scenes. Not everyone wants to be on camera, and that should never limit your creative potential. Our AI transforms your images, ideas, and concepts into polished, engaging videos that captivate audiences without requiring you to show your face. Create compelling content for faceless YouTube channels, anonymous TikTok accounts, educational content, product reviews, motivational pages, and niche topic channels. Hyreel's AI handles the visual storytelling through dynamic image animations, cinematic motion effects, and intelligent scene composition. Pair these visuals with our AI voiceover tool for complete faceless videos.",
     icon: "🎭",
     category: "Content Creation",
     howItWorks: [
@@ -1586,19 +1586,19 @@ export const tools: Tool[] = [
     faqs: [
       {
         question: "Can faceless content really go viral?",
-        answer: "Absolutely. Some of the biggest channels on YouTube and TikTok are faceless. Channels like 'Bright Side' (44M subscribers) and countless motivational accounts prove that great content doesn't require a face. Sorovi helps you create that same quality content."
+        answer: "Absolutely. Some of the biggest channels on YouTube and TikTok are faceless. Channels like 'Bright Side' (44M subscribers) and countless motivational accounts prove that great content doesn't require a face. Hyreel helps you create that same quality content."
       },
       {
         question: "What niches work best for faceless content?",
-        answer: "Top-performing faceless niches include personal finance, technology explainers, motivational content, history and facts, product reviews, cooking recipes, nature and relaxation, and educational tutorials. Sorovi has templates optimized for each of these."
+        answer: "Top-performing faceless niches include personal finance, technology explainers, motivational content, history and facts, product reviews, cooking recipes, nature and relaxation, and educational tutorials. Hyreel has templates optimized for each of these."
       },
       {
         question: "Can I monetize faceless videos?",
-        answer: "Yes! Faceless videos are fully eligible for monetization on YouTube, TikTok Creator Fund, and other platforms. Creator and Business plan videos come with full commercial rights. Many Sorovi users earn significant revenue from faceless channels."
+        answer: "Yes! Faceless videos are fully eligible for monetization on YouTube, TikTok Creator Fund, and other platforms. Creator and Business plan videos come with full commercial rights. Many Hyreel users earn significant revenue from faceless channels."
       },
       {
         question: "Do I need to record my own voice?",
-        answer: "No. Sorovi includes 50+ AI voices that sound natural and professional. Choose a voice that fits your content style, or use your own voice if you prefer. Many successful faceless creators use AI voices exclusively."
+        answer: "No. Hyreel includes 50+ AI voices that sound natural and professional. Choose a voice that fits your content style, or use your own voice if you prefer. Many successful faceless creators use AI voices exclusively."
       }
     ]
   },
@@ -1607,7 +1607,7 @@ export const tools: Tool[] = [
     name: "AI Short Video Maker",
     tagline: "Create viral short-form videos in seconds",
     description: "Generate attention-grabbing short videos optimized for virality. AI creates the perfect hook, pacing, and motion to maximize views on TikTok, Reels, and Shorts.",
-    detailedDescription: "Short-form video is the most powerful content format in social media today, and Sorovi's AI Short Video Maker helps you master it. Our AI understands what makes short-form content engaging: strong opening hooks, optimal pacing, attention-retaining motion patterns, and dynamic effects. Upload any photo and Sorovi generates a short video designed for watch time and shareability. The AI structures your video with a strong opening, maintains visual interest with dynamic motion, and creates a satisfying loop that encourages replays. Whether you're building a following, promoting a brand, or just creating for fun, Sorovi takes the guesswork out of short-form video creation.",
+    detailedDescription: "Short-form video is the most powerful content format in social media today, and Hyreel's AI Short Video Maker helps you master it. Our AI understands what makes short-form content engaging: strong opening hooks, optimal pacing, attention-retaining motion patterns, and dynamic effects. Upload any photo and Hyreel generates a short video designed for watch time and shareability. The AI structures your video with a strong opening, maintains visual interest with dynamic motion, and creates a satisfying loop that encourages replays. Whether you're building a following, promoting a brand, or just creating for fun, Hyreel takes the guesswork out of short-form video creation.",
     icon: "⚡",
     category: "Social Media",
     howItWorks: [
@@ -1686,19 +1686,19 @@ export const tools: Tool[] = [
     faqs: [
       {
         question: "What makes a short video go viral?",
-        answer: "Viral short videos share common traits: a hook that grabs attention in under 1 second, dynamic motion that maintains interest, optimal length for the platform (7-15 seconds usually works best), and a satisfying or surprising element that encourages replays. Sorovi's AI bakes all of these patterns into every video."
+        answer: "Viral short videos share common traits: a hook that grabs attention in under 1 second, dynamic motion that maintains interest, optimal length for the platform (7-15 seconds usually works best), and a satisfying or surprising element that encourages replays. Hyreel's AI bakes all of these patterns into every video."
       },
       {
         question: "What's the ideal length for short-form videos?",
-        answer: "It depends on the platform and content type. TikTok sweet spot is 7-15 seconds. Instagram Reels perform well at 7-20 seconds. YouTube Shorts can go up to 60 seconds but shorter often works better. Sorovi lets you create any length from 3-60 seconds."
+        answer: "It depends on the platform and content type. TikTok sweet spot is 7-15 seconds. Instagram Reels perform well at 7-20 seconds. YouTube Shorts can go up to 60 seconds but shorter often works better. Hyreel lets you create any length from 3-60 seconds."
       },
       {
         question: "How does the virality score work?",
-        answer: "Sorovi's AI analyzes your generated video against patterns from millions of viral videos. It scores hook strength, motion engagement, pacing, and visual appeal on a 1-100 scale. Scores above 70 indicate strong viral potential. The AI also suggests specific improvements to boost your score."
+        answer: "Hyreel's AI analyzes your generated video against patterns from millions of viral videos. It scores hook strength, motion engagement, pacing, and visual appeal on a 1-100 scale. Scores above 70 indicate strong viral potential. The AI also suggests specific improvements to boost your score."
       },
       {
         question: "Can I create short videos with music?",
-        answer: "Yes! Sorovi includes a library of trending and royalty-free music. The AI syncs motion effects to musical beats for a polished, professional feel. You can also add platform-specific trending sounds after exporting."
+        answer: "Yes! Hyreel includes a library of trending and royalty-free music. The AI syncs motion effects to musical beats for a polished, professional feel. You can also add platform-specific trending sounds after exporting."
       }
     ]
   },
@@ -1707,7 +1707,7 @@ export const tools: Tool[] = [
     name: "AI E-commerce Video Creator",
     tagline: "Product videos that sell — powered by AI",
     description: "Create conversion-optimized product videos, ad creatives, and marketing content for your online store. Built specifically for e-commerce brands and sellers.",
-    detailedDescription: "Sorovi's AI E-commerce Video Creator helps online sellers create compelling product videos from existing photos. Upload product images and our AI generates professional marketing videos with cinematic motion effects, dynamic angles, and polished presentation. Create hero product videos, feature highlight reels, and promotional content—all from your existing product photography. The AI highlights product details with strategic motion and presents your products with professional visual quality. Video content consistently outperforms static images in e-commerce, and Sorovi makes it easy to create product videos without a studio or video team.",
+    detailedDescription: "Hyreel's AI E-commerce Video Creator helps online sellers create compelling product videos from existing photos. Upload product images and our AI generates professional marketing videos with cinematic motion effects, dynamic angles, and polished presentation. Create hero product videos, feature highlight reels, and promotional content—all from your existing product photography. The AI highlights product details with strategic motion and presents your products with professional visual quality. Video content consistently outperforms static images in e-commerce, and Hyreel makes it easy to create product videos without a studio or video team.",
     icon: "💰",
     category: "E-commerce",
     howItWorks: [
@@ -1786,7 +1786,7 @@ export const tools: Tool[] = [
     faqs: [
       {
         question: "How do I create videos for my products?",
-        answer: "Simply upload your product photos in the Sorovi app, choose a video style, and the AI generates a professional product video in seconds. Export the video and add it to your product listings on any platform."
+        answer: "Simply upload your product photos in the Hyreel app, choose a video style, and the AI generates a professional product video in seconds. Export the video and add it to your product listings on any platform."
       },
       {
         question: "Can I create videos for multiple products?",
@@ -1794,7 +1794,7 @@ export const tools: Tool[] = [
       },
       {
         question: "What types of e-commerce videos can I create?",
-        answer: "Sorovi creates product showcase videos, feature highlights, lifestyle context videos, comparison videos, unboxing-style reveals, 360-degree product views, ad creatives for social media, and promotional/sale announcement videos."
+        answer: "Hyreel creates product showcase videos, feature highlights, lifestyle context videos, comparison videos, unboxing-style reveals, 360-degree product views, ad creatives for social media, and promotional/sale announcement videos."
       },
       {
         question: "Do product videos really reduce return rates?",
@@ -1807,7 +1807,7 @@ export const tools: Tool[] = [
     name: "AI Photo Animation",
     tagline: "Bring any photo to life with AI animation",
     description: "Animate your photos with stunning AI-powered motion. Watch portraits smile, landscapes come alive, and still moments transform into living memories.",
-    detailedDescription: "Sorovi's AI Photo Animation breathes life into your most treasured images with astonishing realism. Our advanced generative AI doesn't just move your photo around—it actually animates the content within it. Watch as portrait subjects blink, smile, and turn their heads naturally. See ocean waves crash against shores, trees sway in a gentle breeze, and campfires flicker with warm light. This technology is perfect for creating living portraits from family photos, animating historical images, bringing artwork to life, or creating magical moments from everyday snapshots. Sorovi's animation AI understands the physics of the real world: hair flows with gravity, fabric drapes naturally, water follows fluid dynamics, and facial expressions progress through realistic muscle movements. The result is animation so convincing it feels like discovering hidden video footage you never knew existed. Whether you're preserving memories, creating art, or generating engaging social content, AI Photo Animation transforms the ordinary into the extraordinary.",
+    detailedDescription: "Hyreel's AI Photo Animation breathes life into your most treasured images with astonishing realism. Our advanced generative AI doesn't just move your photo around—it actually animates the content within it. Watch as portrait subjects blink, smile, and turn their heads naturally. See ocean waves crash against shores, trees sway in a gentle breeze, and campfires flicker with warm light. This technology is perfect for creating living portraits from family photos, animating historical images, bringing artwork to life, or creating magical moments from everyday snapshots. Hyreel's animation AI understands the physics of the real world: hair flows with gravity, fabric drapes naturally, water follows fluid dynamics, and facial expressions progress through realistic muscle movements. The result is animation so convincing it feels like discovering hidden video footage you never knew existed. Whether you're preserving memories, creating art, or generating engaging social content, AI Photo Animation transforms the ordinary into the extraordinary.",
     icon: "✨",
     category: "Effects",
     howItWorks: [
@@ -1886,11 +1886,11 @@ export const tools: Tool[] = [
     faqs: [
       {
         question: "How realistic is the photo animation?",
-        answer: "Sorovi's AI produces remarkably realistic animation. Portrait subjects exhibit natural eye blinks, micro-expressions, and subtle head movements. Nature elements follow real-world physics. Most viewers initially believe they're watching actual video footage rather than animated photos."
+        answer: "Hyreel's AI produces remarkably realistic animation. Portrait subjects exhibit natural eye blinks, micro-expressions, and subtle head movements. Nature elements follow real-world physics. Most viewers initially believe they're watching actual video footage rather than animated photos."
       },
       {
         question: "Can I animate old or vintage photographs?",
-        answer: "Yes! Sorovi works beautifully with old photographs, including black-and-white images. The AI is trained to handle lower resolution and aged photos gracefully. Many users love bringing grandparents' photos and historical images to life."
+        answer: "Yes! Hyreel works beautifully with old photographs, including black-and-white images. The AI is trained to handle lower resolution and aged photos gracefully. Many users love bringing grandparents' photos and historical images to life."
       },
       {
         question: "What's the difference between animation and video effects?",
@@ -1898,7 +1898,7 @@ export const tools: Tool[] = [
       },
       {
         question: "Can I save animations as Live Photos on iPhone?",
-        answer: "Yes! Sorovi exports directly as iOS Live Photos. Set them as wallpaper and press-and-hold to see the animation play. It's a magical way to keep animated memories on your lock screen."
+        answer: "Yes! Hyreel exports directly as iOS Live Photos. Set them as wallpaper and press-and-hold to see the animation play. It's a magical way to keep animated memories on your lock screen."
       }
     ]
   },
@@ -1907,7 +1907,7 @@ export const tools: Tool[] = [
     name: "AI 3D Photo Video",
     tagline: "Turn flat photos into immersive 3D videos",
     description: "Create stunning 3D depth videos from ordinary 2D photos using AI. Add realistic parallax, depth-of-field effects, and dimensional movement to any image.",
-    detailedDescription: "Sorovi's AI 3D Photo Video technology transforms ordinary flat photographs into immersive three-dimensional video experiences. Our AI uses advanced monocular depth estimation to understand the spatial relationships in your image, then generates convincing 3D parallax motion where foreground elements move independently from the background—just like viewing a real 3D scene. The effect creates a captivating sense of depth and dimension that makes viewers feel like they're looking through a window rather than at a flat screen. This technology excels with landscapes, architectural photos, street scenes, and any image with natural depth layers. The AI automatically identifies depth planes, separates visual elements, and generates smooth multi-layer parallax motion with intelligent inpainting to fill occluded areas. Add depth-of-field effects where the focus shifts between foreground and background elements for a cinematic, DSLR-quality look. Perfect for real estate virtual tours, travel content, artistic photography, and creating premium social media posts that demand attention through dimensional motion.",
+    detailedDescription: "Hyreel's AI 3D Photo Video technology transforms ordinary flat photographs into immersive three-dimensional video experiences. Our AI uses advanced monocular depth estimation to understand the spatial relationships in your image, then generates convincing 3D parallax motion where foreground elements move independently from the background—just like viewing a real 3D scene. The effect creates a captivating sense of depth and dimension that makes viewers feel like they're looking through a window rather than at a flat screen. This technology excels with landscapes, architectural photos, street scenes, and any image with natural depth layers. The AI automatically identifies depth planes, separates visual elements, and generates smooth multi-layer parallax motion with intelligent inpainting to fill occluded areas. Add depth-of-field effects where the focus shifts between foreground and background elements for a cinematic, DSLR-quality look. Perfect for real estate virtual tours, travel content, artistic photography, and creating premium social media posts that demand attention through dimensional motion.",
     icon: "🧊",
     category: "Effects",
     howItWorks: [
@@ -1986,7 +1986,7 @@ export const tools: Tool[] = [
     faqs: [
       {
         question: "How does AI create 3D from a flat 2D photo?",
-        answer: "Sorovi's AI uses monocular depth estimation—a neural network trained on millions of images with known depth data. It analyzes visual cues like perspective, occlusion, relative size, and atmospheric haze to predict the distance of every pixel from the camera, then uses this depth map to create parallax motion."
+        answer: "Hyreel's AI uses monocular depth estimation—a neural network trained on millions of images with known depth data. It analyzes visual cues like perspective, occlusion, relative size, and atmospheric haze to predict the distance of every pixel from the camera, then uses this depth map to create parallax motion."
       },
       {
         question: "What photos work best for the 3D effect?",
@@ -1994,7 +1994,7 @@ export const tools: Tool[] = [
       },
       {
         question: "What happens to hidden areas when layers separate?",
-        answer: "When foreground elements move and reveal areas that weren't visible in the original photo, Sorovi's AI inpainting fills these gaps intelligently. The AI generates plausible visual content based on surrounding context, ensuring seamless, artifact-free 3D motion."
+        answer: "When foreground elements move and reveal areas that weren't visible in the original photo, Hyreel's AI inpainting fills these gaps intelligently. The AI generates plausible visual content based on surrounding context, ensuring seamless, artifact-free 3D motion."
       },
       {
         question: "Can I adjust the depth map manually?",
@@ -2007,7 +2007,7 @@ export const tools: Tool[] = [
     name: "AI Follow Video Effect",
     tagline: "AI camera tracking that follows your subject",
     description: "Create dynamic follow-cam videos from still photos using AI. The virtual camera intelligently tracks and follows your subject for cinematic tracking shots.",
-    detailedDescription: "Sorovi's AI Follow Video Effect simulates the look of professional tracking shots and follow-cam footage from a single still photograph. Our AI identifies the primary subject in your image—whether a person, product, vehicle, animal, or any focal point—and generates smooth camera movement that follows and frames the subject dynamically. The result mimics the work of a skilled camera operator with a gimbal, dolly, or drone, creating that coveted cinematic tracking feel without any actual camera movement. The AI understands composition rules and automatically maintains aesthetically pleasing framing as the virtual camera moves, keeping your subject in focus while the background shifts naturally with perspective-correct parallax. Choose from multiple follow styles: steady track, dynamic chase, smooth glide, orbital follow, or reveal-and-track. Each creates a distinct cinematic mood perfect for different types of content. This effect transforms static portraits into editorial-quality motion content, product shots into premium commercial footage, and ordinary snapshots into professional tracking shots that command attention.",
+    detailedDescription: "Hyreel's AI Follow Video Effect simulates the look of professional tracking shots and follow-cam footage from a single still photograph. Our AI identifies the primary subject in your image—whether a person, product, vehicle, animal, or any focal point—and generates smooth camera movement that follows and frames the subject dynamically. The result mimics the work of a skilled camera operator with a gimbal, dolly, or drone, creating that coveted cinematic tracking feel without any actual camera movement. The AI understands composition rules and automatically maintains aesthetically pleasing framing as the virtual camera moves, keeping your subject in focus while the background shifts naturally with perspective-correct parallax. Choose from multiple follow styles: steady track, dynamic chase, smooth glide, orbital follow, or reveal-and-track. Each creates a distinct cinematic mood perfect for different types of content. This effect transforms static portraits into editorial-quality motion content, product shots into premium commercial footage, and ordinary snapshots into professional tracking shots that command attention.",
     icon: "🎯",
     category: "Effects",
     howItWorks: [
@@ -2086,7 +2086,7 @@ export const tools: Tool[] = [
     faqs: [
       {
         question: "How does AI follow a subject in a still image?",
-        answer: "Sorovi's AI identifies your subject, then simulates camera movement around and toward the subject while keeping it in frame. The background shifts with perspective-correct parallax while the subject remains the focal point. It's like a virtual camera operator tracking your subject through the scene."
+        answer: "Hyreel's AI identifies your subject, then simulates camera movement around and toward the subject while keeping it in frame. The background shifts with perspective-correct parallax while the subject remains the focal point. It's like a virtual camera operator tracking your subject through the scene."
       },
       {
         question: "What's the difference between follow and orbit effects?",

@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-create-viral-tiktok-videos-from-photos",
     title: "How to Create Viral TikTok Videos from Photos",
-    metaTitle: "How to Create Viral TikTok Videos from Photos | Sorovi Blog",
+    metaTitle: "How to Create Viral TikTok Videos from Photos | Hyreel Blog",
     metaDescription:
       "Learn step-by-step how to turn your photos into viral TikTok videos using AI. Tips on effects, timing, and trends that get you on the For You Page.",
     excerpt:
@@ -76,7 +76,7 @@ Virality is a numbers game. Top TikTok creators do not rely on a single video go
 - Repost your best-performing videos with slight variations -- TikTok often gives them a second push
 
 Creating viral TikTok content from photos is not about luck. It is about understanding what captures attention, applying the right AI tools, and iterating relentlessly. Start with one photo, apply an AI motion effect, and post it today.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-01-08T10:00:00Z",
     category: "Tutorial",
     tags: ["TikTok", "viral content", "photo to video", "AI effects", "social media"],
@@ -91,7 +91,7 @@ Creating viral TikTok content from photos is not about luck. It is about underst
   {
     slug: "image-to-video-ai-complete-guide",
     title: "Image to Video AI: The Complete Guide for 2026",
-    metaTitle: "Image to Video AI: Complete Guide for 2026 | Sorovi Blog",
+    metaTitle: "Image to Video AI: Complete Guide for 2026 | Hyreel Blog",
     metaDescription:
       "Everything you need to know about image to video AI technology. How it works, best practices, use cases, and how to get started creating stunning videos from photos.",
     excerpt:
@@ -150,7 +150,7 @@ To maximize the quality of your AI-generated videos, follow these guidelines:
 ## The Future of Image to Video AI
 
 The technology is advancing rapidly. In 2026, we are seeing improvements in temporal consistency, longer generation durations, and the ability to add custom camera paths. As models become more sophisticated, the line between AI-generated and traditionally filmed video continues to blur. For creators and businesses, this means professional video content is becoming more accessible than ever.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-01-15T10:00:00Z",
     category: "Guide",
     tags: ["image to video", "AI technology", "video generation", "deep learning"],
@@ -165,7 +165,7 @@ The technology is advancing rapidly. In 2026, we are seeing improvements in temp
   {
     slug: "best-ai-video-effects-for-social-media",
     title: "Best AI Video Effects for Social Media in 2026",
-    metaTitle: "Best AI Video Effects for Social Media in 2026 | Sorovi Blog",
+    metaTitle: "Best AI Video Effects for Social Media in 2026 | Hyreel Blog",
     metaDescription:
       "Discover the top AI video effects that are driving engagement on TikTok, Instagram, and YouTube. Learn which effects work best for each platform.",
     excerpt:
@@ -228,7 +228,7 @@ Ask yourself three questions before selecting an effect:
 - **What platform?** Each algorithm rewards different content styles
 
 Match your answers to the effect that best serves your content purpose, and you will see measurably better engagement.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-01-22T10:00:00Z",
     category: "Tips & Tricks",
     tags: ["AI effects", "social media", "video marketing", "engagement", "content creation"],
@@ -243,7 +243,7 @@ Match your answers to the effect that best serves your content purpose, and you 
   {
     slug: "ecommerce-product-video-from-photo-to-sale",
     title: "E-Commerce Product Video: From Photo to Sale",
-    metaTitle: "E-Commerce Product Video: From Photo to Sale | Sorovi Blog",
+    metaTitle: "E-Commerce Product Video: From Photo to Sale | Hyreel Blog",
     metaDescription:
       "How e-commerce sellers are using AI to convert product photos into videos that drive sales. Real data on how video increases conversion rates.",
     excerpt:
@@ -295,7 +295,7 @@ Track conversion rates before and after adding video. Most sellers see measurabl
 Consider the math: a traditional product video shoot costs $200 to $2,000 per product. An AI-generated video costs pennies and takes seconds. For a catalog of 50 products, the savings are enormous -- and the conversion lift often pays for an entire year of an AI video tool subscription with a single additional sale.
 
 E-commerce sellers who are not using video in 2026 are leaving money on the table. AI makes it possible for any seller, regardless of budget or technical skill, to create professional product videos that drive real sales.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-01-29T10:00:00Z",
     category: "Case Study",
     tags: ["e-commerce", "product video", "conversion rate", "AI video", "online selling"],
@@ -310,7 +310,7 @@ E-commerce sellers who are not using video in 2026 are leaving money on the tabl
   {
     slug: "ai-video-generator-vs-traditional-editing",
     title: "AI Video Generator vs Traditional Editing: A Honest Comparison",
-    metaTitle: "AI Video Generator vs Traditional Editing: Comparison Guide | Sorovi Blog",
+    metaTitle: "AI Video Generator vs Traditional Editing: Comparison Guide | Hyreel Blog",
     metaDescription:
       "Comparing AI video generation with traditional video editing. When to use each approach, pros and cons, and which is right for your workflow.",
     excerpt:
@@ -373,7 +373,7 @@ Traditional editing is the better choice for:
 The smartest creators combine both. They use AI to generate the initial motion clips and raw material, then import those clips into a traditional editor for final assembly, branding, and storytelling. This hybrid workflow reduces production time by 60 to 70 percent while maintaining creative control.
 
 For most social media creators and small businesses in 2026, AI video generation handles 80 percent of their content needs. The remaining 20 percent -- hero content, brand campaigns, and special projects -- benefits from the precision of traditional editing. Understanding when to use each tool is the real competitive advantage.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-02-03T10:00:00Z",
     category: "Guide",
     tags: ["AI video", "video editing", "comparison", "content creation", "workflow"],
@@ -388,7 +388,7 @@ For most social media creators and small businesses in 2026, AI video generation
   {
     slug: "how-to-make-instagram-reels-go-viral",
     title: "How to Make Instagram Reels Go Viral in 2026",
-    metaTitle: "How to Make Instagram Reels Go Viral in 2026 | Sorovi Blog",
+    metaTitle: "How to Make Instagram Reels Go Viral in 2026 | Hyreel Blog",
     metaDescription:
       "Proven strategies for creating viral Instagram Reels. Learn about algorithm signals, content formats, posting strategies, and AI tools that boost engagement.",
     excerpt:
@@ -450,7 +450,7 @@ The biggest challenge with Reels is volume. The algorithm rewards consistent pos
 - Batch-create a week's worth of Reels in a single session
 
 Creators who combine strong content strategy with AI-powered production are consistently outperforming those who rely on manual creation alone.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-02-07T10:00:00Z",
     category: "Tutorial",
     tags: ["Instagram Reels", "viral content", "social media growth", "AI tools", "Instagram algorithm"],
@@ -465,7 +465,7 @@ Creators who combine strong content strategy with AI-powered production are cons
   {
     slug: "ultimate-guide-ai-video-marketing",
     title: "The Ultimate Guide to AI Video Marketing",
-    metaTitle: "The Ultimate Guide to AI Video Marketing in 2026 | Sorovi Blog",
+    metaTitle: "The Ultimate Guide to AI Video Marketing in 2026 | Hyreel Blog",
     metaDescription:
       "A comprehensive guide to using AI-generated videos in your marketing strategy. Learn how to create, distribute, and optimize AI video content for maximum ROI.",
     excerpt:
@@ -538,7 +538,7 @@ Track these metrics to understand your video marketing performance:
 - **Not testing** -- always A/B test different effects, durations, and hooks
 
 AI video marketing is not just a trend. It is a fundamental shift in how content is produced and consumed. Brands that build their AI video strategy now will have a significant advantage as the technology continues to improve.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-02-12T10:00:00Z",
     category: "Guide",
     tags: ["video marketing", "AI strategy", "content marketing", "digital marketing", "ROI"],
@@ -553,7 +553,7 @@ AI video marketing is not just a trend. It is a fundamental shift in how content
   {
     slug: "ways-ai-changing-video-content-creation",
     title: "5 Ways AI Is Changing Video Content Creation Forever",
-    metaTitle: "5 Ways AI Is Changing Video Content Creation | Sorovi Blog",
+    metaTitle: "5 Ways AI Is Changing Video Content Creation | Hyreel Blog",
     metaDescription:
       "Explore how artificial intelligence is fundamentally transforming video content creation. From automated editing to image-to-video generation, the industry is shifting.",
     excerpt:
@@ -610,7 +610,7 @@ The barrier to entry for video content has dropped dramatically, which means:
 - **Faster trend cycles** -- new content formats emerge and evolve more quickly
 
 Creators and businesses that adapt to these changes quickly will thrive. Those who cling to traditional-only workflows risk being outpaced by competitors who embrace AI as a creative partner rather than a threat.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-02-17T10:00:00Z",
     category: "Industry News",
     tags: ["AI industry", "video creation", "technology trends", "content creation"],
@@ -625,7 +625,7 @@ Creators and businesses that adapt to these changes quickly will thrive. Those w
   {
     slug: "create-youtube-shorts-from-product-photos",
     title: "How to Create YouTube Shorts from Product Photos",
-    metaTitle: "Create YouTube Shorts from Product Photos | Sorovi Blog",
+    metaTitle: "Create YouTube Shorts from Product Photos | Hyreel Blog",
     metaDescription:
       "Step-by-step guide to turning your product photos into engaging YouTube Shorts using AI. Grow your channel and drive sales with video content.",
     excerpt:
@@ -689,7 +689,7 @@ The beauty of AI-generated product videos is scalability. A typical workflow loo
 - **Wednesday through Sunday:** Post 2 to 3 Shorts daily, scheduled in advance
 
 This workflow produces 14 to 21 Shorts per week with minimal time investment, giving your channel consistent content that the YouTube algorithm rewards.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-02-21T10:00:00Z",
     category: "Tutorial",
     tags: ["YouTube Shorts", "product video", "e-commerce", "video marketing"],
@@ -704,7 +704,7 @@ This workflow produces 14 to 21 Shorts per week with minimal time investment, gi
   {
     slug: "ai-zoom-effect-scroll-stopping-videos",
     title: "AI Zoom Effect: Create Scroll-Stopping Videos",
-    metaTitle: "AI Zoom Effect: Create Scroll-Stopping Videos | Sorovi Blog",
+    metaTitle: "AI Zoom Effect: Create Scroll-Stopping Videos | Hyreel Blog",
     metaDescription:
       "Master the AI zoom effect to create videos that stop the scroll. Learn techniques for zoom-in reveals, dramatic zoom-outs, and the cinematic dolly zoom effect.",
     excerpt:
@@ -762,7 +762,7 @@ Zoom into one area of the image, pause briefly, then zoom into a different area.
 ## Getting Started
 
 The fastest way to create zoom content is to start with a photo that has a clear focal point. Upload it, select the zoom effect, adjust the speed to match your platform, and generate. Your first scroll-stopping zoom video is literally seconds away.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-02-25T10:00:00Z",
     category: "Tutorial",
     tags: ["zoom effect", "AI video", "scroll-stopping", "social media", "video techniques"],
@@ -777,7 +777,7 @@ The fastest way to create zoom content is to start with a photo that has a clear
   {
     slug: "photo-to-video-ai-best-practices",
     title: "Photo to Video AI: Best Practices for Stunning Results",
-    metaTitle: "Photo to Video AI: Best Practices for Stunning Results | Sorovi Blog",
+    metaTitle: "Photo to Video AI: Best Practices for Stunning Results | Hyreel Blog",
     metaDescription:
       "Get the best results from photo-to-video AI with these proven best practices. Image selection, effect pairing, optimization tips, and common mistakes to avoid.",
     excerpt:
@@ -846,7 +846,7 @@ For consistent, high-quality results, follow this workflow:
 6. Export and schedule across your content calendar
 
 Consistency is the key. Establish your standards and maintain them across every piece of content.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-03-01T10:00:00Z",
     category: "Guide",
     tags: ["best practices", "photo to video", "AI video", "image quality", "optimization"],
@@ -861,7 +861,7 @@ Consistency is the key. Establish your standards and maintain them across every 
   {
     slug: "content-creators-save-time-with-ai-video",
     title: "How Content Creators Save 20+ Hours a Week with AI Video",
-    metaTitle: "How Content Creators Save 20+ Hours a Week with AI Video | Sorovi Blog",
+    metaTitle: "How Content Creators Save 20+ Hours a Week with AI Video | Hyreel Blog",
     metaDescription:
       "Real content creators share how AI video tools transformed their workflow. Learn their strategies for saving time while increasing content output and quality.",
     excerpt:
@@ -933,7 +933,7 @@ The real power of saving 20 hours per week is not the time itself -- it is what 
 - Simply avoid burnout and maintain creative energy
 
 AI video tools do not replace creativity. They eliminate the repetitive, time-consuming production work so creators can focus on what actually matters -- connecting with their audience.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-03-04T10:00:00Z",
     category: "Case Study",
     tags: ["content creators", "productivity", "time saving", "AI tools", "workflow"],
@@ -948,7 +948,7 @@ AI video tools do not replace creativity. They eliminate the repetitive, time-co
   {
     slug: "ai-video-for-ecommerce-strategy-guide",
     title: "AI Video for E-Commerce: The Complete Strategy Guide",
-    metaTitle: "AI Video for E-Commerce: Complete Strategy Guide | Sorovi Blog",
+    metaTitle: "AI Video for E-Commerce: Complete Strategy Guide | Hyreel Blog",
     metaDescription:
       "Build a complete e-commerce video strategy powered by AI. From product pages to social ads, learn where and how to use AI-generated videos to drive sales.",
     excerpt:
@@ -1020,7 +1020,7 @@ The cost structure for AI-generated e-commerce video is dramatically different f
 | AI video generation | $0.50 - $2 | 10 - 30 seconds |
 
 For a catalog of 100 products, AI video generation saves thousands of dollars and weeks of production time while delivering professional quality that drives measurable sales results.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-03-07T10:00:00Z",
     category: "Guide",
     tags: ["e-commerce", "video strategy", "online retail", "conversion optimization", "product video"],
@@ -1035,7 +1035,7 @@ For a catalog of 100 products, AI video generation saves thousands of dollars an
   {
     slug: "tiktok-shop-video-guide",
     title: "TikTok Shop Video Guide: Drive Sales with AI-Generated Content",
-    metaTitle: "TikTok Shop Video Guide: Drive Sales with AI Content | Sorovi Blog",
+    metaTitle: "TikTok Shop Video Guide: Drive Sales with AI Content | Hyreel Blog",
     metaDescription:
       "Complete guide to creating TikTok Shop videos using AI. Learn video requirements, best practices, and strategies that drive product sales on TikTok.",
     excerpt:
@@ -1109,7 +1109,7 @@ AI video generation makes the 3 to 5 daily videos achievable by reducing per-vid
 - Collaborate with TikTok affiliates who can use your video assets
 
 TikTok Shop rewards sellers who combine quality products with consistent, engaging video content. AI video generation gives you the production capacity to compete with even the largest brands on the platform.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-03-10T10:00:00Z",
     category: "Guide",
     tags: ["TikTok Shop", "e-commerce", "social commerce", "product video", "TikTok"],
@@ -1124,7 +1124,7 @@ TikTok Shop rewards sellers who combine quality products with consistent, engagi
   {
     slug: "ai-orbit-effect-3d-product-videos",
     title: "AI Orbit Effect: Create Stunning 3D Product Videos",
-    metaTitle: "AI Orbit Effect: Create 3D Product Videos | Sorovi Blog",
+    metaTitle: "AI Orbit Effect: Create 3D Product Videos | Hyreel Blog",
     metaDescription:
       "Master the AI orbit effect to create professional 3D product videos from a single photo. Techniques, tips, and examples for e-commerce and social media.",
     excerpt:
@@ -1197,7 +1197,7 @@ For maximum impact, combine the orbit effect with other techniques:
 - Create a split-screen showing the static photo on one side and the orbit video on the other
 
 The orbit effect is one of the most powerful tools in the AI video toolkit for product-based businesses. A single well-executed orbit video can replace an entire photo gallery and give potential buyers the visual confidence they need to complete a purchase.`,
-    author: "Sorovi Team",
+    author: "Hyreel Team",
     publishedAt: "2026-03-14T10:00:00Z",
     category: "Tutorial",
     tags: ["orbit effect", "3D video", "product video", "AI effects", "e-commerce"],

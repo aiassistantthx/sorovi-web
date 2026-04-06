@@ -26,7 +26,7 @@ export const templates: VideoTemplate[] = [
     slug: "tiktok-video-templates",
     name: "TikTok Video Templates",
     icon: "🎵",
-    metaTitle: "TikTok Video Templates | Sorovi - Viral TikTok Content",
+    metaTitle: "TikTok Video Templates | Hyreel - Viral TikTok Content",
     metaDescription: "Create viral TikTok videos with AI templates. Photo-to-video effects optimized for the For You Page. Trending formats, perfect 9:16 ratio, instant creation.",
     heroHeadline: "TikTok Templates That Go Viral",
     heroSubheadline: "AI-powered video templates designed for TikTok's algorithm. Create scroll-stopping content optimized for the For You Page in seconds.",
@@ -90,7 +90,7 @@ export const templates: VideoTemplate[] = [
     ],
     tips: [
       "Use the first 0.5 seconds for your hook — motion grabs attention instantly",
-      "Add trending sounds directly in TikTok after exporting from Sorovi",
+      "Add trending sounds directly in TikTok after exporting from Hyreel",
       "Create 3-5 variations of the same content to test what performs best",
       "Post during peak hours: 7-9am, 12-3pm, 7-11pm in your target timezone"
     ],
@@ -100,12 +100,12 @@ export const templates: VideoTemplate[] = [
         answer: "TikTok templates are optimized for vertical 9:16 format with fast hooks, loop-friendly endings, and motion patterns the algorithm rewards. The effects maximize watch time and completion rate — key metrics for FYP placement."
       },
       {
-        question: "Can I add TikTok sounds to Sorovi videos?",
-        answer: "Export your Sorovi video and add trending sounds directly in TikTok before posting. This ensures you're using the latest trending audio for maximum reach."
+        question: "Can I add TikTok sounds to Hyreel videos?",
+        answer: "Export your Hyreel video and add trending sounds directly in TikTok before posting. This ensures you're using the latest trending audio for maximum reach."
       },
       {
         question: "How many TikTok videos should I post per day?",
-        answer: "1-3 TikToks per day is ideal for growth. With Sorovi templates, you can create a full day's content in under 5 minutes."
+        answer: "1-3 TikToks per day is ideal for growth. With Hyreel templates, you can create a full day's content in under 5 minutes."
       },
       {
         question: "Do these templates work for TikTok Shop?",
@@ -119,7 +119,7 @@ export const templates: VideoTemplate[] = [
     slug: "instagram-reels-templates",
     name: "Instagram Reels Templates",
     icon: "📸",
-    metaTitle: "Instagram Reels Templates | Sorovi - Professional Reels in Seconds",
+    metaTitle: "Instagram Reels Templates | Hyreel - Professional Reels in Seconds",
     metaDescription: "Create professional Instagram Reels with AI templates. Cinematic effects, perfect aspect ratios, and brand-ready designs for maximum engagement.",
     heroHeadline: "Instagram Reels That Get Saved & Shared",
     heroSubheadline: "Professional Reels templates with cinematic motion effects. Create content that drives saves, shares, and follows — optimized for Instagram's algorithm.",
@@ -202,7 +202,7 @@ export const templates: VideoTemplate[] = [
       },
       {
         question: "How do I maintain brand consistency with templates?",
-        answer: "Use the same motion styles and effects across all your Reels. Sorovi lets you save preferences so every video matches your brand aesthetic."
+        answer: "Use the same motion styles and effects across all your Reels. Hyreel lets you save preferences so every video matches your brand aesthetic."
       }
     ],
     relatedTemplates: ["tiktok-video-templates", "product-video-templates", "fashion-video-templates"],
@@ -212,7 +212,7 @@ export const templates: VideoTemplate[] = [
     slug: "youtube-shorts-templates",
     name: "YouTube Shorts Templates",
     icon: "▶️",
-    metaTitle: "YouTube Shorts Templates | Sorovi - Grow Your Channel Faster",
+    metaTitle: "YouTube Shorts Templates | Hyreel - Grow Your Channel Faster",
     metaDescription: "Create YouTube Shorts that grow your channel with AI templates. Optimized for discovery, subscriber conversion, and watch time. Professional Shorts in seconds.",
     heroHeadline: "YouTube Shorts That Grow Your Channel",
     heroSubheadline: "Templates designed for YouTube's Shorts algorithm. Maximize discovery, drive subscribers, and complement your long-form content strategy.",
@@ -286,16 +286,16 @@ export const templates: VideoTemplate[] = [
         answer: "Shorts reach viewers who wouldn't find your long-form content through search. YouTube's Shorts algorithm recommends content to new audiences, making it the fastest way to grow subscribers in 2024."
       },
       {
-        question: "Can I monetize YouTube Shorts made with Sorovi?",
-        answer: "Yes! Sorovi Creator and Business plan videos are fully monetizable through YouTube's Shorts Fund and Partner Program. You own all content and revenue rights."
+        question: "Can I monetize YouTube Shorts made with Hyreel?",
+        answer: "Yes! Hyreel Creator and Business plan videos are fully monetizable through YouTube's Shorts Fund and Partner Program. You own all content and revenue rights."
       },
       {
         question: "Should I repurpose TikToks as YouTube Shorts?",
-        answer: "You can, but original Shorts often perform better. Sorovi lets you create platform-specific versions from the same source image for best results on each platform."
+        answer: "You can, but original Shorts often perform better. Hyreel lets you create platform-specific versions from the same source image for best results on each platform."
       },
       {
         question: "How often should I post YouTube Shorts?",
-        answer: "3-7 Shorts per week is ideal for growth. With Sorovi, creating a week's worth of Shorts takes under 30 minutes."
+        answer: "3-7 Shorts per week is ideal for growth. With Hyreel, creating a week's worth of Shorts takes under 30 minutes."
       }
     ],
     relatedTemplates: ["tiktok-video-templates", "instagram-reels-templates", "tutorial-video-templates"],
@@ -305,7 +305,7 @@ export const templates: VideoTemplate[] = [
     slug: "product-video-templates",
     name: "Product Video Templates",
     icon: "🛒",
-    metaTitle: "Product Video Templates | Sorovi - E-commerce Videos That Convert",
+    metaTitle: "Product Video Templates | Hyreel - E-commerce Videos That Convert",
     metaDescription: "Create product videos that boost sales with AI templates. Professional showcase videos for Amazon, Shopify, Etsy, and social commerce. Photo-to-video in seconds.",
     heroHeadline: "Product Videos That Boost Conversions",
     heroSubheadline: "Transform product photos into professional showcase videos. Templates designed to increase sales on Amazon, Shopify, Etsy, and social commerce platforms.",
@@ -384,7 +384,7 @@ export const templates: VideoTemplate[] = [
       },
       {
         question: "Can I create videos for my entire catalog?",
-        answer: "Yes! Sorovi supports batch processing so you can create videos for hundreds of SKUs efficiently. Business plan users get priority batch processing."
+        answer: "Yes! Hyreel supports batch processing so you can create videos for hundreds of SKUs efficiently. Business plan users get priority batch processing."
       },
       {
         question: "What platforms accept product videos?",
@@ -398,7 +398,7 @@ export const templates: VideoTemplate[] = [
     slug: "real-estate-video-templates",
     name: "Real Estate Video Templates",
     icon: "🏠",
-    metaTitle: "Real Estate Video Templates | Sorovi - Property Videos from Photos",
+    metaTitle: "Real Estate Video Templates | Hyreel - Property Videos from Photos",
     metaDescription: "Create stunning real estate videos from listing photos. Virtual tours, property showcases, and social media content for agents. Professional videos in seconds.",
     heroHeadline: "Property Videos That Sell Homes Faster",
     heroSubheadline: "Transform listing photos into cinematic property videos. Create virtual tours, social content, and video listings without expensive videography.",
@@ -468,8 +468,8 @@ export const templates: VideoTemplate[] = [
     ],
     faqs: [
       {
-        question: "Can Sorovi replace professional real estate videography?",
-        answer: "Sorovi is perfect for creating professional-quality videos from listing photos when traditional videography isn't practical. Many agents use Sorovi for every listing and reserve professional video for luxury properties."
+        question: "Can Hyreel replace professional real estate videography?",
+        answer: "Hyreel is perfect for creating professional-quality videos from listing photos when traditional videography isn't practical. Many agents use Hyreel for every listing and reserve professional video for luxury properties."
       },
       {
         question: "What listing photo quality works best?",
@@ -491,7 +491,7 @@ export const templates: VideoTemplate[] = [
     slug: "fashion-video-templates",
     name: "Fashion Video Templates",
     icon: "👗",
-    metaTitle: "Fashion Video Templates | Sorovi - Lookbook & Collection Videos",
+    metaTitle: "Fashion Video Templates | Hyreel - Lookbook & Collection Videos",
     metaDescription: "Create stunning fashion videos from lookbook photos. Collection showcases, product reveals, and runway-style content for fashion brands. AI-powered video creation.",
     heroHeadline: "Fashion Videos That Stop the Scroll",
     heroSubheadline: "Transform lookbook photos and product shots into runway-worthy fashion videos. Create collection showcases, product reveals, and editorial content instantly.",
@@ -565,12 +565,12 @@ export const templates: VideoTemplate[] = [
         answer: "Lookbook shots, flat lays, on-model photography, and product details all work beautifully. High-resolution images with clean backgrounds produce the most polished fashion videos."
       },
       {
-        question: "Is Sorovi suitable for luxury fashion brands?",
-        answer: "Absolutely. Sorovi's cinematic motion effects create elevated, polished content that meets luxury brand standards. Many fashion brands use Sorovi to maintain their premium visual identity at scale."
+        question: "Is Hyreel suitable for luxury fashion brands?",
+        answer: "Absolutely. Hyreel's cinematic motion effects create elevated, polished content that meets luxury brand standards. Many fashion brands use Hyreel to maintain their premium visual identity at scale."
       },
       {
         question: "Can I showcase fabric texture and details?",
-        answer: "Yes! Sorovi's zoom effects are perfect for highlighting fabric texture, stitching details, and design elements. The AI creates smooth close-up movements that draw attention to craftsmanship."
+        answer: "Yes! Hyreel's zoom effects are perfect for highlighting fabric texture, stitching details, and design elements. The AI creates smooth close-up movements that draw attention to craftsmanship."
       },
       {
         question: "How can fashion brands use these templates?",
@@ -584,7 +584,7 @@ export const templates: VideoTemplate[] = [
     slug: "food-video-templates",
     name: "Food Video Templates",
     icon: "🍽️",
-    metaTitle: "Food Video Templates | Sorovi - Mouthwatering Food Content",
+    metaTitle: "Food Video Templates | Hyreel - Mouthwatering Food Content",
     metaDescription: "Create drool-worthy food videos from photos. Restaurant marketing, recipe content, and food delivery listings. AI-powered food video creation in seconds.",
     heroHeadline: "Food Videos That Make Mouths Water",
     heroSubheadline: "Transform food photography into appetite-inducing videos. Create content for restaurants, food brands, and delivery apps that drives orders and reservations.",
@@ -659,7 +659,7 @@ export const templates: VideoTemplate[] = [
       },
       {
         question: "Can I create videos for delivery app listings?",
-        answer: "Yes! Sorovi videos work perfectly on DoorDash, Uber Eats, Grubhub, and other delivery platforms. Video listings receive significantly more orders than photo-only listings."
+        answer: "Yes! Hyreel videos work perfectly on DoorDash, Uber Eats, Grubhub, and other delivery platforms. Video listings receive significantly more orders than photo-only listings."
       },
       {
         question: "How can restaurants use food video templates?",
@@ -677,7 +677,7 @@ export const templates: VideoTemplate[] = [
     slug: "travel-video-templates",
     name: "Travel Video Templates",
     icon: "✈️",
-    metaTitle: "Travel Video Templates | Sorovi - Stunning Destination Content",
+    metaTitle: "Travel Video Templates | Hyreel - Stunning Destination Content",
     metaDescription: "Create cinematic travel videos from photos. Destination showcases, travel vlogs, and tourism marketing. Transform travel photography into scroll-stopping content.",
     heroHeadline: "Travel Videos That Inspire Wanderlust",
     heroSubheadline: "Transform your travel photography into cinematic destination videos. Create content that inspires followers and showcases the beauty of every location.",
@@ -752,7 +752,7 @@ export const templates: VideoTemplate[] = [
       },
       {
         question: "Can I create travel vlogs from just photos?",
-        answer: "Yes! Many travel creators use Sorovi to turn their trip photos into vlog-style content. Add music in your editing app for the complete travel vlog feel."
+        answer: "Yes! Many travel creators use Hyreel to turn their trip photos into vlog-style content. Add music in your editing app for the complete travel vlog feel."
       },
       {
         question: "How can hotels use travel video templates?",
@@ -770,7 +770,7 @@ export const templates: VideoTemplate[] = [
     slug: "fitness-video-templates",
     name: "Fitness Video Templates",
     icon: "💪",
-    metaTitle: "Fitness Video Templates | Sorovi - Workout & Transformation Content",
+    metaTitle: "Fitness Video Templates | Hyreel - Workout & Transformation Content",
     metaDescription: "Create dynamic fitness videos from photos. Workout showcases, transformation reveals, and gym content. AI-powered fitness video creation for trainers and influencers.",
     heroHeadline: "Fitness Content That Motivates Action",
     heroSubheadline: "Transform workout photos and transformation pics into dynamic fitness videos. Create content that inspires followers and showcases results.",
@@ -863,7 +863,7 @@ export const templates: VideoTemplate[] = [
     slug: "tutorial-video-templates",
     name: "Tutorial Video Templates",
     icon: "📚",
-    metaTitle: "Tutorial Video Templates | Sorovi - Educational Content Made Easy",
+    metaTitle: "Tutorial Video Templates | Hyreel - Educational Content Made Easy",
     metaDescription: "Create engaging tutorial videos from screenshots and images. Step-by-step guides, how-to content, and educational videos. AI-powered tutorial creation.",
     heroHeadline: "Tutorial Videos That Teach Effectively",
     heroSubheadline: "Transform screenshots and step images into engaging tutorial videos. Create educational content that's clear, professional, and easy to follow.",
@@ -933,7 +933,7 @@ export const templates: VideoTemplate[] = [
     ],
     faqs: [
       {
-        question: "Can I create software tutorials with Sorovi?",
+        question: "Can I create software tutorials with Hyreel?",
         answer: "Yes! Upload screenshots and use zoom/pan effects to guide viewers through interfaces. Add text overlays to explain each step clearly."
       },
       {

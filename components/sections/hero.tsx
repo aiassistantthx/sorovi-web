@@ -24,7 +24,7 @@ export function HeroSection() {
 
         {/* Subheading */}
         <Text variant="large" className="mb-10 max-w-2xl mx-auto">
-          No editing skills needed. Sorovi&apos;s AI creates scroll-stopping TikToks, Reels, and Shorts from a single photo.
+          No editing skills needed. Hyreel&apos;s AI creates scroll-stopping TikToks, Reels, and Shorts from a single photo.
         </Text>
 
         {/* Single CTA Button */}

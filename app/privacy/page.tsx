@@ -2,8 +2,8 @@ import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
 
 export const metadata = {
-  title: "Privacy Policy - Sorovi",
-  description: "Learn how Sorovi collects, uses, and protects your personal information",
+  title: "Privacy Policy - Hyreel",
+  description: "Learn how Hyreel collects, uses, and protects your personal information",
 };
 
 export default function PrivacyPage() {
@@ -29,10 +29,10 @@ export default function PrivacyPage() {
                 1. Introduction
               </Heading>
               <Text variant="body" className="mb-4">
-                Welcome to Sorovi. We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you use our AI video creation platform.
+                Welcome to Hyreel. We respect your privacy and are committed to protecting your personal data. This privacy policy explains how we collect, use, and safeguard your information when you use our AI video creation platform.
               </Text>
               <Text variant="body">
-                By using Sorovi, you agree to the collection and use of information in accordance with this policy.
+                By using Hyreel, you agree to the collection and use of information in accordance with this policy.
               </Text>
             </div>
 
@@ -92,7 +92,7 @@ export default function PrivacyPage() {
                 4. AI and Machine Learning
               </Heading>
               <Text variant="body" className="mb-4">
-                Sorovi uses AI technology to generate and edit videos. When you use our AI features:
+                Hyreel uses AI technology to generate and edit videos. When you use our AI features:
               </Text>
               <ul className="space-y-2 mb-4 list-disc list-inside text-[var(--text-gray-300)]">
                 <li>Your content may be processed by our AI models to generate videos</li>
@@ -177,7 +177,7 @@ export default function PrivacyPage() {
                 10. Children's Privacy
               </Heading>
               <Text variant="body">
-                Sorovi is not intended for users under 13 years of age. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.
+                Hyreel is not intended for users under 13 years of age. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.
               </Text>
             </div>
 
@@ -186,7 +186,7 @@ export default function PrivacyPage() {
                 11. Changes to This Policy
               </Heading>
               <Text variant="body">
-                We may update this privacy policy from time to time. We will notify you of significant changes by email or through our platform. Your continued use of Sorovi after changes constitutes acceptance of the updated policy.
+                We may update this privacy policy from time to time. We will notify you of significant changes by email or through our platform. Your continued use of Hyreel after changes constitutes acceptance of the updated policy.
               </Text>
             </div>
 
@@ -198,7 +198,7 @@ export default function PrivacyPage() {
                 If you have questions about this privacy policy or your data, contact us at:
               </Text>
               <ul className="space-y-2 list-none text-[var(--text-gray-300)]">
-                <li>Email: privacy@sorovi.com</li>
+                <li>Email: privacy@hyreel.com</li>
                 <li>Address: 123 Market Street, Suite 400, San Francisco, CA 94103</li>
               </ul>
             </div>

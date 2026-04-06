@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   if (!alternative) {
     return {
-      title: "Alternative Not Found - Sorovi",
+      title: "Alternative Not Found - Hyreel",
     };
   }
 
@@ -62,7 +62,7 @@ export default async function AlternativePage({ params }: { params: Promise<{ sl
         badge={{ text: `vs ${alternative.competitorName}` }}
         title={alternative.heroHeadline}
         description={alternative.heroSubheadline}
-        primaryCta={{ text: "Try Sorovi Free" }}
+        primaryCta={{ text: "Try Hyreel Free" }}
         secondaryCta={{ text: "See Comparison", href: "#comparison" }}
       />
 
@@ -70,7 +70,7 @@ export default async function AlternativePage({ params }: { params: Promise<{ sl
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Why Choose Sorovi Over {alternative.competitorName}?
+            Why Choose Hyreel Over {alternative.competitorName}?
           </Heading>
           <Text variant="large">
             {alternative.competitorDescription}
@@ -94,7 +94,7 @@ export default async function AlternativePage({ params }: { params: Promise<{ sl
       <Section spacing="xl" id="comparison">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Sorovi vs {alternative.competitorName}: Feature Comparison
+            Hyreel vs {alternative.competitorName}: Feature Comparison
           </Heading>
           <Text variant="large">
             See how we stack up side by side
@@ -106,7 +106,7 @@ export default async function AlternativePage({ params }: { params: Promise<{ sl
             <thead>
               <tr className="border-b border-[var(--border-color)]">
                 <th className="text-left py-4 px-4 text-[var(--text-secondary)]">Feature</th>
-                <th className="text-center py-4 px-4 text-[var(--brand-primary)] font-bold">Sorovi</th>
+                <th className="text-center py-4 px-4 text-[var(--brand-primary)] font-bold">Hyreel</th>
                 <th className="text-center py-4 px-4 text-[var(--text-secondary)]">{alternative.competitorName}</th>
               </tr>
             </thead>
@@ -115,14 +115,14 @@ export default async function AlternativePage({ params }: { params: Promise<{ sl
                 <tr key={index} className="border-b border-[var(--border-color)] hover:bg-[var(--surface-light)] transition-colors">
                   <td className="py-4 px-4 text-[var(--text-secondary)]">{row.feature}</td>
                   <td className="py-4 px-4 text-center">
-                    {typeof row.sorovi === "boolean" ? (
-                      row.sorovi ? (
+                    {typeof row.hyreel === "boolean" ? (
+                      row.hyreel ? (
                         <span className="text-[var(--brand-primary)] text-xl">✓</span>
                       ) : (
                         <span className="text-[var(--text-muted)]">—</span>
                       )
                     ) : (
-                      <span className="text-[var(--brand-primary)]">{row.sorovi}</span>
+                      <span className="text-[var(--brand-primary)]">{row.hyreel}</span>
                     )}
                   </td>
                   <td className="py-4 px-4 text-center">
@@ -146,13 +146,13 @@ export default async function AlternativePage({ params }: { params: Promise<{ sl
       {/* Advantages vs Limitations */}
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Sorovi Advantages */}
+          {/* Hyreel Advantages */}
           <div>
             <Heading as="h2" className="mb-6 text-[var(--brand-primary)]">
-              Sorovi Advantages
+              Hyreel Advantages
             </Heading>
             <ul className="space-y-4">
-              {alternative.soroviAdvantages.map((advantage, index) => (
+              {alternative.hyreelAdvantages.map((advantage, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <svg
                     className="w-6 h-6 text-[var(--brand-primary)] flex-shrink-0 mt-1"
@@ -221,22 +221,22 @@ export default async function AlternativePage({ params }: { params: Promise<{ sl
       {/* FAQ */}
       <PageFAQ
         title="Frequently Asked Questions"
-        description={`Common questions about switching from ${alternative.competitorName} to Sorovi`}
+        description={`Common questions about switching from ${alternative.competitorName} to Hyreel`}
         items={alternative.faqs}
         variant="light"
       />
 
       {/* CTA */}
       <FinalCTA
-        title="Ready to Switch to Sorovi?"
-        description="Join thousands of creators who made the switch. Try Sorovi free today."
+        title="Ready to Switch to Hyreel?"
+        description="Join thousands of creators who made the switch. Try Hyreel free today."
         primaryCta={{ text: "Start Creating Free" }}
         secondaryCta={{ text: "Compare Plans", href: "/pricing" }}
       />
 
       {/* Related Tools */}
       <RelatedContent
-        title="Explore Sorovi's AI Video Tools"
+        title="Explore Hyreel's AI Video Tools"
         items={[
           { title: "Image to Video AI", description: "Transform photos into videos", href: "/tools/image-to-video-ai" },
           { title: "TikTok Generator", description: "Create viral TikTok content", href: "/tools/ai-tiktok-video-generator" },

@@ -30,22 +30,22 @@ export async function generateMetadata({
 
   if (!tool) {
     return {
-      title: "Tool Not Found - Sorovi",
+      title: "Tool Not Found - Hyreel",
     };
   }
 
   return {
-    title: `${tool.name} | Sorovi`,
+    title: `${tool.name} | Hyreel`,
     description: tool.description,
     alternates: {
-      canonical: `https://sorovi.app/tools/${tool.slug}`,
+      canonical: `https://hyreel.app/tools/${tool.slug}`,
     },
     openGraph: {
       title: `${tool.name} — ${tool.tagline}`,
       description: tool.description,
-      url: `https://sorovi.app/tools/${tool.slug}`,
+      url: `https://hyreel.app/tools/${tool.slug}`,
       type: "website",
-      siteName: "Sorovi",
+      siteName: "Hyreel",
     },
     twitter: {
       card: "summary_large_image" as const,
@@ -490,7 +490,7 @@ export default async function ToolPage({
             Start Creating with {tool.name}
           </Heading>
           <Text variant="large" className="mb-6">
-            Download Sorovi and turn your photos into videos today
+            Download Hyreel and turn your photos into videos today
           </Text>
 
           {/* Star Rating */}
@@ -513,7 +513,7 @@ export default async function ToolPage({
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <Link href="https://apps.apple.com/app/sorovi-ai-video-generator/id6738042296">
+            <Link href="https://apps.apple.com/app/hyreel-ai-video-generator/id6738042296">
               <Button size="lg">Download for iOS</Button>
             </Link>
             <Button size="lg" variant="secondary">
