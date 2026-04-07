@@ -34,6 +34,14 @@ export async function generateMetadata({
   return {
     title: useCase.metaTitle,
     description: useCase.metaDescription,
+    alternates: {
+      canonical: `/use-cases/${useCase.slug}`,
+    },
+    openGraph: {
+      title: useCase.metaTitle,
+      description: useCase.metaDescription,
+      images: ["/og-image.png"],
+    },
   };
 }
 

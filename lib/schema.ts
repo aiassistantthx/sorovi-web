@@ -73,6 +73,7 @@ export function generateArticleSchema({
   description,
   url,
   publishedAt,
+  modifiedAt,
   author,
   image,
 }: {
@@ -80,6 +81,7 @@ export function generateArticleSchema({
   description: string;
   url: string;
   publishedAt: string;
+  modifiedAt?: string;
   author: string;
   image?: string;
 }) {
@@ -90,16 +92,26 @@ export function generateArticleSchema({
     description,
     url: `${SITE_URL}${url}`,
     datePublished: publishedAt,
+    dateModified: modifiedAt || publishedAt,
+    image: image || `${SITE_URL}/og-image.png`,
     author: {
-      "@type": "Organization",
+      "@type": "Person",
       name: author,
+      url: SITE_URL,
     },
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,
       url: SITE_URL,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/og-image.png`,
+      },
     },
-    ...(image && { image }),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}${url}`,
+    },
   };
 }
 

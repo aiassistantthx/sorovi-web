@@ -38,19 +38,19 @@ export async function generateMetadata({
     title: `${tool.name} | Hyreel`,
     description: tool.description,
     alternates: {
-      canonical: `https://hyreel.com/tools/${tool.slug}`,
+      canonical: `/tools/${tool.slug}`,
     },
     openGraph: {
       title: `${tool.name} — ${tool.tagline}`,
       description: tool.description,
-      url: `https://hyreel.com/tools/${tool.slug}`,
       type: "website",
-      siteName: "Hyreel",
+      images: ["/og-image.png"],
     },
     twitter: {
       card: "summary_large_image" as const,
       title: `${tool.name} — ${tool.tagline}`,
       description: tool.description,
+      images: ["/og-image.png"],
     },
   };
 }

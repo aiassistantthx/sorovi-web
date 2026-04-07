@@ -3,6 +3,11 @@ import { tools } from "@/lib/tools";
 import { alternatives } from "@/lib/alternatives";
 import { useCases } from "@/lib/use-cases";
 import { blogPosts } from "@/lib/blog";
+import { templates } from "@/lib/templates";
+import { industries } from "@/lib/industries";
+import { audiences } from "@/lib/audiences";
+import { platforms } from "@/lib/platforms";
+import { solutions } from "@/lib/solutions";
 
 const SITE_URL = "https://hyreel.com";
 
@@ -37,6 +42,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
+    },
+    {
+      url: `${SITE_URL}/templates`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/industries`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/for`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/platforms`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/solutions`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/alternatives`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/free-ai-video-generator`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/ai-video-no-watermark`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_URL}/cheap-ai-video-maker`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
     {
       url: `${SITE_URL}/about`,
@@ -92,11 +151,51 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const templatePages: MetadataRoute.Sitemap = templates.map((template) => ({
+    url: `${SITE_URL}/templates/${template.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  const industryPages: MetadataRoute.Sitemap = industries.map((industry) => ({
+    url: `${SITE_URL}/industries/${industry.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  const audiencePages: MetadataRoute.Sitemap = audiences.map((audience) => ({
+    url: `${SITE_URL}/for/${audience.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  const platformPages: MetadataRoute.Sitemap = platforms.map((platform) => ({
+    url: `${SITE_URL}/platforms/${platform.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  const solutionPages: MetadataRoute.Sitemap = solutions.map((solution) => ({
+    url: `${SITE_URL}/solutions/${solution.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   return [
     ...staticPages,
     ...toolPages,
     ...alternativePages,
     ...useCasePages,
     ...blogPages,
+    ...templatePages,
+    ...industryPages,
+    ...audiencePages,
+    ...platformPages,
+    ...solutionPages,
   ];
 }

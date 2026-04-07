@@ -10,6 +10,14 @@ export const metadata = {
   title: "Use Cases - How Businesses Use Hyreel AI Video | Hyreel",
   description:
     "Discover how businesses across e-commerce, social media, real estate, fashion, and more use Hyreel to create professional AI videos that drive results.",
+  alternates: {
+    canonical: "/use-cases",
+  },
+  openGraph: {
+    title: "AI Video Use Cases - Hyreel",
+    description: "How businesses use Hyreel AI video for e-commerce, social media, real estate, and more.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function UseCasesPage() {

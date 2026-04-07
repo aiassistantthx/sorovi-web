@@ -7,6 +7,14 @@ export const metadata = {
   title: "Blog - AI Video Creation Tips, Guides & Tutorials | Hyreel",
   description:
     "Learn how to create stunning AI-generated videos. Tips, tutorials, and guides on photo-to-video AI, TikTok content, Instagram Reels, e-commerce video, and more.",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Hyreel Blog - AI Video Creation Tips & Tutorials",
+    description: "Tips, tutorials, and guides on AI video creation for TikTok, Instagram, and more.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function BlogPage() {

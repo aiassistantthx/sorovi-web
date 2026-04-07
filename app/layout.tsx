@@ -15,21 +15,52 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Hyreel - AI Video Generation App",
+  metadataBase: new URL("https://hyreel.com"),
+  title: {
+    default: "Hyreel - AI Video Generation App",
+    template: "%s | Hyreel",
+  },
   description: "Create viral videos in minutes with AI. TikTok, Instagram Reels, YouTube Shorts and more.",
   keywords: ["AI video generator", "TikTok videos", "Instagram Reels", "YouTube Shorts", "video maker app"],
-  authors: [{ name: "Hyreel" }],
+  authors: [{ name: "Hyreel Team" }],
+  creator: "Hyreel",
+  publisher: "Hyreel",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Hyreel - AI Video Generation App",
-    description: "Create viral videos in minutes with AI",
+    description: "Create viral videos in minutes with AI. Transform photos into stunning videos for TikTok, Instagram Reels, and YouTube Shorts.",
     type: "website",
     locale: "en_US",
     siteName: "Hyreel",
+    url: "https://hyreel.com",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Hyreel - AI Video Generation App",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hyreel - AI Video Generation App",
     description: "Create viral videos in minutes with AI",
+    images: ["/og-image.png"],
+    creator: "@hyreelapp",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
