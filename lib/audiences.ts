@@ -826,6 +826,309 @@ export const audiences: Audience[] = [
     ],
     relatedTools: ["ai-social-media-video-maker", "ai-product-video-maker", "ai-instagram-reels-maker", "image-to-video-ai"],
     ctaText: "Start Team Trial"
+  },
+  {
+    slug: "realtors",
+    name: "Real Estate Agents",
+    icon: "🏠",
+    metaTitle: "AI Video for Real Estate Agents | Hyreel",
+    metaDescription: "Create stunning property videos from listing photos. Stand out in your market with professional video tours. No videographer needed.",
+    heroHeadline: "Win More Listings with Professional Property Videos",
+    heroSubheadline: "Transform your listing photos into cinematic property tours in seconds. Stand out from every other agent in your market with video on every listing.",
+    description: "Hyreel helps real estate agents create professional property videos that win listings and attract buyers.",
+    painPoints: [
+      {
+        icon: "💰",
+        title: "Video Production is Expensive",
+        description: "Professional property videos cost $300-1,000+ per listing, eating into your commission."
+      },
+      {
+        icon: "⏰",
+        title: "No Time for Video",
+        description: "Between showings, open houses, and client calls, coordinating video shoots is impossible."
+      },
+      {
+        icon: "🏃",
+        title: "Listings Move Fast",
+        description: "In hot markets, waiting for a videographer means missing the crucial first 48 hours."
+      },
+      {
+        icon: "🆚",
+        title: "Competing Agents Have Video",
+        description: "Top agents in your market use video for every listing. Static photos don't compete."
+      }
+    ],
+    benefits: [
+      {
+        icon: "🎬",
+        title: "Video for Every Listing",
+        description: "Create professional property tours for every listing, not just luxury properties."
+      },
+      {
+        icon: "⚡",
+        title: "Same-Day Delivery",
+        description: "Get property videos live the same day you photograph. No waiting for production."
+      },
+      {
+        icon: "📱",
+        title: "Social Media Ready",
+        description: "Create Instagram Reels and TikToks that build your personal brand and attract clients."
+      },
+      {
+        icon: "💵",
+        title: "Save Thousands Monthly",
+        description: "Replace expensive videography with unlimited AI videos for less than one shoot."
+      }
+    ],
+    features: [
+      "Property tour videos from listing photos",
+      "Cinematic zoom and pan effects",
+      "Custom branding and contact info",
+      "MLS and Zillow compatible exports",
+      "Social media vertical videos",
+      "Batch processing for multiple listings"
+    ],
+    useCases: [
+      "Listing video tours",
+      "Open house promotions",
+      "Just listed announcements",
+      "Neighborhood showcases",
+      "Agent personal branding",
+      "Social media content"
+    ],
+    testimonial: {
+      quote: "I used to only do video for luxury listings. Now every property gets a video tour. My inquiries are up 40% and sellers notice immediately.",
+      author: "David K.",
+      role: "Real Estate Agent, RE/MAX"
+    },
+    stats: [
+      { value: "403%", label: "More Inquiries with Video" },
+      { value: "$500+", label: "Saved per Listing" },
+      { value: "< 60s", label: "Video Creation" },
+      { value: "100%", label: "Listings with Video" }
+    ],
+    faqs: [
+      {
+        question: "Can I add my branding to property videos?",
+        answer: "Yes! Add your logo, name, phone number, brokerage, and contact info to every video. Build your brand with every listing."
+      },
+      {
+        question: "Do these work on MLS and Zillow?",
+        answer: "Absolutely. Hyreel exports standard MP4 videos accepted by all MLS systems, Zillow, Realtor.com, Redfin, and every real estate platform."
+      },
+      {
+        question: "How long are property tour videos?",
+        answer: "You control the length. Create 15-second social clips or 2-3 minute full tours. Most agents create both from the same photos."
+      },
+      {
+        question: "Is this better than hiring a videographer?",
+        answer: "For most listings, yes. You save hundreds and get instant results. For luxury properties, Hyreel complements drone footage perfectly."
+      }
+    ],
+    relatedTools: ["image-to-video-ai", "ai-zoom-video-effect", "ai-parallax-video-effect", "ai-3d-photo-video"],
+    ctaText: "Create Property Videos Free"
+  },
+  {
+    slug: "coaches",
+    name: "Coaches & Consultants",
+    icon: "🎯",
+    metaTitle: "AI Video for Coaches & Consultants | Hyreel",
+    metaDescription: "Build your coaching brand with professional video content. Create course promos, social content, and client testimonial videos without filming.",
+    heroHeadline: "Build Your Coaching Brand with Professional Video",
+    heroSubheadline: "Create content that positions you as the expert. Transform your photos, graphics, and testimonials into videos that attract high-ticket clients.",
+    description: "Hyreel helps coaches and consultants create professional video content that builds authority and attracts clients.",
+    painPoints: [
+      {
+        icon: "📹",
+        title: "Camera Shy or Time Poor",
+        description: "Not everyone loves being on camera, and filming eats into coaching time."
+      },
+      {
+        icon: "🎬",
+        title: "Video Feels Overwhelming",
+        description: "Equipment, editing, lighting — the production process is intimidating."
+      },
+      {
+        icon: "💼",
+        title: "Building Authority Online",
+        description: "You know your stuff, but static posts don't convey expertise like video does."
+      },
+      {
+        icon: "📱",
+        title: "Content Demands",
+        description: "LinkedIn, Instagram, and TikTok all want video. You can't keep up with all platforms."
+      }
+    ],
+    benefits: [
+      {
+        icon: "✨",
+        title: "Professional Without Filming",
+        description: "Create polished video content from photos, testimonials, and graphics. No camera required."
+      },
+      {
+        icon: "🎯",
+        title: "Position as an Expert",
+        description: "Video content builds credibility and trust. Stand out from text-only coaches."
+      },
+      {
+        icon: "📈",
+        title: "Attract Better Clients",
+        description: "Professional content attracts higher-ticket clients who value quality."
+      },
+      {
+        icon: "⏱️",
+        title: "Save Hours Weekly",
+        description: "Create a week's content in 30 minutes instead of spending days filming and editing."
+      }
+    ],
+    features: [
+      "Testimonial videos from client quotes",
+      "Course promotional content",
+      "Social media thought leadership",
+      "Workshop and event promotion",
+      "Before/after transformation content",
+      "Lead magnet videos"
+    ],
+    useCases: [
+      "LinkedIn thought leadership",
+      "Instagram coaching content",
+      "Course and program promotion",
+      "Client success stories",
+      "Workshop announcements",
+      "Lead generation content"
+    ],
+    testimonial: {
+      quote: "I tripled my course sales after adding Hyreel videos to my funnel. Clients say the videos convinced them I was the real deal.",
+      author: "Jennifer B.",
+      role: "Business Coach"
+    },
+    stats: [
+      { value: "3x", label: "Course Sales" },
+      { value: "Higher", label: "Quality Leads" },
+      { value: "Minutes", label: "Content Creation" },
+      { value: "0", label: "Camera Time" }
+    ],
+    faqs: [
+      {
+        question: "Can I create testimonial videos without filming clients?",
+        answer: "Yes! Turn client photos, quotes, and results into professional testimonial videos. Many coaches use this for clients who prefer not to be on camera."
+      },
+      {
+        question: "What kind of content works for LinkedIn?",
+        answer: "Thought leadership videos from your graphics and quotes, client success stories, and promotional content for your services all perform well on LinkedIn."
+      },
+      {
+        question: "Can I promote my courses with Hyreel?",
+        answer: "Absolutely. Create compelling course promo videos from screenshots, testimonials, and course imagery. Many coaches see significant sales increases."
+      },
+      {
+        question: "I'm not tech-savvy. Is this difficult?",
+        answer: "Not at all. Upload a photo, choose an effect, get a video. If you can use Instagram, you can use Hyreel."
+      }
+    ],
+    relatedTools: ["image-to-video-ai", "ai-social-media-video-maker", "ai-zoom-video-effect", "ai-testimonial-video-maker"],
+    ctaText: "Start Building Your Brand Free"
+  },
+  {
+    slug: "photographers",
+    name: "Photographers",
+    icon: "📷",
+    metaTitle: "AI Video for Photographers | Hyreel",
+    metaDescription: "Transform your photography into video content. Add motion to your best shots. Expand your services without learning video editing.",
+    heroHeadline: "Give Your Photography a New Dimension",
+    heroSubheadline: "Transform your best photos into mesmerizing videos. Add a new revenue stream, create social content, and deliver more value to clients — all from your existing work.",
+    description: "Hyreel helps photographers add video services, create social content, and bring their images to life.",
+    painPoints: [
+      {
+        icon: "📹",
+        title: "Clients Want Video Too",
+        description: "Everyone asks for video now, but learning videography is a whole new skillset."
+      },
+      {
+        icon: "💰",
+        title: "Missing Revenue Opportunities",
+        description: "Video photographers charge more, but the equipment and learning curve is steep."
+      },
+      {
+        icon: "📱",
+        title: "Portfolio Needs Video",
+        description: "Static portfolios don't perform on social media. Video gets all the engagement."
+      },
+      {
+        icon: "⏰",
+        title: "Not Enough Hours",
+        description: "Between shoots, editing, and client work, there's no time to learn video editing."
+      }
+    ],
+    benefits: [
+      {
+        icon: "🎬",
+        title: "Add Video Services",
+        description: "Offer video deliverables to clients without buying video equipment or learning editing."
+      },
+      {
+        icon: "💵",
+        title: "New Revenue Stream",
+        description: "Charge for video add-ons. Many photographers add $200-500 per client."
+      },
+      {
+        icon: "📱",
+        title: "Social Media Content",
+        description: "Turn your portfolio into engaging video content that attracts new clients."
+      },
+      {
+        icon: "✨",
+        title: "Bring Photos to Life",
+        description: "Create cinematic motion from your best shots. See your work in a new way."
+      }
+    ],
+    features: [
+      "Photo-to-video with cinematic motion",
+      "Portfolio showcase videos",
+      "Client delivery add-on",
+      "Social media reels from shoots",
+      "Wedding highlight videos",
+      "Behind-the-scenes content"
+    ],
+    useCases: [
+      "Client video deliverables",
+      "Portfolio showcase content",
+      "Wedding and event highlights",
+      "Social media marketing",
+      "Real estate listing videos",
+      "Product photography videos"
+    ],
+    testimonial: {
+      quote: "I added video packages to my wedding photography. Clients love getting video of their photos. I charge $300 extra and it takes me 10 minutes.",
+      author: "Nicole R.",
+      role: "Wedding Photographer"
+    },
+    stats: [
+      { value: "$300+", label: "Extra per Client" },
+      { value: "10min", label: "Creation Time" },
+      { value: "New", label: "Revenue Stream" },
+      { value: "5x", label: "Portfolio Engagement" }
+    ],
+    faqs: [
+      {
+        question: "Can I offer video as an add-on service?",
+        answer: "Absolutely! Many photographers charge $200-500 for video packages. Turn client photos into videos and add a new revenue stream without new skills."
+      },
+      {
+        question: "What types of photography work best?",
+        answer: "Portrait, wedding, real estate, product, and landscape photography all create stunning videos. Any high-quality photo can become engaging video content."
+      },
+      {
+        question: "Will this replace real videography?",
+        answer: "For some projects, yes. For others, Hyreel complements video footage beautifully. It's perfect for clients who want video but didn't hire a videographer."
+      },
+      {
+        question: "How do I price video add-ons?",
+        answer: "Most photographers charge $200-500 depending on the number of images. Since creation takes minutes, your margin is excellent."
+      }
+    ],
+    relatedTools: ["image-to-video-ai", "ai-parallax-video-effect", "ai-zoom-video-effect", "ai-3d-photo-video"],
+    ctaText: "Start Creating Video Free"
   }
 ];
 

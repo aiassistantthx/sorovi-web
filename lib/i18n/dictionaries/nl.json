@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "Hyreel - AI Video Generator | Maak Virale Video's van Foto's",
+    "description": "Maak virale TikTok, Instagram Reels en YouTube Shorts van foto's in minuten. AI-aangedreven video-effecten, geen bewerkingsvaardigheden nodig. Start gratis."
+  },
+  "nav": {
+    "tools": "Tools",
+    "templates": "Sjablonen",
+    "useCases": "Toepassingen",
+    "industries": "Sectoren",
+    "pricing": "Prijzen",
+    "downloadApp": "Download App"
+  },
+  "hero": {
+    "title": "Verander Foto's in",
+    "titleHighlight": "Virale Video's",
+    "titleEnd": "in Minuten",
+    "description": "Geen bewerkingsvaardigheden nodig. Hyreel's AI maakt scroll-stoppende TikToks, Reels en Shorts van één enkele foto.",
+    "cta": "Start met Maken"
+  },
+  "features": {
+    "title": "Waarom Creators van Hyreel Houden",
+    "subtitle": "Professionele videocreatie zonder leercurve",
+    "items": [
+      {
+        "title": "Foto naar Video AI",
+        "description": "Upload elke foto en zie onze AI deze transformeren in een dynamische video met cinematische bewegingseffecten."
+      },
+      {
+        "title": "Cinematische Effecten",
+        "description": "Professionele zoom, orbit, parallax en volg-effecten die je content laten opvallen."
+      },
+      {
+        "title": "Platform Geoptimaliseerd",
+        "description": "Exporteer in perfecte formaten voor TikTok, Instagram Reels, YouTube Shorts en meer."
+      },
+      {
+        "title": "AI Stem & Muziek",
+        "description": "Voeg professionele voice-overs en achtergrondmuziek toe om je video's compleet te maken."
+      },
+      {
+        "title": "Razendsnell",
+        "description": "Maak professionele video's in seconden, niet uren. Perfect voor dagelijkse contentcreatie."
+      },
+      {
+        "title": "Geen Watermerk",
+        "description": "Schone, professionele video's klaar voor je merk. Geen watermerken op betaalde abonnementen."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Maak Video's in 3 Stappen",
+    "subtitle": "Van foto naar virale video in minder dan een minuut",
+    "steps": [
+      {
+        "title": "Upload Je Foto",
+        "description": "Kies een foto uit je camerarol of bibliotheek"
+      },
+      {
+        "title": "Kies een Effect",
+        "description": "Selecteer uit zoom, orbit, parallax en meer AI-effecten"
+      },
+      {
+        "title": "Exporteer & Deel",
+        "description": "Download of deel direct naar TikTok, Instagram, YouTube"
+      }
+    ]
+  },
+  "stats": {
+    "videos": "Video's Gemaakt",
+    "creators": "Actieve Creators",
+    "rating": "App Store Beoordeling",
+    "countries": "Landen"
+  },
+  "cta": {
+    "title": "Klaar om Virale Content te Maken?",
+    "description": "Sluit je aan bij duizenden creators die scroll-stoppende video's maken met AI. Start gratis — geen creditcard nodig.",
+    "primary": "Start Gratis met Maken",
+    "secondary": "Bekijk Prijzen"
+  },
+  "footer": {
+    "tagline": "AI-aangedreven videocreatie voor creators, merken en bedrijven.",
+    "product": "Product",
+    "resources": "Bronnen",
+    "company": "Bedrijf",
+    "legal": "Juridisch",
+    "copyright": "Alle rechten voorbehouden."
+  }
+}

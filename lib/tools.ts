@@ -2101,6 +2101,264 @@ export const tools: Tool[] = [
         answer: "For products, 'Reveal-and-Track' works great—it starts wide and smoothly tracks in toward your product. 'Smooth Glide' is perfect for luxury items, creating an elegant sliding motion. 'Orbital Follow' works well for showing products from multiple angles."
       }
     ]
+  },
+  {
+    slug: "ai-dolly-zoom-effect",
+    name: "AI Dolly Zoom Effect",
+    tagline: "Create the iconic vertigo effect from photos",
+    description: "Transform still photos into cinematic dolly zoom videos. The famous Hitchcock effect—also known as vertigo, contra-zoom, or zolly—now available with AI.",
+    detailedDescription: "The dolly zoom, made famous by Alfred Hitchcock in Vertigo, creates an unsettling yet mesmerizing visual effect where the subject stays the same size while the background appears to stretch or compress. Our AI recreates this iconic cinematic technique from a single still photo, no expensive equipment or camera movement required. Perfect for dramatic reveals, horror content, music videos, and any content where you want to create visual tension and intrigue.",
+    icon: "🎥",
+    category: "Motion Effects",
+    howItWorks: [
+      { step: "1", title: "Upload Your Photo", description: "Select any photo with a clear subject and visible background depth." },
+      { step: "2", title: "Choose Dolly Direction", description: "Select dolly-in (background expands) or dolly-out (background compresses)." },
+      { step: "3", title: "Set Intensity", description: "Control how dramatic the effect is—subtle tension to full vertigo." },
+      { step: "4", title: "Export & Share", description: "Download your cinematic dolly zoom video ready for any platform." }
+    ],
+    features: [
+      { icon: "🎬", title: "Hitchcock Effect", description: "The iconic vertigo/contra-zoom made accessible to everyone" },
+      { icon: "🎯", title: "Subject Lock", description: "AI keeps your subject perfectly sized while background transforms" },
+      { icon: "⚙️", title: "Intensity Control", description: "From subtle unease to dramatic full effect" },
+      { icon: "🔄", title: "Both Directions", description: "Dolly-in and dolly-out for different emotional impacts" }
+    ],
+    benefits: [
+      "Create cinematic tension without camera equipment",
+      "Perfect for dramatic reveals and horror content",
+      "Music video quality from still photos",
+      "Instant professional film technique"
+    ],
+    useCases: [
+      "Music video dramatic moments",
+      "Horror and thriller content",
+      "Dramatic product reveals",
+      "Emotional storytelling beats",
+      "Film school style content"
+    ],
+    pricing: {
+      free: "3 dolly zoom videos per day",
+      creator: "Unlimited dolly zoom effects",
+      business: "Unlimited + commercial license"
+    },
+    faqs: [
+      { question: "What is a dolly zoom?", answer: "A dolly zoom is a camera technique where the camera moves toward/away from a subject while zooming in the opposite direction, keeping the subject the same size but distorting the background. Hitchcock made it famous in Vertigo, Spielberg used it in Jaws. Our AI recreates this from still photos." },
+      { question: "How does AI create dolly zoom from a photo?", answer: "Our AI analyzes depth in your image, identifies the subject, then simulates the simultaneous dolly and zoom movements. It generates new perspective information to create the characteristic background stretch/compression effect." }
+    ]
+  },
+  {
+    slug: "ai-camera-pan-effect",
+    name: "AI Camera Pan Effect",
+    tagline: "Smooth horizontal panning from any photo",
+    description: "Create professional horizontal camera pan movements from still photos. Reveal scenes, follow action, and add cinematic motion with AI-powered panning.",
+    detailedDescription: "The camera pan is one of the most fundamental and versatile cinematography techniques—a smooth horizontal movement that reveals scenes, follows action, or establishes space. Our AI transforms still photos into fluid panning videos, simulating the motion of a professional camera operator. Whether you're creating establishing shots, revealing products, or adding dynamic motion to landscapes, AI camera pan brings your photos to life with cinematic horizontal movement.",
+    icon: "📷",
+    category: "Motion Effects",
+    howItWorks: [
+      { step: "1", title: "Upload Your Photo", description: "Select a photo with horizontal elements to pan across." },
+      { step: "2", title: "Choose Pan Direction", description: "Left-to-right or right-to-left movement." },
+      { step: "3", title: "Set Speed & Distance", description: "Control how fast and how far the camera pans." },
+      { step: "4", title: "Export", description: "Download your smooth panning video." }
+    ],
+    features: [
+      { icon: "↔️", title: "Smooth Horizontal Motion", description: "Fluid left-right camera movement" },
+      { icon: "🎯", title: "Smart Framing", description: "AI maintains proper composition throughout pan" },
+      { icon: "⚡", title: "Speed Control", description: "From slow reveal to quick sweep" },
+      { icon: "🖼️", title: "Panorama Support", description: "Works great with wide landscape photos" }
+    ],
+    benefits: [
+      "Professional panning shots from still photos",
+      "Perfect for landscapes and wide scenes",
+      "Reveal products and spaces cinematically",
+      "No tripod or equipment needed"
+    ],
+    useCases: [
+      "Landscape and travel content",
+      "Real estate property reveals",
+      "Product lineup showcases",
+      "Scene establishing shots",
+      "Architectural photography to video"
+    ],
+    pricing: {
+      free: "3 pan videos per day",
+      creator: "Unlimited camera pans",
+      business: "Unlimited + commercial license"
+    },
+    faqs: [
+      { question: "What's the difference between pan and orbit?", answer: "Pan moves horizontally across a scene (like turning your head side to side). Orbit moves around a subject (like walking around an object). Pan is great for wide scenes and reveals; orbit is better for showcasing individual subjects." },
+      { question: "Do panorama photos work better?", answer: "Wider photos give more room for the pan movement, but standard photos work great too. The AI extends and generates content at the edges for smooth movement regardless of aspect ratio." }
+    ]
+  },
+  {
+    slug: "ai-ken-burns-effect",
+    name: "AI Ken Burns Effect",
+    tagline: "Documentary-style photo animation",
+    description: "Apply the classic Ken Burns documentary technique to your photos. Slow, elegant pan-and-zoom movements that bring still images to life with storytelling gravitas.",
+    detailedDescription: "Named after documentarian Ken Burns who popularized it, this technique combines gentle panning and zooming to create emotional, narrative motion from still photographs. Used in award-winning documentaries, memorial videos, and storytelling content, the Ken Burns effect transforms static images into contemplative, emotionally resonant videos. Our AI applies this classic technique with intelligent composition awareness, ensuring beautiful results every time.",
+    icon: "🎞️",
+    category: "Motion Effects",
+    howItWorks: [
+      { step: "1", title: "Upload Photo", description: "Any photo—portraits, landscapes, historical images." },
+      { step: "2", title: "Select Style", description: "Choose from subtle, classic, or dramatic Ken Burns motion." },
+      { step: "3", title: "Set Focus Points", description: "Optionally guide where the motion emphasizes." },
+      { step: "4", title: "Export", description: "Download your documentary-style animated photo." }
+    ],
+    features: [
+      { icon: "🎬", title: "Documentary Quality", description: "The same technique used in award-winning films" },
+      { icon: "🎯", title: "Smart Focus", description: "AI identifies points of interest for natural motion paths" },
+      { icon: "⏱️", title: "Pacing Control", description: "From contemplative slow motion to dynamic storytelling" },
+      { icon: "🔄", title: "Multiple Styles", description: "Zoom-in, zoom-out, pan-zoom combinations" }
+    ],
+    benefits: [
+      "Documentary-quality results instantly",
+      "Perfect for memorial and tribute videos",
+      "Storytelling motion that evokes emotion",
+      "Classic technique, AI-powered simplicity"
+    ],
+    useCases: [
+      "Documentary and historical content",
+      "Memorial and tribute videos",
+      "Photo slideshows and montages",
+      "Educational content",
+      "Family history presentations"
+    ],
+    pricing: {
+      free: "3 Ken Burns videos per day",
+      creator: "Unlimited Ken Burns effects",
+      business: "Unlimited + commercial license"
+    },
+    faqs: [
+      { question: "Who is Ken Burns?", answer: "Ken Burns is an acclaimed documentary filmmaker known for 'The Civil War', 'Jazz', and 'Baseball'. He popularized the technique of slowly panning and zooming across still photographs to create emotional, narrative motion—now named after him." },
+      { question: "When should I use Ken Burns vs other effects?", answer: "Ken Burns is perfect for storytelling, emotional content, and when you want a contemplative, documentary feel. For energetic social media content, faster effects like zoom or orbit might be better. Ken Burns excels in memorial videos, historical content, and photo-based stories." }
+    ]
+  },
+  {
+    slug: "ai-slow-motion-video",
+    name: "AI Slow Motion Video",
+    tagline: "Create slow-mo videos from still photos",
+    description: "Generate smooth slow-motion video sequences from single photos. AI interpolates motion to create dramatic, time-stretched video from static images.",
+    detailedDescription: "Slow motion typically requires high-frame-rate cameras shooting hundreds of frames per second. Our AI takes a different approach—analyzing a still photo and generating smooth, interpolated motion that plays out in cinematic slow motion. The result: dramatic, time-stretched video sequences from photos you already have. Perfect for creating dramatic moments, emphasizing details, and adding premium production value to any content.",
+    icon: "🐌",
+    category: "Motion Effects",
+    howItWorks: [
+      { step: "1", title: "Upload Photo", description: "Select a photo with implied or potential motion." },
+      { step: "2", title: "Choose Motion Type", description: "Select what kind of movement to generate and slow down." },
+      { step: "3", title: "Set Speed", description: "Control how slow—from subtle to ultra slow-mo." },
+      { step: "4", title: "Export", description: "Download your AI-generated slow motion video." }
+    ],
+    features: [
+      { icon: "🎬", title: "Cinematic Slow-Mo", description: "Hollywood-quality time-stretched motion" },
+      { icon: "🔄", title: "AI Motion Generation", description: "Creates smooth movement from still images" },
+      { icon: "⚙️", title: "Speed Control", description: "From 2x to 10x slower than normal" },
+      { icon: "✨", title: "Smooth Interpolation", description: "No stuttering or artifacts" }
+    ],
+    benefits: [
+      "Slow motion without high-speed cameras",
+      "Dramatic effect from any photo",
+      "Emphasize products and details",
+      "Premium production value instantly"
+    ],
+    useCases: [
+      "Product beauty shots",
+      "Fashion and beauty content",
+      "Food and beverage reveals",
+      "Dramatic moments in any content",
+      "Sports and action emphasis"
+    ],
+    pricing: {
+      free: "3 slow-mo videos per day",
+      creator: "Unlimited slow motion effects",
+      business: "Unlimited + commercial license"
+    },
+    faqs: [
+      { question: "How can AI create slow motion from a still photo?", answer: "Our AI analyzes your photo to understand the scene, then generates smooth intermediate frames that create motion. This motion is then stretched out in time to create the slow-motion effect. It's not capturing real motion—it's AI-imagining what motion would look like, played slowly." },
+      { question: "Is this the same as real slow motion?", answer: "Not exactly. Real slow-mo captures actual fast motion at high frame rates. AI slow-mo generates plausible motion from stills. For cinematic effect and social content, the result is often indistinguishable. For scientific or sports analysis, you'd want real high-speed footage." }
+    ]
+  },
+  {
+    slug: "ai-loop-video-generator",
+    name: "AI Loop Video Generator",
+    tagline: "Create seamless looping videos from photos",
+    description: "Transform still photos into mesmerizing seamless loops. Perfect for backgrounds, social media, and hypnotic visual content that plays forever.",
+    detailedDescription: "Looping videos are everywhere—social media backgrounds, website headers, digital signage, and meditative content. Creating a truly seamless loop traditionally requires careful planning and editing. Our AI generates smooth, hypnotic loops from any photo, ensuring the end flows perfectly into the beginning. Whether you want subtle ambient motion or dramatic continuous movement, AI Loop Video Generator creates professional looping content instantly.",
+    icon: "🔄",
+    category: "Motion Effects",
+    howItWorks: [
+      { step: "1", title: "Upload Photo", description: "Select any photo to transform into a loop." },
+      { step: "2", title: "Choose Loop Style", description: "Subtle ambient, dramatic motion, or bounce loop." },
+      { step: "3", title: "Preview Loop Point", description: "See where the seamless transition occurs." },
+      { step: "4", title: "Export", description: "Download your infinitely looping video." }
+    ],
+    features: [
+      { icon: "♾️", title: "Seamless Loops", description: "Perfect end-to-start transitions" },
+      { icon: "🌊", title: "Multiple Styles", description: "Ambient, dramatic, bounce, and breathing loops" },
+      { icon: "🎯", title: "Smart Transitions", description: "AI ensures invisible loop points" },
+      { icon: "📱", title: "Social Ready", description: "Optimized for TikTok, Instagram, and web" }
+    ],
+    benefits: [
+      "Infinite playback without visible cuts",
+      "Perfect for backgrounds and ambiance",
+      "Hypnotic content that holds attention",
+      "Website and digital signage ready"
+    ],
+    useCases: [
+      "Social media background loops",
+      "Website header videos",
+      "Digital signage content",
+      "Meditation and ambient content",
+      "Live wallpapers and screensavers"
+    ],
+    pricing: {
+      free: "3 loop videos per day",
+      creator: "Unlimited loop generation",
+      business: "Unlimited + 4K loops, commercial license"
+    },
+    faqs: [
+      { question: "How does AI create seamless loops?", answer: "Our AI generates motion that naturally returns to its starting point. It analyzes your image, creates movement, then ensures the final frame transitions invisibly back to the first frame. The result plays forever without any visible cut or jump." },
+      { question: "What makes a good loop?", answer: "Photos with some depth and texture work best—landscapes, abstract patterns, products with interesting surfaces. The AI can create subtle ambient motion (like gently swaying elements) or more dramatic continuous movement depending on your preference." }
+    ]
+  },
+  {
+    slug: "ai-cinemagraph-maker",
+    name: "AI Cinemagraph Maker",
+    tagline: "Photos with subtle living motion",
+    description: "Create cinemagraphs—still photos with isolated moving elements. Hair blowing, water flowing, smoke rising—add life to specific parts of your image while the rest stays frozen.",
+    detailedDescription: "Cinemagraphs are the elegant middle ground between photos and videos—mostly still images with one element in subtle, looping motion. A portrait where only the hair moves, a coffee cup where only the steam rises, a landscape where only the water flows. Traditionally complex to create, our AI makes cinemagraphs accessible by identifying elements that could move naturally and animating only those portions while keeping everything else perfectly still.",
+    icon: "🌊",
+    category: "Motion Effects",
+    howItWorks: [
+      { step: "1", title: "Upload Photo", description: "Select a photo with an element that could naturally move." },
+      { step: "2", title: "Select Moving Area", description: "Tap or let AI detect what should move—hair, water, smoke, fabric." },
+      { step: "3", title: "Choose Motion Type", description: "Flow, sway, ripple, or custom motion patterns." },
+      { step: "4", title: "Export", description: "Download your living cinemagraph." }
+    ],
+    features: [
+      { icon: "🎭", title: "Isolated Motion", description: "Only selected elements move while rest stays still" },
+      { icon: "🔍", title: "AI Detection", description: "Automatically identifies moveable elements" },
+      { icon: "🌊", title: "Natural Motion", description: "Realistic physics for water, hair, fabric, smoke" },
+      { icon: "🔄", title: "Seamless Loop", description: "Perfect looping for infinite playback" }
+    ],
+    benefits: [
+      "Elegant living photos that captivate",
+      "Perfect for luxury brand content",
+      "More engaging than static images",
+      "Subtle and sophisticated motion"
+    ],
+    useCases: [
+      "Fashion and beauty portrait content",
+      "Food and beverage photography",
+      "Luxury product marketing",
+      "Website headers and backgrounds",
+      "Social media standout content"
+    ],
+    pricing: {
+      free: "3 cinemagraphs per day",
+      creator: "Unlimited cinemagraph creation",
+      business: "Unlimited + 4K, commercial license"
+    },
+    faqs: [
+      { question: "What's the difference between cinemagraph and regular video?", answer: "In a video, everything moves. In a cinemagraph, only one element moves while the rest of the image is completely frozen. This creates an elegant, hypnotic effect—like a photograph that's slightly alive." },
+      { question: "What elements work best for cinemagraphs?", answer: "Elements with natural, continuous motion: water, hair, fabric/clothing, smoke/steam, flames, leaves in wind. The key is motion that can loop seamlessly and looks natural when isolated." }
+    ]
   }
 ];
 

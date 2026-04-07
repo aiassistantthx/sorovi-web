@@ -898,6 +898,534 @@ export const useCases: UseCase[] = [
       }
     ],
     ctaText: "Start Creating Social Content Free"
+  },
+  {
+    slug: "amazon-listing-videos",
+    name: "Amazon Listing Videos",
+    title: "AI Videos for Amazon Product Listings",
+    metaTitle: "Amazon Product Video Creator | Hyreel - Boost Amazon Sales with AI Video",
+    metaDescription: "Create professional Amazon product videos from listing photos. A+ Content videos, product showcases, and comparison videos that increase conversions and sales rank.",
+    heroHeadline: "Turn Amazon Photos into Sales-Driving Videos",
+    heroSubheadline: "Create professional product videos for your Amazon listings in seconds. Boost conversion rates, improve A+ Content, and outperform competitors with video-enabled listings.",
+    icon: "📦",
+    industry: "E-commerce",
+    description: "Amazon sellers creating professional product videos from listing photos to improve conversion rates, enhance A+ Content, and boost sales rank.",
+    painPoints: [
+      {
+        icon: "🎬",
+        title: "Amazon Video Requirements Are Strict",
+        description: "Amazon has specific video guidelines -- length, format, content restrictions. Professional video shoots are expensive and may not even comply."
+      },
+      {
+        icon: "💰",
+        title: "Video Production Eats Into Margins",
+        description: "Amazon sellers operate on tight margins. Spending $500-$2,000 per product video isn't sustainable for most catalogs."
+      },
+      {
+        icon: "📊",
+        title: "Competitors Have Video, You Don't",
+        description: "Listings with video convert 20-30% higher. Every competitor with video is taking sales from your static-image listings."
+      },
+      {
+        icon: "🔄",
+        title: "Scaling Video Across Hundreds of ASINs",
+        description: "Creating individual videos for large Amazon catalogs is nearly impossible with traditional production methods."
+      }
+    ],
+    howHyreelHelps: [
+      {
+        icon: "📸",
+        title: "Listing Photos to Video Instantly",
+        description: "Upload your existing Amazon product photos and generate professional videos with cinematic motion effects -- zoom, orbit, and parallax."
+      },
+      {
+        icon: "✅",
+        title: "Amazon-Compliant Output",
+        description: "Videos export in formats that meet Amazon's specifications for product videos, A+ Content, and Brand Story content."
+      },
+      {
+        icon: "💵",
+        title: "Video for Every ASIN",
+        description: "Create videos for your entire Amazon catalog at a fraction of traditional production costs. No more choosing which products deserve video."
+      },
+      {
+        icon: "📈",
+        title: "Boost BSR with Better Conversions",
+        description: "Higher conversion rates from video listings improve your Best Sellers Rank, creating a flywheel of organic visibility and sales."
+      }
+    ],
+    benefits: [
+      "Increase Amazon listing conversion rates by up to 30%",
+      "Meet Amazon video requirements without expensive production",
+      "Create A+ Content videos that showcase product features",
+      "Scale video across your entire Amazon catalog",
+      "Improve Best Sellers Rank through better conversion rates"
+    ],
+    testimonial: {
+      quote: "Added video to my top 50 ASINs in one weekend with Hyreel. Conversion rate jumped 28% and my BSR improved on every single listing. Paid for itself in the first week.",
+      author: "James T.",
+      role: "Amazon Private Label Seller, 200+ ASINs"
+    },
+    relatedTools: ["image-to-video-ai", "ai-zoom-video-effect", "ai-orbit-video-effect", "ai-ecommerce-video-creator"],
+    faqs: [
+      {
+        question: "Do Hyreel videos meet Amazon's video requirements?",
+        answer: "Yes! Hyreel exports videos in formats compliant with Amazon's product video specifications, including A+ Content, Brand Story, and Related Video Shorts requirements."
+      },
+      {
+        question: "Can I use Hyreel for Amazon A+ Content?",
+        answer: "Absolutely. Create engaging videos for your A+ Content modules that showcase product features, demonstrate use cases, and differentiate your brand."
+      },
+      {
+        question: "How many Amazon product videos can I create?",
+        answer: "Unlimited on Creator and Business plans. Create videos for your entire catalog -- whether you have 10 ASINs or 10,000."
+      },
+      {
+        question: "Will video really improve my Amazon conversion rate?",
+        answer: "Data consistently shows that Amazon listings with video see 20-30% higher conversion rates. Video helps customers understand products better, reducing hesitation and returns."
+      }
+    ],
+    ctaText: "Start Creating Amazon Videos Free"
+  },
+  {
+    slug: "shopify-product-videos",
+    name: "Shopify Product Videos",
+    title: "AI Videos for Shopify Stores",
+    metaTitle: "Shopify Product Video Creator | Hyreel - Boost Store Conversions",
+    metaDescription: "Create stunning product videos for your Shopify store from product photos. Increase conversions, reduce returns, and build a professional brand with AI video.",
+    heroHeadline: "Transform Your Shopify Store with AI Product Videos",
+    heroSubheadline: "Create professional product videos for every item in your Shopify store. Boost conversions, reduce returns, and compete with enterprise brands -- all without a video production budget.",
+    icon: "🛍️",
+    industry: "E-commerce",
+    description: "Shopify store owners creating professional product videos to increase conversions, reduce returns, and build brand credibility.",
+    painPoints: [
+      {
+        icon: "🎥",
+        title: "No Video Production Resources",
+        description: "Most Shopify merchants don't have the budget or expertise to create professional product videos, leaving stores looking amateur compared to big brands."
+      },
+      {
+        icon: "📉",
+        title: "Low Conversion Rates",
+        description: "Shopify stores average 1.4% conversion rate. Static product images don't convey product quality, leading to hesitation and abandoned carts."
+      },
+      {
+        icon: "📦",
+        title: "High Return Rates",
+        description: "Customers can't fully visualize products from photos alone, leading to disappointment and costly returns."
+      },
+      {
+        icon: "🏪",
+        title: "Competing with Enterprise Brands",
+        description: "Big brands have professional video for every product. Independent Shopify stores can't match this level of content quality."
+      }
+    ],
+    howHyreelHelps: [
+      {
+        icon: "✨",
+        title: "Product Photos to Video Instantly",
+        description: "Transform your existing product photography into professional videos with cinematic motion that showcases every detail."
+      },
+      {
+        icon: "🔌",
+        title: "Perfect for Shopify Product Pages",
+        description: "Videos export in formats optimized for Shopify product pages, collection pages, and homepage sections."
+      },
+      {
+        icon: "📈",
+        title: "Boost Conversion Rate",
+        description: "Product videos increase conversion rates by 20-30%. Give customers the confidence to buy with dynamic product visualization."
+      },
+      {
+        icon: "↩️",
+        title: "Reduce Returns",
+        description: "Video shows products from multiple angles with realistic motion, helping customers understand exactly what they're buying."
+      }
+    ],
+    benefits: [
+      "Increase Shopify store conversion rates by up to 30%",
+      "Create professional product videos without production costs",
+      "Reduce returns with better product visualization",
+      "Build brand credibility with video-enabled product pages",
+      "Compete with enterprise brands on content quality"
+    ],
+    testimonial: {
+      quote: "My Shopify store went from a 1.2% to 2.1% conversion rate after adding Hyreel videos to all product pages. Returns dropped 15%. Best investment I've made for my store.",
+      author: "Michelle K.",
+      role: "Shopify Store Owner, Home Decor Niche"
+    },
+    relatedTools: ["image-to-video-ai", "ai-product-video-maker", "ai-zoom-video-effect", "ai-ecommerce-video-creator"],
+    faqs: [
+      {
+        question: "How do I add Hyreel videos to my Shopify product pages?",
+        answer: "Export your video from Hyreel and upload it directly to your Shopify product media. Shopify supports video in product galleries alongside images."
+      },
+      {
+        question: "What product categories work best with video?",
+        answer: "All categories benefit from video! Fashion, jewelry, home decor, electronics, beauty -- any product where customers want to see details, textures, and dimensions from multiple angles."
+      },
+      {
+        question: "Will videos slow down my Shopify store?",
+        answer: "Hyreel videos are optimized for web performance. They load progressively and don't significantly impact page speed when implemented correctly."
+      },
+      {
+        question: "Can I use these videos for Shopify email marketing?",
+        answer: "Yes! Use Hyreel videos in abandoned cart emails, new product announcements, and promotional campaigns. Video in email increases click-through rates by 200-300%."
+      }
+    ],
+    ctaText: "Start Creating Shopify Videos Free"
+  },
+  {
+    slug: "etsy-seller-videos",
+    name: "Etsy Seller Videos",
+    title: "AI Videos for Etsy Sellers",
+    metaTitle: "Etsy Product Video Creator | Hyreel - Stand Out on Etsy with AI Video",
+    metaDescription: "Create professional Etsy listing videos from product photos. Showcase handmade quality, increase favorites, and drive more sales with AI-powered video for Etsy sellers.",
+    heroHeadline: "Showcase Your Handmade Quality with AI Video",
+    heroSubheadline: "Create professional product videos that highlight the craftsmanship and details of your Etsy products. Stand out in search, increase favorites, and convert browsers into buyers.",
+    icon: "🎨",
+    industry: "E-commerce",
+    description: "Etsy sellers creating product videos to showcase handmade quality, differentiate from competitors, and increase conversion rates.",
+    painPoints: [
+      {
+        icon: "⏰",
+        title: "Already Spending Hours on Each Product",
+        description: "Etsy sellers are artisans first. Time spent on photography and video is time not spent creating products."
+      },
+      {
+        icon: "📹",
+        title: "Video Shows Handmade Quality Best",
+        description: "Static photos can't capture the texture, craftsmanship, and details that make handmade products special."
+      },
+      {
+        icon: "🏆",
+        title: "Standing Out in Etsy Search",
+        description: "With millions of Etsy listings, video-enabled listings stand out and rank better in search results."
+      },
+      {
+        icon: "💰",
+        title: "Professional Video is Out of Budget",
+        description: "Etsy sellers work with tight margins. Professional product videography isn't financially viable for most handmade businesses."
+      }
+    ],
+    howHyreelHelps: [
+      {
+        icon: "✋",
+        title: "Showcase Handmade Details",
+        description: "Hyreel's zoom and orbit effects highlight the textures, materials, and craftsmanship that make your products unique."
+      },
+      {
+        icon: "⚡",
+        title: "Video from Existing Photos",
+        description: "Turn your product photos into professional videos in seconds. No new photo shoots, no video equipment, no technical skills required."
+      },
+      {
+        icon: "🔍",
+        title: "Stand Out in Etsy Search",
+        description: "Listings with video get more engagement, which Etsy's algorithm rewards with better search placement."
+      },
+      {
+        icon: "💵",
+        title: "Affordable for Artisans",
+        description: "Create professional videos at a fraction of the cost of traditional production, keeping your margins healthy."
+      }
+    ],
+    benefits: [
+      "Highlight handmade craftsmanship with dynamic video",
+      "Stand out in Etsy search with video-enabled listings",
+      "Create videos in seconds without technical skills",
+      "Increase favorites and conversion rates",
+      "Affordable video production for artisan budgets"
+    ],
+    testimonial: {
+      quote: "My handmade jewelry deserves to be seen in motion. Hyreel videos show the sparkle and detail that photos just can't capture. My conversion rate doubled and I'm getting way more favorites.",
+      author: "Amanda R.",
+      role: "Etsy Seller, Handmade Jewelry"
+    },
+    relatedTools: ["image-to-video-ai", "ai-zoom-video-effect", "ai-orbit-video-effect", "ai-product-video-maker"],
+    faqs: [
+      {
+        question: "Does Etsy support video in listings?",
+        answer: "Yes! Etsy allows sellers to add videos to their listings. Video-enabled listings receive more engagement and better visibility in search results."
+      },
+      {
+        question: "What Etsy product types benefit most from video?",
+        answer: "Jewelry, ceramics, textiles, leather goods, art prints, and any product where texture, scale, and craftsmanship details are important. Video helps buyers appreciate handmade quality."
+      },
+      {
+        question: "How long should Etsy product videos be?",
+        answer: "Etsy recommends 5-15 second videos. Hyreel creates perfectly timed videos that showcase your product without overstaying their welcome."
+      },
+      {
+        question: "Can I show my product being made?",
+        answer: "Yes! Upload photos from your making process and create engaging behind-the-scenes videos that tell your artisan story and build connection with buyers."
+      }
+    ],
+    ctaText: "Start Creating Etsy Videos Free"
+  },
+  {
+    slug: "dropshipping-videos",
+    name: "Dropshipping Videos",
+    title: "AI Videos for Dropshipping Stores",
+    metaTitle: "Dropshipping Product Video Creator | Hyreel - Scale Video Content Fast",
+    metaDescription: "Create professional product videos for dropshipping stores from supplier photos. Test products faster, improve ad performance, and scale winning products with AI video.",
+    heroHeadline: "Scale Your Dropshipping Store with AI Video",
+    heroSubheadline: "Create professional product videos from supplier photos in seconds. Test products faster, improve ad performance, and scale winning products -- all without waiting for samples or hiring videographers.",
+    icon: "🚀",
+    industry: "E-commerce",
+    description: "Dropshippers creating product videos from supplier images to test products faster, improve ad creative performance, and scale winning products.",
+    painPoints: [
+      {
+        icon: "📦",
+        title: "No Physical Product Access",
+        description: "Dropshippers don't have products in hand. Creating video content requires ordering samples and waiting weeks."
+      },
+      {
+        icon: "⏱️",
+        title: "Speed to Market is Everything",
+        description: "Trending products have short windows. Waiting for samples and video production means missing the opportunity."
+      },
+      {
+        icon: "🎯",
+        title: "Ad Creative Fatigue",
+        description: "Facebook and TikTok ads need constant creative refresh. Producing enough video variations to test and scale is overwhelming."
+      },
+      {
+        icon: "📊",
+        title: "Testing Multiple Products Simultaneously",
+        description: "Successful dropshipping requires testing many products at once. Creating video for each potential winner is a bottleneck."
+      }
+    ],
+    howHyreelHelps: [
+      {
+        icon: "📸",
+        title: "Supplier Photos to Video",
+        description: "Transform supplier product photos into professional videos instantly. No samples needed -- start testing products the same day you find them."
+      },
+      {
+        icon: "⚡",
+        title: "Test Products 10x Faster",
+        description: "Create video ads for new products in minutes, not weeks. Test more products and find winners faster than competitors."
+      },
+      {
+        icon: "🔄",
+        title: "Unlimited Ad Variations",
+        description: "Generate dozens of video ad variations from one product photo. A/B test hooks, effects, and formats without additional production costs."
+      },
+      {
+        icon: "📈",
+        title: "Scale Winners Instantly",
+        description: "Found a winning product? Create fresh video variations immediately to fight creative fatigue and scale profitably."
+      }
+    ],
+    benefits: [
+      "Create video ads from supplier photos -- no samples needed",
+      "Test products 10x faster than traditional production",
+      "Generate unlimited ad creative variations",
+      "Scale winning products with fresh video content",
+      "Reduce creative production costs by 90%"
+    ],
+    testimonial: {
+      quote: "I test 20-30 products per week now. Hyreel lets me create video ads from AliExpress photos in seconds. My time-to-test went from 2 weeks to same-day. Found 3 winning products last month alone.",
+      author: "Kevin L.",
+      role: "Dropshipping Store Owner"
+    },
+    relatedTools: ["image-to-video-ai", "ai-product-video-maker", "ai-faceless-video-generator", "ai-zoom-video-effect"],
+    faqs: [
+      {
+        question: "Can I use supplier photos for Hyreel videos?",
+        answer: "Yes! Hyreel works perfectly with product photos from AliExpress, Alibaba, CJ Dropshipping, and other supplier platforms. Higher quality supplier photos produce better videos."
+      },
+      {
+        question: "Will these videos work for Facebook and TikTok ads?",
+        answer: "Absolutely. Hyreel videos export in formats optimized for Facebook/Meta Ads and TikTok Ads. The authentic, product-focused style performs well on both platforms."
+      },
+      {
+        question: "How many product videos can I test at once?",
+        answer: "Unlimited on Creator and Business plans. Test as many products as you want simultaneously -- there's no bottleneck on video production."
+      },
+      {
+        question: "How do I refresh creatives when they fatigue?",
+        answer: "Create new video variations from the same product photos with different effects, zoom speeds, and focal points. Generate fresh creatives in seconds instead of ordering new samples."
+      }
+    ],
+    ctaText: "Start Creating Dropshipping Videos Free"
+  },
+  {
+    slug: "affiliate-marketing-videos",
+    name: "Affiliate Marketing Videos",
+    title: "AI Videos for Affiliate Marketing",
+    metaTitle: "Affiliate Marketing Video Creator | Hyreel - Promote Products with AI Video",
+    metaDescription: "Create professional affiliate product videos without owning the products. Boost commissions with engaging video content for your affiliate marketing campaigns.",
+    heroHeadline: "Promote Affiliate Products with Professional Video",
+    heroSubheadline: "Create engaging product videos for your affiliate marketing campaigns without owning the products. Boost click-through rates, increase conversions, and earn higher commissions with AI video.",
+    icon: "🤝",
+    industry: "Marketing",
+    description: "Affiliate marketers creating product videos to promote affiliate offers across social media, blogs, and email marketing campaigns.",
+    painPoints: [
+      {
+        icon: "📦",
+        title: "Don't Own the Products You Promote",
+        description: "Affiliate marketers promote products they don't have. Creating authentic video content without physical access is challenging."
+      },
+      {
+        icon: "📸",
+        title: "Limited to Text and Screenshots",
+        description: "Most affiliate content is text reviews and product screenshots. Video content drives higher engagement but seems out of reach."
+      },
+      {
+        icon: "🎯",
+        title: "Low Click-Through Rates",
+        description: "Static affiliate content struggles to capture attention. Video increases engagement but requires production resources affiliates don't have."
+      },
+      {
+        icon: "💰",
+        title: "Buying Products Eats Into Commissions",
+        description: "Purchasing every product to create video reviews makes many affiliate opportunities unprofitable."
+      }
+    ],
+    howHyreelHelps: [
+      {
+        icon: "🖼️",
+        title: "Product Images to Video",
+        description: "Transform product images from merchant sites into professional videos. Showcase affiliate products without purchasing them first."
+      },
+      {
+        icon: "📈",
+        title: "Higher Click-Through Rates",
+        description: "Video content drives 2-3x higher engagement than static images. Increase affiliate link clicks with compelling video."
+      },
+      {
+        icon: "📱",
+        title: "Multi-Platform Content",
+        description: "Create affiliate videos for TikTok, Instagram, YouTube Shorts, Pinterest, and your blog -- all from the same product images."
+      },
+      {
+        icon: "⚡",
+        title: "Scale Your Affiliate Content",
+        description: "Promote more products, create more content, and capture more commission opportunities without scaling production costs."
+      }
+    ],
+    benefits: [
+      "Create product videos without owning the products",
+      "Increase affiliate link click-through rates with video",
+      "Scale content production across multiple affiliate offers",
+      "Publish across all platforms from one piece of content",
+      "Maximize commission earnings with professional video"
+    ],
+    testimonial: {
+      quote: "Switched from static pins to video pins for my affiliate content. Click-through rate went from 0.8% to 3.2%. My affiliate commissions tripled in two months with Hyreel.",
+      author: "Jennifer M.",
+      role: "Pinterest Affiliate Marketer"
+    },
+    relatedTools: ["image-to-video-ai", "ai-social-media-video-maker", "ai-zoom-video-effect", "ai-product-video-maker"],
+    faqs: [
+      {
+        question: "Can I use merchant product images for Hyreel videos?",
+        answer: "Yes, as long as you have rights to use the merchant's product images for affiliate promotion. Most affiliate programs grant these rights -- check your affiliate agreement for specific terms."
+      },
+      {
+        question: "What affiliate platforms work best with video content?",
+        answer: "Amazon Associates, ShareASale, CJ Affiliate, and direct affiliate programs all benefit from video promotion. Video performs especially well on Pinterest, TikTok, and YouTube for affiliate content."
+      },
+      {
+        question: "How do I add affiliate links to my videos?",
+        answer: "Add affiliate links in your video descriptions, captions, bio links, and accompanying blog posts. For YouTube, use pinned comments and cards. For TikTok/Instagram, direct traffic to your link in bio."
+      },
+      {
+        question: "Is video content better for affiliate marketing than written reviews?",
+        answer: "Video and written content work best together. Video drives initial engagement and clicks, while detailed written reviews help with SEO and conversion. Hyreel helps you scale the video side."
+      }
+    ],
+    ctaText: "Start Creating Affiliate Videos Free"
+  },
+  {
+    slug: "pinterest-video-pins",
+    name: "Pinterest Video Pins",
+    title: "AI Video Pins for Pinterest",
+    metaTitle: "Pinterest Video Pin Creator | Hyreel - Create Viral Video Pins",
+    metaDescription: "Create stunning Pinterest Video Pins from images. Boost impressions, increase outbound clicks, and drive traffic with AI-powered video content for Pinterest.",
+    heroHeadline: "Create Viral Video Pins That Drive Traffic",
+    heroSubheadline: "Transform your Pinterest strategy with AI-generated Video Pins. Get 5x more impressions, increase saves, and drive massive traffic to your website with scroll-stopping video content.",
+    icon: "📌",
+    industry: "Social Media",
+    description: "Pinterest marketers creating Video Pins to increase impressions, saves, and outbound clicks to their websites and affiliate offers.",
+    painPoints: [
+      {
+        icon: "📉",
+        title: "Static Pins Get Buried",
+        description: "Pinterest's algorithm heavily favors Video Pins. Static image pins receive a fraction of the impressions and engagement they used to."
+      },
+      {
+        icon: "🎬",
+        title: "Video Production Seems Overwhelming",
+        description: "Pinterest marketers are often solopreneurs without video editing skills or equipment. Creating Video Pins feels impossible."
+      },
+      {
+        icon: "📊",
+        title: "Competition for Attention is Fierce",
+        description: "Pinterest is saturated with content. Standing out requires scroll-stopping visual content that most marketers can't produce."
+      },
+      {
+        icon: "🔄",
+        title: "Need Fresh Content Constantly",
+        description: "Pinterest rewards fresh pins. Creating enough video content to stay visible in feeds is a constant challenge."
+      }
+    ],
+    howHyreelHelps: [
+      {
+        icon: "✨",
+        title: "Images to Video Pins Instantly",
+        description: "Transform your existing pin images into engaging Video Pins with cinematic motion effects. No editing skills or equipment needed."
+      },
+      {
+        icon: "📈",
+        title: "5x More Impressions",
+        description: "Video Pins receive significantly more distribution in Pinterest's algorithm. Get your content in front of more potential visitors."
+      },
+      {
+        icon: "📐",
+        title: "Pinterest-Optimized Format",
+        description: "Hyreel exports Video Pins in the exact specifications Pinterest prefers -- 2:3 aspect ratio, optimal duration, and ideal file size."
+      },
+      {
+        icon: "🔄",
+        title: "Fresh Content at Scale",
+        description: "Create dozens of Video Pins from your existing content library. Keep your profile fresh with minimal effort."
+      }
+    ],
+    benefits: [
+      "Dramatically increase Pinterest impressions with Video Pins",
+      "Create professional Video Pins without video editing skills",
+      "Drive more traffic to your website or affiliate offers",
+      "Stand out in the feed with scroll-stopping motion",
+      "Maintain a consistent fresh pinning schedule"
+    ],
+    testimonial: {
+      quote: "Switched my top 100 pins from static to video with Hyreel. My monthly impressions went from 500K to 2.5M. Website traffic from Pinterest tripled. Video Pins are a complete game-changer.",
+      author: "Rachel S.",
+      role: "Pinterest Blogger, DIY & Crafts Niche"
+    },
+    relatedTools: ["image-to-video-ai", "ai-social-media-video-maker", "ai-zoom-video-effect", "ai-parallax-video-effect"],
+    faqs: [
+      {
+        question: "How much better do Video Pins perform than static pins?",
+        answer: "Pinterest Video Pins typically receive 3-5x more impressions than static pins. They also see higher save rates and outbound click rates because they capture attention in the feed."
+      },
+      {
+        question: "What's the ideal Video Pin length?",
+        answer: "Pinterest recommends Video Pins between 6-15 seconds. Hyreel creates perfectly timed videos that showcase your content without losing viewer attention."
+      },
+      {
+        question: "Do I need to recreate all my pins as videos?",
+        answer: "Start with your top-performing static pins. Convert your best content to Video Pins first, then expand. Hyreel makes it easy to transform your entire catalog over time."
+      },
+      {
+        question: "Can I schedule Video Pins like regular pins?",
+        answer: "Yes! Export Video Pins from Hyreel and upload them to Pinterest directly or through scheduling tools like Tailwind. Schedule and automate your Video Pin strategy."
+      }
+    ],
+    ctaText: "Start Creating Video Pins Free"
   }
 ];
 

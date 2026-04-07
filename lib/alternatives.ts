@@ -1016,6 +1016,457 @@ export const alternatives: Alternative[] = [
       "better than fliki",
       "fliki competitor for photos"
     ]
+  },
+  {
+    slug: "sora",
+    competitorName: "OpenAI Sora",
+    title: "OpenAI Sora Alternative",
+    metaTitle: "Sora Alternative | Hyreel - AI Video Generation Available Now",
+    metaDescription: "Looking for a Sora alternative? Hyreel offers AI video generation you can use today. Transform photos into videos with cinematic effects. No waitlist.",
+    heroHeadline: "The Best OpenAI Sora Alternative Available Now",
+    heroSubheadline: "While Sora creates impressive AI videos, it's limited access and expensive. Hyreel offers instant AI video generation from photos—available today.",
+    competitorDescription: "OpenAI Sora is a text-to-video AI model that generates realistic videos from text prompts. While impressive, it has limited availability, high costs, and requires text prompts rather than working with your existing images.",
+    whySwitchReasons: [
+      {
+        icon: "🚀",
+        title: "Available Now",
+        description: "No waitlist, no limited access. Start creating AI videos immediately with Hyreel's iOS app."
+      },
+      {
+        icon: "📸",
+        title: "Use Your Own Photos",
+        description: "Transform your product shots, portraits, and images into videos. No need to describe what you want—use what you have."
+      },
+      {
+        icon: "💰",
+        title: "Affordable Pricing",
+        description: "Unlimited videos for $9.99/month. Sora costs significantly more for limited generations."
+      },
+      {
+        icon: "📱",
+        title: "Mobile-First",
+        description: "Create on your iPhone, post directly to social media. Sora requires desktop access and complex prompts."
+      }
+    ],
+    comparisonTable: [
+      { feature: "Availability", hyreel: "Now", competitor: "Limited" },
+      { feature: "Photo to Video", hyreel: true, competitor: false },
+      { feature: "Text to Video", hyreel: false, competitor: true },
+      { feature: "Mobile App", hyreel: true, competitor: false },
+      { feature: "Unlimited Videos", hyreel: "$9.99/mo", competitor: "Pay per use" },
+      { feature: "Cinematic Motion Effects", hyreel: true, competitor: "N/A" },
+      { feature: "Processing Time", hyreel: "Seconds", competitor: "Minutes" },
+      { feature: "Brand Consistency", hyreel: "Your photos", competitor: "AI generated" },
+      { feature: "Learning Curve", hyreel: "Simple", competitor: "Complex prompts" },
+      { feature: "Social Media Export", hyreel: true, competitor: "Download only" }
+    ],
+    hyreelAdvantages: [
+      "Available now—no waitlist or limited access",
+      "Use your own photos for brand-consistent content",
+      "Affordable flat-rate pricing vs pay-per-video",
+      "Mobile-first creation for social media workflows",
+      "Faster generation—seconds vs minutes",
+      "No prompt engineering required"
+    ],
+    competitorLimitations: [
+      "Limited availability and long waitlists",
+      "Expensive pay-per-use pricing model",
+      "Text prompts only—can't use existing photos",
+      "Complex prompt engineering for best results",
+      "Desktop/API only—no mobile app",
+      "Generated content may not match brand aesthetics"
+    ],
+    testimonial: {
+      quote: "I was on Sora's waitlist for months. Switched to Hyreel and created 50 product videos in my first week. Sometimes simpler is better.",
+      author: "David K.",
+      role: "Brand Manager"
+    },
+    faqs: [
+      {
+        question: "Is Hyreel as good as Sora?",
+        answer: "They serve different purposes. Sora generates videos from text descriptions—great for creative concepts. Hyreel transforms your photos into videos—perfect for product content, social media, and brand-consistent marketing. For most business use cases, Hyreel is more practical."
+      },
+      {
+        question: "Can Hyreel generate videos from text like Sora?",
+        answer: "Hyreel focuses on photo-to-video conversion with cinematic motion effects. For text-to-video, you'd use Sora. But if you have product photos, portraits, or images you want to animate, Hyreel is the faster and more affordable choice."
+      },
+      {
+        question: "Why choose Hyreel over Sora?",
+        answer: "Availability (use it now), affordability ($9.99/mo unlimited), practicality (your photos = brand consistency), and simplicity (no complex prompts). Sora is impressive tech, but Hyreel solves real creator problems today."
+      },
+      {
+        question: "Will Hyreel add text-to-video like Sora?",
+        answer: "We're focused on being the best at photo-to-video. Our AI motion effects, speed, and mobile experience are specifically optimized for this use case. We'd rather excel at one thing than be mediocre at many."
+      }
+    ],
+    relatedKeywords: [
+      "sora alternative",
+      "openai sora alternative",
+      "sora ai alternative",
+      "better than sora",
+      "sora competitor"
+    ]
+  },
+  {
+    slug: "kling-ai",
+    competitorName: "Kling AI",
+    title: "Kling AI Alternative",
+    metaTitle: "Kling AI Alternative | Hyreel - Faster AI Video from Photos",
+    metaDescription: "Looking for a Kling AI alternative? Hyreel offers instant photo-to-video conversion with cinematic effects. No credits, unlimited videos from $9.99/mo.",
+    heroHeadline: "The Best Kling AI Alternative for Photo-to-Video",
+    heroSubheadline: "While Kling AI offers impressive video generation, Hyreel specializes in transforming your photos into videos with professional motion effects—faster and more affordable.",
+    competitorDescription: "Kling AI is a Chinese AI video generator that creates videos from text and images. It offers high-quality results but uses a credit system, has longer processing times, and may have accessibility limitations in some regions.",
+    whySwitchReasons: [
+      {
+        icon: "⚡",
+        title: "Instant Results",
+        description: "Get your videos in seconds, not minutes. Hyreel's optimized pipeline means faster turnaround for your content."
+      },
+      {
+        icon: "♾️",
+        title: "Unlimited Videos",
+        description: "No credits, no limits. Create as many videos as you need for $9.99/month."
+      },
+      {
+        icon: "🌍",
+        title: "Global Access",
+        description: "Available worldwide with no regional restrictions. Same experience everywhere."
+      },
+      {
+        icon: "🎬",
+        title: "Cinematic Motion",
+        description: "Professional zoom, orbit, and parallax effects specifically designed for social media content."
+      }
+    ],
+    comparisonTable: [
+      { feature: "Processing Speed", hyreel: "Seconds", competitor: "Minutes" },
+      { feature: "Pricing Model", hyreel: "Flat rate", competitor: "Credits" },
+      { feature: "Photo to Video", hyreel: true, competitor: true },
+      { feature: "Unlimited Videos", hyreel: "$9.99/mo", competitor: "Credit-based" },
+      { feature: "Global Availability", hyreel: true, competitor: "Limited" },
+      { feature: "Mobile App", hyreel: "iOS Native", competitor: "Web only" },
+      { feature: "Motion Effects", hyreel: "Cinematic", competitor: "Basic" },
+      { feature: "Social Media Export", hyreel: true, competitor: "Download" },
+      { feature: "English Support", hyreel: "Native", competitor: "Translated" }
+    ],
+    hyreelAdvantages: [
+      "Faster processing—seconds vs minutes",
+      "Predictable pricing with unlimited videos",
+      "Native iOS app for mobile-first creators",
+      "Global availability without restrictions",
+      "Specialized cinematic motion effects",
+      "Direct social media export"
+    ],
+    competitorLimitations: [
+      "Credit-based pricing can get expensive",
+      "Longer video generation times",
+      "Web-only interface—no mobile app",
+      "Regional availability concerns",
+      "Less specialized motion effect controls"
+    ],
+    faqs: [
+      {
+        question: "Is Hyreel better than Kling AI?",
+        answer: "For photo-to-video with cinematic motion effects, Hyreel offers faster processing, simpler pricing, and a native mobile app. Kling AI has broader video generation capabilities but uses credits and takes longer."
+      },
+      {
+        question: "How does Hyreel pricing compare to Kling AI?",
+        answer: "Hyreel offers unlimited videos for $9.99/month. Kling AI uses a credit system where each video costs credits. For high-volume creators, Hyreel is significantly more cost-effective."
+      },
+      {
+        question: "Can I access Hyreel anywhere?",
+        answer: "Yes! Hyreel is available globally through the iOS App Store. No regional restrictions or VPN needed, unlike some competitors."
+      }
+    ],
+    relatedKeywords: [
+      "kling ai alternative",
+      "kling alternative",
+      "better than kling ai",
+      "kling ai competitor"
+    ]
+  },
+  {
+    slug: "vidu-ai",
+    competitorName: "Vidu AI",
+    title: "Vidu AI Alternative",
+    metaTitle: "Vidu AI Alternative | Hyreel - Photo to Video Made Simple",
+    metaDescription: "Looking for a Vidu AI alternative? Hyreel transforms photos into stunning videos with cinematic effects. Available now, unlimited videos from $9.99/mo.",
+    heroHeadline: "The Best Vidu AI Alternative for Creators",
+    heroSubheadline: "Vidu AI generates videos from text, but Hyreel transforms your actual photos into videos with professional motion effects—perfect for product content and social media.",
+    competitorDescription: "Vidu AI is a Chinese text-to-video platform that generates videos from text prompts. It offers realistic video generation but focuses on text-to-video rather than photo animation.",
+    whySwitchReasons: [
+      {
+        icon: "📸",
+        title: "Your Photos, Animated",
+        description: "Use your product shots, portraits, and images. No need to hope AI generates what you want."
+      },
+      {
+        icon: "🎯",
+        title: "Brand Consistency",
+        description: "Your photos mean your brand. Generated content can't match the authenticity of real product images."
+      },
+      {
+        icon: "⚡",
+        title: "Faster Creation",
+        description: "Photo to video in seconds. No waiting for generation or regenerating until you get it right."
+      },
+      {
+        icon: "📱",
+        title: "Mobile Native",
+        description: "Create on iPhone, post to social. Perfect workflow for modern creators."
+      }
+    ],
+    comparisonTable: [
+      { feature: "Photo to Video", hyreel: true, competitor: "Limited" },
+      { feature: "Text to Video", hyreel: false, competitor: true },
+      { feature: "Processing Speed", hyreel: "Seconds", competitor: "Minutes" },
+      { feature: "Mobile App", hyreel: true, competitor: false },
+      { feature: "Brand Consistency", hyreel: "Your photos", competitor: "AI generated" },
+      { feature: "Unlimited Videos", hyreel: "$9.99/mo", competitor: "Credits" },
+      { feature: "Cinematic Effects", hyreel: true, competitor: "N/A" },
+      { feature: "Global Access", hyreel: true, competitor: "Limited" }
+    ],
+    hyreelAdvantages: [
+      "Transform your actual photos into videos",
+      "Brand-consistent content using real images",
+      "Faster processing times",
+      "Native mobile app experience",
+      "Unlimited videos with flat-rate pricing"
+    ],
+    competitorLimitations: [
+      "Text-to-video requires prompt engineering",
+      "Generated content may not match brand",
+      "Credit-based pricing",
+      "Regional accessibility concerns",
+      "No dedicated mobile app"
+    ],
+    faqs: [
+      {
+        question: "What's the difference between Vidu AI and Hyreel?",
+        answer: "Vidu AI generates videos from text descriptions. Hyreel transforms your existing photos into videos with cinematic motion. Different tools for different needs—Hyreel is better for product content and brand-consistent social media."
+      },
+      {
+        question: "Which is better for e-commerce?",
+        answer: "Hyreel. You have product photos—turn them into scroll-stopping videos. AI-generated content can't match the authenticity of your real products."
+      }
+    ],
+    relatedKeywords: [
+      "vidu ai alternative",
+      "vidu alternative",
+      "better than vidu ai"
+    ]
+  },
+  {
+    slug: "haiper-ai",
+    competitorName: "Haiper AI",
+    title: "Haiper AI Alternative",
+    metaTitle: "Haiper AI Alternative | Hyreel - Cinematic Photo to Video",
+    metaDescription: "Looking for a Haiper AI alternative? Hyreel offers photo-to-video with professional motion effects. Unlimited videos from $9.99/mo, available now.",
+    heroHeadline: "The Best Haiper AI Alternative",
+    heroSubheadline: "Haiper AI offers video generation, but Hyreel specializes in transforming photos into stunning videos with cinematic motion effects.",
+    competitorDescription: "Haiper AI is a video generation platform that creates videos from text and images. It offers various creative tools but may have limitations in specialized photo animation.",
+    whySwitchReasons: [
+      {
+        icon: "🎬",
+        title: "Cinematic Specialization",
+        description: "Hyreel focuses on cinematic motion—zoom, orbit, parallax. Purpose-built for scroll-stopping content."
+      },
+      {
+        icon: "📱",
+        title: "Mobile-First",
+        description: "Native iOS app designed for creators. Create and share without touching a desktop."
+      },
+      {
+        icon: "💰",
+        title: "Simple Pricing",
+        description: "Unlimited videos for $9.99/month. No credits, no surprises."
+      },
+      {
+        icon: "⚡",
+        title: "Instant Results",
+        description: "Videos in seconds, not minutes. Perfect for high-volume content creation."
+      }
+    ],
+    comparisonTable: [
+      { feature: "Photo to Video", hyreel: true, competitor: true },
+      { feature: "Cinematic Motion Effects", hyreel: "Advanced", competitor: "Basic" },
+      { feature: "Mobile App", hyreel: true, competitor: "Web" },
+      { feature: "Unlimited Videos", hyreel: "$9.99/mo", competitor: "Credits" },
+      { feature: "Processing Speed", hyreel: "Seconds", competitor: "Variable" },
+      { feature: "Social Export", hyreel: true, competitor: "Download" }
+    ],
+    hyreelAdvantages: [
+      "Specialized cinematic motion effects",
+      "Native mobile app experience",
+      "Flat-rate unlimited pricing",
+      "Faster processing times",
+      "Direct social media export"
+    ],
+    competitorLimitations: [
+      "Less specialized motion effects",
+      "Web-based interface only",
+      "Credit-based pricing model"
+    ],
+    faqs: [
+      {
+        question: "Is Hyreel better than Haiper AI for social media?",
+        answer: "For photo-based content with cinematic motion, yes. Hyreel's specialized effects and mobile app make it ideal for TikTok, Instagram, and YouTube Shorts creators."
+      },
+      {
+        question: "How does pricing compare?",
+        answer: "Hyreel offers unlimited videos for $9.99/month. Haiper uses a credit system that can cost more for high-volume creators."
+      }
+    ],
+    relatedKeywords: [
+      "haiper ai alternative",
+      "haiper alternative",
+      "better than haiper"
+    ]
+  },
+  {
+    slug: "viggle-ai",
+    competitorName: "Viggle AI",
+    title: "Viggle AI Alternative",
+    metaTitle: "Viggle AI Alternative | Hyreel - Professional Photo Animation",
+    metaDescription: "Looking for a Viggle AI alternative? Hyreel transforms photos into videos with cinematic effects. No character animation needed—just stunning motion.",
+    heroHeadline: "The Best Viggle AI Alternative",
+    heroSubheadline: "Viggle AI focuses on character animation, but Hyreel excels at transforming any photo into a cinematic video with professional motion effects.",
+    competitorDescription: "Viggle AI specializes in character animation and motion, making static characters dance or move. It's focused on a specific niche rather than general photo-to-video conversion.",
+    whySwitchReasons: [
+      {
+        icon: "🖼️",
+        title: "Any Photo Works",
+        description: "Not just characters—products, landscapes, food, fashion. Transform any image into motion."
+      },
+      {
+        icon: "🎬",
+        title: "Cinematic Effects",
+        description: "Professional zoom, orbit, parallax. Motion that makes content look premium."
+      },
+      {
+        icon: "🛍️",
+        title: "Business Ready",
+        description: "Perfect for product videos, marketing content, and e-commerce. Not just fun animations."
+      },
+      {
+        icon: "📱",
+        title: "Mobile Native",
+        description: "iOS app for creation anywhere. Desktop not required."
+      }
+    ],
+    comparisonTable: [
+      { feature: "Character Animation", hyreel: "Limited", competitor: true },
+      { feature: "Product Photo Animation", hyreel: true, competitor: false },
+      { feature: "Cinematic Camera Motion", hyreel: true, competitor: false },
+      { feature: "E-commerce Videos", hyreel: true, competitor: false },
+      { feature: "Mobile App", hyreel: true, competitor: "Web" },
+      { feature: "Unlimited Videos", hyreel: "$9.99/mo", competitor: "Free/Limited" }
+    ],
+    hyreelAdvantages: [
+      "Works with any photo, not just characters",
+      "Cinematic camera motion effects",
+      "Perfect for business and e-commerce",
+      "Native mobile app",
+      "Professional quality output"
+    ],
+    competitorLimitations: [
+      "Limited to character/person animation",
+      "Not suitable for product content",
+      "Web-based only",
+      "Specific use case focus"
+    ],
+    faqs: [
+      {
+        question: "Should I use Viggle AI or Hyreel?",
+        answer: "Depends on your content. Viggle AI is great for making characters dance or move. Hyreel is better for products, marketing, e-commerce, and general photo animation with cinematic effects."
+      },
+      {
+        question: "Can Hyreel animate people like Viggle?",
+        answer: "Hyreel uses camera motion (zoom, orbit, parallax) rather than character animation. For dancing videos, use Viggle. For cinematic product reveals and professional content, use Hyreel."
+      }
+    ],
+    relatedKeywords: [
+      "viggle ai alternative",
+      "viggle alternative",
+      "better than viggle"
+    ]
+  },
+  {
+    slug: "kaiber",
+    competitorName: "Kaiber",
+    title: "Kaiber Alternative",
+    metaTitle: "Kaiber Alternative | Hyreel - Simple Photo to Video AI",
+    metaDescription: "Looking for a Kaiber alternative? Hyreel offers straightforward photo-to-video conversion with cinematic effects. No complex prompts, unlimited videos $9.99/mo.",
+    heroHeadline: "The Best Kaiber Alternative for Simple Video Creation",
+    heroSubheadline: "Kaiber offers artistic AI video transformation, but Hyreel provides straightforward photo-to-video with professional cinematic motion—no artistic prompts needed.",
+    competitorDescription: "Kaiber is an AI video platform known for artistic style transfers and music video generation. It creates visually striking transformations but requires artistic direction and prompts.",
+    whySwitchReasons: [
+      {
+        icon: "🎯",
+        title: "Straightforward Results",
+        description: "No artistic prompts or style selection. Your photo becomes a video with cinematic motion. Simple."
+      },
+      {
+        icon: "🛍️",
+        title: "Business-Ready Output",
+        description: "Professional, clean results for products and marketing. Not abstract art—usable content."
+      },
+      {
+        icon: "⚡",
+        title: "Faster Workflow",
+        description: "No prompt engineering or style selection. Upload, pick effect, done in seconds."
+      },
+      {
+        icon: "💰",
+        title: "Predictable Pricing",
+        description: "Unlimited videos for $9.99/month vs Kaiber's credit system."
+      }
+    ],
+    comparisonTable: [
+      { feature: "Photo to Video", hyreel: true, competitor: true },
+      { feature: "Style Transfer", hyreel: false, competitor: true },
+      { feature: "Cinematic Motion", hyreel: true, competitor: "Artistic" },
+      { feature: "Learning Curve", hyreel: "Minimal", competitor: "Moderate" },
+      { feature: "Business Content", hyreel: true, competitor: "Artistic focus" },
+      { feature: "Mobile App", hyreel: true, competitor: "Web" },
+      { feature: "Unlimited Videos", hyreel: "$9.99/mo", competitor: "Credits" },
+      { feature: "Processing Speed", hyreel: "Seconds", competitor: "Minutes" }
+    ],
+    hyreelAdvantages: [
+      "Simple, predictable results",
+      "Business and e-commerce ready",
+      "No prompt engineering required",
+      "Faster processing times",
+      "Flat-rate unlimited pricing",
+      "Native mobile app"
+    ],
+    competitorLimitations: [
+      "Artistic focus may not suit business content",
+      "Requires creative prompts and style selection",
+      "Credit-based pricing",
+      "Longer processing for transformations",
+      "Web-only interface"
+    ],
+    faqs: [
+      {
+        question: "What's the difference between Kaiber and Hyreel?",
+        answer: "Kaiber specializes in artistic AI transformations with style transfers. Hyreel focuses on cinematic photo animation with clean, professional results. Kaiber for art, Hyreel for business content."
+      },
+      {
+        question: "Which is easier to use?",
+        answer: "Hyreel. No prompts, no style selection. Upload your photo, pick a motion effect, get your video in seconds. Kaiber requires more creative direction."
+      },
+      {
+        question: "Which is better for product videos?",
+        answer: "Hyreel. Clean cinematic motion showcases products professionally. Kaiber's artistic transformations are better suited for creative/artistic content."
+      }
+    ],
+    relatedKeywords: [
+      "kaiber alternative",
+      "kaiber ai alternative",
+      "better than kaiber",
+      "kaiber competitor"
+    ]
   }
 ];
 

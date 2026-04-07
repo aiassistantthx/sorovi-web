@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "Hyreel - AI動画ジェネレーター | 写真からバイラル動画を作成",
+    "description": "写真から数分でバイラルなTikTok、Instagram Reels、YouTube Shortsを作成。AI搭載の動画エフェクト、編集スキル不要。無料で始める。"
+  },
+  "nav": {
+    "tools": "ツール",
+    "templates": "テンプレート",
+    "useCases": "活用事例",
+    "industries": "業界",
+    "pricing": "料金",
+    "downloadApp": "アプリをダウンロード"
+  },
+  "hero": {
+    "title": "写真を",
+    "titleHighlight": "バイラル動画",
+    "titleEnd": "に数分で変換",
+    "description": "編集スキルは不要。HyreelのAIが1枚の写真からスクロールを止めるTikTok、Reels、Shortsを作成します。",
+    "cta": "作成を始める"
+  },
+  "features": {
+    "title": "クリエイターがHyreelを愛する理由",
+    "subtitle": "学習曲線なしでプロフェッショナルな動画制作",
+    "items": [
+      {
+        "title": "写真から動画へAI",
+        "description": "任意の写真をアップロードし、AIがシネマティックなモーションエフェクトでダイナミックな動画に変換する様子をご覧ください。"
+      },
+      {
+        "title": "シネマティックエフェクト",
+        "description": "ズーム、オービット、パララックス、フォローなどのプロフェッショナルなエフェクトでコンテンツを際立たせます。"
+      },
+      {
+        "title": "プラットフォーム最適化",
+        "description": "TikTok、Instagram Reels、YouTube Shortsなどに最適なフォーマットでエクスポート。"
+      },
+      {
+        "title": "AIボイス＆音楽",
+        "description": "プロフェッショナルなナレーションとBGMを追加して動画を完成させます。"
+      },
+      {
+        "title": "超高速",
+        "description": "数時間ではなく数秒でプロフェッショナルな動画を作成。毎日のコンテンツ制作に最適。"
+      },
+      {
+        "title": "ウォーターマークなし",
+        "description": "あなたのブランドにふさわしいクリーンでプロフェッショナルな動画。有料プランではウォーターマークなし。"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "3ステップで動画作成",
+    "subtitle": "写真からバイラル動画まで1分以内",
+    "steps": [
+      {
+        "title": "写真をアップロード",
+        "description": "カメラロールやライブラリから任意の写真を選択"
+      },
+      {
+        "title": "エフェクトを選択",
+        "description": "ズーム、オービット、パララックスなどのAIエフェクトから選択"
+      },
+      {
+        "title": "エクスポート＆共有",
+        "description": "ダウンロードまたはTikTok、Instagram、YouTubeに直接共有"
+      }
+    ]
+  },
+  "stats": {
+    "videos": "作成された動画",
+    "creators": "アクティブなクリエイター",
+    "rating": "App Store評価",
+    "countries": "国"
+  },
+  "cta": {
+    "title": "バイラルコンテンツを作る準備はできましたか？",
+    "description": "AIでスクロールを止める動画を作る数千人のクリエイターに参加しましょう。無料で始める — クレジットカード不要。",
+    "primary": "無料で作成を始める",
+    "secondary": "料金を見る"
+  },
+  "footer": {
+    "tagline": "クリエイター、ブランド、ビジネス向けAI動画制作。",
+    "product": "製品",
+    "resources": "リソース",
+    "company": "会社情報",
+    "legal": "法的事項",
+    "copyright": "全著作権所有。"
+  }
+}

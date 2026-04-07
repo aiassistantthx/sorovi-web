@@ -867,6 +867,324 @@ export const industries: Industry[] = [
       }
     ],
     ctaText: "Create Course Videos Free"
+  },
+  {
+    slug: "jewelry-accessories",
+    name: "Jewelry & Accessories",
+    icon: "💎",
+    metaTitle: "AI Video for Jewelry & Accessory Brands | Hyreel",
+    metaDescription: "Create stunning jewelry videos that show sparkle and shine. 360° product showcases, detail zooms, and social content from your product photos.",
+    heroHeadline: "AI Video for Jewelry & Accessories",
+    heroSubheadline: "Show the sparkle that photos can't capture. Create mesmerizing jewelry videos with 360° rotation, light-catching effects, and detail zooms.",
+    description: "Jewelry brands and accessory retailers using AI video to showcase shine, detail, and craftsmanship in motion.",
+    challenges: [
+      {
+        icon: "✨",
+        title: "Photos Don't Show Sparkle",
+        description: "Static images can't capture how jewelry catches light. Customers need to see movement."
+      },
+      {
+        icon: "💰",
+        title: "Expensive Product Shoots",
+        description: "Professional jewelry photography and video requires specialized equipment and expertise."
+      },
+      {
+        icon: "🔍",
+        title: "Detail is Everything",
+        description: "Customers want to see craftsmanship, settings, and finish up close before buying."
+      },
+      {
+        icon: "📱",
+        title: "Social Media Demands",
+        description: "Jewelry content needs to stop the scroll. Static photos get buried."
+      }
+    ],
+    solutions: [
+      {
+        icon: "🔄",
+        title: "360° Product Rotation",
+        description: "AI orbit effect shows jewelry from every angle, simulating a professional turntable."
+      },
+      {
+        icon: "💫",
+        title: "Light-Catching Motion",
+        description: "Movement reveals sparkle, shimmer, and light reflection that photos miss."
+      },
+      {
+        icon: "🔬",
+        title: "Detail Zoom Effects",
+        description: "Show settings, stones, and craftsmanship with smooth zoom reveals."
+      },
+      {
+        icon: "📲",
+        title: "Social-Ready Content",
+        description: "Create TikTok and Reels content that showcases your pieces beautifully."
+      }
+    ],
+    videoTypes: [
+      { title: "360° Showcase", description: "Full rotation videos showing every angle" },
+      { title: "Detail Close-Ups", description: "Zoom into stones, settings, and craftsmanship" },
+      { title: "Lifestyle Context", description: "Jewelry in wear with motion and style" },
+      { title: "Collection Reveals", description: "New collection and launch announcements" },
+      { title: "Size & Scale", description: "Help customers understand actual dimensions" },
+      { title: "Gift Guide Content", description: "Holiday and occasion promotional videos" }
+    ],
+    benefits: [
+      "Show sparkle and shine that photos can't capture",
+      "Create videos for every piece in your inventory",
+      "Reduce returns with better product visualization",
+      "Stand out on crowded marketplaces",
+      "Build trust with detailed showcase videos",
+      "Drive higher conversion rates online"
+    ],
+    stats: [
+      { value: "40%", label: "Higher conversion" },
+      { value: "360°", label: "Product views" },
+      { value: "< 30s", label: "Per piece video" },
+      { value: "25%", label: "Lower returns" }
+    ],
+    testimonial: {
+      quote: "My handmade jewelry deserves to be seen in motion. Hyreel shows the sparkle photos just can't capture. Conversion rate doubled and returns dropped.",
+      author: "Amanda R.",
+      role: "Etsy Jewelry Seller"
+    },
+    relatedTools: ["ai-orbit-video-effect", "ai-zoom-video-effect", "image-to-video-ai", "ai-product-video-maker"],
+    relatedUseCases: ["jewelry-showcase-videos", "accessory-product-videos"],
+    faqs: [
+      {
+        question: "Can Hyreel really show jewelry sparkle?",
+        answer: "Yes! The motion effects reveal how light catches on surfaces, stones, and metals. Customers see shimmer and sparkle that static photos miss completely."
+      },
+      {
+        question: "What jewelry types work best?",
+        answer: "Rings, necklaces, bracelets, earrings, and watches all work beautifully. Any jewelry with reflective surfaces or detail benefits from motion."
+      },
+      {
+        question: "Do I need professional product photos?",
+        answer: "Good lighting is key, but you don't need a professional studio. Clean backgrounds with even lighting produce excellent results even from smartphone shots."
+      },
+      {
+        question: "Can I create videos for my entire inventory?",
+        answer: "Yes! Hyreel is built for scale. Many jewelry sellers create videos for hundreds of pieces in a single day."
+      },
+      {
+        question: "Will this help on Etsy and Amazon?",
+        answer: "Absolutely. Video listings get significantly more views and sales. Hyreel videos work on all jewelry marketplaces."
+      }
+    ],
+    ctaText: "Create Jewelry Videos Free"
+  },
+  {
+    slug: "pet-products",
+    name: "Pet Products",
+    icon: "🐕",
+    metaTitle: "AI Video for Pet Product Brands | Hyreel",
+    metaDescription: "Create engaging pet product videos from photos. Perfect for pet food, toys, accessories, and supplies. Boost sales with video content.",
+    heroHeadline: "AI Video for Pet Product Brands",
+    heroSubheadline: "Create scroll-stopping pet product videos that pet parents love. Showcase toys, accessories, and supplies with professional motion effects.",
+    description: "Pet product brands and retailers using AI video to showcase products and connect with pet-loving audiences.",
+    challenges: [
+      {
+        icon: "📸",
+        title: "Pets Don't Stay Still",
+        description: "Getting good product photos with actual pets is nearly impossible. They don't follow directions."
+      },
+      {
+        icon: "💰",
+        title: "Production Costs",
+        description: "Professional pet product videos require animal wranglers, trainers, and patience — all expensive."
+      },
+      {
+        icon: "📱",
+        title: "Pet Content Competition",
+        description: "Pet parents scroll past static product images. The feed is full of cute pet videos."
+      },
+      {
+        icon: "🛒",
+        title: "Standing Out on Chewy/Amazon",
+        description: "Pet marketplaces are competitive. Products without video get less visibility."
+      }
+    ],
+    solutions: [
+      {
+        icon: "🎬",
+        title: "Product Videos Without Pets",
+        description: "Create engaging product showcases from product photos alone. No animal wranglers needed."
+      },
+      {
+        icon: "✨",
+        title: "Eye-Catching Effects",
+        description: "Motion effects that stop the scroll in feeds full of cute pet content."
+      },
+      {
+        icon: "🔄",
+        title: "Product Rotation",
+        description: "360° orbit effects show toys, accessories, and products from every angle."
+      },
+      {
+        icon: "📲",
+        title: "Social-Ready Content",
+        description: "Create TikTok and Instagram content that pet parents love to engage with."
+      }
+    ],
+    videoTypes: [
+      { title: "Product Showcases", description: "360° views of toys, beds, and accessories" },
+      { title: "Feature Highlights", description: "Zoom into quality and design details" },
+      { title: "Size Comparisons", description: "Help buyers understand product dimensions" },
+      { title: "New Arrival Promos", description: "Launch videos for new products" },
+      { title: "Collection Videos", description: "Showcase product lines and variations" },
+      { title: "Sale Announcements", description: "Promotional content for campaigns" }
+    ],
+    benefits: [
+      "Create product videos without wrangling pets",
+      "Stand out in competitive pet marketplaces",
+      "Connect with pet parents through video content",
+      "Show product quality and features clearly",
+      "Increase conversion rates on listings",
+      "Scale content for your entire catalog"
+    ],
+    stats: [
+      { value: "$143B", label: "Pet industry size" },
+      { value: "35%", label: "Higher conversions" },
+      { value: "< 30s", label: "Per product video" },
+      { value: "3x", label: "More engagement" }
+    ],
+    testimonial: {
+      quote: "Creating pet product videos used to mean expensive photo shoots with unpredictable animals. Now we have video for every product. Sales are up 45%.",
+      author: "Brian M.",
+      role: "Pet Brand Founder"
+    },
+    relatedTools: ["ai-orbit-video-effect", "ai-zoom-video-effect", "image-to-video-ai", "ai-product-video-maker"],
+    relatedUseCases: ["pet-product-videos", "pet-brand-marketing"],
+    faqs: [
+      {
+        question: "Do I need photos with actual pets?",
+        answer: "No! Hyreel creates engaging product videos from product photography alone. You can add pet photos later if you have them, but they're not required."
+      },
+      {
+        question: "What pet products work best?",
+        answer: "Toys, beds, bowls, collars, leashes, treats packaging, and accessories all create excellent videos. Any pet product benefits from motion."
+      },
+      {
+        question: "Can I use these on Chewy and Amazon?",
+        answer: "Yes! Hyreel exports standard video formats accepted by Chewy, Amazon, Petco, and all major pet retail platforms."
+      },
+      {
+        question: "How do I compete with cute pet videos?",
+        answer: "Professional product videos stand out differently — they show quality and build purchase confidence. You don't need to compete on cuteness."
+      },
+      {
+        question: "Can I create videos for my whole catalog?",
+        answer: "Absolutely. Pet brands create videos for hundreds of products efficiently. Scale to cover your entire inventory."
+      }
+    ],
+    ctaText: "Create Pet Product Videos Free"
+  },
+  {
+    slug: "automotive",
+    name: "Automotive",
+    icon: "🚗",
+    metaTitle: "AI Video for Automotive & Car Dealerships | Hyreel",
+    metaDescription: "Create professional vehicle videos from photos. Perfect for car dealerships, auto parts, and automotive accessories. Sell more vehicles with video.",
+    heroHeadline: "AI Video for Automotive",
+    heroSubheadline: "Transform vehicle photos into cinematic showcases. Create professional inventory videos, 360° walkarounds, and detail highlights without expensive production.",
+    description: "Car dealerships, auto parts sellers, and automotive brands using AI video to showcase vehicles and products.",
+    challenges: [
+      {
+        icon: "💰",
+        title: "Video Production Costs",
+        description: "Professional vehicle videos cost $500-2,000+ per car. Impossible for entire inventory."
+      },
+      {
+        icon: "⏰",
+        title: "Inventory Moves Fast",
+        description: "Cars sell before video production is complete. Traditional video can't keep up with turnover."
+      },
+      {
+        icon: "📹",
+        title: "Walkaround Video Expectations",
+        description: "Buyers expect to see vehicles from every angle. Static photos don't cut it anymore."
+      },
+      {
+        icon: "🆚",
+        title: "Competitive Market",
+        description: "Dealerships with video sell faster. Those without lose to competitors."
+      }
+    ],
+    solutions: [
+      {
+        icon: "🎬",
+        title: "Instant Vehicle Videos",
+        description: "Create professional vehicle showcases from inventory photos in seconds, not days."
+      },
+      {
+        icon: "🔄",
+        title: "360° Walkaround Effect",
+        description: "AI orbit creates the impression of walking around the vehicle from a single exterior shot."
+      },
+      {
+        icon: "🔍",
+        title: "Feature Highlights",
+        description: "Zoom into interior features, trim details, and selling points."
+      },
+      {
+        icon: "📱",
+        title: "Social & Website Ready",
+        description: "Create content for your website, Facebook Marketplace, and social media."
+      }
+    ],
+    videoTypes: [
+      { title: "Exterior Walkaround", description: "360° views of vehicle exterior" },
+      { title: "Interior Showcase", description: "Feature highlights and cabin details" },
+      { title: "Feature Highlights", description: "Zoom into key selling points" },
+      { title: "New Arrival Videos", description: "Announce new inventory instantly" },
+      { title: "Comparison Content", description: "Trim levels and model comparisons" },
+      { title: "Parts & Accessories", description: "Aftermarket and OEM parts showcases" }
+    ],
+    benefits: [
+      "Create video for every vehicle in inventory",
+      "Sell cars faster with video listings",
+      "Keep up with high-turnover inventory",
+      "Stand out from competitors",
+      "Professional quality without expensive production",
+      "Scale video across all your listings"
+    ],
+    stats: [
+      { value: "73%", label: "Buyers watch video first" },
+      { value: "2x", label: "Faster sales with video" },
+      { value: "< 60s", label: "Per vehicle video" },
+      { value: "100%", label: "Inventory coverage" }
+    ],
+    testimonial: {
+      quote: "We used to have video for maybe 10% of inventory. Now every vehicle gets a video within hours of arriving. Average days on lot dropped from 45 to 28.",
+      author: "Robert J.",
+      role: "General Manager, Car Dealership"
+    },
+    relatedTools: ["ai-orbit-video-effect", "ai-zoom-video-effect", "image-to-video-ai", "ai-product-video-maker"],
+    relatedUseCases: ["car-dealership-videos", "automotive-product-videos"],
+    faqs: [
+      {
+        question: "Can I create videos for my entire inventory?",
+        answer: "Yes! Hyreel is built for scale. Dealerships create videos for every vehicle — new and used — efficiently. Coverage goes from 10% to 100%."
+      },
+      {
+        question: "What vehicle photos work best?",
+        answer: "Standard lot photography works great. Multiple angles of exterior and interior photos create the best results. Better lighting produces better videos."
+      },
+      {
+        question: "How do I use these on my website and Facebook?",
+        answer: "Export videos and upload to your dealer website, Facebook Marketplace, Cars.com, Autotrader, and all major automotive platforms."
+      },
+      {
+        question: "Is this as good as a professional walkaround?",
+        answer: "For most inventory, yes. AI-generated videos give buyers the visual tour they want. For high-end vehicles, Hyreel complements professional video."
+      },
+      {
+        question: "Can I use this for parts and accessories?",
+        answer: "Absolutely. Auto parts sellers use Hyreel for product showcases, wheel displays, accessory highlights, and more."
+      }
+    ],
+    ctaText: "Create Vehicle Videos Free"
   }
 ];
 

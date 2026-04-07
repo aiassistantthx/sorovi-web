@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "Hyreel - AI视频生成器 | 将照片变成病毒式传播视频",
+    "description": "几分钟内从照片创建病毒式TikTok、Instagram Reels和YouTube Shorts。AI驱动的视频效果，无需编辑技能。免费开始。"
+  },
+  "nav": {
+    "tools": "工具",
+    "templates": "模板",
+    "useCases": "应用场景",
+    "industries": "行业",
+    "pricing": "定价",
+    "downloadApp": "下载应用"
+  },
+  "hero": {
+    "title": "将照片转化为",
+    "titleHighlight": "病毒式视频",
+    "titleEnd": "只需几分钟",
+    "description": "无需编辑技能。Hyreel的AI从一张照片创建令人驻足的TikTok、Reels和Shorts。",
+    "cta": "开始创作"
+  },
+  "features": {
+    "title": "创作者为什么喜爱Hyreel",
+    "subtitle": "无需学习曲线的专业视频创作",
+    "items": [
+      {
+        "title": "AI图片转视频",
+        "description": "上传任何照片，观看我们的AI将其转换为带有电影级动态效果的精彩视频。"
+      },
+      {
+        "title": "电影级效果",
+        "description": "专业的缩放、环绕、视差和跟踪效果，让您的内容脱颖而出。"
+      },
+      {
+        "title": "平台优化",
+        "description": "以完美格式导出到TikTok、Instagram Reels、YouTube Shorts等平台。"
+      },
+      {
+        "title": "AI配音与音乐",
+        "description": "添加专业配音和背景音乐，完善您的视频。"
+      },
+      {
+        "title": "极速处理",
+        "description": "几秒钟而非几小时创建专业视频。适合日常内容创作。"
+      },
+      {
+        "title": "无水印",
+        "description": "干净专业的视频，适合您的品牌。付费计划无水印。"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "3步创建视频",
+    "subtitle": "从照片到病毒式视频不到一分钟",
+    "steps": [
+      {
+        "title": "上传您的照片",
+        "description": "从相机胶卷或图库中选择任意照片"
+      },
+      {
+        "title": "选择效果",
+        "description": "从缩放、环绕、视差等AI效果中选择"
+      },
+      {
+        "title": "导出并分享",
+        "description": "下载或直接分享到TikTok、Instagram、YouTube"
+      }
+    ]
+  },
+  "stats": {
+    "videos": "创建的视频",
+    "creators": "活跃创作者",
+    "rating": "App Store评分",
+    "countries": "国家"
+  },
+  "cta": {
+    "title": "准备好创作病毒式内容了吗？",
+    "description": "加入数千名使用AI创作令人驻足视频的创作者。免费开始——无需信用卡。",
+    "primary": "免费开始创作",
+    "secondary": "查看定价"
+  },
+  "footer": {
+    "tagline": "为创作者、品牌和企业提供AI视频创作。",
+    "product": "产品",
+    "resources": "资源",
+    "company": "公司",
+    "legal": "法律",
+    "copyright": "版权所有。"
+  }
+}

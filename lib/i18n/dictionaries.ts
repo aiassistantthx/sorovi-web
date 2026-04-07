@@ -7,6 +7,12 @@ const dictionaries = {
   fr: () => import("./dictionaries/fr.json").then((module) => module.default),
   pt: () => import("./dictionaries/pt.json").then((module) => module.default),
   ru: () => import("./dictionaries/ru.json").then((module) => module.default),
+  it: () => import("./dictionaries/it.json").then((module) => module.default),
+  nl: () => import("./dictionaries/nl.json").then((module) => module.default),
+  pl: () => import("./dictionaries/pl.json").then((module) => module.default),
+  ja: () => import("./dictionaries/ja.json").then((module) => module.default),
+  ko: () => import("./dictionaries/ko.json").then((module) => module.default),
+  zh: () => import("./dictionaries/zh.json").then((module) => module.default),
 };
 
 export const getDictionary = async (locale: Locale) => {

@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "Hyreel - Generator Wideo AI | Zamień Zdjęcia w Wirusowe Filmy",
+    "description": "Twórz wirusowe TikToki, Instagram Reels i YouTube Shorts ze zdjęć w kilka minut. Efekty wideo AI, bez umiejętności montażu. Zacznij za darmo."
+  },
+  "nav": {
+    "tools": "Narzędzia",
+    "templates": "Szablony",
+    "useCases": "Zastosowania",
+    "industries": "Branże",
+    "pricing": "Cennik",
+    "downloadApp": "Pobierz Aplikację"
+  },
+  "hero": {
+    "title": "Zamień Zdjęcia w",
+    "titleHighlight": "Wirusowe Filmy",
+    "titleEnd": "w Kilka Minut",
+    "description": "Nie potrzebujesz umiejętności montażu. AI Hyreel tworzy przyciągające uwagę TikToki, Reels i Shorts z jednego zdjęcia.",
+    "cta": "Zacznij Tworzyć"
+  },
+  "features": {
+    "title": "Dlaczego Twórcy Kochają Hyreel",
+    "subtitle": "Profesjonalne tworzenie wideo bez krzywej uczenia się",
+    "items": [
+      {
+        "title": "Ze Zdjęcia do Wideo AI",
+        "description": "Prześlij dowolne zdjęcie i obserwuj, jak nasze AI przekształca je w dynamiczny film z efektami kinowymi."
+      },
+      {
+        "title": "Efekty Kinowe",
+        "description": "Profesjonalne efekty zoom, orbity, paralaksy i śledzenia, które wyróżniają Twoje treści."
+      },
+      {
+        "title": "Optymalizacja dla Platform",
+        "description": "Eksportuj w idealnych formatach dla TikTok, Instagram Reels, YouTube Shorts i innych."
+      },
+      {
+        "title": "Głos i Muzyka AI",
+        "description": "Dodaj profesjonalne lektory i muzykę w tle, aby ukończyć swoje filmy."
+      },
+      {
+        "title": "Błyskawicznie",
+        "description": "Twórz profesjonalne filmy w sekundy, nie godziny. Idealne do codziennego tworzenia treści."
+      },
+      {
+        "title": "Bez Znaku Wodnego",
+        "description": "Czyste, profesjonalne filmy gotowe dla Twojej marki. Bez znaków wodnych w płatnych planach."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Twórz Filmy w 3 Krokach",
+    "subtitle": "Od zdjęcia do wirusowego wideo w mniej niż minutę",
+    "steps": [
+      {
+        "title": "Prześlij Swoje Zdjęcie",
+        "description": "Wybierz dowolne zdjęcie z rolki aparatu lub biblioteki"
+      },
+      {
+        "title": "Wybierz Efekt",
+        "description": "Wybierz spośród zoom, orbity, paralaksy i innych efektów AI"
+      },
+      {
+        "title": "Eksportuj i Udostępnij",
+        "description": "Pobierz lub udostępnij bezpośrednio na TikTok, Instagram, YouTube"
+      }
+    ]
+  },
+  "stats": {
+    "videos": "Utworzonych Filmów",
+    "creators": "Aktywnych Twórców",
+    "rating": "Ocena App Store",
+    "countries": "Krajów"
+  },
+  "cta": {
+    "title": "Gotowy do Tworzenia Wirusowych Treści?",
+    "description": "Dołącz do tysięcy twórców tworzących przyciągające uwagę filmy z AI. Zacznij za darmo — karta kredytowa nie jest wymagana.",
+    "primary": "Zacznij Tworzyć Za Darmo",
+    "secondary": "Zobacz Cennik"
+  },
+  "footer": {
+    "tagline": "Tworzenie wideo AI dla twórców, marek i firm.",
+    "product": "Produkt",
+    "resources": "Zasoby",
+    "company": "Firma",
+    "legal": "Prawne",
+    "copyright": "Wszelkie prawa zastrzeżone."
+  }
+}

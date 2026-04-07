@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "title": "Hyreel - Generatore Video AI | Trasforma Foto in Video Virali",
+    "description": "Crea TikTok, Instagram Reels e YouTube Shorts virali dalle foto in pochi minuti. Effetti video AI, nessuna competenza di editing richiesta. Inizia gratis."
+  },
+  "nav": {
+    "tools": "Strumenti",
+    "templates": "Modelli",
+    "useCases": "Casi d'Uso",
+    "industries": "Settori",
+    "pricing": "Prezzi",
+    "downloadApp": "Scarica App"
+  },
+  "hero": {
+    "title": "Trasforma Foto in",
+    "titleHighlight": "Video Virali",
+    "titleEnd": "in Pochi Minuti",
+    "description": "Nessuna competenza di editing necessaria. L'AI di Hyreel crea TikTok, Reels e Shorts che catturano l'attenzione da una singola foto.",
+    "cta": "Inizia a Creare"
+  },
+  "features": {
+    "title": "Perché i Creator Amano Hyreel",
+    "subtitle": "Creazione video professionale senza curva di apprendimento",
+    "items": [
+      {
+        "title": "Da Foto a Video con AI",
+        "description": "Carica qualsiasi foto e guarda la nostra AI trasformarla in un video dinamico con effetti cinematografici."
+      },
+      {
+        "title": "Effetti Cinematografici",
+        "description": "Effetti zoom, orbita, parallasse e tracking professionali che fanno risaltare i tuoi contenuti."
+      },
+      {
+        "title": "Ottimizzato per le Piattaforme",
+        "description": "Esporta nei formati perfetti per TikTok, Instagram Reels, YouTube Shorts e altro."
+      },
+      {
+        "title": "Voce e Musica AI",
+        "description": "Aggiungi voci fuori campo professionali e musica di sottofondo per completare i tuoi video."
+      },
+      {
+        "title": "Velocissimo",
+        "description": "Crea video professionali in secondi, non ore. Perfetto per la creazione di contenuti quotidiana."
+      },
+      {
+        "title": "Senza Filigrana",
+        "description": "Video puliti e professionali pronti per il tuo brand. Nessuna filigrana nei piani a pagamento."
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "Crea Video in 3 Passi",
+    "subtitle": "Da foto a video virale in meno di un minuto",
+    "steps": [
+      {
+        "title": "Carica la Tua Foto",
+        "description": "Scegli qualsiasi foto dal rullino o dalla libreria"
+      },
+      {
+        "title": "Scegli un Effetto",
+        "description": "Seleziona tra zoom, orbita, parallasse e altri effetti AI"
+      },
+      {
+        "title": "Esporta e Condividi",
+        "description": "Scarica o condividi direttamente su TikTok, Instagram, YouTube"
+      }
+    ]
+  },
+  "stats": {
+    "videos": "Video Creati",
+    "creators": "Creator Attivi",
+    "rating": "Valutazione App Store",
+    "countries": "Paesi"
+  },
+  "cta": {
+    "title": "Pronto a Creare Contenuti Virali?",
+    "description": "Unisciti a migliaia di creator che realizzano video coinvolgenti con l'AI. Inizia gratis — nessuna carta di credito richiesta.",
+    "primary": "Inizia a Creare Gratis",
+    "secondary": "Vedi Prezzi"
+  },
+  "footer": {
+    "tagline": "Creazione video AI per creator, brand e aziende.",
+    "product": "Prodotto",
+    "resources": "Risorse",
+    "company": "Azienda",
+    "legal": "Legale",
+    "copyright": "Tutti i diritti riservati."
+  }
+}
