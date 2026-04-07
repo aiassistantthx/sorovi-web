@@ -21,7 +21,6 @@ export const metadata: Metadata = {
     template: "%s | Hyreel",
   },
   description: "Create viral videos in minutes with AI. TikTok, Instagram Reels, YouTube Shorts and more.",
-  keywords: ["AI video generator", "TikTok videos", "Instagram Reels", "YouTube Shorts", "video maker app"],
   authors: [{ name: "Hyreel Team" }],
   creator: "Hyreel",
   publisher: "Hyreel",

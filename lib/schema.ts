@@ -65,6 +65,14 @@ export function generateWebSiteSchema() {
     "@type": "WebSite",
     name: SITE_NAME,
     url: SITE_URL,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${SITE_URL}/blog?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
   };
 }
 
@@ -144,5 +152,108 @@ export function generateFAQSchema(
         text: faq.answer,
       },
     })),
+  };
+}
+
+export function generateToolSchema({
+  name,
+  description,
+  url,
+}: {
+  name: string;
+  description: string;
+  url: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: `${name} - ${SITE_NAME}`,
+    applicationCategory: "MultimediaApplication",
+    operatingSystem: "iOS",
+    description,
+    url: `${SITE_URL}${url}`,
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    author: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      ratingCount: "2847",
+      bestRating: "5",
+      worstRating: "1",
+    },
+  };
+}
+
+export function generatePricingSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: `${SITE_NAME} - AI Video Generator`,
+    description: "Create viral videos in minutes with AI. Transform photos into stunning videos with cinematic motion effects.",
+    brand: {
+      "@type": "Brand",
+      name: SITE_NAME,
+    },
+    offers: [
+      {
+        "@type": "Offer",
+        name: "Free Plan",
+        price: "0",
+        priceCurrency: "USD",
+        description: "5 videos per day, all motion effects, watermark",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "Creator Plan",
+        price: "9.99",
+        priceCurrency: "USD",
+        description: "Unlimited videos, no watermark, 1080p, 50+ AI voices",
+        availability: "https://schema.org/InStock",
+        priceValidUntil: "2027-12-31",
+      },
+      {
+        "@type": "Offer",
+        name: "Business Plan",
+        price: "29.99",
+        priceCurrency: "USD",
+        description: "Everything in Creator plus 4K, premium voices, team features",
+        availability: "https://schema.org/InStock",
+        priceValidUntil: "2027-12-31",
+      },
+    ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      ratingCount: "2847",
+      bestRating: "5",
+      worstRating: "1",
+    },
+  };
+}
+
+export function generateAboutPageSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: `About ${SITE_NAME}`,
+    description: "Learn about Hyreel, the AI video generation app helping creators make viral content.",
+    url: `${SITE_URL}/about`,
+    mainEntity: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+      foundingDate: "2023",
+      description: "AI-powered video generation app for creators and businesses.",
+    },
   };
 }

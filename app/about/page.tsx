@@ -2,10 +2,19 @@ import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { generateAboutPageSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: "About Us - Hyreel",
-  description: "Learn about Hyreel's mission to democratize video creation with AI technology",
+  title: "About Us - Hyreel AI Video Generation",
+  description: "Learn about Hyreel's mission to democratize video creation with AI. Founded in 2023, we've helped 14,000+ creators make 240,000+ videos.",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Hyreel - AI Video Generation App",
+    description: "Making video creation accessible to everyone with AI technology.",
+    images: ["/og-image.png"],
+  },
 };
 
 const teamValues = [
@@ -39,8 +48,15 @@ const stats = [
 ];
 
 export default function AboutPage() {
+  const aboutSchema = generateAboutPageSchema();
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+
       {/* Hero Section */}
       <Section spacing="xl" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">

@@ -2,10 +2,19 @@ import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { generatePricingSchema } from "@/lib/schema";
 
 export const metadata = {
-  title: "Pricing - Hyreel",
-  description: "Choose the perfect plan for your video creation needs. Start free, upgrade anytime.",
+  title: "Pricing - AI Video Generator Plans | Hyreel",
+  description: "Choose the perfect plan for your video creation needs. Free plan available, Creator $9.99/mo, Business $29.99/mo. No hidden fees, cancel anytime.",
+  alternates: {
+    canonical: "/pricing",
+  },
+  openGraph: {
+    title: "Hyreel Pricing - AI Video Generator Plans",
+    description: "Free plan, Creator $9.99/mo, Business $29.99/mo. Start creating viral videos today.",
+    images: ["/og-image.png"],
+  },
 };
 
 const plans = [
@@ -89,8 +98,15 @@ const faqs = [
 ];
 
 export default function PricingPage() {
+  const pricingSchema = generatePricingSchema();
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
+      />
+
       {/* Hero Section */}
       <Section spacing="xl" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">

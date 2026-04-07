@@ -9,7 +9,7 @@ import Link from "next/link";
 import { tools, getToolBySlug, type Tool } from "@/lib/tools";
 import {
   generateBreadcrumbSchema,
-  generateSoftwareApplicationSchema,
+  generateToolSchema,
 } from "@/lib/schema";
 
 // Generate static params for all tools
@@ -107,7 +107,11 @@ export default async function ToolPage({
     { name: "Tools", url: "/tools" },
     { name: tool.name, url: `/tools/${tool.slug}` },
   ]);
-  const appSchema = generateSoftwareApplicationSchema();
+  const toolSchema = generateToolSchema({
+    name: tool.name,
+    description: tool.description,
+    url: `/tools/${tool.slug}`,
+  });
   const relatedTools = getRelatedTools(tool);
   const videos = toolVideos[tool.slug] || [];
 
@@ -119,7 +123,7 @@ export default async function ToolPage({
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(appSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
       />
 
       {/* Hero Section */}

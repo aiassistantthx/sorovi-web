@@ -5,20 +5,24 @@ import { Container } from "./container";
 const footerLinks = {
   product: [
     { label: "AI Video Tools", href: "/tools" },
+    { label: "Templates", href: "/templates" },
     { label: "Use Cases", href: "/use-cases" },
+    { label: "Industries", href: "/industries" },
     { label: "Pricing", href: "/pricing" },
+  ],
+  solutions: [
+    { label: "For Creators", href: "/for/creators" },
+    { label: "For Small Business", href: "/for/small-business" },
+    { label: "For Agencies", href: "/for/agencies" },
+    { label: "TikTok Videos", href: "/platforms/tiktok" },
+    { label: "Instagram Reels", href: "/platforms/instagram" },
+    { label: "All Solutions", href: "/solutions" },
   ],
   resources: [
     { label: "Blog", href: "/blog" },
+    { label: "Alternatives", href: "/alternatives" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
-  ],
-  alternatives: [
-    { label: "Canva Alternative", href: "/alternatives/canva" },
-    { label: "CapCut Alternative", href: "/alternatives/capcut" },
-    { label: "Runway Alternative", href: "/alternatives/runway" },
-    { label: "Synthesia Alternative", href: "/alternatives/synthesia" },
-    { label: "Pika AI Alternative", href: "/alternatives/pika-ai" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },
@@ -52,11 +56,11 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Resources */}
+            {/* Solutions */}
             <div>
-              <span className="block text-[var(--text-primary)] font-semibold mb-4">Resources</span>
+              <span className="block text-[var(--text-primary)] font-semibold mb-4">Solutions</span>
               <ul className="space-y-3">
-                {footerLinks.resources.map((link) => (
+                {footerLinks.solutions.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
@@ -69,11 +73,11 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Alternatives */}
+            {/* Resources */}
             <div>
-              <span className="block text-[var(--text-primary)] font-semibold mb-4">Alternatives</span>
+              <span className="block text-[var(--text-primary)] font-semibold mb-4">Resources</span>
               <ul className="space-y-3">
-                {footerLinks.alternatives.map((link) => (
+                {footerLinks.resources.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
