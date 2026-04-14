@@ -4,10 +4,13 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { tools, getAllCategories } from "@/lib/tools";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "AI Video Tools - Hyreel",
-  description: "Explore our suite of AI-powered video creation tools. Script generators, voice AI, avatars, and more.",
+  description:
+    "Explore our suite of AI-powered video creation tools. Script generators, voice AI, avatars, and more.",
+  alternates: generateAlternates("/tools"),
 };
 
 const categories = getAllCategories();

@@ -4,17 +4,17 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { alternatives } from "@/lib/alternatives";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "AI Video Generator Alternatives & Comparisons | Hyreel",
   description:
     "Compare Hyreel to popular AI video generators like Canva, Synthesia, Runway, CapCut, and more. See why creators choose Hyreel for photo-to-video AI.",
-  alternates: {
-    canonical: "/alternatives",
-  },
+  alternates: generateAlternates("/alternatives"),
   openGraph: {
     title: "AI Video Generator Alternatives - Hyreel vs Competitors",
-    description: "Compare Hyreel to Canva, Synthesia, Runway, CapCut, and other AI video tools.",
+    description:
+      "Compare Hyreel to Canva, Synthesia, Runway, CapCut, and other AI video tools.",
     images: ["/og-image.png"],
   },
 };

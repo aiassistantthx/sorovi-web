@@ -4,14 +4,13 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { platforms } from "@/lib/platforms";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "AI Video Generator for Every Social Platform | Hyreel",
   description:
     "Create optimized videos for TikTok, Instagram Reels, YouTube Shorts, Pinterest, LinkedIn, and Facebook. Platform-specific formats and effects.",
-  alternates: {
-    canonical: "https://hyreel.app/platforms",
-  },
+  alternates: generateAlternates("/platforms"),
 };
 
 export default function PlatformsPage() {

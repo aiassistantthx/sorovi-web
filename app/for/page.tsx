@@ -4,14 +4,13 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { audiences } from "@/lib/audiences";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "AI Video Generator for Every Creator & Business | Hyreel",
   description:
     "Discover how Hyreel helps creators, small businesses, influencers, marketers, agencies, and entrepreneurs create professional video content.",
-  alternates: {
-    canonical: "https://hyreel.app/for",
-  },
+  alternates: generateAlternates("/for"),
 };
 
 export default function AudiencesPage() {

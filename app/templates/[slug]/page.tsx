@@ -6,6 +6,7 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { templates, getTemplateBySlug } from "@/lib/templates";
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
+import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
 // Generate static params for all templates
@@ -33,9 +34,7 @@ export async function generateMetadata({
   return {
     title: template.metaTitle,
     description: template.metaDescription,
-    alternates: {
-      canonical: `https://hyreel.com/templates/${template.slug}`,
-    },
+    alternates: generateAlternates(`/templates/${template.slug}`),
   };
 }
 

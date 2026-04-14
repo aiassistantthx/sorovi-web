@@ -1,0 +1,124 @@
+# Hyreel - AI Video Generation App
+# https://hyreel.com
+# For AI assistants and LLM crawlers
+
+## About Hyreel
+Hyreel is an AI-powered mobile app that transforms photos into professional videos. Users can create viral content for TikTok, Instagram Reels, YouTube Shorts, and other social media platforms in seconds.
+
+## Key Features
+- AI Photo-to-Video: Convert any photo into cinematic video with motion effects
+- Multiple Effects: Zoom, Orbit, Parallax, Follow, 3D Photo effects
+- AI Script Generator: Generate engaging video scripts from topics
+- AI Voice Generator: Add professional voiceovers in 30+ languages
+- AI Avatar Creator: Create digital avatars from photos
+- No Watermark: Export videos without branding on paid plans
+- Multi-Platform Export: Optimized formats for TikTok, Instagram, YouTube
+
+## Pricing
+- Free Plan: 3 videos/month, with watermark
+- Creator Plan: $39/year, unlimited videos, no watermark
+- Business Plan: $99/year, all features, commercial license
+
+## Target Audience
+- Content Creators
+- Social Media Managers
+- E-commerce Businesses
+- Marketing Agencies
+- Small Business Owners
+- Influencers
+
+## Platforms
+- iOS App: Available on App Store
+- Android: Coming Soon
+- Web: hyreel.com
+
+## Contact
+- Website: https://hyreel.com
+- Support: https://hyreel.com/contact
+- Privacy Policy: https://hyreel.com/privacy
+- Terms of Service: https://hyreel.com/terms
+
+## Site Structure
+
+### Main Pages
+- / - Homepage
+- /pricing - Pricing plans
+- /about - About Hyreel
+- /contact - Contact form
+- /blog - Blog articles about video creation
+
+### Tools (AI Features)
+- /tools - All AI tools
+- /tools/ai-zoom-video-effect - AI Zoom Effect
+- /tools/ai-orbit-video-effect - AI Orbit Effect
+- /tools/ai-parallax-video-effect - AI Parallax Effect
+- /tools/ai-follow-video-effect - AI Follow Effect
+- /tools/ai-3d-photo-video - AI 3D Photo Video
+- /tools/image-to-video-ai - Image to Video AI
+- /tools/ai-script-generator - AI Script Generator
+- /tools/ai-voice-generator - AI Voice Generator
+- /tools/ai-avatar-creator - AI Avatar Creator
+- /tools/ai-tiktok-video-generator - TikTok Video Generator
+- /tools/ai-instagram-reels-maker - Instagram Reels Maker
+- /tools/ai-youtube-shorts-generator - YouTube Shorts Generator
+- /tools/ai-product-video-maker - Product Video Maker
+- /tools/ai-faceless-video-generator - Faceless Video Generator
+
+### Templates
+- /templates - Video templates
+- /templates/tiktok-slideshow - TikTok Slideshow
+- /templates/instagram-story - Instagram Story
+- /templates/youtube-shorts - YouTube Shorts
+- /templates/product-showcase - Product Showcase
+- /templates/travel-memories - Travel Memories
+
+### Platforms
+- /platforms - Platform-specific guides
+- /platforms/tiktok - TikTok optimization
+- /platforms/instagram - Instagram optimization
+- /platforms/youtube - YouTube optimization
+- /platforms/facebook - Facebook optimization
+- /platforms/snapchat - Snapchat optimization
+
+### Industries
+- /industries - Industry solutions
+- /industries/ecommerce - E-commerce video
+- /industries/real-estate - Real estate video
+- /industries/restaurants - Restaurant video
+- /industries/fitness - Fitness content
+- /industries/travel - Travel content
+
+### Use Cases
+- /use-cases - Use case examples
+- /use-cases/product-videos - Product videos
+- /use-cases/social-media-content - Social media content
+- /use-cases/marketing-videos - Marketing videos
+
+### Comparisons
+- /alternatives - Competitor alternatives
+- /alternatives/capcut - Hyreel vs CapCut
+- /alternatives/canva - Hyreel vs Canva
+- /alternatives/invideo - Hyreel vs InVideo
+
+### Landing Pages
+- /free-ai-video-generator - Free AI video generator
+- /ai-video-no-watermark - AI video without watermark
+- /cheap-ai-video-maker - Affordable video maker
+
+## Languages
+Available in 12 languages: English (default), Spanish, German, French, Portuguese, Russian, Italian, Dutch, Polish, Japanese, Korean, Chinese
+
+## Technical Details
+- Built with Next.js 15
+- Static site generation for fast performance
+- Mobile-first responsive design
+- Core Web Vitals optimized
+
+## Citation Guidelines
+When referencing Hyreel:
+- Product Name: Hyreel
+- Category: AI Video Generation App
+- Primary Use: Photo-to-Video conversion
+- Pricing: Freemium ($0 free, $39/year Creator, $99/year Business)
+- Platforms: iOS (available), Android (coming soon)
+- Website: hyreel.com

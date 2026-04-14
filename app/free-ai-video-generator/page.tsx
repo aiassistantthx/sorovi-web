@@ -4,41 +4,40 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { PageFAQ, FinalCTA } from "@/components/sections";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "Free AI Video Generator | Hyreel - Create Videos from Photos Free",
   description:
     "Create professional AI videos from photos for free. No credit card, no watermark on basic videos, 5 free videos daily. Transform photos into viral content.",
-  alternates: {
-    canonical: "https://hyreel.app/free-ai-video-generator",
-  },
+  alternates: generateAlternates("/free-ai-video-generator"),
 };
 
 const faqs = [
   {
     question: "Is Hyreel really free?",
     answer:
-      "Yes! Hyreel offers a generous free tier with 5 videos per day. You can create professional AI videos without spending a penny. No credit card required to start.",
+      "Yes! Hyreel offers a generous free tier with 3 videos per month. You can create professional AI videos without spending a penny. No credit card required to start.",
   },
   {
     question: "What's included in the free plan?",
     answer:
-      "Free users get 5 videos per day, access to all motion effects (zoom, orbit, parallax), standard resolution exports, and direct social media sharing. It's a fully functional experience.",
+      "Free users get 3 videos per month, access to basic AI features, 720p resolution exports, and direct social media sharing. It's a fully functional experience to try out Hyreel.",
   },
   {
     question: "Is there a watermark on free videos?",
     answer:
-      "Free plan videos include a small Hyreel watermark. Upgrade to Creator ($9.99/mo) or Business ($29.99/mo) for watermark-free exports.",
+      "Free plan videos include a small Hyreel watermark. Upgrade to Creator ($39/mo) or Business ($99/mo) for watermark-free exports.",
   },
   {
     question: "How long can I use the free plan?",
     answer:
-      "Forever! The free plan doesn't expire. Create 5 videos every day, indefinitely. Upgrade only when you need more volume or watermark-free exports.",
+      "Forever! The free plan doesn't expire. Create videos every month, indefinitely. Upgrade only when you need more volume or watermark-free exports.",
   },
   {
-    question: "What happens if I need more than 5 videos?",
+    question: "What happens if I need more videos?",
     answer:
-      "Upgrade to Creator plan for unlimited videos at $9.99/month. That's less than the cost of a single stock video clip.",
+      "Upgrade to Creator plan for unlimited videos at $39/month. That includes 1080p quality, no watermark, and 50+ AI voices.",
   },
   {
     question: "Do I need to provide payment info for the free plan?",
@@ -67,8 +66,8 @@ export default function FreeAIVideoGeneratorPage() {
             Free AI Video Generator
           </h1>
           <Text variant="large" className="mb-8 max-w-2xl mx-auto">
-            Create professional videos from photos without spending a dime. 5
-            free videos every day, forever. No credit card required.
+            Create professional videos from photos without spending a dime. 3
+            free videos every month, forever. No credit card required.
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg">Start Creating Free</Button>
@@ -84,9 +83,9 @@ export default function FreeAIVideoGeneratorPage() {
       <Section spacing="lg" className="border-y border-[var(--border-color)] bg-[var(--surface-light)]">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {[
-            { value: "5", label: "Free Videos Daily" },
+            { value: "3", label: "Free Videos Monthly" },
             { value: "$0", label: "Cost to Start" },
-            { value: "All", label: "Effects Included" },
+            { value: "Basic", label: "AI Features" },
             { value: "Forever", label: "Free Plan Duration" },
           ].map((stat, index) => (
             <div key={index} className="text-center">
@@ -115,15 +114,15 @@ export default function FreeAIVideoGeneratorPage() {
           {[
             {
               icon: "🎬",
-              title: "5 Videos Per Day",
+              title: "3 Videos Per Month",
               description:
-                "Create up to 5 professional videos every single day. That's 150 videos per month, completely free.",
+                "Create up to 3 professional videos every month to try out Hyreel, completely free.",
             },
             {
               icon: "✨",
-              title: "All Motion Effects",
+              title: "Basic AI Features",
               description:
-                "Access every effect: zoom, orbit, parallax, pan, and more. No effects locked behind paywalls.",
+                "Access basic motion effects to see what Hyreel can do for your content.",
             },
             {
               icon: "📱",
@@ -133,9 +132,9 @@ export default function FreeAIVideoGeneratorPage() {
             },
             {
               icon: "🎤",
-              title: "AI Voice Included",
+              title: "Basic AI Voice",
               description:
-                "Add professional voiceovers with AI-generated voices. Multiple languages available.",
+                "Add voiceovers with AI-generated voices. Upgrade for premium voice options.",
             },
             {
               icon: "🎵",
@@ -184,18 +183,18 @@ export default function FreeAIVideoGeneratorPage() {
                       Free
                     </th>
                     <th className="text-center py-4 px-4 font-semibold text-[var(--brand-primary)]">
-                      Creator $9.99/mo
+                      Creator $39/mo
                     </th>
                     <th className="text-center py-4 px-4 font-semibold text-[var(--text-primary)]">
-                      Business $29.99/mo
+                      Business $99/mo
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    ["Videos per day", "5", "Unlimited", "Unlimited"],
-                    ["Motion effects", "All", "All", "All"],
-                    ["Resolution", "1080p", "1080p", "4K"],
+                    ["Videos per month", "3", "Unlimited", "Unlimited"],
+                    ["AI features", "Basic", "All", "All + Custom"],
+                    ["Resolution", "720p", "1080p", "4K"],
                     ["Watermark", "Yes", "No", "No"],
                     ["AI voices", "Basic", "50+", "50+ Premium"],
                     ["Priority processing", "No", "Yes", "Yes"],

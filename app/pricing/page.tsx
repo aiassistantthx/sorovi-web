@@ -3,16 +3,17 @@ import { Section } from "@/components/layouts/section";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { generatePricingSchema } from "@/lib/schema";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "Pricing - AI Video Generator Plans | Hyreel",
-  description: "Choose the perfect plan for your video creation needs. Free plan available, Creator $9.99/mo, Business $29.99/mo. No hidden fees, cancel anytime.",
-  alternates: {
-    canonical: "/pricing",
-  },
+  description:
+    "Choose the perfect plan for your video creation needs. Free plan available, Creator $39/mo, Business $99/mo. No hidden fees, cancel anytime.",
+  alternates: generateAlternates("/pricing"),
   openGraph: {
     title: "Hyreel Pricing - AI Video Generator Plans",
-    description: "Free plan, Creator $9.99/mo, Business $29.99/mo. Start creating viral videos today.",
+    description:
+      "Free plan, Creator $39/mo, Business $99/mo. Start creating viral videos today.",
     images: ["/og-image.png"],
   },
 };

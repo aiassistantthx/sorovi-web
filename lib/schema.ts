@@ -12,7 +12,7 @@ export function generateSoftwareApplicationSchema() {
     offers: {
       "@type": "AggregateOffer",
       lowPrice: "0",
-      highPrice: "29.99",
+      highPrice: "99",
       priceCurrency: "USD",
       offerCount: "3",
     },
@@ -42,6 +42,12 @@ export function generateOrganizationSchema() {
     "@type": "Organization",
     name: SITE_NAME,
     url: SITE_URL,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}/og-image.png`,
+      width: 1200,
+      height: 630,
+    },
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer support",
@@ -198,7 +204,8 @@ export function generatePricingSchema() {
     "@context": "https://schema.org",
     "@type": "Product",
     name: `${SITE_NAME} - AI Video Generator`,
-    description: "Create viral videos in minutes with AI. Transform photos into stunning videos with cinematic motion effects.",
+    description:
+      "Create viral videos in minutes with AI. Transform photos into stunning videos with cinematic motion effects.",
     brand: {
       "@type": "Brand",
       name: SITE_NAME,
@@ -209,24 +216,26 @@ export function generatePricingSchema() {
         name: "Free Plan",
         price: "0",
         priceCurrency: "USD",
-        description: "5 videos per day, all motion effects, watermark",
+        description: "3 videos per month, 720p quality, basic features",
         availability: "https://schema.org/InStock",
       },
       {
         "@type": "Offer",
         name: "Creator Plan",
-        price: "9.99",
+        price: "39",
         priceCurrency: "USD",
-        description: "Unlimited videos, no watermark, 1080p, 50+ AI voices",
+        description:
+          "Unlimited videos, no watermark, 1080p, 50+ AI voices, priority support",
         availability: "https://schema.org/InStock",
         priceValidUntil: "2027-12-31",
       },
       {
         "@type": "Offer",
         name: "Business Plan",
-        price: "29.99",
+        price: "99",
         priceCurrency: "USD",
-        description: "Everything in Creator plus 4K, premium voices, team features",
+        description:
+          "Everything in Creator plus 4K, team collaboration, API access, dedicated support",
         availability: "https://schema.org/InStock",
         priceValidUntil: "2027-12-31",
       },
@@ -246,14 +255,156 @@ export function generateAboutPageSchema() {
     "@context": "https://schema.org",
     "@type": "AboutPage",
     name: `About ${SITE_NAME}`,
-    description: "Learn about Hyreel, the AI video generation app helping creators make viral content.",
+    description:
+      "Learn about Hyreel, the AI video generation app helping creators make viral content.",
     url: `${SITE_URL}/about`,
     mainEntity: {
       "@type": "Organization",
       name: SITE_NAME,
       url: SITE_URL,
       foundingDate: "2023",
-      description: "AI-powered video generation app for creators and businesses.",
+      description:
+        "AI-powered video generation app for creators and businesses.",
     },
+  };
+}
+
+export function generateVideoObjectSchema({
+  name,
+  description,
+  thumbnailUrl,
+  uploadDate,
+  contentUrl,
+  duration,
+}: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  contentUrl: string;
+  duration?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name,
+    description,
+    thumbnailUrl: thumbnailUrl.startsWith("http")
+      ? thumbnailUrl
+      : `${SITE_URL}${thumbnailUrl}`,
+    uploadDate,
+    contentUrl: contentUrl.startsWith("http")
+      ? contentUrl
+      : `${SITE_URL}${contentUrl}`,
+    ...(duration && { duration }),
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+  };
+}
+
+export function generateComparisonSchema({
+  name,
+  description,
+  items,
+}: {
+  name: string;
+  description: string;
+  items: Array<{ name: string; position: number }>;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    description,
+    numberOfItems: items.length,
+    itemListElement: items.map((item) => ({
+      "@type": "ListItem",
+      position: item.position,
+      name: item.name,
+    })),
+  };
+}
+
+export function generateHowToSchema({
+  name,
+  description,
+  steps,
+  totalTime,
+  tool,
+}: {
+  name: string;
+  description: string;
+  steps: Array<{ title: string; description: string }>;
+  totalTime?: string;
+  tool?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    ...(totalTime && { totalTime }),
+    ...(tool && {
+      tool: {
+        "@type": "HowToTool",
+        name: tool,
+      },
+    }),
+    step: steps.map((step, index) => ({
+      "@type": "HowToStep",
+      position: index + 1,
+      name: step.title,
+      text: step.description,
+      url: `${SITE_URL}#step-${index + 1}`,
+    })),
+  };
+}
+
+export function generateVideoGallerySchema({
+  name,
+  description,
+  videos,
+}: {
+  name: string;
+  description: string;
+  videos: Array<{
+    name: string;
+    description: string;
+    contentUrl: string;
+    thumbnailUrl?: string;
+  }>;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    description,
+    numberOfItems: videos.length,
+    itemListElement: videos.map((video, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "VideoObject",
+        name: video.name,
+        description: video.description,
+        contentUrl: video.contentUrl.startsWith("http")
+          ? video.contentUrl
+          : `${SITE_URL}${video.contentUrl}`,
+        thumbnailUrl: video.thumbnailUrl
+          ? video.thumbnailUrl.startsWith("http")
+            ? video.thumbnailUrl
+            : `${SITE_URL}${video.thumbnailUrl}`
+          : `${SITE_URL}/og-image.png`,
+        uploadDate: new Date().toISOString().split("T")[0],
+        publisher: {
+          "@type": "Organization",
+          name: SITE_NAME,
+          url: SITE_URL,
+        },
+      },
+    })),
   };
 }

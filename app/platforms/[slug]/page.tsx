@@ -7,6 +7,7 @@ import Link from "next/link";
 import { platforms, getPlatformBySlug } from "@/lib/platforms";
 import { getToolBySlug } from "@/lib/tools";
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
+import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
 export async function generateStaticParams() {
@@ -28,9 +29,7 @@ export async function generateMetadata({
   return {
     title: platform.metaTitle,
     description: platform.metaDescription,
-    alternates: {
-      canonical: `https://hyreel.app/platforms/${platform.slug}`,
-    },
+    alternates: generateAlternates(`/platforms/${platform.slug}`),
   };
 }
 

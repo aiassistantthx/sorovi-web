@@ -3,16 +3,17 @@ import { Section } from "@/components/layouts/section";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { generateAboutPageSchema } from "@/lib/schema";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "About Us - Hyreel AI Video Generation",
-  description: "Learn about Hyreel's mission to democratize video creation with AI. Founded in 2023, we've helped 14,000+ creators make 240,000+ videos.",
-  alternates: {
-    canonical: "/about",
-  },
+  description:
+    "Learn about Hyreel's mission to democratize video creation with AI. Founded in 2023, we've helped 14,000+ creators make 240,000+ videos.",
+  alternates: generateAlternates("/about"),
   openGraph: {
     title: "About Hyreel - AI Video Generation App",
-    description: "Making video creation accessible to everyone with AI technology.",
+    description:
+      "Making video creation accessible to everyone with AI technology.",
     images: ["/og-image.png"],
   },
 };

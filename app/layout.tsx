@@ -20,16 +20,18 @@ export const metadata: Metadata = {
     default: "Hyreel - AI Video Generation App",
     template: "%s | Hyreel",
   },
-  description: "Create viral videos in minutes with AI. TikTok, Instagram Reels, YouTube Shorts and more.",
+  description:
+    "Create viral videos in minutes with AI. TikTok, Instagram Reels, YouTube Shorts and more.",
   authors: [{ name: "Hyreel Team" }],
   creator: "Hyreel",
   publisher: "Hyreel",
-  alternates: {
-    canonical: "/",
+  other: {
+    "msapplication-TileColor": "#7c3aed",
   },
   openGraph: {
     title: "Hyreel - AI Video Generation App",
-    description: "Create viral videos in minutes with AI. Transform photos into stunning videos for TikTok, Instagram Reels, and YouTube Shorts.",
+    description:
+      "Create viral videos in minutes with AI. Transform photos into stunning videos for TikTok, Instagram Reels, and YouTube Shorts.",
     type: "website",
     locale: "en_US",
     siteName: "Hyreel",
@@ -71,6 +73,35 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
+        {/* Preload critical resources for better LCP */}
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+        <link rel="dns-prefetch" href="https://apps.apple.com" />
+
+        {/* RSS Feed */}
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Hyreel Blog RSS Feed"
+          href="/feed.xml"
+        />
+
+        {/* llms.txt for AI crawlers */}
+        <link rel="author" href="/llms.txt" />
+
+        {/* Theme color for mobile browsers */}
+        <meta name="theme-color" content="#0a0a0a" />
+        <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+
+        {/* Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -86,9 +117,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased font-sans">
         <Navigation />
-        <main className="min-h-screen pt-16">
-          {children}
-        </main>
+        <main className="min-h-screen pt-16">{children}</main>
         <Footer />
       </body>
     </html>

@@ -7,6 +7,7 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { alternatives, getAlternativeBySlug } from "@/lib/alternatives";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
 export async function generateStaticParams() {
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: alternative.metaTitle,
     description: alternative.metaDescription,
+    alternates: generateAlternates(`/alternatives/${alternative.slug}`),
   };
 }
 

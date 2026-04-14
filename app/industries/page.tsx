@@ -4,11 +4,13 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { industries } from "@/lib/industries";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "AI Video by Industry - Hyreel",
   description:
     "Discover how businesses across e-commerce, real estate, fashion, food, fitness, and more use Hyreel AI to create professional video content.",
+  alternates: generateAlternates("/industries"),
 };
 
 export default function IndustriesPage() {

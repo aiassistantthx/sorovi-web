@@ -5,14 +5,13 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { templates, getAllTemplateCategories } from "@/lib/templates";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "Video Templates - AI Video Templates for Every Platform | Hyreel",
   description:
     "Explore AI video templates for TikTok, Instagram Reels, YouTube Shorts, products, real estate, fashion, food, and more. Create professional videos from photos in seconds.",
-  alternates: {
-    canonical: "https://hyreel.com/templates",
-  },
+  alternates: generateAlternates("/templates"),
 };
 
 export default function TemplatesPage() {

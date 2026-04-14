@@ -7,6 +7,7 @@ import Link from "next/link";
 import { solutions, getSolutionBySlug } from "@/lib/solutions";
 import { getToolBySlug } from "@/lib/tools";
 import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
+import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
 export async function generateStaticParams() {
@@ -28,9 +29,7 @@ export async function generateMetadata({
   return {
     title: solution.metaTitle,
     description: solution.metaDescription,
-    alternates: {
-      canonical: `https://hyreel.app/solutions/${solution.slug}`,
-    },
+    alternates: generateAlternates(`/solutions/${solution.slug}`),
   };
 }
 

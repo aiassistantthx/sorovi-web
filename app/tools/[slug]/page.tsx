@@ -10,7 +10,11 @@ import { tools, getToolBySlug, type Tool } from "@/lib/tools";
 import {
   generateBreadcrumbSchema,
   generateToolSchema,
+  generateHowToSchema,
+  generateVideoGallerySchema,
+  generateFAQSchema,
 } from "@/lib/schema";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 // Generate static params for all tools
 export async function generateStaticParams() {
@@ -37,9 +41,7 @@ export async function generateMetadata({
   return {
     title: `${tool.name} | Hyreel`,
     description: tool.description,
-    alternates: {
-      canonical: `/tools/${tool.slug}`,
-    },
+    alternates: generateAlternates(`/tools/${tool.slug}`),
     openGraph: {
       title: `${tool.name} — ${tool.tagline}`,
       description: tool.description,
@@ -112,8 +114,28 @@ export default async function ToolPage({
     description: tool.description,
     url: `/tools/${tool.slug}`,
   });
+  const howToSchema = generateHowToSchema({
+    name: `How to use ${tool.name}`,
+    description: tool.description,
+    steps: tool.howItWorks.map((step) => ({
+      title: step.title,
+      description: step.description,
+    })),
+    totalTime: "PT2M",
+    tool: "Hyreel App",
+  });
+  const faqSchema = generateFAQSchema(tool.faqs);
   const relatedTools = getRelatedTools(tool);
   const videos = toolVideos[tool.slug] || [];
+  const videoGallerySchema = videos.length > 0 ? generateVideoGallerySchema({
+    name: `${tool.name} Examples`,
+    description: `Video examples created with ${tool.name}`,
+    videos: videos.map((src, index) => ({
+      name: `${tool.name} Example ${index + 1}`,
+      description: `Example video created with ${tool.name} by Hyreel`,
+      contentUrl: src,
+    })),
+  }) : null;
 
   return (
     <>
@@ -125,6 +147,20 @@ export default async function ToolPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      {videoGallerySchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoGallerySchema) }}
+        />
+      )}
 
       {/* Hero Section */}
       <Section spacing="xl" className="relative overflow-hidden">

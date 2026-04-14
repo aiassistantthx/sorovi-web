@@ -7,6 +7,7 @@ import Link from "next/link";
 import { industries, getIndustryBySlug } from "@/lib/industries";
 import { getToolBySlug } from "@/lib/tools";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
 // Generate static params for all industries
@@ -34,9 +35,7 @@ export async function generateMetadata({
   return {
     title: industry.metaTitle,
     description: industry.metaDescription,
-    alternates: {
-      canonical: `https://hyreel.com/industries/${industry.slug}`,
-    },
+    alternates: generateAlternates(`/industries/${industry.slug}`),
   };
 }
 

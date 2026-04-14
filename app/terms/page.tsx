@@ -1,9 +1,11 @@
 import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "Terms of Service - Hyreel",
   description: "Read the terms and conditions for using the Hyreel platform",
+  alternates: generateAlternates("/terms"),
 };
 
 export default function TermsPage() {

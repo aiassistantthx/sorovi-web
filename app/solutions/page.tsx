@@ -4,14 +4,13 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { solutions } from "@/lib/solutions";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "AI Video Solutions for Every Challenge | Hyreel",
   description:
     "Solve your video content challenges with Hyreel AI. No editing skills, fast creation, viral content, product videos, and scalable production.",
-  alternates: {
-    canonical: "https://hyreel.app/solutions",
-  },
+  alternates: generateAlternates("/solutions"),
 };
 
 export default function SolutionsPage() {

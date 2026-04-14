@@ -4,41 +4,40 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { PageFAQ, FinalCTA } from "@/components/sections";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
-  title: "Affordable AI Video Maker | Hyreel - Pro Videos from $9.99/mo",
+  title: "Affordable AI Video Maker | Hyreel - Pro Videos from $39/mo",
   description:
-    "The most affordable AI video generator with professional results. Unlimited videos from $9.99/month. Cheaper than Canva, Synthesia, and traditional video production.",
-  alternates: {
-    canonical: "https://hyreel.app/cheap-ai-video-maker",
-  },
+    "The most affordable AI video generator with professional results. Unlimited videos from $39/month. Cheaper than Synthesia and traditional video production.",
+  alternates: generateAlternates("/cheap-ai-video-maker"),
 };
 
 const faqs = [
   {
-    question: "Is Hyreel really the cheapest AI video maker?",
+    question: "Is Hyreel good value for AI video?",
     answer:
-      "Hyreel offers one of the best value propositions in AI video. At $9.99/mo for unlimited videos, you pay less than most competitors charge for 10-20 videos. Plus, there's a free tier with 5 videos/day.",
+      "Hyreel offers excellent value in AI video. At $39/mo for unlimited videos with no watermark, you get professional quality at a fraction of traditional production costs. Plus, there's a free tier to try it out.",
   },
   {
-    question: "How does Hyreel compare to Canva Pro pricing?",
+    question: "How does Hyreel compare to Synthesia pricing?",
     answer:
-      "Canva Pro costs $12.99/mo and includes limited AI video features. Hyreel Creator is $9.99/mo with unlimited AI video creation and superior motion effects. Better AI video at a lower price.",
+      "Synthesia costs $29/mo for just 10 minutes of avatar video. Hyreel Creator is $39/mo with unlimited AI video creation and superior motion effects. More videos, better value.",
   },
   {
-    question: "Is cheap quality low quality?",
+    question: "Is affordable quality low quality?",
     answer:
-      "Absolutely not! Hyreel's low pricing comes from efficient AI technology, not compromised quality. You get professional cinematic effects that rival expensive production. The price reflects smart technology, not inferior output.",
+      "Absolutely not! Hyreel's pricing comes from efficient AI technology, not compromised quality. You get professional cinematic effects that rival expensive production. The price reflects smart technology, not inferior output.",
   },
   {
     question: "What's the catch with the free plan?",
     answer:
-      "No catch! Free plan gives you 5 videos daily with a small watermark. It's fully functional — we just hope you'll upgrade when you need more volume or watermark-free exports.",
+      "No catch! Free plan gives you 3 videos monthly with a small watermark. It's fully functional — we just hope you'll upgrade when you need more volume or watermark-free exports.",
   },
   {
     question: "How much would this cost with traditional video production?",
     answer:
-      "A single professionally produced video costs $200-$500 minimum. With Hyreel, you create unlimited videos for $9.99/month. One subscription costs less than 5% of a single traditional video.",
+      "A single professionally produced video costs $500-$2,000. With Hyreel, you create unlimited videos for $39/month. One subscription costs less than 8% of a single traditional video.",
   },
   {
     question: "Can I cancel anytime?",
@@ -48,7 +47,7 @@ const faqs = [
 ];
 
 const competitors = [
-  { name: "Hyreel Creator", price: "$9.99/mo", videos: "Unlimited", note: "Best value" },
+  { name: "Hyreel Creator", price: "$39/mo", videos: "Unlimited", note: "Best value" },
   { name: "Canva Pro", price: "$12.99/mo", videos: "Limited AI", note: "" },
   { name: "Synthesia", price: "$29/mo", videos: "10 min", note: "Avatar only" },
   { name: "Runway", price: "$15/mo", videos: "Credits", note: "Complex" },

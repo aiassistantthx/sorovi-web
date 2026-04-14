@@ -1,9 +1,12 @@
 import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "Privacy Policy - Hyreel",
-  description: "Learn how Hyreel collects, uses, and protects your personal information",
+  description:
+    "Learn how Hyreel collects, uses, and protects your personal information",
+  alternates: generateAlternates("/privacy"),
 };
 
 export default function PrivacyPage() {

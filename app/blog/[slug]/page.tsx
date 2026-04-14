@@ -16,6 +16,7 @@ import {
   generateArticleSchema,
   generateBreadcrumbSchema,
 } from "@/lib/schema";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
@@ -42,9 +43,7 @@ export async function generateMetadata({
   return {
     title: post.metaTitle,
     description: post.metaDescription,
-    alternates: {
-      canonical: `/blog/${post.slug}`,
-    },
+    alternates: generateAlternates(`/blog/${post.slug}`),
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,

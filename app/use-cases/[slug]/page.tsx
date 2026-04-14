@@ -7,6 +7,7 @@ import Link from "next/link";
 import { useCases, getUseCaseBySlug } from "@/lib/use-cases";
 import { getToolBySlug } from "@/lib/tools";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
 // Generate static params for all use cases
@@ -34,9 +35,7 @@ export async function generateMetadata({
   return {
     title: useCase.metaTitle,
     description: useCase.metaDescription,
-    alternates: {
-      canonical: `/use-cases/${useCase.slug}`,
-    },
+    alternates: generateAlternates(`/use-cases/${useCase.slug}`),
     openGraph: {
       title: useCase.metaTitle,
       description: useCase.metaDescription,

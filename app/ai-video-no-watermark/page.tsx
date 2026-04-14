@@ -4,21 +4,20 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { PageFAQ, FinalCTA } from "@/components/sections";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "AI Video Generator Without Watermark | Hyreel - Clean Pro Videos",
   description:
-    "Create professional AI videos without watermarks. Clean, brand-ready videos for business, marketing, and social media. Starting at $9.99/month.",
-  alternates: {
-    canonical: "https://hyreel.app/ai-video-no-watermark",
-  },
+    "Create professional AI videos without watermarks. Clean, brand-ready videos for business, marketing, and social media. Starting at $39/month.",
+  alternates: generateAlternates("/ai-video-no-watermark"),
 };
 
 const faqs = [
   {
     question: "How do I get videos without watermarks?",
     answer:
-      "Subscribe to Hyreel Creator ($9.99/mo) or Business ($29.99/mo) plan. All videos on paid plans export without any Hyreel branding or watermarks.",
+      "Subscribe to Hyreel Creator ($39/mo) or Business ($99/mo) plan. All videos on paid plans export without any Hyreel branding or watermarks.",
   },
   {
     question: "Can I use watermark-free videos for commercial purposes?",
@@ -28,7 +27,7 @@ const faqs = [
   {
     question: "What's the difference between Creator and Business plans?",
     answer:
-      "Both are watermark-free. Creator ($9.99/mo) is for individual creators. Business ($29.99/mo) adds 4K resolution, premium AI voices, team collaboration, and priority support.",
+      "Both are watermark-free. Creator ($39/mo) is for individual creators with 1080p and 50+ AI voices. Business ($99/mo) adds 4K resolution, premium AI voices, team collaboration, API access, and dedicated support.",
   },
   {
     question: "Is there a way to remove watermarks from free plan videos?",

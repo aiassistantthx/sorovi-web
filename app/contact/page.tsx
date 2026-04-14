@@ -4,10 +4,13 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
   title: "Contact Us - Hyreel",
-  description: "Get in touch with the Hyreel team. We're here to help with any questions.",
+  description:
+    "Get in touch with the Hyreel team. We're here to help with any questions.",
+  alternates: generateAlternates("/contact"),
 };
 
 const contactMethods = [
