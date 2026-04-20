@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import { Navigation } from "@/components/layouts/navigation";
-import { Footer } from "@/components/layouts/footer";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { notFound } from "next/navigation";
 
@@ -28,11 +26,5 @@ export default async function LocalizedLayout({
     notFound();
   }
 
-  return (
-    <>
-      <Navigation />
-      <main className="pt-16">{children}</main>
-      <Footer />
-    </>
-  );
+  return <>{children}</>;
 }
