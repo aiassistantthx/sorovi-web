@@ -6,7 +6,7 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { platforms, getPlatformBySlug } from "@/lib/platforms";
 import { getToolBySlug } from "@/lib/tools";
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
@@ -55,14 +55,12 @@ export default async function PlatformPage({
     { name: platform.name, url: `/platforms/${platform.slug}` },
   ]);
 
-  const faqSchema = generateFAQSchema(platform.faqs);
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([breadcrumbSchema, faqSchema]),
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 

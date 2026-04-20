@@ -7,6 +7,8 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { alternatives, getAlternativeBySlug } from "@/lib/alternatives";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
+import { getLocalizedAlternativeContent } from "@/lib/i18n/content/alternatives";
 import { generateBreadcrumbSchema } from "@/lib/schema";
 
 const SITE_URL = "https://hyreel.com";
@@ -36,8 +38,12 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  // Get localized content if available
+  const localizedContent = getLocalizedAlternativeContent(slug, lang as Locale);
+  const title = localizedContent?.title || alt.title;
+
   return {
-    title: alt.metaTitle,
+    title: `${title} | Hyreel`,
     description: alt.metaDescription,
     alternates: {
       canonical: `${SITE_URL}/${lang}/alternatives/${slug}`,
@@ -70,9 +76,16 @@ export default async function LocalizedAlternativePage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+
+  // Get localized content if available
+  const localizedContent = getLocalizedAlternativeContent(slug, lang as Locale);
+  const heroHeadline = localizedContent?.heroHeadline || alt.heroHeadline;
+  const heroSubheadline = localizedContent?.heroSubheadline || alt.heroSubheadline;
+
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: `/${lang}` },
-    { name: "Alternatives", url: `/${lang}/alternatives` },
+    { name: t.home, url: `/${lang}` },
+    { name: t.alternatives, url: `/${lang}/alternatives` },
     { name: `vs ${alt.competitorName}`, url: `/${lang}/alternatives/${alt.slug}` },
   ]);
 
@@ -91,22 +104,22 @@ export default async function LocalizedAlternativePage({
         <div className="text-center">
           <Breadcrumb
             items={[
-              { label: "Home", href: `/${lang}` },
-              { label: "Alternatives", href: `/${lang}/alternatives` },
+              { label: t.home, href: `/${lang}` },
+              { label: t.alternatives, href: `/${lang}/alternatives` },
               { label: `vs ${alt.competitorName}` },
             ]}
             className="justify-center mb-6"
           />
 
           <Heading as="h1" className="mb-6">
-            {alt.heroHeadline}
+            {heroHeadline}
           </Heading>
 
           <Text variant="large" className="mb-8 max-w-3xl mx-auto">
-            {alt.heroSubheadline}
+            {heroSubheadline}
           </Text>
 
-          <Button size="lg">Try Hyreel Free</Button>
+          <Button size="lg">{t.tryItFree}</Button>
         </div>
       </Section>
 
@@ -184,13 +197,13 @@ export default async function LocalizedAlternativePage({
       <Section spacing="xl">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
-            Ready to Make the Switch?
+            {t.readyToCreate}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Start Creating Free</Button>
+            <Button size="lg">{t.startCreatingFree}</Button>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
-                View Pricing
+                {t.viewPricing}
               </Button>
             </Link>
           </div>

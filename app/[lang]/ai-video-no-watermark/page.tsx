@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -53,6 +54,8 @@ export default async function LocalizedNoWatermarkPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+
   return (
     <>
       <Section spacing="xl" className="relative overflow-hidden">
@@ -62,14 +65,14 @@ export default async function LocalizedNoWatermarkPage({
 
         <div className="text-center max-w-4xl mx-auto">
           <Heading as="h1" className="mb-6">
-            AI Video Without Watermark
+            {t.aiVideoNoWatermark}
           </Heading>
 
           <Text variant="large" className="mb-8">
             Create professional videos with no watermarks or branding. Your content, your way.
           </Text>
 
-          <Button size="lg">Start Creating</Button>
+          <Button size="lg">{t.startCreating}</Button>
         </div>
       </Section>
 
@@ -111,13 +114,13 @@ export default async function LocalizedNoWatermarkPage({
       <Section spacing="xl">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
-            Get Started
+            {t.readyToCreate}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Try Hyreel</Button>
+            <Button size="lg">{t.tryItFree}</Button>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
-                View Plans
+                {t.viewPricing}
               </Button>
             </Link>
           </div>

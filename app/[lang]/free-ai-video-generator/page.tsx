@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -53,6 +54,8 @@ export default async function LocalizedFreeAIVideoGeneratorPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+
   return (
     <>
       <Section spacing="xl" className="relative overflow-hidden">
@@ -69,14 +72,14 @@ export default async function LocalizedFreeAIVideoGeneratorPage({
           </div>
 
           <Heading as="h1" className="mb-6">
-            Free AI Video Generator
+            {t.freeAIVideoGenerator}
           </Heading>
 
           <Text variant="large" className="mb-8">
-            Create stunning videos from your photos — completely free. No credit card, no hidden fees.
+            Create stunning videos from your photos — completely free. {t.noCreditCard}.
           </Text>
 
-          <Button size="lg">Start Creating Free</Button>
+          <Button size="lg">{t.startCreatingFree}</Button>
         </div>
       </Section>
 
@@ -106,13 +109,13 @@ export default async function LocalizedFreeAIVideoGeneratorPage({
       <Section spacing="xl">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
-            Ready to Create?
+            {t.readyToCreate}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Start Free Now</Button>
+            <Button size="lg">{t.startCreatingFree}</Button>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
-                See All Plans
+                {t.viewPricing}
               </Button>
             </Link>
           </div>

@@ -1,8 +1,9 @@
 import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { generatePricingSchema } from "@/lib/schema";
+import { generatePricingSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
@@ -100,12 +101,20 @@ const faqs = [
 
 export default function PricingPage() {
   const pricingSchema = generatePricingSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Pricing", url: "/pricing" },
+  ]);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Hero Section */}
@@ -116,6 +125,13 @@ export default function PricingPage() {
         </div>
 
         <div className="text-center">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Pricing" },
+            ]}
+            className="justify-center mb-6"
+          />
           <Heading as="h1" className="mb-6">
             Simple, Transparent Pricing
           </Heading>

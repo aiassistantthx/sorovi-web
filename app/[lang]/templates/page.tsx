@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { templates } from "@/lib/templates";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -54,6 +55,8 @@ export default async function LocalizedTemplatesPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+
   return (
     <>
       <Section spacing="xl" className="relative overflow-hidden">
@@ -64,12 +67,12 @@ export default async function LocalizedTemplatesPage({
 
         <div className="text-center">
           <Heading as="h1" className="mb-6">
-            Video Templates
+            {t.templates}
           </Heading>
           <Text variant="large" className="mb-8">
             100+ ready-to-use templates for viral content. Just add your photo.
           </Text>
-          <Button size="lg">Browse Templates</Button>
+          <Button size="lg">{t.viewAll}</Button>
         </div>
       </Section>
 

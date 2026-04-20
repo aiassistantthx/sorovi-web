@@ -6,7 +6,7 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { audiences, getAudienceBySlug } from "@/lib/audiences";
 import { getToolBySlug } from "@/lib/tools";
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
@@ -55,14 +55,12 @@ export default async function AudiencePage({
     { name: audience.name, url: `/for/${audience.slug}` },
   ]);
 
-  const faqSchema = generateFAQSchema(audience.faqs);
-
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([breadcrumbSchema, faqSchema]),
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 

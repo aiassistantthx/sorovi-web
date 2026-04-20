@@ -8,10 +8,11 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { tools, getToolBySlug, type Tool } from "@/lib/tools";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
+import { getLocalizedToolContent } from "@/lib/i18n/content/tools";
 import {
   generateBreadcrumbSchema,
   generateToolSchema,
-  generateFAQSchema,
 } from "@/lib/schema";
 
 const SITE_URL = "https://hyreel.com";
@@ -41,9 +42,14 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  // Get localized content if available
+  const localizedContent = getLocalizedToolContent(slug, lang as Locale);
+  const name = localizedContent?.name || tool.name;
+  const description = localizedContent?.description || tool.description;
+
   return {
-    title: tool.name,
-    description: tool.description,
+    title: `${name} | Hyreel`,
+    description: description,
     alternates: {
       canonical: `${SITE_URL}/${lang}/tools/${slug}`,
       languages: Object.fromEntries(
@@ -85,17 +91,24 @@ export default async function LocalizedToolPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+
+  // Get localized content if available
+  const localizedContent = getLocalizedToolContent(slug, lang as Locale);
+  const toolName = localizedContent?.name || tool.name;
+  const toolDescription = localizedContent?.description || tool.description;
+  const toolDetailedDescription = localizedContent?.detailedDescription || tool.detailedDescription;
+
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: `/${lang}` },
-    { name: "Tools", url: `/${lang}/tools` },
-    { name: tool.name, url: `/${lang}/tools/${tool.slug}` },
+    { name: t.home, url: `/${lang}` },
+    { name: t.tools, url: `/${lang}/tools` },
+    { name: toolName, url: `/${lang}/tools/${tool.slug}` },
   ]);
   const toolSchema = generateToolSchema({
-    name: tool.name,
-    description: tool.description,
+    name: toolName,
+    description: toolDescription,
     url: `/${lang}/tools/${tool.slug}`,
   });
-  const faqSchema = generateFAQSchema(tool.faqs);
   const relatedTools = getRelatedTools(tool);
 
   return (
@@ -108,10 +121,6 @@ export default async function LocalizedToolPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
 
       {/* Hero Section */}
       <Section spacing="xl" className="relative overflow-hidden">
@@ -123,9 +132,9 @@ export default async function LocalizedToolPage({
         <div className="text-center">
           <Breadcrumb
             items={[
-              { label: "Home", href: `/${lang}` },
-              { label: "Tools", href: `/${lang}/tools` },
-              { label: tool.name },
+              { label: t.home, href: `/${lang}` },
+              { label: t.tools, href: `/${lang}/tools` },
+              { label: toolName },
             ]}
             className="justify-center mb-6"
           />
@@ -136,18 +145,18 @@ export default async function LocalizedToolPage({
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight text-[var(--text-primary)] mb-4">
-            {tool.name}
+            {toolName}
           </h1>
 
           <Text variant="large" className="mb-8 max-w-3xl mx-auto">
-            {tool.description}
+            {toolDescription}
           </Text>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Try It Free</Button>
+            <Button size="lg">{t.tryItFree}</Button>
             <a href="#how-it-works">
               <Button size="lg" variant="secondary">
-                See How It Works
+                {t.howItWorks}
               </Button>
             </a>
           </div>
@@ -158,10 +167,10 @@ export default async function LocalizedToolPage({
       <Section spacing="xl" id="how-it-works" className="bg-[var(--surface-light)]">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            How It Works
+            {t.howItWorks}
           </Heading>
           <Text variant="large">
-            {tool.name} in {tool.howItWorks.length} simple steps
+            {toolName} in {tool.howItWorks.length} simple steps
           </Text>
         </div>
 

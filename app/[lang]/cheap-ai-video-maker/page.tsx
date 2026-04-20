@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -53,6 +54,8 @@ export default async function LocalizedCheapAIVideoMakerPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+
   return (
     <>
       <Section spacing="xl" className="relative overflow-hidden">
@@ -68,14 +71,14 @@ export default async function LocalizedCheapAIVideoMakerPage({
           </div>
 
           <Heading as="h1" className="mb-6">
-            Affordable AI Video Maker
+            {t.cheapAIVideoMaker}
           </Heading>
 
           <Text variant="large" className="mb-8">
             Professional AI videos without breaking the bank. Starting from $0/month.
           </Text>
 
-          <Button size="lg">Start Free</Button>
+          <Button size="lg">{t.startCreatingFree}</Button>
         </div>
       </Section>
 
@@ -88,9 +91,9 @@ export default async function LocalizedCheapAIVideoMakerPage({
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {[
-            { plan: "Free", price: "$0", features: "3 videos/month, 720p" },
-            { plan: "Creator", price: "$39/mo", features: "Unlimited videos, 1080p, No watermark" },
-            { plan: "Business", price: "$99/mo", features: "Everything + 4K, Team features" },
+            { plan: t.free, price: "$0", features: "3 videos/month, 720p" },
+            { plan: t.creator, price: "$39/mo", features: `${t.unlimitedVideos}, 1080p, ${t.noWatermark}` },
+            { plan: t.business, price: "$99/mo", features: "Everything + 4K, Team features" },
           ].map((tier, index) => (
             <Card key={index} variant="elevated" className="text-center">
               <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">
@@ -108,13 +111,13 @@ export default async function LocalizedCheapAIVideoMakerPage({
       <Section spacing="xl">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
-            Ready to Start?
+            {t.readyToCreate}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Start Free</Button>
+            <Button size="lg">{t.startCreatingFree}</Button>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
-                Compare Plans
+                {t.viewPricing}
               </Button>
             </Link>
           </div>

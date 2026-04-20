@@ -12,7 +12,6 @@ import {
   generateToolSchema,
   generateHowToSchema,
   generateVideoGallerySchema,
-  generateFAQSchema,
 } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 
@@ -124,7 +123,6 @@ export default async function ToolPage({
     totalTime: "PT2M",
     tool: "Hyreel App",
   });
-  const faqSchema = generateFAQSchema(tool.faqs);
   const relatedTools = getRelatedTools(tool);
   const videos = toolVideos[tool.slug] || [];
   const videoGallerySchema = videos.length > 0 ? generateVideoGallerySchema({
@@ -150,10 +148,6 @@ export default async function ToolPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       {videoGallerySchema && (
         <script
@@ -285,6 +279,7 @@ export default async function ToolPage({
                   loop
                   muted
                   playsInline
+                  preload="metadata"
                   className="w-full h-full object-cover"
                 >
                   <source src={src} type="video/mp4" />

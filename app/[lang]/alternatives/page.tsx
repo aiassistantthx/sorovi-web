@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { alternatives } from "@/lib/alternatives";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -54,6 +55,8 @@ export default async function LocalizedAlternativesPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+
   return (
     <>
       <Section spacing="xl" className="relative overflow-hidden">
@@ -64,12 +67,12 @@ export default async function LocalizedAlternativesPage({
 
         <div className="text-center">
           <Heading as="h1" className="mb-6">
-            Hyreel Alternatives & Comparisons
+            Hyreel {t.alternatives}
           </Heading>
           <Text variant="large" className="mb-8">
             See how Hyreel compares to other video creation tools.
           </Text>
-          <Button size="lg">Try Hyreel Free</Button>
+          <Button size="lg">{t.tryItFree}</Button>
         </div>
       </Section>
 

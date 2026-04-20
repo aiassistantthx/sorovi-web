@@ -2,6 +2,7 @@ import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
 import { Card } from "@/components/ui/card";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -65,6 +66,8 @@ export default async function LocalizedContactPage({
   if (!i18n.locales.includes(lang as Locale)) {
     notFound();
   }
+
+  const t = getTranslations(lang as Locale);
 
   const contacts = [
     {

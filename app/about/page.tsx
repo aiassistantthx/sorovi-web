@@ -1,8 +1,9 @@
 import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { generateAboutPageSchema } from "@/lib/schema";
+import { generateAboutPageSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 
 export const metadata = {
@@ -50,12 +51,20 @@ const stats = [
 
 export default function AboutPage() {
   const aboutSchema = generateAboutPageSchema();
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "About", url: "/about" },
+  ]);
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Hero Section */}
@@ -66,6 +75,13 @@ export default function AboutPage() {
         </div>
 
         <div className="text-center">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "About" },
+            ]}
+            className="justify-center mb-6"
+          />
           <Heading as="h1" className="mb-6">
             Making Video Creation Accessible to Everyone
           </Heading>

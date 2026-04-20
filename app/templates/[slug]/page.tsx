@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { templates, getTemplateBySlug } from "@/lib/templates";
-import { generateBreadcrumbSchema, generateFAQSchema } from "@/lib/schema";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
@@ -62,15 +62,13 @@ export default async function TemplatePage({
     { name: template.name, url: `/templates/${template.slug}` },
   ]);
 
-  const faqSchema = generateFAQSchema(template.faqs);
-
   return (
     <>
       {/* JSON-LD Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([breadcrumbSchema, faqSchema]),
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
 

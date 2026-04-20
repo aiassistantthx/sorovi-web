@@ -1,6 +1,52 @@
 const SITE_URL = "https://hyreel.com";
 const SITE_NAME = "Hyreel";
 
+// Testimonials data for Review schema
+const testimonialReviews = [
+  {
+    author: "Sarah K.",
+    role: "Fashion Creator",
+    reviewBody:
+      "I went from 500 views to 2M views on my third video. The AI just knows what works.",
+    ratingValue: 5,
+  },
+  {
+    author: "Marcus J.",
+    role: "E-commerce Owner",
+    reviewBody:
+      "Used to spend $2,000/month on a video editor. Now I create better content myself in minutes.",
+    ratingValue: 5,
+  },
+  {
+    author: "Elena R.",
+    role: "Dropshipper",
+    reviewBody:
+      "The photo-to-video feature is insane. Upload a product shot, get a viral-ready ad. Game over.",
+    ratingValue: 5,
+  },
+  {
+    author: "David L.",
+    role: "Fitness Coach",
+    reviewBody:
+      "My Reels engagement went up 400% after switching to Hyreel. The AI voiceover sounds natural.",
+    ratingValue: 5,
+  },
+  {
+    author: "Priya M.",
+    role: "Food Blogger",
+    reviewBody:
+      "Finally, an AI tool that doesn't make your content look AI-generated. Quality is incredible.",
+    ratingValue: 5,
+  },
+  {
+    author: "James T.",
+    role: "Marketing Agency",
+    reviewBody:
+      "Went viral on TikTok within a week of using Hyreel. My agency clients are blown away.",
+    ratingValue: 5,
+  },
+];
+
 export function generateSoftwareApplicationSchema() {
   return {
     "@context": "https://schema.org",
@@ -23,6 +69,21 @@ export function generateSoftwareApplicationSchema() {
       bestRating: "5",
       worstRating: "1",
     },
+    review: testimonialReviews.map((review) => ({
+      "@type": "Review",
+      author: {
+        "@type": "Person",
+        name: review.author,
+        jobTitle: review.role,
+      },
+      reviewBody: review.reviewBody,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: review.ratingValue,
+        bestRating: 5,
+        worstRating: 1,
+      },
+    })),
     description:
       "Create viral videos in minutes with AI. Transform photos into stunning videos with cinematic motion effects.",
     url: SITE_URL,
@@ -34,6 +95,35 @@ export function generateSoftwareApplicationSchema() {
       url: SITE_URL,
     },
   };
+}
+
+export function generateReviewSchema(reviews: Array<{
+  author: string;
+  role?: string;
+  reviewBody: string;
+  ratingValue?: number;
+}>) {
+  return reviews.map((review) => ({
+    "@context": "https://schema.org",
+    "@type": "Review",
+    itemReviewed: {
+      "@type": "SoftwareApplication",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    author: {
+      "@type": "Person",
+      name: review.author,
+      ...(review.role && { jobTitle: review.role }),
+    },
+    reviewBody: review.reviewBody,
+    reviewRating: {
+      "@type": "Rating",
+      ratingValue: review.ratingValue || 5,
+      bestRating: 5,
+      worstRating: 1,
+    },
+  }));
 }
 
 export function generateOrganizationSchema() {

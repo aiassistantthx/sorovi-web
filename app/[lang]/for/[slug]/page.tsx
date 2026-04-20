@@ -7,6 +7,8 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { audiences, getAudienceBySlug } from "@/lib/audiences";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
+import { getLocalizedAudienceContent } from "@/lib/i18n/content/audiences";
 import { generateBreadcrumbSchema } from "@/lib/schema";
 
 const SITE_URL = "https://hyreel.com";
@@ -36,8 +38,12 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  // Get localized content if available
+  const localizedContent = getLocalizedAudienceContent(slug, lang as Locale);
+  const audienceName = localizedContent?.name || audience.name;
+
   return {
-    title: `Hyreel for ${audience.name}`,
+    title: `Hyreel for ${audienceName}`,
     description: audience.description,
     alternates: {
       canonical: `${SITE_URL}/${lang}/for/${slug}`,
@@ -70,10 +76,18 @@ export default async function LocalizedForPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+
+  // Get localized content if available
+  const localizedContent = getLocalizedAudienceContent(slug, lang as Locale);
+  const audienceName = localizedContent?.name || audience.name;
+  const heroHeadline = localizedContent?.heroHeadline || audience.heroHeadline;
+  const heroSubheadline = localizedContent?.heroSubheadline || audience.heroSubheadline;
+
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: `/${lang}` },
-    { name: "For", url: `/${lang}/for` },
-    { name: audience.name, url: `/${lang}/for/${audience.slug}` },
+    { name: t.home, url: `/${lang}` },
+    { name: t.forAudience, url: `/${lang}/for` },
+    { name: audienceName, url: `/${lang}/for/${audience.slug}` },
   ]);
 
   return (
@@ -91,9 +105,9 @@ export default async function LocalizedForPage({
         <div className="text-center">
           <Breadcrumb
             items={[
-              { label: "Home", href: `/${lang}` },
-              { label: "For", href: `/${lang}/for` },
-              { label: audience.name },
+              { label: t.home, href: `/${lang}` },
+              { label: t.forAudience, href: `/${lang}/for` },
+              { label: audienceName },
             ]}
             className="justify-center mb-6"
           />
@@ -101,21 +115,21 @@ export default async function LocalizedForPage({
           <div className="text-6xl mb-6">{audience.icon}</div>
 
           <Heading as="h1" className="mb-6">
-            Hyreel for {audience.name}
+            {heroHeadline}
           </Heading>
 
           <Text variant="large" className="mb-8 max-w-3xl mx-auto">
-            {audience.description}
+            {heroSubheadline}
           </Text>
 
-          <Button size="lg">Start Creating Free</Button>
+          <Button size="lg">{t.startCreatingFree}</Button>
         </div>
       </Section>
 
       <Section spacing="xl">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Why {audience.name} Love Hyreel
+            Why {audienceName} Love Hyreel
           </Heading>
         </div>
 
@@ -138,7 +152,7 @@ export default async function LocalizedForPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Features for {audience.name}
+            Features for {audienceName}
           </Heading>
         </div>
 
@@ -154,13 +168,13 @@ export default async function LocalizedForPage({
       <Section spacing="xl">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
-            Ready to Get Started?
+            {t.readyToCreate}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Start Creating Free</Button>
+            <Button size="lg">{t.startCreatingFree}</Button>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
-                View Pricing
+                {t.viewPricing}
               </Button>
             </Link>
           </div>

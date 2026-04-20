@@ -1,10 +1,12 @@
 import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { alternatives } from "@/lib/alternatives";
 import { generateAlternates } from "@/lib/seo/alternates";
+import { generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata = {
   title: "AI Video Generator Alternatives & Comparisons | Hyreel",
@@ -20,8 +22,18 @@ export const metadata = {
 };
 
 export default function AlternativesPage() {
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Alternatives", url: "/alternatives" },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       <Section spacing="xl" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand-primary)]/5 rounded-full blur-3xl" />
@@ -29,6 +41,14 @@ export default function AlternativesPage() {
         </div>
 
         <div className="text-center">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Alternatives" },
+            ]}
+            className="justify-center mb-6"
+          />
+
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-[var(--brand-primary)]/10 border border-[var(--brand-primary)]/20 mb-6">
             <span className="text-sm font-medium text-[var(--brand-primary)]">
               Alternatives

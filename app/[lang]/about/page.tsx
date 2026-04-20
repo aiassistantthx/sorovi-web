@@ -2,6 +2,7 @@ import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
 import { Card } from "@/components/ui/card";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -66,6 +67,8 @@ export default async function LocalizedAboutPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+
   return (
     <>
       <Section spacing="xl" className="relative overflow-hidden">
@@ -104,9 +107,9 @@ export default async function LocalizedAboutPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
           {[
-            { value: "240,909+", label: "Videos Created" },
-            { value: "14,258+", label: "Active Creators" },
-            { value: "32", label: "Languages" },
+            { value: "240,909+", label: t.videosCreated },
+            { value: "14,258+", label: t.activeCreators },
+            { value: "32", label: t.languages },
             { value: "2023", label: "Founded" },
           ].map((stat, index) => (
             <div key={index} className="text-center">

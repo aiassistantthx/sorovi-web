@@ -3,7 +3,8 @@ import { Section } from "@/components/layouts/section";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { generatePricingSchema } from "@/lib/schema";
-import { i18n, type Locale, localeNames } from "@/lib/i18n/config";
+import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -158,6 +159,7 @@ export default async function LocalizedPricingPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
   const pricingSchema = generatePricingSchema();
 
   return (
@@ -176,10 +178,10 @@ export default async function LocalizedPricingPage({
 
         <div className="text-center">
           <Heading as="h1" className="mb-6">
-            Simple, Transparent Pricing
+            {t.pricingPageTitle}
           </Heading>
           <Text variant="large">
-            Start free, upgrade when you're ready. No hidden fees, no surprises. Cancel anytime.
+            {t.pricingPageSubtitle}
           </Text>
         </div>
       </Section>
@@ -200,7 +202,7 @@ export default async function LocalizedPricingPage({
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                   <span className="px-4 py-1 rounded-full bg-[var(--brand-primary)] text-white text-sm font-medium">
-                    Most Popular
+                    {t.mostPopular}
                   </span>
                 </div>
               )}
@@ -279,14 +281,14 @@ export default async function LocalizedPricingPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
-            Start Creating Today
+            {t.readyToCreate}
           </Heading>
           <Text variant="large" className="mb-8">
-            Join 14,258+ creators making viral content with Hyreel
+            {t.joinCreators}
           </Text>
-          <Button size="lg">Get Started Free</Button>
+          <Button size="lg">{t.getStartedFree}</Button>
           <Text variant="small" className="mt-4 text-[var(--text-muted)]">
-            No credit card required • Cancel anytime
+            {t.noCreditCard}
           </Text>
         </div>
       </Section>

@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import Link from "next/link";
 import { blogPosts } from "@/lib/blog";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -68,6 +69,8 @@ export default async function LocalizedBlogPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+
   return (
     <>
       <Section spacing="xl" className="relative overflow-hidden">
@@ -78,10 +81,10 @@ export default async function LocalizedBlogPage({
 
         <div className="text-center">
           <Heading as="h1" className="mb-6">
-            Hyreel Blog
+            {t.blogPageTitle}
           </Heading>
           <Text variant="large">
-            Tips, tutorials, and insights for creating viral video content with AI.
+            {t.blogPageSubtitle}
           </Text>
         </div>
       </Section>
@@ -104,7 +107,7 @@ export default async function LocalizedBlogPage({
                 </Text>
                 <div className="flex items-center justify-between text-sm text-[var(--text-muted)]">
                   <span>{post.author}</span>
-                  <span>{post.readingTime} min read</span>
+                  <span>{post.readingTime} {t.minRead}</span>
                 </div>
               </Link>
             </Card>

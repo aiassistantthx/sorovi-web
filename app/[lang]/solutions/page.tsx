@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { solutions } from "@/lib/solutions";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -54,6 +55,8 @@ export default async function LocalizedSolutionsPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+
   return (
     <>
       <Section spacing="xl" className="relative overflow-hidden">
@@ -64,12 +67,12 @@ export default async function LocalizedSolutionsPage({
 
         <div className="text-center">
           <Heading as="h1" className="mb-6">
-            Solutions for Every Need
+            {t.solutions}
           </Heading>
           <Text variant="large" className="mb-8">
             Find the perfect AI video solution for your goals.
           </Text>
-          <Button size="lg">Explore Solutions</Button>
+          <Button size="lg">{t.learnMore}</Button>
         </div>
       </Section>
 
@@ -86,7 +89,7 @@ export default async function LocalizedSolutionsPage({
                   {solution.heroSubheadline}
                 </Text>
                 <div className="flex items-center gap-2 text-[var(--brand-primary)] text-sm font-medium">
-                  Learn More
+                  {t.learnMore}
                   <svg
                     className="w-4 h-4 group-hover:translate-x-1 transition-transform"
                     fill="none"

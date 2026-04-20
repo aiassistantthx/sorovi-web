@@ -1,11 +1,12 @@
 import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { tools, getAllCategories } from "@/lib/tools";
 import { generateAlternates } from "@/lib/seo/alternates";
-import { generateToolsListSchema } from "@/lib/schema";
+import { generateToolsListSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata = {
   title: "AI Video Tools - Hyreel",
@@ -18,6 +19,10 @@ const categories = getAllCategories();
 
 export default function ToolsPage() {
   const toolsListSchema = generateToolsListSchema(tools);
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: "Home", url: "/" },
+    { name: "Tools", url: "/tools" },
+  ]);
 
   return (
     <>
@@ -25,6 +30,10 @@ export default function ToolsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(toolsListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Hero Section */}
@@ -35,6 +44,13 @@ export default function ToolsPage() {
         </div>
 
         <div className="text-center">
+          <Breadcrumb
+            items={[
+              { label: "Home", href: "/" },
+              { label: "Tools" },
+            ]}
+            className="justify-center mb-6"
+          />
           <Heading as="h1" className="mb-6">
             AI Video Creation Tools
           </Heading>

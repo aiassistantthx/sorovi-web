@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { tools, getAllCategories } from "@/lib/tools";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -26,24 +27,11 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
-  const titles: Record<Locale, string> = {
-    en: "AI Video Tools - Hyreel",
-    es: "Herramientas de Video IA - Hyreel",
-    de: "KI-Video-Tools - Hyreel",
-    fr: "Outils Vidéo IA - Hyreel",
-    pt: "Ferramentas de Vídeo IA - Hyreel",
-    ru: "AI Инструменты для Видео - Hyreel",
-    it: "Strumenti Video IA - Hyreel",
-    nl: "AI-Videotools - Hyreel",
-    pl: "Narzędzia Wideo AI - Hyreel",
-    ja: "AIビデオツール - Hyreel",
-    ko: "AI 비디오 도구 - Hyreel",
-    zh: "AI视频工具 - Hyreel",
-  };
+  const t = getTranslations(lang as Locale);
 
   return {
-    title: titles[lang as Locale],
-    description: "Explore our suite of AI-powered video creation tools.",
+    title: `${t.aiVideoTools} - Hyreel`,
+    description: t.toolsPageSubtitle,
     alternates: {
       canonical: `${SITE_URL}/${lang}/tools`,
       languages: Object.fromEntries(
@@ -71,6 +59,8 @@ export default async function LocalizedToolsPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+
   return (
     <>
       <Section spacing="xl" className="relative overflow-hidden">
@@ -81,22 +71,22 @@ export default async function LocalizedToolsPage({
 
         <div className="text-center">
           <Heading as="h1" className="mb-6">
-            AI Video Creation Tools
+            {t.toolsPageTitle}
           </Heading>
           <Text variant="large" className="mb-8">
-            Everything you need to create professional videos with AI.
+            {t.toolsPageSubtitle}
           </Text>
-          <Button size="lg">Start Creating Free</Button>
+          <Button size="lg">{t.startCreatingFree}</Button>
         </div>
       </Section>
 
       <Section spacing="lg" className="bg-[var(--surface-light)]">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { value: "100+", label: "AI Tools" },
-            { value: "14,258+", label: "Active Users" },
-            { value: "240,909+", label: "Videos Created" },
-            { value: "32", label: "Languages" },
+            { value: "100+", label: t.aiVideoTools },
+            { value: "14,258+", label: t.activeCreators },
+            { value: "240,909+", label: t.videosCreated },
+            { value: "32", label: t.languages },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-2">
@@ -121,10 +111,10 @@ export default async function LocalizedToolsPage({
           >
             <div className="mb-10">
               <Heading as="h2" className="mb-4">
-                {category} Tools
+                {category} {t.tools}
               </Heading>
               <Text variant="large">
-                Powerful AI tools for {category.toLowerCase()}
+                {t.toolsPageSubtitle}
               </Text>
             </div>
 
@@ -140,7 +130,7 @@ export default async function LocalizedToolsPage({
                       {tool.tagline}
                     </Text>
                     <div className="flex items-center gap-1 md:gap-2 text-[var(--brand-primary)] text-xs md:text-sm font-medium">
-                      Learn More
+                      {t.learnMore}
                       <svg
                         className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform"
                         fill="none"
@@ -164,16 +154,16 @@ export default async function LocalizedToolsPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
-            Ready to Create Amazing Videos?
+            {t.readyToCreate}
           </Heading>
           <Text variant="large" className="mb-8">
-            Start using our AI tools today. No credit card required.
+            {t.noCreditCard}
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Get Started Free</Button>
+            <Button size="lg">{t.getStartedFree}</Button>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
-                View Pricing
+                {t.viewPricing}
               </Button>
             </Link>
           </div>
