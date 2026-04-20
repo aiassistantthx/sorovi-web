@@ -1,13 +1,31 @@
 import type { Locale } from "../config";
 
-// Translations for tool content (name, tagline, description)
+// Translations for tool content (name, tagline, description, howItWorks, features, faqs)
 // Key is tool slug, value is translations per locale
+
+interface HowItWorksStep {
+  title: string;
+  description: string;
+}
+
+interface Feature {
+  title: string;
+  description: string;
+}
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
 
 interface ToolTranslation {
   name: string;
   tagline: string;
   description: string;
   detailedDescription: string;
+  howItWorks?: HowItWorksStep[];
+  features?: Feature[];
+  faqs?: FAQ[];
 }
 
 type ToolTranslations = Partial<Record<Locale, ToolTranslation>>;
@@ -632,22 +650,290 @@ export const toolTranslations: Record<string, ToolTranslations> = {
   "ai-faceless-video-generator": {
     es: {
       name: "Generador de Videos Sin Rostro IA",
-      tagline: "Crea videos sin mostrar tu cara",
-      description: "Videos profesionales sin aparecer en cámara. Perfecto para canales anónimos y contenido de nicho.",
-      detailedDescription: "Crea contenido atractivo sin necesidad de mostrar tu rostro con nuestro generador de videos sin rostro IA.",
+      tagline: "Crea videos virales sin mostrar tu cara",
+      description: "Genera contenido de video atractivo sin aparecer en camara con IA. Perfecto para creadores que quieren construir una audiencia y monetizar contenido sin mostrarse.",
+      detailedDescription: "Construye un canal de contenido rentable sin ponerte frente a la camara. El Generador de Videos Sin Rostro IA de Hyreel combina animacion de imagenes IA, voces profesionales y edicion inteligente para crear videos de alta calidad.",
+      howItWorks: [
+        { title: "Elige Tu Nicho", description: "Selecciona tu tematica: motivacional, educativo, resenas de productos, narracion o cualquier tema. Sin camara necesaria." },
+        { title: "Sube Imagenes", description: "Anade imagenes que ilustren tu contenido. Fotos de stock, capturas de pantalla o visuales generados por IA." },
+        { title: "Anade Voz IA y Movimiento", description: "Genera narracion con voces IA y aplica efectos de movimiento cinematografico." },
+        { title: "Publica Anonimamente", description: "Exporta tu video y publicalo en YouTube, TikTok o cualquier plataforma sin mostrar tu cara." }
+      ],
+      features: [
+        { title: "Sin Rostro Requerido", description: "Pipeline completo de creacion de video sin aparecer en camara" },
+        { title: "Narracion IA", description: "Voces profesionales en mas de 50 voces IA realistas en 32 idiomas" },
+        { title: "Animacion Cinematografica", description: "Transforma imagenes estaticas en escenas dinamicas con efectos de movimiento IA" },
+        { title: "Subtitulos Automaticos", description: "Subtitulos sincronizados para accesibilidad y engagement" },
+        { title: "Biblioteca Musical", description: "Musica libre de regalias y sonidos ambiente adaptados a tu contenido" },
+        { title: "Plantillas por Nicho", description: "Plantillas predisenadas para nichos populares de contenido sin rostro" }
+      ],
+      faqs: [
+        { question: "Se puede ganar dinero con videos sin mostrar la cara?", answer: "Absolutamente. Los canales sin rostro estan entre los mas rentables de YouTube, especialmente en nichos como finanzas, educacion y tecnologia." },
+        { question: "Que nichos funcionan mejor para contenido sin rostro?", answer: "Educacion, finanzas, tecnologia, narracion y misterio, historias motivacionales, meditacion y compilaciones de datos curiosos." },
+        { question: "Puedo usar las voces IA para cualquier contenido?", answer: "Si, nuestras 50+ voces IA cubren una amplia gama de tonos y estilos para cualquier nicho." },
+        { question: "Como hago mis videos unicos?", answer: "La combinacion de tu seleccion de imagenes, voz, estilo de script y efectos de movimiento crea contenido unico." }
+      ]
+    },
+    de: {
+      name: "KI Gesichtsloser Video-Generator",
+      tagline: "Erstelle virale Videos ohne dein Gesicht zu zeigen",
+      description: "Generiere ansprechende Video-Inhalte mit KI ohne vor der Kamera zu erscheinen. Perfekt fuer Creator, die ein Publikum aufbauen wollen.",
+      detailedDescription: "Baue einen profitablen Content-Kanal auf, ohne vor die Kamera zu treten. Hyreels KI kombiniert Bildanimation, professionelle Stimmen und intelligente Bearbeitung.",
+      howItWorks: [
+        { title: "Waehle Deine Nische", description: "Waehle dein Thema: motivierend, bildend, Produktbewertungen, Storytelling oder jedes Thema." },
+        { title: "Lade Bilder Hoch", description: "Fuege Bilder hinzu, die deinen Inhalt illustrieren. Stock-Fotos, Screenshots oder KI-generierte Visuals." },
+        { title: "Fuege KI-Voiceover Hinzu", description: "Generiere Narration mit KI-Stimmen und wende cinematische Bewegungseffekte an." },
+        { title: "Veroeffentliche Anonym", description: "Exportiere dein Video und veroeffentliche auf YouTube, TikTok oder jeder Plattform." }
+      ],
+      features: [
+        { title: "Kein Gesicht Erforderlich", description: "Komplette Videoproduktion ohne vor der Kamera zu erscheinen" },
+        { title: "KI-Narration", description: "Professionelle Voiceovers mit 50+ realistischen KI-Stimmen in 32 Sprachen" },
+        { title: "Cinematische Bildanimation", description: "Verwandle statische Bilder in dynamische Szenen mit KI-Bewegungseffekten" },
+        { title: "Auto-Generierte Untertitel", description: "Synchronisierte Untertitel fuer Barrierefreiheit und Engagement" },
+        { title: "Hintergrundmusik-Bibliothek", description: "Lizenzfreie Musik und Ambient-Sounds passend zur Stimmung" },
+        { title: "Nischen-Templates", description: "Vorgefertigte Templates fuer beliebte gesichtslose Content-Nischen" }
+      ],
+      faqs: [
+        { question: "Kann man mit Videos ohne Gesicht Geld verdienen?", answer: "Absolut. Gesichtslose Kanaele gehoeren zu den profitabelsten auf YouTube, besonders in Nischen wie Finanzen, Bildung und Tech." },
+        { question: "Welche Nischen funktionieren am besten?", answer: "Bildung, Finanzen und Business, Tech-Reviews, Storytelling, motivierende Stories und Meditations-Inhalte." },
+        { question: "Kann ich die KI-Stimmen fuer jede Art von Content nutzen?", answer: "Ja, unsere 50+ KI-Stimmen decken eine breite Palette von Toenen und Stilen ab." },
+        { question: "Wie mache ich meine Videos einzigartig?", answer: "Die Kombination aus Bildauswahl, Stimmwahl, Skriptstil und Bewegungseffekten schafft einzigartigen Content." }
+      ]
+    },
+    fr: {
+      name: "Generateur de Videos Sans Visage IA",
+      tagline: "Creez des videos virales sans montrer votre visage",
+      description: "Generez du contenu video engageant avec l'IA sans apparaitre devant la camera. Parfait pour les createurs qui veulent monetiser du contenu.",
+      detailedDescription: "Construisez une chaine rentable sans passer devant la camera. Le Generateur combine animation d'images IA, voix professionnelles et montage intelligent.",
+      howItWorks: [
+        { title: "Choisissez Votre Niche", description: "Selectionnez votre thematique: motivationnel, educatif, avis produits, storytelling ou tout sujet." },
+        { title: "Telechargez des Images", description: "Ajoutez des images qui illustrent votre contenu. Photos stock, captures d'ecran ou visuels generes par IA." },
+        { title: "Ajoutez Voix IA et Mouvement", description: "Generez la narration avec des voix IA et appliquez des effets de mouvement cinematographiques." },
+        { title: "Publiez Anonymement", description: "Exportez votre video et publiez sur YouTube, TikTok ou toute plateforme." }
+      ],
+      features: [
+        { title: "Aucun Visage Requis", description: "Pipeline complet de creation video sans apparaitre devant la camera" },
+        { title: "Narration IA", description: "Voix-off professionnelles avec plus de 50 voix IA realistes en 32 langues" },
+        { title: "Animation Cinematographique", description: "Transformez des images statiques en scenes dynamiques avec des effets de mouvement IA" },
+        { title: "Sous-titres Automatiques", description: "Sous-titres synchronises pour l'accessibilite et l'engagement" },
+        { title: "Bibliotheque Musicale", description: "Musique libre de droits et sons d'ambiance adaptes a votre contenu" },
+        { title: "Templates par Niche", description: "Templates pre-construits pour les niches populaires de contenu sans visage" }
+      ],
+      faqs: [
+        { question: "Peut-on gagner de l'argent avec des videos sans visage?", answer: "Absolument. Les chaines sans visage sont parmi les plus rentables sur YouTube, surtout dans les niches comme la finance et l'education." },
+        { question: "Quelles niches fonctionnent le mieux?", answer: "Education, finance et business, revues tech, storytelling et mystere, histoires motivantes et contenu meditation." },
+        { question: "Puis-je utiliser les voix IA pour tout type de contenu?", answer: "Oui, nos 50+ voix IA couvrent une large gamme de tons et styles." },
+        { question: "Comment rendre mes videos uniques?", answer: "La combinaison de votre selection d'images, choix de voix, style de script et effets de mouvement cree un contenu unique." }
+      ]
+    },
+    pt: {
+      name: "Gerador de Videos Sem Rosto IA",
+      tagline: "Crie videos virais sem mostrar seu rosto",
+      description: "Gere conteudo de video envolvente com IA sem aparecer na camera. Perfeito para criadores que querem monetizar conteudo sem se mostrar.",
+      detailedDescription: "Construa um canal lucrativo sem aparecer na camera. O Gerador combina animacao de imagens IA, vozes profissionais e edicao inteligente.",
+      howItWorks: [
+        { title: "Escolha Seu Nicho", description: "Selecione sua tematica: motivacional, educacional, reviews de produtos, storytelling ou qualquer topico." },
+        { title: "Envie Imagens", description: "Adicione imagens que ilustrem seu conteudo. Fotos de banco, capturas de tela ou visuais gerados por IA." },
+        { title: "Adicione Voz IA e Movimento", description: "Gere narracao com vozes IA e aplique efeitos de movimento cinematograficos." },
+        { title: "Publique Anonimamente", description: "Exporte seu video e publique no YouTube, TikTok ou qualquer plataforma." }
+      ],
+      features: [
+        { title: "Sem Rosto Necessario", description: "Pipeline completo de criacao de video sem aparecer na camera" },
+        { title: "Narracao IA", description: "Locucoes profissionais com mais de 50 vozes IA realistas em 32 idiomas" },
+        { title: "Animacao Cinematografica", description: "Transforme imagens estaticas em cenas dinamicas com efeitos de movimento IA" },
+        { title: "Legendas Automaticas", description: "Legendas sincronizadas para acessibilidade e engajamento" },
+        { title: "Biblioteca Musical", description: "Musica livre de royalties e sons ambiente adaptados ao seu conteudo" },
+        { title: "Templates por Nicho", description: "Templates pre-construidos para nichos populares de conteudo sem rosto" }
+      ],
+      faqs: [
+        { question: "E possivel ganhar dinheiro com videos sem mostrar o rosto?", answer: "Absolutamente. Canais sem rosto estao entre os mais lucrativos do YouTube, especialmente em nichos como financas e educacao." },
+        { question: "Quais nichos funcionam melhor?", answer: "Educacao, financas e negocios, reviews de tech, storytelling e misterio, historias motivacionais e conteudo de meditacao." },
+        { question: "Posso usar as vozes IA para qualquer tipo de conteudo?", answer: "Sim, nossas 50+ vozes IA cobrem uma ampla gama de tons e estilos." },
+        { question: "Como torno meus videos unicos?", answer: "A combinacao da sua selecao de imagens, escolha de voz, estilo de roteiro e efeitos de movimento cria conteudo unico." }
+      ]
     },
     ru: {
       name: "ИИ Генератор Видео Без Лица",
-      tagline: "Создавайте видео не показывая лицо",
-      description: "Профессиональные видео без появления в кадре. Идеально для анонимных каналов и нишевого контента.",
-      detailedDescription: "Создавайте привлекательный контент без показа лица с нашим ИИ генератором видео без лица.",
+      tagline: "Создавайте вирусные видео не показывая лицо",
+      description: "Генерируйте вовлекающий видеоконтент с помощью ИИ без появления в кадре. Идеально для создателей, которые хотят монетизировать контент.",
+      detailedDescription: "Постройте прибыльный контент-канал без появления перед камерой. Генератор сочетает ИИ-анимацию изображений, профессиональные голоса и умный монтаж.",
+      howItWorks: [
+        { title: "Выберите Нишу", description: "Выберите тематику: мотивационный, образовательный, обзоры продуктов, сторителлинг или любую тему." },
+        { title: "Загрузите Изображения", description: "Добавьте изображения, иллюстрирующие ваш контент. Стоковые фото, скриншоты или визуалы ИИ." },
+        { title: "Добавьте ИИ-Озвучку и Движение", description: "Создайте озвучку с помощью ИИ-голосов и примените кинематографические эффекты движения." },
+        { title: "Публикуйте Анонимно", description: "Экспортируйте готовое видео и публикуйте на YouTube, TikTok или любой платформе." }
+      ],
+      features: [
+        { title: "Лицо Не Требуется", description: "Полный процесс создания видео без появления в кадре" },
+        { title: "ИИ-Озвучка", description: "Профессиональная озвучка с более чем 50 реалистичными ИИ-голосами на 32 языках" },
+        { title: "Кинематографическая Анимация", description: "Превращайте статичные изображения в динамичные сцены с эффектами движения ИИ" },
+        { title: "Автоматические Субтитры", description: "Синхронизированные субтитры для доступности и вовлеченности" },
+        { title: "Библиотека Музыки", description: "Музыка без лицензионных отчислений и фоновые звуки под настроение контента" },
+        { title: "Шаблоны по Нишам", description: "Готовые шаблоны для популярных ниш контента без лица" }
+      ],
+      faqs: [
+        { question: "Можно ли зарабатывать на видео без показа лица?", answer: "Безусловно. Каналы без лица одни из самых прибыльных на YouTube, особенно в нишах финансов, образования и технологий." },
+        { question: "Какие ниши лучше всего подходят?", answer: "Образование, финансы и бизнес, обзоры технологий, сторителлинг и детективы, мотивационные истории и контент для медитации." },
+        { question: "Могу ли я использовать ИИ-голоса для любого типа контента?", answer: "Да, наши 50+ ИИ-голосов охватывают широкий спектр тональностей и стилей." },
+        { question: "Как сделать мои видео уникальными?", answer: "Сочетание вашего выбора изображений, голоса, стиля сценария и эффектов движения создает уникальный контент." }
+      ]
+    },
+    it: {
+      name: "Generatore Video Senza Volto IA",
+      tagline: "Crea video virali senza mostrare il viso",
+      description: "Genera contenuti video coinvolgenti con l'IA senza apparire davanti alla telecamera. Perfetto per creator che vogliono monetizzare contenuti.",
+      detailedDescription: "Costruisci un canale redditizio senza metterti davanti alla telecamera. Il Generatore combina animazione immagini IA, voci professionali e montaggio intelligente.",
+      howItWorks: [
+        { title: "Scegli la Tua Nicchia", description: "Seleziona la tua tematica: motivazionale, educativo, recensioni prodotti, storytelling o qualsiasi argomento." },
+        { title: "Carica Immagini", description: "Aggiungi immagini che illustrino il tuo contenuto. Foto stock, screenshot o visual generati dall'IA." },
+        { title: "Aggiungi Voce IA e Movimento", description: "Genera la narrazione con voci IA e applica effetti di movimento cinematografici." },
+        { title: "Pubblica Anonimamente", description: "Esporta il tuo video e pubblicalo su YouTube, TikTok o qualsiasi piattaforma." }
+      ],
+      features: [
+        { title: "Nessun Volto Richiesto", description: "Pipeline completa di creazione video senza apparire davanti alla telecamera" },
+        { title: "Narrazione IA", description: "Doppiaggi professionali con oltre 50 voci IA realistiche in 32 lingue" },
+        { title: "Animazione Cinematografica", description: "Trasforma immagini statiche in scene dinamiche con effetti di movimento IA" },
+        { title: "Sottotitoli Automatici", description: "Sottotitoli sincronizzati per accessibilita e coinvolgimento" },
+        { title: "Libreria Musicale", description: "Musica royalty-free e suoni ambientali abbinati al mood del contenuto" },
+        { title: "Template per Nicchia", description: "Template pre-costruiti per nicchie popolari di contenuto senza volto" }
+      ],
+      faqs: [
+        { question: "Si puo guadagnare con video senza mostrare il volto?", answer: "Assolutamente. I canali senza volto sono tra i piu redditizi su YouTube, specialmente in nicchie come finanza ed educazione." },
+        { question: "Quali nicchie funzionano meglio?", answer: "Educazione, finanza e business, recensioni tech, storytelling e mystery, storie motivazionali e contenuti di meditazione." },
+        { question: "Posso usare le voci IA per qualsiasi tipo di contenuto?", answer: "Si, le nostre 50+ voci IA coprono un'ampia gamma di toni e stili." },
+        { question: "Come rendo unici i miei video?", answer: "La combinazione della tua selezione di immagini, scelta della voce, stile dello script e effetti di movimento crea contenuti unici." }
+      ]
+    },
+    nl: {
+      name: "AI Gezichtloze Video Generator",
+      tagline: "Maak virale videos zonder je gezicht te tonen",
+      description: "Genereer boeiende video-inhoud met AI zonder voor de camera te verschijnen. Perfect voor creators die content willen monetiseren.",
+      detailedDescription: "Bouw een winstgevend contentkanaal zonder voor de camera te staan. De Generator combineert AI-beeldanimatie, professionele stemmen en slimme bewerking.",
+      howItWorks: [
+        { title: "Kies Je Niche", description: "Selecteer je thema: motiverend, educatief, productreviews, storytelling of elk onderwerp." },
+        { title: "Upload Afbeeldingen", description: "Voeg afbeeldingen toe die je content illustreren. Stockfotos, screenshots of AI-gegenereerde visuals." },
+        { title: "Voeg AI Voice-over Toe", description: "Genereer narration met AI-stemmen en pas cinematische bewegingseffecten toe." },
+        { title: "Publiceer Anoniem", description: "Exporteer je video en publiceer op YouTube, TikTok of elk platform." }
+      ],
+      features: [
+        { title: "Geen Gezicht Vereist", description: "Complete videoproductie-pipeline zonder voor de camera te verschijnen" },
+        { title: "AI Narration", description: "Professionele voice-overs met 50+ realistische AI-stemmen in 32 talen" },
+        { title: "Cinematische Animatie", description: "Transformeer statische beelden in dynamische scenes met AI-bewegingseffecten" },
+        { title: "Automatische Ondertitels", description: "Gesynchroniseerde ondertitels voor toegankelijkheid en engagement" },
+        { title: "Muziek Bibliotheek", description: "Royalty-vrije muziek en ambient sounds afgestemd op de stemming" },
+        { title: "Niche Templates", description: "Voorgebouwde templates voor populaire gezichtloze content niches" }
+      ],
+      faqs: [
+        { question: "Kun je geld verdienen met videos zonder gezicht?", answer: "Absoluut. Gezichtloze kanalen behoren tot de meest winstgevende op YouTube, vooral in niches zoals financien en educatie." },
+        { question: "Welke niches werken het beste?", answer: "Educatie, financien en business, tech reviews, storytelling en mystery, motiverende verhalen en meditatie-content." },
+        { question: "Kan ik de AI-stemmen voor elk type content gebruiken?", answer: "Ja, onze 50+ AI-stemmen dekken een breed scala aan tonen en stijlen." },
+        { question: "Hoe maak ik mijn videos uniek?", answer: "De combinatie van je beeldselectie, stemkeuze, scriptstijl en bewegingseffecten creert unieke content." }
+      ]
+    },
+    pl: {
+      name: "Generator Wideo Bez Twarzy AI",
+      tagline: "Tworz wiralowe filmy bez pokazywania twarzy",
+      description: "Generuj angazujace tresci wideo z AI bez pojawiania sie przed kamera. Idealny dla tworcow, ktorzy chca zarabiac na tresciach.",
+      detailedDescription: "Zbuduj dochodowy kanal bez stawania przed kamera. Generator laczy animacje obrazow AI, profesjonalne glosy i inteligentny montaz.",
+      howItWorks: [
+        { title: "Wybierz Swoja Nisze", description: "Wybierz tematyke: motywacyjna, edukacyjna, recenzje produktow, storytelling lub dowolny temat." },
+        { title: "Przeslij Obrazy", description: "Dodaj obrazy ilustrujace Twoja tresc. Zdjecia stockowe, zrzuty ekranu lub wizualizacje AI." },
+        { title: "Dodaj Glos AI i Ruch", description: "Wygeneruj narracje z glosami AI i zastosuj kinowe efekty ruchu." },
+        { title: "Publikuj Anonimowo", description: "Eksportuj film i publikuj na YouTube, TikTok lub dowolnej platformie." }
+      ],
+      features: [
+        { title: "Twarz Nie Jest Wymagana", description: "Kompletny proces tworzenia wideo bez pojawiania sie przed kamera" },
+        { title: "Narracja AI", description: "Profesjonalne lektoraty z ponad 50 realistycznymi glosami AI w 32 jezykach" },
+        { title: "Kinowa Animacja", description: "Przeksztalcaj statyczne obrazy w dynamiczne sceny z efektami ruchu AI" },
+        { title: "Automatyczne Napisy", description: "Zsynchronizowane napisy dla dostepnosci i zaangazowania" },
+        { title: "Biblioteka Muzyki", description: "Muzyka bez tantiem i dzwieki ambient dopasowane do nastroju" },
+        { title: "Szablony Niszowe", description: "Gotowe szablony dla popularnych nisz tresci bez twarzy" }
+      ],
+      faqs: [
+        { question: "Czy mozna zarabiac na filmach bez pokazywania twarzy?", answer: "Absolutnie. Kanaly bez twarzy naleza do najbardziej dochodowych na YouTube, szczegolnie w niszach jak finanse i edukacja." },
+        { question: "Ktore nisze dzialaja najlepiej?", answer: "Edukacja, finanse i biznes, recenzje tech, storytelling i tajemnice, motywacyjne historie i tresci medytacyjne." },
+        { question: "Czy moge uzywac glosow AI do kazdego typu tresci?", answer: "Tak, nasze 50+ glosow AI obejmuje szeroki zakres tonow i stylow." },
+        { question: "Jak uczynic moje filmy unikalnymi?", answer: "Kombinacja Twojego wyboru obrazow, glosu, stylu skryptu i efektow ruchu tworzy unikalna tresc." }
+      ]
+    },
+    ja: {
+      name: "AI顔出し不要動画ジェネレーター",
+      tagline: "顔を出さずにバイラル動画を作成",
+      description: "カメラの前に出ることなくAIで魅力的な動画コンテンツを生成。コンテンツを収益化したいクリエイターに最適。",
+      detailedDescription: "カメラの前に立つことなく収益性の高いコンテンツチャンネルを構築。ジェネレーターはAI画像アニメーション、プロの音声、スマート編集を組み合わせます。",
+      howItWorks: [
+        { title: "ニッチを選択", description: "テーマを選択：モチベーション、教育、商品レビュー、ストーリーテリングなど。" },
+        { title: "画像をアップロード", description: "コンテンツを説明する画像を追加。ストック写真、スクリーンショット、またはAI生成ビジュアル。" },
+        { title: "AIボイスとモーションを追加", description: "AIボイスでナレーションを生成し、シネマティックなモーションエフェクトを適用。" },
+        { title: "匿名で公開", description: "動画をエクスポートし、顔を出さずにYouTube、TikTok、または任意のプラットフォームに公開。" }
+      ],
+      features: [
+        { title: "顔出し不要", description: "カメラの前に出る必要のない完全な動画作成パイプライン" },
+        { title: "AIナレーション", description: "32言語で50以上のリアルなAIボイスによるプロのボイスオーバー" },
+        { title: "シネマティックアニメーション", description: "静止画像をAIモーションエフェクトでダイナミックなシーンに変換" },
+        { title: "自動字幕", description: "アクセシビリティとエンゲージメントのための同期字幕" },
+        { title: "BGMライブラリ", description: "コンテンツのムードに合わせたロイヤリティフリーの音楽とアンビエントサウンド" },
+        { title: "ニッチテンプレート", description: "人気の顔出し不要コンテンツニッチ用のプリセットテンプレート" }
+      ],
+      faqs: [
+        { question: "顔を出さない動画で収益化できますか?", answer: "もちろんです。顔出し不要チャンネルはYouTubeで最も収益性の高いカテゴリの一つです。" },
+        { question: "顔出し不要コンテンツに最適なニッチは?", answer: "教育、金融とビジネス、テックレビュー、ストーリーテリングとミステリー、モチベーションと瞑想コンテンツ。" },
+        { question: "AIボイスはどんなタイプのコンテンツにも使えますか?", answer: "はい、50以上のAIボイスは幅広いトーンとスタイルをカバーしています。" },
+        { question: "顔出し不要動画をユニークにするには?", answer: "画像選択、ボイス選択、スクリプトスタイル、モーションエフェクトの組み合わせがユニークなコンテンツを生み出します。" }
+      ]
+    },
+    ko: {
+      name: "AI 얼굴 없는 비디오 생성기",
+      tagline: "얼굴을 보여주지 않고 바이럴 비디오 제작",
+      description: "카메라 앞에 나타나지 않고 AI로 매력적인 비디오 콘텐츠를 생성합니다. 콘텐츠를 수익화하려는 크리에이터에게 완벽합니다.",
+      detailedDescription: "카메라 앞에 서지 않고 수익성 있는 콘텐츠 채널을 구축하세요. 생성기는 AI 이미지 애니메이션, 전문 음성, 스마트 편집을 결합합니다.",
+      howItWorks: [
+        { title: "니치 선택", description: "주제를 선택하세요: 동기부여, 교육, 제품 리뷰, 스토리텔링 또는 모든 주제." },
+        { title: "이미지 업로드", description: "콘텐츠를 설명하는 이미지를 추가하세요. 스톡 사진, 스크린샷 또는 AI 생성 비주얼." },
+        { title: "AI 음성 및 모션 추가", description: "AI 음성으로 내레이션을 생성하고 시네마틱 모션 효과를 적용합니다." },
+        { title: "익명으로 게시", description: "비디오를 내보내고 얼굴을 보여주지 않고 YouTube, TikTok 또는 모든 플랫폼에 게시합니다." }
+      ],
+      features: [
+        { title: "얼굴 불필요", description: "카메라 앞에 나타날 필요 없는 완전한 비디오 제작 파이프라인" },
+        { title: "AI 내레이션", description: "32개 언어로 50개 이상의 사실적인 AI 음성으로 전문 보이스오버" },
+        { title: "시네마틱 애니메이션", description: "AI 모션 효과로 정적 이미지를 역동적인 장면으로 변환" },
+        { title: "자동 자막", description: "접근성과 참여를 위한 동기화된 자막" },
+        { title: "음악 라이브러리", description: "콘텐츠 분위기에 맞는 로열티 프리 음악과 앰비언트 사운드" },
+        { title: "니치 템플릿", description: "인기 있는 얼굴 없는 콘텐츠 니치를 위한 사전 제작 템플릿" }
+      ],
+      faqs: [
+        { question: "얼굴을 보여주지 않는 비디오로 수익을 낼 수 있나요?", answer: "물론입니다. 얼굴 없는 채널은 YouTube에서 가장 수익성이 높은 채널 중 하나입니다." },
+        { question: "얼굴 없는 콘텐츠에 가장 적합한 니치는?", answer: "교육, 금융 및 비즈니스, 기술 리뷰, 스토리텔링 및 미스터리, 동기부여 및 명상 콘텐츠." },
+        { question: "AI 음성을 모든 유형의 콘텐츠에 사용할 수 있나요?", answer: "네, 50개 이상의 AI 음성은 다양한 톤과 스타일을 다룹니다." },
+        { question: "얼굴 없는 비디오를 독특하게 만드는 방법은?", answer: "이미지 선택, 음성 선택, 스크립트 스타일, 모션 효과의 조합이 고유한 콘텐츠를 만듭니다." }
+      ]
     },
     zh: {
       name: "AI无脸视频生成器",
-      tagline: "创建不露脸的视频",
-      description: "无需出镜的专业视频。非常适合匿名频道和利基内容。",
-      detailedDescription: "使用我们的AI无脸视频生成器创建引人入胜的内容而无需露脸。",
-    },
+      tagline: "不露脸创建病毒式视频",
+      description: "使用AI生成引人入胜的视频内容，无需出镜。非常适合想要将内容变现的创作者。",
+      detailedDescription: "无需出镜即可建立盈利的内容频道。生成器结合了AI图像动画、专业配音和智能编辑。",
+      howItWorks: [
+        { title: "选择细分市场", description: "选择您的主题：励志、教育、产品评测、故事讲述或任何话题。" },
+        { title: "上传图片", description: "添加说明内容的图片。库存照片、截图或AI生成的视觉效果。" },
+        { title: "添加AI配音和动效", description: "使用AI语音生成旁白，并应用电影级动效。" },
+        { title: "匿名发布", description: "导出视频，在YouTube、TikTok或任何平台上发布而无需露脸。" }
+      ],
+      features: [
+        { title: "无需露脸", description: "完整的视频创作流程，永远不需要出镜" },
+        { title: "AI旁白", description: "32种语言50多种逼真AI语音的专业配音" },
+        { title: "电影级动画", description: "通过AI动效将静态图像转换为动态场景" },
+        { title: "自动字幕", description: "同步字幕，提高可访问性和参与度" },
+        { title: "音乐库", description: "与内容氛围匹配的免版税音乐和环境音效" },
+        { title: "细分市场模板", description: "为热门无脸内容细分市场预建的模板" }
+      ],
+      faqs: [
+        { question: "不露脸的视频能赚钱吗?", answer: "当然可以。无脸频道是YouTube上最赚钱的频道之一。" },
+        { question: "哪些细分市场最适合无脸内容?", answer: "教育、金融和商业、科技评测、故事讲述和悬疑、励志和冥想内容。" },
+        { question: "我可以将AI语音用于任何类型的内容吗?", answer: "是的，我们的50多种AI语音涵盖了广泛的音调和风格。" },
+        { question: "如何使我的无脸视频独特?", answer: "您的图片选择、声音选择、脚本风格和动效的组合创造了独特的内容。" }
+      ]
+    }
   },
   "ai-short-video-maker": {
     es: {
@@ -878,7 +1164,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
 export function getLocalizedToolContent(
   slug: string,
   locale: Locale
-): { name: string; tagline: string; description: string; detailedDescription: string } | null {
+): ToolTranslation | null {
   // Don't return translations for English (default locale)
   if (locale === "en") return null;
 

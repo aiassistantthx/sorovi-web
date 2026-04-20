@@ -162,6 +162,14 @@ export interface Translations {
   readyToSwitch: string;
   readyToSolve: string;
   startCreatingAffordable: string;
+
+  // Fruit Characters Section
+  fruitCharactersBadge: string;
+  fruitCharactersTitle: string;
+  fruitCharactersSubtitle: string;
+  fruitCharactersCreateVideo: string;
+  fruitCharactersTryTextToVideo: string;
+  fruitCharactersUnlimited: string;
 }
 
 const en: Translations = {
@@ -322,6 +330,14 @@ const en: Translations = {
   readyToSwitch: "Ready to Switch to Hyreel?",
   readyToSolve: "Ready to Solve This Challenge?",
   startCreatingAffordable: "Start Creating Affordable Videos",
+
+  // Fruit Characters Section
+  fruitCharactersBadge: "AI-Generated Characters",
+  fruitCharactersTitle: "3D Pixar-Style Characters",
+  fruitCharactersSubtitle: "Generate stunning animated videos with our collection of AI-powered 3D characters. Perfect for TikTok, Reels, and social media ads.",
+  fruitCharactersCreateVideo: "Create Your Video",
+  fruitCharactersTryTextToVideo: "Try Text-to-Video",
+  fruitCharactersUnlimited: "Generate unlimited animated videos with AI",
 };
 
 const es: Translations = {
@@ -472,6 +488,14 @@ const es: Translations = {
   readyToSwitch: "¿Listo para Cambiar a Hyreel?",
   readyToSolve: "¿Listo para Resolver Este Desafío?",
   startCreatingAffordable: "Empieza a Crear Videos Accesibles",
+
+  // Fruit Characters Section
+  fruitCharactersBadge: "Personajes Generados por IA",
+  fruitCharactersTitle: "Personajes 3D Estilo Pixar",
+  fruitCharactersSubtitle: "Genera impresionantes videos animados con nuestra colección de personajes 3D potenciados por IA. Perfectos para TikTok, Reels y anuncios en redes sociales.",
+  fruitCharactersCreateVideo: "Crea Tu Video",
+  fruitCharactersTryTextToVideo: "Prueba Texto a Video",
+  fruitCharactersUnlimited: "Genera videos animados ilimitados con IA",
 };
 
 const de: Translations = {
@@ -622,6 +646,14 @@ const de: Translations = {
   readyToSwitch: "Bereit zu Hyreel zu Wechseln?",
   readyToSolve: "Bereit, Diese Herausforderung zu Lösen?",
   startCreatingAffordable: "Günstige Videos Erstellen",
+
+  // Fruit Characters Section
+  fruitCharactersBadge: "KI-Generierte Charaktere",
+  fruitCharactersTitle: "3D Pixar-Stil Charaktere",
+  fruitCharactersSubtitle: "Erstellen Sie beeindruckende animierte Videos mit unserer Sammlung von KI-gesteuerten 3D-Charakteren. Perfekt für TikTok, Reels und Social-Media-Anzeigen.",
+  fruitCharactersCreateVideo: "Erstelle Dein Video",
+  fruitCharactersTryTextToVideo: "Text-zu-Video Testen",
+  fruitCharactersUnlimited: "Generiere unbegrenzt animierte Videos mit KI",
 };
 
 const fr: Translations = {
@@ -772,6 +804,14 @@ const fr: Translations = {
   readyToSwitch: "Prêt à Passer à Hyreel?",
   readyToSolve: "Prêt à Résoudre Ce Défi?",
   startCreatingAffordable: "Créer des Vidéos Abordables",
+
+  // Fruit Characters Section
+  fruitCharactersBadge: "Personnages Générés par IA",
+  fruitCharactersTitle: "Personnages 3D Style Pixar",
+  fruitCharactersSubtitle: "Créez de superbes vidéos animées avec notre collection de personnages 3D alimentés par IA. Parfaits pour TikTok, Reels et les publicités sur les réseaux sociaux.",
+  fruitCharactersCreateVideo: "Créez Votre Vidéo",
+  fruitCharactersTryTextToVideo: "Essayer Texte-en-Vidéo",
+  fruitCharactersUnlimited: "Générez des vidéos animées illimitées avec l'IA",
 };
 
 const pt: Translations = {
@@ -922,6 +962,14 @@ const pt: Translations = {
   readyToSwitch: "Pronto para Mudar para o Hyreel?",
   readyToSolve: "Pronto para Resolver Este Desafio?",
   startCreatingAffordable: "Comece a Criar Vídeos Acessíveis",
+
+  // Fruit Characters Section
+  fruitCharactersBadge: "Personagens Gerados por IA",
+  fruitCharactersTitle: "Personagens 3D Estilo Pixar",
+  fruitCharactersSubtitle: "Crie vídeos animados incríveis com nossa coleção de personagens 3D alimentados por IA. Perfeitos para TikTok, Reels e anúncios em redes sociais.",
+  fruitCharactersCreateVideo: "Crie Seu Vídeo",
+  fruitCharactersTryTextToVideo: "Experimente Texto-para-Vídeo",
+  fruitCharactersUnlimited: "Gere vídeos animados ilimitados com IA",
 };
 
 const ru: Translations = {
@@ -1072,6 +1120,14 @@ const ru: Translations = {
   readyToSwitch: "Готовы перейти на Hyreel?",
   readyToSolve: "Готовы решить эту задачу?",
   startCreatingAffordable: "Создавайте доступные видео",
+
+  // Fruit Characters Section
+  fruitCharactersBadge: "ИИ-Персонажи",
+  fruitCharactersTitle: "3D Персонажи в стиле Pixar",
+  fruitCharactersSubtitle: "Создавайте потрясающие анимационные видео с нашей коллекцией 3D-персонажей на базе ИИ. Идеально для TikTok, Reels и рекламы в соцсетях.",
+  fruitCharactersCreateVideo: "Создать Видео",
+  fruitCharactersTryTextToVideo: "Попробовать Текст-в-Видео",
+  fruitCharactersUnlimited: "Создавайте неограниченное количество анимаций с ИИ",
 };
 
 const it: Translations = {
@@ -1222,6 +1278,14 @@ const it: Translations = {
   readyToSwitch: "Pronto a Passare a Hyreel?",
   readyToSolve: "Pronto a Risolvere Questa Sfida?",
   startCreatingAffordable: "Crea Video Economici",
+
+  // Fruit Characters Section
+  fruitCharactersBadge: "Personaggi Generati dall'IA",
+  fruitCharactersTitle: "Personaggi 3D Stile Pixar",
+  fruitCharactersSubtitle: "Crea video animati mozzafiato con la nostra collezione di personaggi 3D alimentati dall'IA. Perfetti per TikTok, Reels e pubblicità sui social.",
+  fruitCharactersCreateVideo: "Crea il Tuo Video",
+  fruitCharactersTryTextToVideo: "Prova Testo-in-Video",
+  fruitCharactersUnlimited: "Genera video animati illimitati con l'IA",
 };
 
 const nl: Translations = {
@@ -1372,6 +1436,14 @@ const nl: Translations = {
   readyToSwitch: "Klaar om Over te Stappen naar Hyreel?",
   readyToSolve: "Klaar om Deze Uitdaging op te Lossen?",
   startCreatingAffordable: "Maak Betaalbare Video's",
+
+  // Fruit Characters Section
+  fruitCharactersBadge: "AI-Gegenereerde Personages",
+  fruitCharactersTitle: "3D Pixar-Stijl Personages",
+  fruitCharactersSubtitle: "Maak verbluffende animatievideo's met onze collectie AI-aangedreven 3D-personages. Perfect voor TikTok, Reels en social media-advertenties.",
+  fruitCharactersCreateVideo: "Maak Je Video",
+  fruitCharactersTryTextToVideo: "Probeer Tekst-naar-Video",
+  fruitCharactersUnlimited: "Genereer onbeperkt animatievideo's met AI",
 };
 
 const pl: Translations = {
@@ -1522,6 +1594,14 @@ const pl: Translations = {
   readyToSwitch: "Gotowy na Przejście do Hyreel?",
   readyToSolve: "Gotowy, by Rozwiązać To Wyzwanie?",
   startCreatingAffordable: "Twórz Przystępne Cenowo Filmy",
+
+  // Fruit Characters Section
+  fruitCharactersBadge: "Postacie Generowane przez AI",
+  fruitCharactersTitle: "Postacie 3D w Stylu Pixar",
+  fruitCharactersSubtitle: "Twórz oszałamiające animowane filmy z naszą kolekcją postaci 3D napędzanych przez AI. Idealne dla TikTok, Reels i reklam w mediach społecznościowych.",
+  fruitCharactersCreateVideo: "Stwórz Swój Film",
+  fruitCharactersTryTextToVideo: "Wypróbuj Tekst-na-Wideo",
+  fruitCharactersUnlimited: "Generuj nieograniczoną liczbę animowanych filmów z AI",
 };
 
 const ja: Translations = {
@@ -1672,6 +1752,14 @@ const ja: Translations = {
   readyToSwitch: "Hyreelに切り替える準備はできましたか？",
   readyToSolve: "この課題を解決する準備はできましたか？",
   startCreatingAffordable: "お手頃な動画作成を始める",
+
+  // Fruit Characters Section
+  fruitCharactersBadge: "AI生成キャラクター",
+  fruitCharactersTitle: "3Dピクサースタイルキャラクター",
+  fruitCharactersSubtitle: "AI搭載の3Dキャラクターコレクションで魅力的なアニメーション動画を生成。TikTok、Reels、SNS広告に最適。",
+  fruitCharactersCreateVideo: "動画を作成",
+  fruitCharactersTryTextToVideo: "テキストから動画を試す",
+  fruitCharactersUnlimited: "AIで無制限のアニメーション動画を生成",
 };
 
 const ko: Translations = {
@@ -1822,6 +1910,14 @@ const ko: Translations = {
   readyToSwitch: "Hyreel로 전환할 준비가 되셨나요?",
   readyToSolve: "이 과제를 해결할 준비가 되셨나요?",
   startCreatingAffordable: "저렴한 영상 만들기 시작",
+
+  // Fruit Characters Section
+  fruitCharactersBadge: "AI 생성 캐릭터",
+  fruitCharactersTitle: "3D 픽사 스타일 캐릭터",
+  fruitCharactersSubtitle: "AI 기반 3D 캐릭터 컬렉션으로 멋진 애니메이션 영상을 만들어보세요. TikTok, Reels, 소셜 미디어 광고에 완벽합니다.",
+  fruitCharactersCreateVideo: "영상 만들기",
+  fruitCharactersTryTextToVideo: "텍스트-투-비디오 체험하기",
+  fruitCharactersUnlimited: "AI로 무제한 애니메이션 영상 생성",
 };
 
 const zh: Translations = {
@@ -1972,6 +2068,14 @@ const zh: Translations = {
   readyToSwitch: "准备好切换到Hyreel了吗？",
   readyToSolve: "准备好解决这个挑战了吗？",
   startCreatingAffordable: "开始制作实惠的视频",
+
+  // Fruit Characters Section
+  fruitCharactersBadge: "AI生成角色",
+  fruitCharactersTitle: "3D皮克斯风格角色",
+  fruitCharactersSubtitle: "使用我们的AI驱动3D角色系列创建令人惊叹的动画视频。非常适合TikTok、Reels和社交媒体广告。",
+  fruitCharactersCreateVideo: "创建您的视频",
+  fruitCharactersTryTextToVideo: "试用文字转视频",
+  fruitCharactersUnlimited: "用AI生成无限量动画视频",
 };
 
 const translations: Record<Locale, Translations> = {
