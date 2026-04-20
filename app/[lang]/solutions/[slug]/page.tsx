@@ -7,7 +7,9 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { solutions, getSolutionBySlug } from "@/lib/solutions";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import { getLocalizedSolutionContent } from "@/lib/i18n/content/solutions";
 
 const SITE_URL = "https://hyreel.com";
 
@@ -70,10 +72,16 @@ export default async function LocalizedSolutionPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+  const localizedContent = getLocalizedSolutionContent(slug, lang as Locale);
+  const name = localizedContent?.name || solution.name;
+  const heroHeadline = localizedContent?.heroHeadline || solution.name;
+  const heroSubheadline = localizedContent?.heroSubheadline || solution.description;
+
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: `/${lang}` },
-    { name: "Solutions", url: `/${lang}/solutions` },
-    { name: solution.name, url: `/${lang}/solutions/${solution.slug}` },
+    { name: t.home, url: `/${lang}` },
+    { name: t.solutions, url: `/${lang}/solutions` },
+    { name: name, url: `/${lang}/solutions/${solution.slug}` },
   ]);
 
   return (
@@ -91,9 +99,9 @@ export default async function LocalizedSolutionPage({
         <div className="text-center">
           <Breadcrumb
             items={[
-              { label: "Home", href: `/${lang}` },
-              { label: "Solutions", href: `/${lang}/solutions` },
-              { label: solution.name },
+              { label: t.home, href: `/${lang}` },
+              { label: t.solutions, href: `/${lang}/solutions` },
+              { label: name },
             ]}
             className="justify-center mb-6"
           />
@@ -101,21 +109,21 @@ export default async function LocalizedSolutionPage({
           <div className="text-6xl mb-6">{solution.icon}</div>
 
           <Heading as="h1" className="mb-6">
-            {solution.name}
+            {heroHeadline}
           </Heading>
 
           <Text variant="large" className="mb-8 max-w-3xl mx-auto">
-            {solution.description}
+            {heroSubheadline}
           </Text>
 
-          <Button size="lg">Start Creating Free</Button>
+          <Button size="lg">{t.startCreatingFree}</Button>
         </div>
       </Section>
 
       <Section spacing="xl">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Key Benefits
+            {t.keyBenefits}
           </Heading>
         </div>
 
@@ -135,13 +143,13 @@ export default async function LocalizedSolutionPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
-            Ready to Get Started?
+            {t.readyToGetStarted}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Start Creating Free</Button>
+            <Button size="lg">{t.startCreatingFree}</Button>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
-                View Pricing
+                {t.viewPricing}
               </Button>
             </Link>
           </div>

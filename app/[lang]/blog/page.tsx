@@ -5,6 +5,7 @@ import Link from "next/link";
 import { blogPosts } from "@/lib/blog";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { getTranslations } from "@/lib/i18n/translations";
+import { getLocalizedBlogContent } from "@/lib/i18n/content/blog";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -91,27 +92,33 @@ export default async function LocalizedBlogPage({
 
       <Section spacing="xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {blogPosts.map((post, index) => (
-            <Card key={index} variant="elevated" className="group cursor-pointer">
-              <Link href={`/${lang}/blog/${post.slug}`}>
-                <div className="mb-4">
-                  <span className="text-xs text-[var(--brand-primary)] font-medium uppercase tracking-wider">
-                    {post.category}
-                  </span>
-                </div>
-                <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-3 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">
-                  {post.title}
-                </h2>
-                <Text variant="small" className="mb-4 line-clamp-3">
-                  {post.excerpt}
-                </Text>
-                <div className="flex items-center justify-between text-sm text-[var(--text-muted)]">
-                  <span>{post.author}</span>
-                  <span>{post.readingTime} {t.minRead}</span>
-                </div>
-              </Link>
-            </Card>
-          ))}
+          {blogPosts.map((post, index) => {
+            const localizedContent = getLocalizedBlogContent(post.slug, lang as Locale);
+            const title = localizedContent?.title || post.title;
+            const excerpt = localizedContent?.excerpt || post.excerpt;
+
+            return (
+              <Card key={index} variant="elevated" className="group cursor-pointer">
+                <Link href={`/${lang}/blog/${post.slug}`}>
+                  <div className="mb-4">
+                    <span className="text-xs text-[var(--brand-primary)] font-medium uppercase tracking-wider">
+                      {post.category}
+                    </span>
+                  </div>
+                  <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-3 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">
+                    {title}
+                  </h2>
+                  <Text variant="small" className="mb-4 line-clamp-3">
+                    {excerpt}
+                  </Text>
+                  <div className="flex items-center justify-between text-sm text-[var(--text-muted)]">
+                    <span>{post.author}</span>
+                    <span>{post.readingTime} {t.minRead}</span>
+                  </div>
+                </Link>
+              </Card>
+            );
+          })}
         </div>
       </Section>
     </>

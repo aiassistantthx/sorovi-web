@@ -7,7 +7,9 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { useCases, getUseCaseBySlug } from "@/lib/use-cases";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import { getLocalizedUseCaseContent } from "@/lib/i18n/content/use-cases";
 
 const SITE_URL = "https://hyreel.com";
 
@@ -70,10 +72,16 @@ export default async function LocalizedUseCasePage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+  const localizedContent = getLocalizedUseCaseContent(slug, lang as Locale);
+  const title = localizedContent?.title || useCase.title;
+  const heroHeadline = localizedContent?.heroHeadline || useCase.title;
+  const heroSubheadline = localizedContent?.heroSubheadline || useCase.description;
+
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: `/${lang}` },
-    { name: "Use Cases", url: `/${lang}/use-cases` },
-    { name: useCase.title, url: `/${lang}/use-cases/${useCase.slug}` },
+    { name: t.home, url: `/${lang}` },
+    { name: t.useCases, url: `/${lang}/use-cases` },
+    { name: title, url: `/${lang}/use-cases/${useCase.slug}` },
   ]);
 
   return (
@@ -91,9 +99,9 @@ export default async function LocalizedUseCasePage({
         <div className="text-center">
           <Breadcrumb
             items={[
-              { label: "Home", href: `/${lang}` },
-              { label: "Use Cases", href: `/${lang}/use-cases` },
-              { label: useCase.title },
+              { label: t.home, href: `/${lang}` },
+              { label: t.useCases, href: `/${lang}/use-cases` },
+              { label: title },
             ]}
             className="justify-center mb-6"
           />
@@ -101,21 +109,21 @@ export default async function LocalizedUseCasePage({
           <div className="text-6xl mb-6">{useCase.icon}</div>
 
           <Heading as="h1" className="mb-6">
-            {useCase.title}
+            {heroHeadline}
           </Heading>
 
           <Text variant="large" className="mb-8 max-w-3xl mx-auto">
-            {useCase.description}
+            {heroSubheadline}
           </Text>
 
-          <Button size="lg">Start Creating Free</Button>
+          <Button size="lg">{t.startCreatingFree}</Button>
         </div>
       </Section>
 
       <Section spacing="xl">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            How Hyreel Helps
+            {t.howHyreelHelps}
           </Heading>
         </div>
 
@@ -135,7 +143,7 @@ export default async function LocalizedUseCasePage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Benefits
+            {t.benefits}
           </Heading>
         </div>
 
@@ -165,13 +173,13 @@ export default async function LocalizedUseCasePage({
       <Section spacing="xl">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
-            Ready to Get Started?
+            {t.readyToGetStarted}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Start Creating Free</Button>
+            <Button size="lg">{t.startCreatingFree}</Button>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
-                View Pricing
+                {t.viewPricing}
               </Button>
             </Link>
           </div>

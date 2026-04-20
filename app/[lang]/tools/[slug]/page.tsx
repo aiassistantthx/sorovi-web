@@ -170,7 +170,7 @@ export default async function LocalizedToolPage({
             {t.howItWorks}
           </Heading>
           <Text variant="large">
-            {toolName} in {tool.howItWorks.length} simple steps
+            {toolName} {t.inSimpleSteps.replace("{count}", String(tool.howItWorks.length))}
           </Text>
         </div>
 
@@ -197,7 +197,7 @@ export default async function LocalizedToolPage({
       <Section spacing="xl">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Features & Capabilities
+            {t.featuresCapabilities}
           </Heading>
         </div>
 
@@ -220,7 +220,7 @@ export default async function LocalizedToolPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Frequently Asked Questions
+            {t.frequentlyAskedQuestions}
           </Heading>
         </div>
 
@@ -228,12 +228,12 @@ export default async function LocalizedToolPage({
           <Accordion items={tool.faqs} />
           <div className="text-center mt-8">
             <Text variant="small">
-              Still have questions?{" "}
+              {t.stillHaveQuestions}{" "}
               <Link
                 href={`/${lang}/contact`}
                 className="text-[var(--brand-primary)] hover:underline"
               >
-                Contact support
+                {t.contactSupport}
               </Link>
             </Text>
           </div>
@@ -245,7 +245,7 @@ export default async function LocalizedToolPage({
         <Section spacing="xl">
           <div className="text-center mb-10">
             <Heading as="h2" className="mb-4">
-              Related Tools
+              {t.relatedTools}
             </Heading>
           </div>
 
@@ -269,7 +269,7 @@ export default async function LocalizedToolPage({
 
           <div className="text-center mt-8">
             <Link href={`/${lang}/tools`}>
-              <Button variant="secondary">View All Tools</Button>
+              <Button variant="secondary">{t.viewAllTools}</Button>
             </Link>
           </div>
         </Section>
@@ -279,16 +279,16 @@ export default async function LocalizedToolPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center">
           <Heading as="h2" className="mb-4">
-            Start Creating with {tool.name}
+            {t.startCreatingWith.replace("{name}", toolName)}
           </Heading>
           <Text variant="large" className="mb-6">
-            Download Hyreel and turn your photos into videos today
+            {t.downloadHyreelCta}
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Download for iOS</Button>
+            <Button size="lg">{t.downloadForIOS}</Button>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
-                View Pricing
+                {t.viewPricing}
               </Button>
             </Link>
           </div>

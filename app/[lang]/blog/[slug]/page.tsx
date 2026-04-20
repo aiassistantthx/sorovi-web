@@ -17,6 +17,7 @@ import {
   generateBreadcrumbSchema,
 } from "@/lib/schema";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getLocalizedBlogContent } from "@/lib/i18n/content/blog";
 
 const SITE_URL = "https://hyreel.com";
 
@@ -45,9 +46,13 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  const localizedContent = getLocalizedBlogContent(slug, lang as Locale);
+  const metaTitle = localizedContent?.metaTitle || post.metaTitle;
+  const metaDescription = localizedContent?.metaDescription || post.metaDescription;
+
   return {
-    title: post.metaTitle,
-    description: post.metaDescription,
+    title: metaTitle,
+    description: metaDescription,
     alternates: {
       canonical: `${SITE_URL}/${lang}/blog/${slug}`,
       languages: Object.fromEntries(
@@ -60,8 +65,8 @@ export async function generateMetadata({
       ),
     },
     openGraph: {
-      title: post.metaTitle,
-      description: post.metaDescription,
+      title: metaTitle,
+      description: metaDescription,
       type: "article",
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt || post.publishedAt,
@@ -93,9 +98,13 @@ export default async function LocalizedBlogPostPage({
     .map((toolSlug) => getToolBySlug(toolSlug))
     .filter((tool) => tool !== undefined);
 
+  const localizedContent = getLocalizedBlogContent(slug, lang as Locale);
+  const title = localizedContent?.title || post.title;
+  const excerpt = localizedContent?.excerpt || post.excerpt;
+
   const articleSchema = generateArticleSchema({
-    title: post.title,
-    description: post.metaDescription,
+    title: title,
+    description: localizedContent?.metaDescription || post.metaDescription,
     url: `/${lang}/blog/${post.slug}`,
     publishedAt: post.publishedAt,
     author: post.author,
@@ -104,7 +113,7 @@ export default async function LocalizedBlogPostPage({
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: "Home", url: `/${lang}` },
     { name: "Blog", url: `/${lang}/blog` },
-    { name: post.title, url: `/${lang}/blog/${post.slug}` },
+    { name: title, url: `/${lang}/blog/${post.slug}` },
   ]);
 
   const formattedDate = new Date(post.publishedAt).toLocaleDateString(
@@ -142,7 +151,7 @@ export default async function LocalizedBlogPostPage({
           <svg className="w-3 h-3" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M9 5l7 7-7 7" />
           </svg>
-          <span className="text-[var(--text-secondary)] line-clamp-1">{post.title}</span>
+          <span className="text-[var(--text-secondary)] line-clamp-1">{title}</span>
         </nav>
       </Section>
 
@@ -161,7 +170,7 @@ export default async function LocalizedBlogPostPage({
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--text-primary)] leading-[1.1] tracking-tight mb-8">
-            {post.title}
+            {title}
           </h1>
 
           <div className="flex items-center justify-center gap-4 text-base text-[var(--text-muted)]">
@@ -232,7 +241,11 @@ export default async function LocalizedBlogPostPage({
             </Text>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {relatedPosts.map((relatedPost) => (
+              {relatedPosts.map((relatedPost) => {
+                const relatedLocalizedContent = getLocalizedBlogContent(relatedPost.slug, lang as Locale);
+                const relatedTitle = relatedLocalizedContent?.title || relatedPost.title;
+                const relatedExcerpt = relatedLocalizedContent?.excerpt || relatedPost.excerpt;
+                return (
                 <Link key={relatedPost.slug} href={`/${lang}/blog/${relatedPost.slug}`}>
                   <Card variant="elevated" className="group cursor-pointer h-full flex flex-col hover:border-[var(--brand-primary)]/30 transition-all">
                     <div className="flex items-center justify-between mb-3">
@@ -242,14 +255,15 @@ export default async function LocalizedBlogPostPage({
                       </span>
                     </div>
                     <h3 className="text-base font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">
-                      {relatedPost.title}
+                      {relatedTitle}
                     </h3>
                     <Text variant="small" className="line-clamp-2 flex-grow">
-                      {relatedPost.excerpt}
+                      {relatedExcerpt}
                     </Text>
                   </Card>
                 </Link>
-              ))}
+              );
+              })}
             </div>
           </div>
         </Section>

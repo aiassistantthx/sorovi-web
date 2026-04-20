@@ -1,0 +1,165 @@
+import { type Locale } from "@/lib/i18n/config";
+
+interface IndustryTranslation {
+  name: string;
+  heroHeadline: string;
+  heroSubheadline: string;
+}
+
+type NonEnLocale = Exclude<Locale, "en">;
+
+const industryTranslations: Record<string, Partial<Record<NonEnLocale, IndustryTranslation>>> = {
+  "e-commerce": {
+    es: { name: "E-commerce", heroHeadline: "Marketing de Video IA para E-commerce", heroSubheadline: "Convierte fotos de productos en videos que venden. Crea exhibiciones profesionales de productos en segundos." },
+    de: { name: "E-Commerce", heroHeadline: "KI-Videomarketing für E-Commerce", heroSubheadline: "Verwandle Produktfotos in verkaufsfördernde Videos. Erstelle professionelle Produktpräsentationen in Sekunden." },
+    fr: { name: "E-commerce", heroHeadline: "Marketing Vidéo IA pour E-commerce", heroSubheadline: "Transformez les photos de produits en vidéos qui vendent. Créez des présentations professionnelles en secondes." },
+    pt: { name: "E-commerce", heroHeadline: "Marketing de Vídeo IA para E-commerce", heroSubheadline: "Transforme fotos de produtos em vídeos que vendem. Crie apresentações profissionais em segundos." },
+    ru: { name: "Электронная коммерция", heroHeadline: "AI-Видеомаркетинг для E-commerce", heroSubheadline: "Превращайте фото товаров в продающие видео. Создавайте профессиональные презентации за секунды." },
+    it: { name: "E-commerce", heroHeadline: "Video Marketing IA per E-commerce", heroSubheadline: "Trasforma le foto dei prodotti in video che vendono. Crea presentazioni professionali in pochi secondi." },
+    nl: { name: "E-commerce", heroHeadline: "AI Videomarketing voor E-commerce", heroSubheadline: "Verander productfoto's in video's die verkopen. Maak professionele presentaties in seconden." },
+    pl: { name: "E-commerce", heroHeadline: "Marketing Wideo AI dla E-commerce", heroSubheadline: "Zamień zdjęcia produktów w filmy, które sprzedają. Twórz profesjonalne prezentacje w sekundy." },
+    ja: { name: "Eコマース", heroHeadline: "EコマースのためのAI動画マーケティング", heroSubheadline: "商品写真を売れる動画に変換。数秒でプロフェッショナルな商品展示を作成。" },
+    ko: { name: "이커머스", heroHeadline: "이커머스를 위한 AI 비디오 마케팅", heroSubheadline: "제품 사진을 판매하는 비디오로 전환. 몇 초 만에 전문적인 제품 쇼케이스 제작." },
+    zh: { name: "电子商务", heroHeadline: "电子商务AI视频营销", heroSubheadline: "将产品照片转换为促进销售的视频。几秒钟内创建专业产品展示。" },
+  },
+  "real-estate": {
+    es: { name: "Inmobiliario", heroHeadline: "Marketing de Video IA para Inmobiliario", heroSubheadline: "Transforma fotos de propiedades en recorridos virtuales impresionantes. Vende propiedades más rápido con video profesional." },
+    de: { name: "Immobilien", heroHeadline: "KI-Videomarketing für Immobilien", heroSubheadline: "Verwandle Immobilienfotos in beeindruckende virtuelle Rundgänge. Verkaufe Immobilien schneller mit professionellem Video." },
+    fr: { name: "Immobilier", heroHeadline: "Marketing Vidéo IA pour l'Immobilier", heroSubheadline: "Transformez les photos de propriétés en visites virtuelles impressionnantes. Vendez plus vite avec la vidéo professionnelle." },
+    pt: { name: "Imobiliário", heroHeadline: "Marketing de Vídeo IA para Imobiliário", heroSubheadline: "Transforme fotos de imóveis em tours virtuais impressionantes. Venda imóveis mais rápido com vídeo profissional." },
+    ru: { name: "Недвижимость", heroHeadline: "AI-Видеомаркетинг для Недвижимости", heroSubheadline: "Превращайте фото недвижимости в впечатляющие виртуальные туры. Продавайте быстрее с профессиональным видео." },
+    it: { name: "Immobiliare", heroHeadline: "Video Marketing IA per Immobiliare", heroSubheadline: "Trasforma le foto degli immobili in tour virtuali impressionanti. Vendi più velocemente con video professionali." },
+    nl: { name: "Vastgoed", heroHeadline: "AI Videomarketing voor Vastgoed", heroSubheadline: "Verander vastgoedfoto's in indrukwekkende virtuele tours. Verkoop sneller met professionele video." },
+    pl: { name: "Nieruchomości", heroHeadline: "Marketing Wideo AI dla Nieruchomości", heroSubheadline: "Zamień zdjęcia nieruchomości w imponujące wirtualne spacery. Sprzedawaj szybciej z profesjonalnym wideo." },
+    ja: { name: "不動産", heroHeadline: "不動産のためのAI動画マーケティング", heroSubheadline: "物件写真を印象的なバーチャルツアーに変換。プロフェッショナルな動画で早く売却。" },
+    ko: { name: "부동산", heroHeadline: "부동산을 위한 AI 비디오 마케팅", heroSubheadline: "부동산 사진을 인상적인 가상 투어로 전환. 전문 비디오로 더 빠르게 판매." },
+    zh: { name: "房地产", heroHeadline: "房地产AI视频营销", heroSubheadline: "将房产照片转换为令人印象深刻的虚拟导览。用专业视频更快销售。" },
+  },
+  "fashion-apparel": {
+    es: { name: "Moda y Ropa", heroHeadline: "Marketing de Video IA para Moda", heroSubheadline: "Crea lookbooks de moda dinámicos y videos de productos. Muestra tu colección con movimiento cinematográfico." },
+    de: { name: "Mode & Bekleidung", heroHeadline: "KI-Videomarketing für Mode", heroSubheadline: "Erstelle dynamische Mode-Lookbooks und Produktvideos. Präsentiere deine Kollektion mit filmischer Bewegung." },
+    fr: { name: "Mode & Vêtements", heroHeadline: "Marketing Vidéo IA pour la Mode", heroSubheadline: "Créez des lookbooks mode dynamiques et des vidéos produit. Montrez votre collection avec un mouvement cinématographique." },
+    pt: { name: "Moda & Vestuário", heroHeadline: "Marketing de Vídeo IA para Moda", heroSubheadline: "Crie lookbooks de moda dinâmicos e vídeos de produtos. Mostre sua coleção com movimento cinematográfico." },
+    ru: { name: "Мода и Одежда", heroHeadline: "AI-Видеомаркетинг для Моды", heroSubheadline: "Создавайте динамичные модные лукбуки и видео продуктов. Демонстрируйте коллекцию с кинематографичным движением." },
+    it: { name: "Moda & Abbigliamento", heroHeadline: "Video Marketing IA per la Moda", heroSubheadline: "Crea lookbook di moda dinamici e video prodotto. Mostra la tua collezione con movimento cinematografico." },
+    nl: { name: "Mode & Kleding", heroHeadline: "AI Videomarketing voor Mode", heroSubheadline: "Maak dynamische mode lookbooks en productvideo's. Toon je collectie met cinematografische beweging." },
+    pl: { name: "Moda i Odzież", heroHeadline: "Marketing Wideo AI dla Mody", heroSubheadline: "Twórz dynamiczne lookbooki modowe i filmy produktowe. Pokazuj kolekcję z kinowym ruchem." },
+    ja: { name: "ファッション・アパレル", heroHeadline: "ファッションのためのAI動画マーケティング", heroSubheadline: "ダイナミックなファッションルックブックと商品動画を作成。シネマティックな動きでコレクションを披露。" },
+    ko: { name: "패션 & 의류", heroHeadline: "패션을 위한 AI 비디오 마케팅", heroSubheadline: "다이나믹한 패션 룩북과 제품 비디오 제작. 시네마틱한 움직임으로 컬렉션 쇼케이스." },
+    zh: { name: "时尚服装", heroHeadline: "时尚AI视频营销", heroSubheadline: "创建动态时尚造型集和产品视频。用电影般的动感展示您的系列。" },
+  },
+  "food-restaurant": {
+    es: { name: "Comida y Restaurantes", heroHeadline: "Marketing de Video IA para Restaurantes", heroSubheadline: "Haz que tu comida luzca irresistible en video. Crea contenido que da hambre para redes sociales y menús." },
+    de: { name: "Gastronomie", heroHeadline: "KI-Videomarketing für Restaurants", heroSubheadline: "Lass dein Essen im Video unwiderstehlich aussehen. Erstelle appetitanregende Inhalte für Social Media und Speisekarten." },
+    fr: { name: "Restauration", heroHeadline: "Marketing Vidéo IA pour Restaurants", heroSubheadline: "Rendez votre cuisine irrésistible en vidéo. Créez du contenu appétissant pour les réseaux sociaux et menus." },
+    pt: { name: "Alimentação e Restaurantes", heroHeadline: "Marketing de Vídeo IA para Restaurantes", heroSubheadline: "Faça sua comida parecer irresistível em vídeo. Crie conteúdo que dá fome para redes sociais e cardápios." },
+    ru: { name: "Рестораны и Еда", heroHeadline: "AI-Видеомаркетинг для Ресторанов", heroSubheadline: "Сделайте вашу еду неотразимой на видео. Создавайте аппетитный контент для соцсетей и меню." },
+    it: { name: "Ristorazione", heroHeadline: "Video Marketing IA per Ristoranti", heroSubheadline: "Rendi il tuo cibo irresistibile in video. Crea contenuti appetitosi per social media e menu." },
+    nl: { name: "Horeca", heroHeadline: "AI Videomarketing voor Restaurants", heroSubheadline: "Laat je eten er onweerstaanbaar uitzien op video. Maak honger-opwekkende content voor social media en menu's." },
+    pl: { name: "Gastronomia", heroHeadline: "Marketing Wideo AI dla Restauracji", heroSubheadline: "Spraw, by jedzenie wyglądało nieodparcie na wideo. Twórz apetyczne treści dla social media i menu." },
+    ja: { name: "飲食・レストラン", heroHeadline: "レストランのためのAI動画マーケティング", heroSubheadline: "料理を動画で魅力的に見せましょう。SNSやメニュー用の食欲をそそるコンテンツを作成。" },
+    ko: { name: "음식 & 레스토랑", heroHeadline: "레스토랑을 위한 AI 비디오 마케팅", heroSubheadline: "음식을 비디오에서 거부할 수 없게 만드세요. SNS와 메뉴용 식욕을 돋우는 콘텐츠 제작." },
+    zh: { name: "餐饮", heroHeadline: "餐厅AI视频营销", heroSubheadline: "让您的美食在视频中令人垂涎。为社交媒体和菜单创建诱人内容。" },
+  },
+  "beauty-cosmetics": {
+    es: { name: "Belleza y Cosméticos", heroHeadline: "Marketing de Video IA para Belleza", heroSubheadline: "Crea contenido de belleza impresionante que convierte. Muestra productos con efectos de video profesionales." },
+    de: { name: "Beauty & Kosmetik", heroHeadline: "KI-Videomarketing für Beauty", heroSubheadline: "Erstelle atemberaubende Beauty-Inhalte die konvertieren. Präsentiere Produkte mit professionellen Videoeffekten." },
+    fr: { name: "Beauté & Cosmétiques", heroHeadline: "Marketing Vidéo IA pour la Beauté", heroSubheadline: "Créez du contenu beauté impressionnant qui convertit. Présentez les produits avec des effets vidéo professionnels." },
+    pt: { name: "Beleza & Cosméticos", heroHeadline: "Marketing de Vídeo IA para Beleza", heroSubheadline: "Crie conteúdo de beleza impressionante que converte. Mostre produtos com efeitos de vídeo profissionais." },
+    ru: { name: "Красота и Косметика", heroHeadline: "AI-Видеомаркетинг для Красоты", heroSubheadline: "Создавайте впечатляющий бьюти-контент, который конвертирует. Демонстрируйте продукты с профессиональными видеоэффектами." },
+    it: { name: "Bellezza & Cosmetici", heroHeadline: "Video Marketing IA per la Bellezza", heroSubheadline: "Crea contenuti beauty impressionanti che convertono. Mostra i prodotti con effetti video professionali." },
+    nl: { name: "Beauty & Cosmetica", heroHeadline: "AI Videomarketing voor Beauty", heroSubheadline: "Maak verbluffende beauty content die converteert. Toon producten met professionele video-effecten." },
+    pl: { name: "Uroda i Kosmetyki", heroHeadline: "Marketing Wideo AI dla Branży Beauty", heroSubheadline: "Twórz imponujące treści beauty, które konwertują. Pokazuj produkty z profesjonalnymi efektami wideo." },
+    ja: { name: "ビューティー・コスメ", heroHeadline: "ビューティーのためのAI動画マーケティング", heroSubheadline: "コンバージョンする印象的なビューティーコンテンツを作成。プロフェッショナルな動画エフェクトで商品を披露。" },
+    ko: { name: "뷰티 & 화장품", heroHeadline: "뷰티를 위한 AI 비디오 마케팅", heroSubheadline: "전환율 높은 인상적인 뷰티 콘텐츠 제작. 전문적인 비디오 효과로 제품 쇼케이스." },
+    zh: { name: "美妆护肤", heroHeadline: "美妆AI视频营销", heroSubheadline: "创建令人惊叹的美妆内容来提高转化。用专业视频效果展示产品。" },
+  },
+  "fitness-wellness": {
+    es: { name: "Fitness y Bienestar", heroHeadline: "Marketing de Video IA para Fitness", heroSubheadline: "Crea contenido fitness motivador que inspira acción. Videos dinámicos para entrenadores y marcas de bienestar." },
+    de: { name: "Fitness & Wellness", heroHeadline: "KI-Videomarketing für Fitness", heroSubheadline: "Erstelle motivierende Fitness-Inhalte die zum Handeln inspirieren. Dynamische Videos für Trainer und Wellness-Marken." },
+    fr: { name: "Fitness & Bien-être", heroHeadline: "Marketing Vidéo IA pour le Fitness", heroSubheadline: "Créez du contenu fitness motivant qui inspire l'action. Vidéos dynamiques pour coachs et marques wellness." },
+    pt: { name: "Fitness & Bem-estar", heroHeadline: "Marketing de Vídeo IA para Fitness", heroSubheadline: "Crie conteúdo fitness motivador que inspira ação. Vídeos dinâmicos para treinadores e marcas de bem-estar." },
+    ru: { name: "Фитнес и Здоровье", heroHeadline: "AI-Видеомаркетинг для Фитнеса", heroSubheadline: "Создавайте мотивирующий фитнес-контент, вдохновляющий на действия. Динамичные видео для тренеров и велнес-брендов." },
+    it: { name: "Fitness & Benessere", heroHeadline: "Video Marketing IA per il Fitness", heroSubheadline: "Crea contenuti fitness motivanti che ispirano all'azione. Video dinamici per trainer e brand del benessere." },
+    nl: { name: "Fitness & Wellness", heroHeadline: "AI Videomarketing voor Fitness", heroSubheadline: "Maak motiverende fitness content die inspireert tot actie. Dynamische video's voor trainers en wellness merken." },
+    pl: { name: "Fitness i Wellness", heroHeadline: "Marketing Wideo AI dla Fitness", heroSubheadline: "Twórz motywujące treści fitness inspirujące do działania. Dynamiczne filmy dla trenerów i marek wellness." },
+    ja: { name: "フィットネス・ウェルネス", heroHeadline: "フィットネスのためのAI動画マーケティング", heroSubheadline: "行動を促すモチベーショナルなフィットネスコンテンツを作成。トレーナーやウェルネスブランド向けダイナミック動画。" },
+    ko: { name: "피트니스 & 웰니스", heroHeadline: "피트니스를 위한 AI 비디오 마케팅", heroSubheadline: "행동을 불러일으키는 동기부여 피트니스 콘텐츠 제작. 트레이너와 웰니스 브랜드를 위한 다이나믹 비디오." },
+    zh: { name: "健身健康", heroHeadline: "健身AI视频营销", heroSubheadline: "创建激励行动的健身内容。为教练和健康品牌打造的动态视频。" },
+  },
+  "travel-hospitality": {
+    es: { name: "Viajes y Hospitalidad", heroHeadline: "Marketing de Video IA para Viajes", heroSubheadline: "Inspira pasión por viajar con videos impresionantes de destinos. Crea contenido que hace que la gente reserve." },
+    de: { name: "Reise & Gastgewerbe", heroHeadline: "KI-Videomarketing für Reisen", heroSubheadline: "Wecke Fernweh mit beeindruckenden Reisevideos. Erstelle Inhalte die zum Buchen inspirieren." },
+    fr: { name: "Voyages & Hôtellerie", heroHeadline: "Marketing Vidéo IA pour le Tourisme", heroSubheadline: "Inspirez l'envie de voyager avec des vidéos de destination impressionnantes. Créez du contenu qui fait réserver." },
+    pt: { name: "Viagens & Hospitalidade", heroHeadline: "Marketing de Vídeo IA para Turismo", heroSubheadline: "Inspire vontade de viajar com vídeos de destinos impressionantes. Crie conteúdo que faz as pessoas reservarem." },
+    ru: { name: "Туризм и Гостеприимство", heroHeadline: "AI-Видеомаркетинг для Туризма", heroSubheadline: "Вдохновляйте на путешествия впечатляющими видео направлений. Создавайте контент, который побуждает бронировать." },
+    it: { name: "Viaggi & Ospitalità", heroHeadline: "Video Marketing IA per il Turismo", heroSubheadline: "Ispira voglia di viaggiare con video di destinazioni impressionanti. Crea contenuti che fanno prenotare." },
+    nl: { name: "Reizen & Horeca", heroHeadline: "AI Videomarketing voor Reizen", heroSubheadline: "Inspireer reislust met indrukwekkende bestemmingsvideo's. Maak content die mensen laat boeken." },
+    pl: { name: "Turystyka i Hotelarstwo", heroHeadline: "Marketing Wideo AI dla Turystyki", heroSubheadline: "Inspiruj pasją do podróży imponującymi filmami destynacji. Twórz treści, które skłaniają do rezerwacji." },
+    ja: { name: "旅行・ホスピタリティ", heroHeadline: "旅行のためのAI動画マーケティング", heroSubheadline: "印象的な目的地動画で旅心を刺激。予約を促すコンテンツを作成。" },
+    ko: { name: "여행 & 호스피탈리티", heroHeadline: "여행을 위한 AI 비디오 마케팅", heroSubheadline: "인상적인 여행지 비디오로 여행 욕구를 자극. 예약을 유도하는 콘텐츠 제작." },
+    zh: { name: "旅游酒店", heroHeadline: "旅游AI视频营销", heroSubheadline: "用令人印象深刻的目的地视频激发旅行热情。创建促进预订的内容。" },
+  },
+  "education-online-courses": {
+    es: { name: "Educación y Cursos Online", heroHeadline: "Marketing de Video IA para Educación", heroSubheadline: "Crea contenido educativo atractivo que mantiene a los estudiantes aprendiendo. Videos profesionales para cursos y tutoriales." },
+    de: { name: "Bildung & Online-Kurse", heroHeadline: "KI-Videomarketing für Bildung", heroSubheadline: "Erstelle fesselnde Bildungsinhalte die Schüler am Lernen halten. Professionelle Videos für Kurse und Tutorials." },
+    fr: { name: "Éducation & Cours en Ligne", heroHeadline: "Marketing Vidéo IA pour l'Éducation", heroSubheadline: "Créez du contenu éducatif engageant qui maintient les étudiants en apprentissage. Vidéos professionnelles pour cours." },
+    pt: { name: "Educação & Cursos Online", heroHeadline: "Marketing de Vídeo IA para Educação", heroSubheadline: "Crie conteúdo educacional envolvente que mantém os alunos aprendendo. Vídeos profissionais para cursos e tutoriais." },
+    ru: { name: "Образование и Онлайн-курсы", heroHeadline: "AI-Видеомаркетинг для Образования", heroSubheadline: "Создавайте увлекательный образовательный контент, удерживающий студентов. Профессиональные видео для курсов и туториалов." },
+    it: { name: "Educazione & Corsi Online", heroHeadline: "Video Marketing IA per l'Educazione", heroSubheadline: "Crea contenuti educativi coinvolgenti che mantengono gli studenti all'apprendimento. Video professionali per corsi." },
+    nl: { name: "Onderwijs & Online Cursussen", heroHeadline: "AI Videomarketing voor Onderwijs", heroSubheadline: "Maak boeiende educatieve content die studenten aan het leren houdt. Professionele video's voor cursussen." },
+    pl: { name: "Edukacja i Kursy Online", heroHeadline: "Marketing Wideo AI dla Edukacji", heroSubheadline: "Twórz angażujące treści edukacyjne utrzymujące uczniów w nauce. Profesjonalne filmy do kursów i tutoriali." },
+    ja: { name: "教育・オンラインコース", heroHeadline: "教育のためのAI動画マーケティング", heroSubheadline: "学習者を引き付けるエンゲージングな教育コンテンツを作成。コースやチュートリアル用プロフェッショナル動画。" },
+    ko: { name: "교육 & 온라인 코스", heroHeadline: "교육을 위한 AI 비디오 마케팅", heroSubheadline: "학생들의 학습을 유지하는 매력적인 교육 콘텐츠 제작. 코스와 튜토리얼용 전문 비디오." },
+    zh: { name: "教育在线课程", heroHeadline: "教育AI视频营销", heroSubheadline: "创建保持学生学习的吸引人教育内容。课程和教程的专业视频。" },
+  },
+  "jewelry-accessories": {
+    es: { name: "Joyería y Accesorios", heroHeadline: "Marketing de Video IA para Joyería", heroSubheadline: "Haz brillar tus joyas en video. Efectos cinematográficos que capturan el brillo y detalle de cada pieza." },
+    de: { name: "Schmuck & Accessoires", heroHeadline: "KI-Videomarketing für Schmuck", heroSubheadline: "Lass deinen Schmuck im Video strahlen. Filmische Effekte die Glanz und Details jedes Stücks einfangen." },
+    fr: { name: "Bijoux & Accessoires", heroHeadline: "Marketing Vidéo IA pour la Bijouterie", heroSubheadline: "Faites briller vos bijoux en vidéo. Effets cinématographiques qui capturent l'éclat et les détails de chaque pièce." },
+    pt: { name: "Joias & Acessórios", heroHeadline: "Marketing de Vídeo IA para Joias", heroSubheadline: "Faça suas joias brilharem em vídeo. Efeitos cinematográficos que capturam o brilho e detalhes de cada peça." },
+    ru: { name: "Ювелирные Изделия", heroHeadline: "AI-Видеомаркетинг для Ювелирных Изделий", heroSubheadline: "Заставьте украшения сиять на видео. Кинематографические эффекты, захватывающие блеск и детали каждого изделия." },
+    it: { name: "Gioielli & Accessori", heroHeadline: "Video Marketing IA per Gioielli", heroSubheadline: "Fai brillare i tuoi gioielli in video. Effetti cinematografici che catturano la lucentezza e i dettagli di ogni pezzo." },
+    nl: { name: "Sieraden & Accessoires", heroHeadline: "AI Videomarketing voor Sieraden", heroSubheadline: "Laat je sieraden schitteren op video. Cinematografische effecten die glans en details van elk stuk vastleggen." },
+    pl: { name: "Biżuteria i Akcesoria", heroHeadline: "Marketing Wideo AI dla Biżuterii", heroSubheadline: "Spraw, by biżuteria lśniła na wideo. Kinowe efekty uchwytujące blask i detale każdej sztuki." },
+    ja: { name: "ジュエリー・アクセサリー", heroHeadline: "ジュエリーのためのAI動画マーケティング", heroSubheadline: "ジュエリーを動画で輝かせましょう。各ピースの輝きとディテールを捉えるシネマティックエフェクト。" },
+    ko: { name: "주얼리 & 액세서리", heroHeadline: "주얼리를 위한 AI 비디오 마케팅", heroSubheadline: "주얼리를 비디오에서 빛나게 하세요. 각 제품의 광채와 디테일을 담는 시네마틱 효과." },
+    zh: { name: "珠宝配饰", heroHeadline: "珠宝AI视频营销", heroSubheadline: "让您的珠宝在视频中闪耀。捕捉每件作品光泽和细节的电影效果。" },
+  },
+  "pet-products": {
+    es: { name: "Productos para Mascotas", heroHeadline: "Marketing de Video IA para Mascotas", heroSubheadline: "Crea contenido adorable de mascotas que convierte. Videos que muestran productos para mascotas en acción." },
+    de: { name: "Haustierprodukte", heroHeadline: "KI-Videomarketing für Haustierprodukte", heroSubheadline: "Erstelle niedliche Haustier-Inhalte die konvertieren. Videos die Haustierprodukte in Aktion zeigen." },
+    fr: { name: "Produits pour Animaux", heroHeadline: "Marketing Vidéo IA pour Animaux", heroSubheadline: "Créez du contenu adorable d'animaux qui convertit. Vidéos montrant les produits pour animaux en action." },
+    pt: { name: "Produtos para Pets", heroHeadline: "Marketing de Vídeo IA para Pets", heroSubheadline: "Crie conteúdo adorável de pets que converte. Vídeos mostrando produtos para pets em ação." },
+    ru: { name: "Товары для Питомцев", heroHeadline: "AI-Видеомаркетинг для Товаров для Питомцев", heroSubheadline: "Создавайте очаровательный контент о питомцах, который конвертирует. Видео, показывающие товары в действии." },
+    it: { name: "Prodotti per Animali", heroHeadline: "Video Marketing IA per Animali", heroSubheadline: "Crea contenuti adorabili di animali che convertono. Video che mostrano prodotti per animali in azione." },
+    nl: { name: "Huisdierproducten", heroHeadline: "AI Videomarketing voor Huisdieren", heroSubheadline: "Maak schattige huisdier content die converteert. Video's die huisdierproducten in actie tonen." },
+    pl: { name: "Produkty dla Zwierząt", heroHeadline: "Marketing Wideo AI dla Zwierząt", heroSubheadline: "Twórz urocze treści o zwierzętach, które konwertują. Filmy pokazujące produkty dla zwierząt w akcji." },
+    ja: { name: "ペット用品", heroHeadline: "ペット用品のためのAI動画マーケティング", heroSubheadline: "コンバージョンする愛らしいペットコンテンツを作成。ペット用品を実際に使用している動画。" },
+    ko: { name: "반려동물 제품", heroHeadline: "반려동물을 위한 AI 비디오 마케팅", heroSubheadline: "전환율 높은 사랑스러운 반려동물 콘텐츠 제작. 반려동물 제품을 실제로 보여주는 비디오." },
+    zh: { name: "宠物用品", heroHeadline: "宠物AI视频营销", heroSubheadline: "创建转化率高的可爱宠物内容。展示宠物产品实际使用的视频。" },
+  },
+  "automotive": {
+    es: { name: "Automotriz", heroHeadline: "Marketing de Video IA para Automotriz", heroSubheadline: "Crea videos automotrices impresionantes que venden. Efectos cinematográficos para concesionarios y marcas de autos." },
+    de: { name: "Automotive", heroHeadline: "KI-Videomarketing für Automotive", heroSubheadline: "Erstelle beeindruckende Autovideos die verkaufen. Filmische Effekte für Händler und Automarken." },
+    fr: { name: "Automobile", heroHeadline: "Marketing Vidéo IA pour l'Automobile", heroSubheadline: "Créez des vidéos automobiles impressionnantes qui vendent. Effets cinématographiques pour concessionnaires et marques." },
+    pt: { name: "Automotivo", heroHeadline: "Marketing de Vídeo IA para Automotivo", heroSubheadline: "Crie vídeos automotivos impressionantes que vendem. Efeitos cinematográficos para concessionárias e marcas." },
+    ru: { name: "Автомобили", heroHeadline: "AI-Видеомаркетинг для Автомобилей", heroSubheadline: "Создавайте впечатляющие автомобильные видео, которые продают. Кинематографические эффекты для дилеров и автобрендов." },
+    it: { name: "Automotive", heroHeadline: "Video Marketing IA per l'Automotive", heroSubheadline: "Crea video automotive impressionanti che vendono. Effetti cinematografici per concessionarie e marchi auto." },
+    nl: { name: "Automotive", heroHeadline: "AI Videomarketing voor Automotive", heroSubheadline: "Maak indrukwekkende autovideo's die verkopen. Cinematografische effecten voor dealers en automerken." },
+    pl: { name: "Motoryzacja", heroHeadline: "Marketing Wideo AI dla Motoryzacji", heroSubheadline: "Twórz imponujące filmy motoryzacyjne, które sprzedają. Kinowe efekty dla dealerów i marek samochodowych." },
+    ja: { name: "自動車", heroHeadline: "自動車のためのAI動画マーケティング", heroSubheadline: "売れる印象的な自動車動画を作成。ディーラーや自動車ブランド向けシネマティックエフェクト。" },
+    ko: { name: "자동차", heroHeadline: "자동차를 위한 AI 비디오 마케팅", heroSubheadline: "판매하는 인상적인 자동차 비디오 제작. 딜러와 자동차 브랜드를 위한 시네마틱 효과." },
+    zh: { name: "汽车", heroHeadline: "汽车AI视频营销", heroSubheadline: "创建促进销售的令人印象深刻的汽车视频。为经销商和汽车品牌打造的电影效果。" },
+  },
+};
+
+export function getLocalizedIndustryContent(
+  slug: string,
+  locale: Locale
+): IndustryTranslation | null {
+  if (locale === "en") return null;
+  const translations = industryTranslations[slug];
+  if (!translations) return null;
+  return translations[locale as NonEnLocale] || null;
+}

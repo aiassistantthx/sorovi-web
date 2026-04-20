@@ -7,7 +7,9 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { platforms, getPlatformBySlug } from "@/lib/platforms";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import { getLocalizedPlatformContent } from "@/lib/i18n/content/platforms";
 
 const SITE_URL = "https://hyreel.com";
 
@@ -70,10 +72,16 @@ export default async function LocalizedPlatformPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+  const localizedContent = getLocalizedPlatformContent(slug, lang as Locale);
+  const name = localizedContent?.name || platform.name;
+  const heroHeadline = localizedContent?.heroHeadline || `Create ${platform.name} Videos with AI`;
+  const heroSubheadline = localizedContent?.heroSubheadline || platform.description;
+
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: `/${lang}` },
-    { name: "Platforms", url: `/${lang}/platforms` },
-    { name: platform.name, url: `/${lang}/platforms/${platform.slug}` },
+    { name: t.home, url: `/${lang}` },
+    { name: t.platforms, url: `/${lang}/platforms` },
+    { name: name, url: `/${lang}/platforms/${platform.slug}` },
   ]);
 
   return (
@@ -91,9 +99,9 @@ export default async function LocalizedPlatformPage({
         <div className="text-center">
           <Breadcrumb
             items={[
-              { label: "Home", href: `/${lang}` },
-              { label: "Platforms", href: `/${lang}/platforms` },
-              { label: platform.name },
+              { label: t.home, href: `/${lang}` },
+              { label: t.platforms, href: `/${lang}/platforms` },
+              { label: name },
             ]}
             className="justify-center mb-6"
           />
@@ -101,21 +109,21 @@ export default async function LocalizedPlatformPage({
           <div className="text-6xl mb-6">{platform.icon}</div>
 
           <Heading as="h1" className="mb-6">
-            Create {platform.name} Videos with AI
+            {heroHeadline}
           </Heading>
 
           <Text variant="large" className="mb-8 max-w-3xl mx-auto">
-            {platform.description}
+            {heroSubheadline}
           </Text>
 
-          <Button size="lg">Start Creating Free</Button>
+          <Button size="lg">{t.startCreatingFree}</Button>
         </div>
       </Section>
 
       <Section spacing="xl">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Optimized for {platform.name}
+            {t.optimizedFor.replace("{name}", name)}
           </Heading>
         </div>
 
@@ -134,13 +142,13 @@ export default async function LocalizedPlatformPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
-            Ready to Create {platform.name} Content?
+            {t.readyToCreateContent.replace("{name}", name)}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Start Creating Free</Button>
+            <Button size="lg">{t.startCreatingFree}</Button>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
-                View Pricing
+                {t.viewPricing}
               </Button>
             </Link>
           </div>

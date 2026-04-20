@@ -7,7 +7,9 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { industries, getIndustryBySlug } from "@/lib/industries";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import { getLocalizedIndustryContent } from "@/lib/i18n/content/industries";
 
 const SITE_URL = "https://hyreel.com";
 
@@ -70,10 +72,16 @@ export default async function LocalizedIndustryPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+  const localizedContent = getLocalizedIndustryContent(slug, lang as Locale);
+  const name = localizedContent?.name || industry.name;
+  const heroHeadline = localizedContent?.heroHeadline || `AI Video for ${industry.name}`;
+  const heroSubheadline = localizedContent?.heroSubheadline || industry.description;
+
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: `/${lang}` },
-    { name: "Industries", url: `/${lang}/industries` },
-    { name: industry.name, url: `/${lang}/industries/${industry.slug}` },
+    { name: t.home, url: `/${lang}` },
+    { name: t.industries, url: `/${lang}/industries` },
+    { name: name, url: `/${lang}/industries/${industry.slug}` },
   ]);
 
   return (
@@ -91,9 +99,9 @@ export default async function LocalizedIndustryPage({
         <div className="text-center">
           <Breadcrumb
             items={[
-              { label: "Home", href: `/${lang}` },
-              { label: "Industries", href: `/${lang}/industries` },
-              { label: industry.name },
+              { label: t.home, href: `/${lang}` },
+              { label: t.industries, href: `/${lang}/industries` },
+              { label: name },
             ]}
             className="justify-center mb-6"
           />
@@ -101,21 +109,21 @@ export default async function LocalizedIndustryPage({
           <div className="text-6xl mb-6">{industry.icon}</div>
 
           <Heading as="h1" className="mb-6">
-            AI Video for {industry.name}
+            {heroHeadline}
           </Heading>
 
           <Text variant="large" className="mb-8 max-w-3xl mx-auto">
-            {industry.description}
+            {heroSubheadline}
           </Text>
 
-          <Button size="lg">Start Creating Free</Button>
+          <Button size="lg">{t.startCreatingFree}</Button>
         </div>
       </Section>
 
       <Section spacing="xl">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Solutions for {industry.name}
+            {t.solutionsFor.replace("{name}", name)}
           </Heading>
         </div>
 
@@ -135,13 +143,13 @@ export default async function LocalizedIndustryPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
-            Ready to Transform Your {industry.name} Content?
+            {t.readyToTransformContent.replace("{name}", name)}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Start Creating Free</Button>
+            <Button size="lg">{t.startCreatingFree}</Button>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
-                View Pricing
+                {t.viewPricing}
               </Button>
             </Link>
           </div>

@@ -6,7 +6,9 @@ import { Breadcrumb } from "@/components/ui/breadcrumb";
 import Link from "next/link";
 import { templates, getTemplateBySlug } from "@/lib/templates";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import { getLocalizedTemplateContent } from "@/lib/i18n/content/templates";
 
 const SITE_URL = "https://hyreel.com";
 
@@ -69,10 +71,16 @@ export default async function LocalizedTemplatePage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+  const localizedContent = getLocalizedTemplateContent(slug, lang as Locale);
+  const name = localizedContent?.name || template.name;
+  const heroHeadline = localizedContent?.heroHeadline || template.name;
+  const heroSubheadline = localizedContent?.heroSubheadline || template.description;
+
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: `/${lang}` },
-    { name: "Templates", url: `/${lang}/templates` },
-    { name: template.name, url: `/${lang}/templates/${template.slug}` },
+    { name: t.home, url: `/${lang}` },
+    { name: t.templates, url: `/${lang}/templates` },
+    { name: name, url: `/${lang}/templates/${template.slug}` },
   ]);
 
   return (
@@ -90,9 +98,9 @@ export default async function LocalizedTemplatePage({
         <div className="text-center">
           <Breadcrumb
             items={[
-              { label: "Home", href: `/${lang}` },
-              { label: "Templates", href: `/${lang}/templates` },
-              { label: template.name },
+              { label: t.home, href: `/${lang}` },
+              { label: t.templates, href: `/${lang}/templates` },
+              { label: name },
             ]}
             className="justify-center mb-6"
           />
@@ -100,21 +108,21 @@ export default async function LocalizedTemplatePage({
           <div className="text-6xl mb-6">{template.icon}</div>
 
           <Heading as="h1" className="mb-6">
-            {template.name}
+            {heroHeadline}
           </Heading>
 
           <Text variant="large" className="mb-8 max-w-3xl mx-auto">
-            {template.description}
+            {heroSubheadline}
           </Text>
 
-          <Button size="lg">Use This Template</Button>
+          <Button size="lg">{t.useThisTemplate}</Button>
         </div>
       </Section>
 
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Template Features
+            {t.templateFeatures}
           </Heading>
         </div>
 
@@ -137,13 +145,13 @@ export default async function LocalizedTemplatePage({
       <Section spacing="xl">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
-            Ready to Use This Template?
+            {t.readyToUseTemplate}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Start Creating</Button>
+            <Button size="lg">{t.startCreating}</Button>
             <Link href={`/${lang}/templates`}>
               <Button size="lg" variant="secondary">
-                Browse All Templates
+                {t.browseAllTemplates}
               </Button>
             </Link>
           </div>

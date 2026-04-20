@@ -73,81 +73,6 @@ export async function generateMetadata({
   };
 }
 
-const plans = [
-  {
-    name: "Free",
-    price: "$0",
-    period: "forever",
-    description: "Perfect for trying out Hyreel",
-    features: [
-      "3 videos per month",
-      "720p quality",
-      "Basic AI features",
-      "Hyreel watermark",
-      "Limited templates",
-      "Community support",
-    ],
-    cta: "Start Free",
-    popular: false,
-  },
-  {
-    name: "Creator",
-    price: "$39",
-    period: "per month",
-    description: "Best for individual creators",
-    features: [
-      "Unlimited videos",
-      "1080p HD quality",
-      "All AI features",
-      "No watermarks",
-      "100+ templates",
-      "50+ AI voices",
-      "Priority support",
-      "Direct publishing",
-    ],
-    cta: "Start Creating",
-    popular: true,
-  },
-  {
-    name: "Business",
-    price: "$99",
-    period: "per month",
-    description: "For teams and agencies",
-    features: [
-      "Everything in Creator",
-      "4K quality",
-      "Team collaboration",
-      "5 team members",
-      "Custom branding",
-      "API access",
-      "Analytics dashboard",
-      "Dedicated support",
-      "Custom AI training",
-    ],
-    cta: "Start Business Trial",
-    popular: false,
-  },
-];
-
-const faqs = [
-  {
-    q: "Can I change plans anytime?",
-    a: "Yes! Upgrade, downgrade, or cancel anytime. Changes take effect immediately.",
-  },
-  {
-    q: "What happens if I exceed my plan limits?",
-    a: "On the Free plan, you'll need to upgrade. Paid plans have unlimited videos.",
-  },
-  {
-    q: "Do you offer refunds?",
-    a: "Yes, we offer a 14-day money-back guarantee on all paid plans.",
-  },
-  {
-    q: "Can I use videos commercially?",
-    a: "Absolutely! You own 100% rights to all videos you create.",
-  },
-];
-
 export default async function LocalizedPricingPage({
   params,
 }: {
@@ -161,6 +86,69 @@ export default async function LocalizedPricingPage({
 
   const t = getTranslations(lang as Locale);
   const pricingSchema = generatePricingSchema();
+
+  const plans = [
+    {
+      name: t.free,
+      price: "$0",
+      period: t.forever,
+      description: t.planDescFree,
+      features: [
+        t.videosPerMonth,
+        t.quality720p,
+        t.basicAiFeatures,
+        t.hyreelWatermark,
+        t.limitedTemplates,
+        t.communitySupport,
+      ],
+      cta: t.ctaStartFree,
+      popular: false,
+    },
+    {
+      name: t.creator,
+      price: "$39",
+      period: t.perMonth,
+      description: t.planDescCreator,
+      features: [
+        t.unlimitedVideos,
+        t.quality1080p,
+        t.allAiFeatures,
+        t.noWatermark,
+        t.templates100Plus,
+        t.aiVoices50Plus,
+        t.prioritySupport,
+        t.directPublishing,
+      ],
+      cta: t.ctaStartCreating,
+      popular: true,
+    },
+    {
+      name: t.business,
+      price: "$99",
+      period: t.perMonth,
+      description: t.planDescBusiness,
+      features: [
+        t.everythingInCreator,
+        t.quality4K,
+        t.teamCollaboration,
+        t.teamMembers5,
+        t.customBranding,
+        t.apiAccess,
+        t.analyticsDashboard,
+        t.dedicatedSupport,
+        t.customAiTraining,
+      ],
+      cta: t.ctaStartBusinessTrial,
+      popular: false,
+    },
+  ];
+
+  const faqs = [
+    { q: t.pricingFaq1Q, a: t.pricingFaq1A },
+    { q: t.pricingFaq2Q, a: t.pricingFaq2A },
+    { q: t.pricingFaq3Q, a: t.pricingFaq3A },
+    { q: t.pricingFaq4Q, a: t.pricingFaq4A },
+  ];
 
   return (
     <>
@@ -258,10 +246,10 @@ export default async function LocalizedPricingPage({
       <Section spacing="xl">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Pricing FAQs
+            {t.pricingFaqs}
           </Heading>
           <Text variant="large">
-            Common questions about our pricing
+            {t.pricingFaqsSubtitle}
           </Text>
         </div>
 

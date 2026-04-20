@@ -126,7 +126,7 @@ export default async function LocalizedAlternativePage({
       <Section spacing="xl">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Feature Comparison
+            {t.featureComparison}
           </Heading>
         </div>
 
@@ -135,7 +135,7 @@ export default async function LocalizedAlternativePage({
             <thead>
               <tr className="border-b border-[var(--border-color)]">
                 <th className="text-left py-4 px-4 text-[var(--text-primary)] font-semibold">
-                  Feature
+                  {t.feature}
                 </th>
                 <th className="text-center py-4 px-4 text-[var(--brand-primary)] font-semibold">
                   Hyreel
@@ -167,7 +167,7 @@ export default async function LocalizedAlternativePage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Why Creators Choose Hyreel
+            {t.whyChooseHyreel}
           </Heading>
         </div>
 

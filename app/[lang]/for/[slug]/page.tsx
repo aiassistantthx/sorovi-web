@@ -129,7 +129,7 @@ export default async function LocalizedForPage({
       <Section spacing="xl">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Why {audienceName} Love Hyreel
+            {t.whyLoveHyreel.replace("{name}", audienceName)}
           </Heading>
         </div>
 
@@ -152,7 +152,7 @@ export default async function LocalizedForPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Features for {audienceName}
+            {t.featuresFor.replace("{name}", audienceName)}
           </Heading>
         </div>
 
