@@ -37,7 +37,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `Hyreel for ${audience.name} | Hyreel`,
+    title: `Hyreel for ${audience.name}`,
     description: audience.description,
     alternates: {
       canonical: `${SITE_URL}/${lang}/for/${slug}`,

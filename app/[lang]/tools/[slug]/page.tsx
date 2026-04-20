@@ -42,7 +42,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${tool.name} | Hyreel`,
+    title: tool.name,
     description: tool.description,
     alternates: {
       canonical: `${SITE_URL}/${lang}/tools/${slug}`,

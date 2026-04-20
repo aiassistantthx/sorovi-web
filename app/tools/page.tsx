@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { tools, getAllCategories } from "@/lib/tools";
 import { generateAlternates } from "@/lib/seo/alternates";
+import { generateToolsListSchema } from "@/lib/schema";
 
 export const metadata = {
   title: "AI Video Tools - Hyreel",
@@ -16,8 +17,16 @@ export const metadata = {
 const categories = getAllCategories();
 
 export default function ToolsPage() {
+  const toolsListSchema = generateToolsListSchema(tools);
+
   return (
     <>
+      {/* ItemList Schema for Tools */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolsListSchema) }}
+      />
+
       {/* Hero Section */}
       <Section spacing="xl" className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">

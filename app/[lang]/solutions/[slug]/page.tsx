@@ -37,7 +37,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${solution.name} | Hyreel`,
+    title: solution.name,
     description: solution.description,
     alternates: {
       canonical: `${SITE_URL}/${lang}/solutions/${slug}`,

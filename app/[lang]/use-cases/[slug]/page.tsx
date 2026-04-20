@@ -37,7 +37,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${useCase.title} | Hyreel`,
+    title: useCase.title,
     description: useCase.description,
     alternates: {
       canonical: `${SITE_URL}/${lang}/use-cases/${slug}`,

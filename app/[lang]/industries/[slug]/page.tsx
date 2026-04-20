@@ -37,7 +37,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: `AI Video for ${industry.name} | Hyreel`,
+    title: `AI Video for ${industry.name}`,
     description: industry.description,
     alternates: {
       canonical: `${SITE_URL}/${lang}/industries/${slug}`,

@@ -408,3 +408,31 @@ export function generateVideoGallerySchema({
     })),
   };
 }
+
+export function generateToolsListSchema(
+  tools: Array<{ name: string; slug: string; tagline: string; icon: string }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Hyreel AI Video Tools",
+    description: "Collection of AI-powered video creation tools",
+    numberOfItems: tools.length,
+    itemListElement: tools.map((tool, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "SoftwareApplication",
+        name: tool.name,
+        applicationCategory: "MultimediaApplication",
+        description: tool.tagline,
+        url: `${SITE_URL}/tools/${tool.slug}`,
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+        },
+      },
+    })),
+  };
+}
