@@ -17,6 +17,7 @@ import {
   generateBreadcrumbSchema,
 } from "@/lib/schema";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { getLocalizedBlogContent } from "@/lib/i18n/content/blog";
 
 const SITE_URL = "https://hyreel.com";
@@ -93,6 +94,7 @@ export default async function LocalizedBlogPostPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
   const relatedPosts = getRelatedPosts(post.slug);
   const relatedTools = post.relatedTools
     .map((toolSlug) => getToolBySlug(toolSlug))
@@ -111,8 +113,8 @@ export default async function LocalizedBlogPostPage({
   });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: "Home", url: `/${lang}` },
-    { name: "Blog", url: `/${lang}/blog` },
+    { name: t.home, url: `/${lang}` },
+    { name: t.blog, url: `/${lang}/blog` },
     { name: title, url: `/${lang}/blog/${post.slug}` },
   ]);
 
@@ -140,13 +142,13 @@ export default async function LocalizedBlogPostPage({
       <Section spacing="sm" className="border-b border-[var(--border-color)]">
         <nav className="flex items-center gap-2 text-sm text-[var(--text-muted)]">
           <Link href={`/${lang}`} className="hover:text-[var(--text-primary)] transition-colors">
-            Home
+            {t.home}
           </Link>
           <svg className="w-3 h-3" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M9 5l7 7-7 7" />
           </svg>
           <Link href={`/${lang}/blog`} className="hover:text-[var(--text-primary)] transition-colors">
-            Blog
+            {t.blog}
           </Link>
           <svg className="w-3 h-3" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
             <path d="M9 5l7 7-7 7" />
@@ -165,7 +167,7 @@ export default async function LocalizedBlogPostPage({
           <div className="flex items-center justify-center gap-3 mb-8">
             <Badge variant="primary">{post.category}</Badge>
             <span className="text-sm text-[var(--text-muted)]">
-              {post.readingTime} min read
+              {post.readingTime} {t.minRead}
             </span>
           </div>
 
@@ -204,10 +206,10 @@ export default async function LocalizedBlogPostPage({
         <Section spacing="lg" className="bg-[var(--surface-light)]">
           <div className="max-w-4xl mx-auto">
             <Heading as="h2" className="mb-2 text-center">
-              Related Tools
+              {t.relatedTools}
             </Heading>
             <Text variant="body" className="text-center mb-8">
-              Try these AI tools mentioned in this article
+              {t.tryTheseTools}
             </Text>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -234,10 +236,10 @@ export default async function LocalizedBlogPostPage({
         <Section spacing="lg">
           <div className="max-w-4xl mx-auto">
             <Heading as="h2" className="mb-2 text-center">
-              Related Articles
+              {t.relatedArticles}
             </Heading>
             <Text variant="body" className="text-center mb-8">
-              Continue reading about AI video creation
+              {t.continueReading}
             </Text>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -273,16 +275,16 @@ export default async function LocalizedBlogPostPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center">
           <Heading as="h2" className="mb-6">
-            Ready to Create Amazing Videos?
+            {t.readyToCreate}
           </Heading>
           <Text variant="large" className="mb-8">
-            Start transforming your photos into stunning AI-generated videos today.
+            {t.startTransforming}
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Start Creating Free</Button>
+            <Button size="lg">{t.startCreatingFree}</Button>
             <Link href={`/${lang}/blog`}>
               <Button size="lg" variant="secondary">
-                Back to Blog
+                {t.backToBlog}
               </Button>
             </Link>
           </div>

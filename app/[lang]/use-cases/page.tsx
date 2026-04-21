@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useCases } from "@/lib/use-cases";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { getTranslations } from "@/lib/i18n/translations";
+import { getLocalizedUseCaseContent } from "@/lib/i18n/content/use-cases";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -70,7 +71,7 @@ export default async function LocalizedUseCasesPage({
             {t.useCases}
           </Heading>
           <Text variant="large" className="mb-8">
-            See how creators are using Hyreel to make viral content.
+            {t.useCasesPageSubtitle}
           </Text>
           <Button size="lg">{t.startCreatingFree}</Button>
         </div>
@@ -78,15 +79,19 @@ export default async function LocalizedUseCasesPage({
 
       <Section spacing="xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {useCases.map((useCase, index) => (
+          {useCases.map((useCase, index) => {
+            const localizedContent = getLocalizedUseCaseContent(useCase.slug, lang as Locale);
+            const title = localizedContent?.title || useCase.title;
+            const description = localizedContent?.heroSubheadline || useCase.description;
+            return (
             <Card key={index} variant="elevated" className="group cursor-pointer">
               <Link href={`/${lang}/use-cases/${useCase.slug}`}>
                 <div className="text-4xl mb-4">{useCase.icon}</div>
                 <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors">
-                  {useCase.title}
+                  {title}
                 </h2>
                 <Text variant="small" className="mb-4 line-clamp-2">
-                  {useCase.description}
+                  {description}
                 </Text>
                 <div className="flex items-center gap-2 text-[var(--brand-primary)] text-sm font-medium">
                   {t.learnMore}
@@ -104,7 +109,8 @@ export default async function LocalizedUseCasesPage({
                 </div>
               </Link>
             </Card>
-          ))}
+          );
+          })}
         </div>
       </Section>
     </>

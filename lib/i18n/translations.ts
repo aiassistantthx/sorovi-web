@@ -16,6 +16,7 @@ export interface Translations {
   platforms: string;
   industries: string;
   useCases: string;
+  useCasesPageSubtitle: string;
   forAudience: string;
 
   // CTAs
@@ -123,6 +124,11 @@ export interface Translations {
   blogPageSubtitle: string;
   readMore: string;
   minRead: string;
+  relatedArticles: string;
+  backToBlog: string;
+  startTransforming: string;
+  tryTheseTools: string;
+  continueReading: string;
 
   // Footer/Common sections
   readyToCreate: string;
@@ -188,6 +194,7 @@ const en: Translations = {
   platforms: "Platforms",
   industries: "Industries",
   useCases: "Use Cases",
+  useCasesPageSubtitle: "See how creators are using Hyreel to make viral content",
   forAudience: "For",
 
   // CTAs
@@ -291,6 +298,11 @@ const en: Translations = {
   blogPageSubtitle: "Tips, tutorials, and insights for AI video creation",
   readMore: "Read More",
   minRead: "min read",
+  relatedArticles: "Related Articles",
+  backToBlog: "Back to Blog",
+  startTransforming: "Start transforming your photos into stunning AI-generated videos today.",
+  tryTheseTools: "Try these AI tools mentioned in this article",
+  continueReading: "Continue reading about AI video creation",
 
   // Footer/Common sections
   readyToCreate: "Ready to Create Amazing Videos?",
@@ -355,6 +367,7 @@ const es: Translations = {
   platforms: "Plataformas",
   industries: "Industrias",
   useCases: "Casos de Uso",
+  useCasesPageSubtitle: "Descubre cómo los creadores usan Hyreel para hacer contenido viral",
   forAudience: "Para",
 
   startCreating: "Empezar a Crear",
@@ -452,6 +465,11 @@ const es: Translations = {
   blogPageSubtitle: "Consejos, tutoriales e información sobre creación de video con IA",
   readMore: "Leer Más",
   minRead: "min de lectura",
+  relatedArticles: "Artículos Relacionados",
+  backToBlog: "Volver al Blog",
+  startTransforming: "Comienza a transformar tus fotos en impresionantes videos generados por IA hoy.",
+  tryTheseTools: "Prueba estas herramientas de IA mencionadas en este artículo",
+  continueReading: "Sigue leyendo sobre creación de video con IA",
 
   readyToCreate: "¿Listo para Crear Videos Increíbles?",
   joinCreators: "Únete a miles de creadores usando Hyreel",
@@ -513,6 +531,7 @@ const de: Translations = {
   platforms: "Plattformen",
   industries: "Branchen",
   useCases: "Anwendungsfälle",
+  useCasesPageSubtitle: "Erfahre, wie Creator Hyreel nutzen, um virale Inhalte zu erstellen",
   forAudience: "Für",
 
   startCreating: "Jetzt Erstellen",
@@ -610,6 +629,11 @@ const de: Translations = {
   blogPageSubtitle: "Tipps, Tutorials und Einblicke zur KI-Videoerstellung",
   readMore: "Weiterlesen",
   minRead: "Min. Lesezeit",
+  relatedArticles: "Verwandte Artikel",
+  backToBlog: "Zurück zum Blog",
+  startTransforming: "Beginne noch heute, deine Fotos in atemberaubende KI-generierte Videos zu verwandeln.",
+  tryTheseTools: "Probiere diese in diesem Artikel erwähnten KI-Tools aus",
+  continueReading: "Weiterlesen über KI-Videoerstellung",
 
   readyToCreate: "Bereit für Großartige Videos?",
   joinCreators: "Schließe dich tausenden Creators an",
@@ -671,6 +695,7 @@ const fr: Translations = {
   platforms: "Plateformes",
   industries: "Industries",
   useCases: "Cas d'Usage",
+  useCasesPageSubtitle: "Découvrez comment les créateurs utilisent Hyreel pour créer du contenu viral",
   forAudience: "Pour",
 
   startCreating: "Commencer à Créer",
@@ -768,6 +793,11 @@ const fr: Translations = {
   blogPageSubtitle: "Conseils, tutoriels et insights sur la création vidéo IA",
   readMore: "Lire la Suite",
   minRead: "min de lecture",
+  relatedArticles: "Articles Connexes",
+  backToBlog: "Retour au Blog",
+  startTransforming: "Commencez dès aujourd'hui à transformer vos photos en vidéos IA époustouflantes.",
+  tryTheseTools: "Essayez ces outils IA mentionnés dans cet article",
+  continueReading: "Continuez à lire sur la création vidéo IA",
 
   readyToCreate: "Prêt à Créer des Vidéos Incroyables?",
   joinCreators: "Rejoignez des milliers de créateurs",
@@ -829,6 +859,7 @@ const pt: Translations = {
   platforms: "Plataformas",
   industries: "Indústrias",
   useCases: "Casos de Uso",
+  useCasesPageSubtitle: "Veja como os criadores usam Hyreel para fazer conteúdo viral",
   forAudience: "Para",
 
   startCreating: "Começar a Criar",
@@ -926,6 +957,11 @@ const pt: Translations = {
   blogPageSubtitle: "Dicas, tutoriais e insights sobre criação de vídeo com IA",
   readMore: "Ler Mais",
   minRead: "min de leitura",
+  relatedArticles: "Artigos Relacionados",
+  backToBlog: "Voltar ao Blog",
+  startTransforming: "Comece a transformar suas fotos em vídeos incríveis gerados por IA hoje.",
+  tryTheseTools: "Experimente estas ferramentas de IA mencionadas neste artigo",
+  continueReading: "Continue lendo sobre criação de vídeo com IA",
 
   readyToCreate: "Pronto para Criar Vídeos Incríveis?",
   joinCreators: "Junte-se a milhares de criadores",
@@ -987,6 +1023,7 @@ const ru: Translations = {
   platforms: "Платформы",
   industries: "Индустрии",
   useCases: "Примеры использования",
+  useCasesPageSubtitle: "Узнайте, как создатели используют Hyreel для создания вирального контента",
   forAudience: "Для",
 
   startCreating: "Начать создавать",
@@ -1084,6 +1121,11 @@ const ru: Translations = {
   blogPageSubtitle: "Советы, уроки и инсайты о создании видео с ИИ",
   readMore: "Читать далее",
   minRead: "мин чтения",
+  relatedArticles: "Похожие статьи",
+  backToBlog: "Назад в блог",
+  startTransforming: "Начните превращать свои фото в потрясающие ИИ-видео уже сегодня.",
+  tryTheseTools: "Попробуйте эти ИИ-инструменты, упомянутые в статье",
+  continueReading: "Продолжайте читать о создании видео с ИИ",
 
   readyToCreate: "Готовы создавать потрясающие видео?",
   joinCreators: "Присоединяйтесь к тысячам авторов",
@@ -1145,6 +1187,7 @@ const it: Translations = {
   platforms: "Piattaforme",
   industries: "Settori",
   useCases: "Casi d'Uso",
+  useCasesPageSubtitle: "Scopri come i creator usano Hyreel per creare contenuti virali",
   forAudience: "Per",
 
   startCreating: "Inizia a Creare",
@@ -1242,6 +1285,11 @@ const it: Translations = {
   blogPageSubtitle: "Consigli, tutorial e approfondimenti sulla creazione video con IA",
   readMore: "Leggi di Più",
   minRead: "min di lettura",
+  relatedArticles: "Articoli Correlati",
+  backToBlog: "Torna al Blog",
+  startTransforming: "Inizia oggi a trasformare le tue foto in straordinari video generati dall'IA.",
+  tryTheseTools: "Prova questi strumenti IA menzionati in questo articolo",
+  continueReading: "Continua a leggere sulla creazione video con IA",
 
   readyToCreate: "Pronto a Creare Video Fantastici?",
   joinCreators: "Unisciti a migliaia di creator",
@@ -1303,6 +1351,7 @@ const nl: Translations = {
   platforms: "Platforms",
   industries: "Industrieën",
   useCases: "Toepassingen",
+  useCasesPageSubtitle: "Ontdek hoe creators Hyreel gebruiken om virale content te maken",
   forAudience: "Voor",
 
   startCreating: "Begin te Creëren",
@@ -1400,6 +1449,11 @@ const nl: Translations = {
   blogPageSubtitle: "Tips, tutorials en inzichten over AI video creatie",
   readMore: "Lees Meer",
   minRead: "min lezen",
+  relatedArticles: "Gerelateerde Artikelen",
+  backToBlog: "Terug naar Blog",
+  startTransforming: "Begin vandaag nog met het transformeren van je foto's in verbluffende AI-gegenereerde video's.",
+  tryTheseTools: "Probeer deze AI-tools uit dit artikel",
+  continueReading: "Lees verder over AI video creatie",
 
   readyToCreate: "Klaar om Geweldige Video's te Maken?",
   joinCreators: "Sluit je aan bij duizenden creators",
@@ -1461,6 +1515,7 @@ const pl: Translations = {
   platforms: "Platformy",
   industries: "Branże",
   useCases: "Przypadki użycia",
+  useCasesPageSubtitle: "Zobacz, jak twórcy używają Hyreel do tworzenia wirusowych treści",
   forAudience: "Dla",
 
   startCreating: "Zacznij Tworzyć",
@@ -1558,6 +1613,11 @@ const pl: Translations = {
   blogPageSubtitle: "Porady, tutoriale i spostrzeżenia o tworzeniu wideo AI",
   readMore: "Czytaj Więcej",
   minRead: "min czytania",
+  relatedArticles: "Powiązane Artykuły",
+  backToBlog: "Wróć do Bloga",
+  startTransforming: "Zacznij już dziś przekształcać swoje zdjęcia w niesamowite filmy generowane przez AI.",
+  tryTheseTools: "Wypróbuj te narzędzia AI wspomniane w tym artykule",
+  continueReading: "Czytaj dalej o tworzeniu wideo AI",
 
   readyToCreate: "Gotowy na Tworzenie Niesamowitych Filmów?",
   joinCreators: "Dołącz do tysięcy twórców",
@@ -1619,6 +1679,7 @@ const ja: Translations = {
   platforms: "プラットフォーム",
   industries: "業界",
   useCases: "活用事例",
+  useCasesPageSubtitle: "クリエイターがHyreelを使ってバイラルコンテンツを作成する方法をご覧ください",
   forAudience: "向け",
 
   startCreating: "作成を開始",
@@ -1716,6 +1777,11 @@ const ja: Translations = {
   blogPageSubtitle: "AI動画作成のヒント、チュートリアル、インサイト",
   readMore: "続きを読む",
   minRead: "分で読める",
+  relatedArticles: "関連記事",
+  backToBlog: "ブログに戻る",
+  startTransforming: "今日から写真を素晴らしいAI生成動画に変換しましょう。",
+  tryTheseTools: "この記事で紹介されているAIツールを試してみてください",
+  continueReading: "AI動画作成について読み続ける",
 
   readyToCreate: "素晴らしい動画を作る準備はできましたか？",
   joinCreators: "何千人ものクリエイターに参加",
@@ -1777,6 +1843,7 @@ const ko: Translations = {
   platforms: "플랫폼",
   industries: "산업",
   useCases: "활용 사례",
+  useCasesPageSubtitle: "크리에이터들이 Hyreel을 사용하여 바이럴 콘텐츠를 만드는 방법을 확인하세요",
   forAudience: "대상",
 
   startCreating: "만들기 시작",
@@ -1874,6 +1941,11 @@ const ko: Translations = {
   blogPageSubtitle: "AI 영상 제작에 대한 팁, 튜토리얼, 인사이트",
   readMore: "더 읽기",
   minRead: "분 소요",
+  relatedArticles: "관련 기사",
+  backToBlog: "블로그로 돌아가기",
+  startTransforming: "오늘부터 사진을 놀라운 AI 생성 동영상으로 변환하세요.",
+  tryTheseTools: "이 기사에서 언급된 AI 도구를 사용해 보세요",
+  continueReading: "AI 영상 제작에 대해 계속 읽기",
 
   readyToCreate: "멋진 영상을 만들 준비가 되셨나요?",
   joinCreators: "수천 명의 크리에이터와 함께하세요",
@@ -1935,6 +2007,7 @@ const zh: Translations = {
   platforms: "平台",
   industries: "行业",
   useCases: "使用案例",
+  useCasesPageSubtitle: "了解创作者如何使用Hyreel制作病毒式内容",
   forAudience: "适用于",
 
   startCreating: "开始创作",
@@ -2032,6 +2105,11 @@ const zh: Translations = {
   blogPageSubtitle: "AI视频创作的技巧、教程和见解",
   readMore: "阅读更多",
   minRead: "分钟阅读",
+  relatedArticles: "相关文章",
+  backToBlog: "返回博客",
+  startTransforming: "今天就开始将您的照片转换为令人惊叹的AI生成视频吧。",
+  tryTheseTools: "试试本文中提到的这些AI工具",
+  continueReading: "继续阅读AI视频创作相关内容",
 
   readyToCreate: "准备好创作精彩视频了吗？",
   joinCreators: "加入数千名创作者",
