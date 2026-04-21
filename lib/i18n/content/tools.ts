@@ -1189,54 +1189,180 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "Créez des Reels Instagram viraux avec l'IA",
       description: "Générez des Reels parfaits à partir de photos. Optimisé pour l'algorithme Instagram avec des effets tendance.",
       detailedDescription: "Maîtrisez Instagram Reels avec notre créateur vidéo IA conçu spécifiquement pour Instagram.",
+      howItWorks: [
+        { title: "Sélectionnez Votre Meilleure Photo", description: "Choisissez n'importe quelle image haute qualité. Produits, portraits, photos de voyage—Hyreel les rend toutes prêtes pour Reels." },
+        { title: "Appliquez l'Effet de Mouvement IA", description: "Choisissez parmi les effets optimisés Instagram: Zoom élégant, Orbite fluide, Suivi dynamique, Profondeur parallax." },
+        { title: "Personnalisez & Brandez", description: "Ajoutez vos couleurs de marque, superpositions de texte et choisissez parmi une musique curatée adaptée à Instagram." },
+        { title: "Partagez sur Instagram", description: "Exportez au format parfait pour Reels (9:16). Partagez sur Instagram directement via iOS." }
+      ],
+      features: [
+        { title: "Optimisé Instagram", description: "Effets et formats conçus spécifiquement pour l'algorithme Reels" },
+        { title: "Préréglages Esthétiques", description: "Belles gradations de couleurs et styles correspondant à l'esthétique Instagram" },
+        { title: "Mouvement Boostant l'Engagement", description: "Motifs de mouvement IA prouvés pour augmenter le temps de visionnage et les partages" },
+        { title: "Partage Facile Instagram", description: "Exportez et partagez vers Instagram Reels et Stories via iOS" },
+        { title: "Outils Texte & Légende", description: "Ajoutez des superpositions de texte élégantes correspondant à votre marque" },
+        { title: "Bibliothèque Musicale Instagram", description: "Accès à la musique sûre Instagram et audio tendance" }
+      ],
     },
     pt: {
       name: "Criador de Reels Instagram IA",
       tagline: "Crie Reels do Instagram virais com IA",
       description: "Gere Reels perfeitos a partir de fotos. Otimizado para o algoritmo do Instagram com efeitos de tendência.",
       detailedDescription: "Domine Instagram Reels com nosso criador de vídeos IA projetado especificamente para Instagram.",
+      howItWorks: [
+        { title: "Selecione Sua Melhor Foto", description: "Escolha qualquer imagem de alta qualidade. Produtos, retratos, fotos de viagem—Hyreel deixa todas prontas para Reels." },
+        { title: "Aplique Efeito de Movimento IA", description: "Escolha entre efeitos otimizados para Instagram: Zoom elegante, Órbita suave, Seguimento dinâmico, Profundidade parallax." },
+        { title: "Personalize & Marque", description: "Adicione as cores da sua marca, sobreposições de texto e escolha entre música curada amigável ao Instagram." },
+        { title: "Compartilhe no Instagram", description: "Exporte no formato perfeito para Reels (9:16). Compartilhe no Instagram diretamente via iOS." }
+      ],
+      features: [
+        { title: "Otimizado para Instagram", description: "Efeitos e formatos projetados especificamente para o algoritmo do Reels" },
+        { title: "Presets Estéticos", description: "Lindas gradações de cores e estilos combinando com a estética do Instagram" },
+        { title: "Movimento que Aumenta Engajamento", description: "Padrões de movimento IA comprovados para aumentar tempo de visualização e compartilhamentos" },
+        { title: "Compartilhamento Fácil Instagram", description: "Exporte e compartilhe para Instagram Reels e Stories via iOS" },
+        { title: "Ferramentas de Texto & Legenda", description: "Adicione sobreposições de texto estilosas que combinam com sua marca" },
+        { title: "Biblioteca de Música Instagram", description: "Acesso a música segura para Instagram e áudio trending" }
+      ],
     },
     ru: {
       name: "ИИ Создатель Instagram Reels",
       tagline: "Создавайте вирусные Instagram Reels с ИИ",
       description: "Генерируйте идеальные Reels из фото. Оптимизировано для алгоритма Instagram с трендовыми эффектами.",
       detailedDescription: "Овладейте Instagram Reels с нашим ИИ создателем видео, разработанным специально для Instagram.",
+      howItWorks: [
+        { title: "Выберите Лучшее Фото", description: "Выберите любое качественное изображение. Продукты, портреты, фото из путешествий—Hyreel делает их готовыми для Reels." },
+        { title: "Примените ИИ Эффект Движения", description: "Выбирайте из эффектов, оптимизированных для Instagram: Элегантный зум, Плавная орбита, Динамичное слежение, Глубина параллакс." },
+        { title: "Настройте и Брендируйте", description: "Добавьте цвета бренда, текстовые наложения и выберите из подобранной музыки для Instagram." },
+        { title: "Поделитесь в Instagram", description: "Экспортируйте в идеальном формате Reels (9:16). Делитесь в Instagram напрямую через iOS." }
+      ],
+      features: [
+        { title: "Оптимизировано для Instagram", description: "Эффекты и форматы, разработанные специально для алгоритма Reels" },
+        { title: "Эстетические Пресеты", description: "Красивые цветовые градации и стили, соответствующие эстетике Instagram" },
+        { title: "Движение для Вовлеченности", description: "ИИ паттерны движения, доказанно увеличивающие время просмотра и репосты" },
+        { title: "Простой Экспорт в Instagram", description: "Экспортируйте и делитесь в Instagram Reels и Stories через iOS" },
+        { title: "Инструменты Текста и Подписей", description: "Добавляйте стильные текстовые наложения, соответствующие вашему бренду" },
+        { title: "Библиотека Музыки Instagram", description: "Доступ к музыке, безопасной для Instagram, и трендовому аудио" }
+      ],
     },
     it: {
       name: "Creatore di Reels Instagram IA",
       tagline: "Crea Reels Instagram virali con l'IA",
       description: "Genera Reels perfetti dalle foto. Ottimizzato per l'algoritmo di Instagram con effetti di tendenza.",
       detailedDescription: "Domina Instagram Reels con il nostro creatore video IA progettato specificamente per Instagram.",
+      howItWorks: [
+        { title: "Seleziona la Tua Foto Migliore", description: "Scegli qualsiasi immagine di alta qualità. Prodotti, ritratti, foto di viaggio—Hyreel le rende tutte pronte per Reels." },
+        { title: "Applica Effetto Movimento IA", description: "Scegli tra effetti ottimizzati per Instagram: Zoom elegante, Orbita fluida, Tracciamento dinamico, Profondità parallax." },
+        { title: "Personalizza & Brandizza", description: "Aggiungi i colori del tuo brand, sovrapposizioni di testo e scegli tra musica curata adatta a Instagram." },
+        { title: "Condividi su Instagram", description: "Esporta nel formato perfetto per Reels (9:16). Condividi su Instagram direttamente via iOS." }
+      ],
+      features: [
+        { title: "Ottimizzato per Instagram", description: "Effetti e formati progettati specificamente per l'algoritmo Reels" },
+        { title: "Preset Estetici", description: "Belle gradazioni di colore e stili che corrispondono all'estetica Instagram" },
+        { title: "Movimento che Aumenta Engagement", description: "Pattern di movimento IA provati per aumentare tempo di visione e condivisioni" },
+        { title: "Condivisione Facile Instagram", description: "Esporta e condividi su Instagram Reels e Stories via iOS" },
+        { title: "Strumenti Testo & Didascalie", description: "Aggiungi sovrapposizioni di testo eleganti che corrispondono al tuo brand" },
+        { title: "Libreria Musicale Instagram", description: "Accesso a musica sicura per Instagram e audio trending" }
+      ],
     },
     nl: {
       name: "AI Instagram Reels Maker",
       tagline: "Maak virale Instagram Reels met AI",
       description: "Genereer perfecte Reels uit foto's. Geoptimaliseerd voor het Instagram-algoritme met trending effecten.",
       detailedDescription: "Beheers Instagram Reels met onze AI-videomaker speciaal ontworpen voor Instagram.",
+      howItWorks: [
+        { title: "Selecteer Je Beste Foto", description: "Kies een willekeurige afbeelding van hoge kwaliteit. Producten, portretten, reisfoto's—Hyreel maakt ze allemaal Reels-klaar." },
+        { title: "Pas AI Bewegingseffect Toe", description: "Kies uit Instagram-geoptimaliseerde effecten: Elegante zoom, Vloeiende orbit, Dynamisch volgen, Parallax diepte." },
+        { title: "Aanpassen & Branden", description: "Voeg je merkkleuren, tekstoverlays toe en kies uit gecureerde Instagram-vriendelijke muziek." },
+        { title: "Deel op Instagram", description: "Exporteer in perfect Reels-formaat (9:16). Deel op Instagram direct via iOS." }
+      ],
+      features: [
+        { title: "Instagram-Geoptimaliseerd", description: "Effecten en formaten speciaal ontworpen voor het Reels-algoritme" },
+        { title: "Esthetische Presets", description: "Mooie kleurverlopingen en stijlen die passen bij de Instagram-esthetiek" },
+        { title: "Engagement-Verhogend Beweging", description: "AI-bewegingspatronen bewezen om kijktijd en shares te verhogen" },
+        { title: "Makkelijk Instagram Delen", description: "Exporteer en deel naar Instagram Reels en Stories via iOS" },
+        { title: "Tekst- & Caption-Tools", description: "Voeg stijlvolle tekstoverlays toe die bij je merk passen" },
+        { title: "Instagram Muziekbibliotheek", description: "Toegang tot Instagram-veilige muziek en trending audio" }
+      ],
     },
     pl: {
       name: "Kreator Reels Instagram AI",
       tagline: "Twórz wiralowe Instagram Reels z AI",
       description: "Generuj idealne Reels ze zdjęć. Zoptymalizowane dla algorytmu Instagram z trendowymi efektami.",
       detailedDescription: "Opanuj Instagram Reels z naszym kreatorem wideo AI zaprojektowanym specjalnie dla Instagram.",
+      howItWorks: [
+        { title: "Wybierz Swoje Najlepsze Zdjęcie", description: "Wybierz dowolny obraz wysokiej jakości. Produkty, portrety, zdjęcia z podróży—Hyreel przygotuje je wszystkie na Reels." },
+        { title: "Zastosuj Efekt Ruchu AI", description: "Wybierz spośród efektów zoptymalizowanych dla Instagram: Elegancki zoom, Płynna orbita, Dynamiczne śledzenie, Głębia parallax." },
+        { title: "Dostosuj i Branduj", description: "Dodaj kolory swojej marki, nakładki tekstowe i wybierz z wyselekcjonowanej muzyki przyjaznej Instagram." },
+        { title: "Udostępnij na Instagram", description: "Eksportuj w idealnym formacie Reels (9:16). Udostępniaj na Instagram bezpośrednio przez iOS." }
+      ],
+      features: [
+        { title: "Zoptymalizowane dla Instagram", description: "Efekty i formaty zaprojektowane specjalnie dla algorytmu Reels" },
+        { title: "Estetyczne Presety", description: "Piękne gradacje kolorów i style pasujące do estetyki Instagram" },
+        { title: "Ruch Zwiększający Zaangażowanie", description: "Wzorce ruchu AI sprawdzone w zwiększaniu czasu oglądania i udostępnień" },
+        { title: "Łatwe Udostępnianie Instagram", description: "Eksportuj i udostępniaj na Instagram Reels i Stories przez iOS" },
+        { title: "Narzędzia Tekstu i Podpisów", description: "Dodawaj stylowe nakładki tekstowe pasujące do Twojej marki" },
+        { title: "Biblioteka Muzyki Instagram", description: "Dostęp do muzyki bezpiecznej dla Instagram i trendowego audio" }
+      ],
     },
     ja: {
       name: "AI Instagram Reelsメーカー",
       tagline: "AIでバイラルInstagram Reelsを作成",
       description: "写真から完璧なReelsを生成。トレンドエフェクトでInstagramアルゴリズムに最適化。",
       detailedDescription: "Instagram専用に設計されたAIビデオクリエイターでInstagram Reelsをマスター。",
+      howItWorks: [
+        { title: "ベストな写真を選択", description: "高品質な画像を選択。商品、ポートレート、旅行写真—HyreelがすべてReels対応にします。" },
+        { title: "AIモーションエフェクトを適用", description: "Instagram最適化エフェクトから選択: エレガントズーム、スムーズオービット、ダイナミックフォロー、パララックス深度。" },
+        { title: "カスタマイズ&ブランディング", description: "ブランドカラー、テキストオーバーレイを追加し、Instagram向けの厳選音楽から選択。" },
+        { title: "Instagramに共有", description: "完璧なReelsフォーマット（9:16）でエクスポート。iOSから直接Instagramに共有。" }
+      ],
+      features: [
+        { title: "Instagram最適化", description: "Reelsアルゴリズム専用に設計されたエフェクトとフォーマット" },
+        { title: "エステティックプリセット", description: "Instagramの美学に合った美しいカラーグレードとスタイル" },
+        { title: "エンゲージメント向上モーション", description: "視聴時間とシェアを増やすことが実証されたAIモーションパターン" },
+        { title: "簡単Instagram共有", description: "iOSからInstagram ReelsとStoriesにエクスポート・共有" },
+        { title: "テキスト&キャプションツール", description: "ブランドに合ったスタイリッシュなテキストオーバーレイを追加" },
+        { title: "Instagram音楽ライブラリ", description: "Instagram対応の音楽とトレンドオーディオにアクセス" }
+      ],
     },
     ko: {
       name: "AI Instagram Reels 메이커",
       tagline: "AI로 바이럴 Instagram Reels 생성",
       description: "사진에서 완벽한 Reels를 생성하세요. 트렌드 효과로 Instagram 알고리즘에 최적화.",
       detailedDescription: "Instagram 전용으로 설계된 AI 비디오 크리에이터로 Instagram Reels를 마스터하세요.",
+      howItWorks: [
+        { title: "최고의 사진 선택", description: "고품질 이미지를 선택하세요. 제품, 인물, 여행 사진—Hyreel이 모두 Reels 준비 완료로 만들어 드립니다." },
+        { title: "AI 모션 효과 적용", description: "Instagram 최적화 효과 중 선택: 우아한 줌, 부드러운 오빗, 다이나믹 팔로우, 패럴랙스 깊이." },
+        { title: "커스터마이즈 & 브랜딩", description: "브랜드 색상, 텍스트 오버레이를 추가하고 Instagram 친화적인 큐레이션 음악에서 선택하세요." },
+        { title: "Instagram에 공유", description: "완벽한 Reels 형식(9:16)으로 내보내기. iOS에서 직접 Instagram에 공유." }
+      ],
+      features: [
+        { title: "Instagram 최적화", description: "Reels 알고리즘 전용으로 설계된 효과와 형식" },
+        { title: "에스테틱 프리셋", description: "Instagram 미학에 맞는 아름다운 컬러 그레이드와 스타일" },
+        { title: "참여도 향상 모션", description: "시청 시간과 공유를 늘리는 것으로 입증된 AI 모션 패턴" },
+        { title: "쉬운 Instagram 공유", description: "iOS에서 Instagram Reels와 Stories로 내보내기 및 공유" },
+        { title: "텍스트 & 캡션 도구", description: "브랜드에 맞는 스타일리시한 텍스트 오버레이 추가" },
+        { title: "Instagram 음악 라이브러리", description: "Instagram 안전 음악과 트렌드 오디오에 접근" }
+      ],
     },
     zh: {
       name: "AI Instagram Reels制作器",
       tagline: "用AI创建病毒式Instagram Reels",
       description: "从照片生成完美的Reels。使用流行效果为Instagram算法优化。",
       detailedDescription: "使用专为Instagram设计的AI视频创作器掌握Instagram Reels。",
+      howItWorks: [
+        { title: "选择您最好的照片", description: "选择任何高质量图像。产品、人像、旅行照片——Hyreel让它们都准备好成为Reels。" },
+        { title: "应用AI运动效果", description: "从Instagram优化效果中选择：优雅缩放、流畅环绕、动态跟随、视差深度。" },
+        { title: "自定义与品牌化", description: "添加您的品牌颜色、文字叠加，并从精选的Instagram友好音乐中选择。" },
+        { title: "分享到Instagram", description: "以完美的Reels格式（9:16）导出。通过iOS直接分享到Instagram。" }
+      ],
+      features: [
+        { title: "Instagram优化", description: "专为Reels算法设计的效果和格式" },
+        { title: "美学预设", description: "与Instagram美学相匹配的美丽色彩分级和风格" },
+        { title: "提升参与度的运动", description: "经证实可增加观看时间和分享的AI运动模式" },
+        { title: "轻松Instagram分享", description: "通过iOS导出并分享到Instagram Reels和Stories" },
+        { title: "文字和标题工具", description: "添加与您品牌匹配的时尚文字叠加" },
+        { title: "Instagram音乐库", description: "访问Instagram安全音乐和流行音频" }
+      ],
     },
   },
   "ai-youtube-shorts-generator": {
@@ -1245,66 +1371,220 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "Crea YouTube Shorts virales con IA",
       description: "Genera Shorts perfectos para YouTube desde fotos. Optimizado para descubrimiento y engagement.",
       detailedDescription: "Domina YouTube Shorts con nuestro generador de videos IA optimizado para el formato vertical de YouTube.",
+      howItWorks: [
+        { title: "Sube Cualquier Imagen", description: "Comienza con una foto que cuente tu historia. Miniaturas, fotos de productos o cualquier imagen impactante funciona." },
+        { title: "Añade Movimiento IA", description: "Elige efectos de movimiento cinematográfico que den vida a tu imagen y mantengan la atención del espectador." },
+        { title: "Optimiza para YouTube", description: "Añade títulos, llamadas a suscripción y optimiza para el algoritmo de YouTube Shorts." },
+        { title: "Sube a YouTube", description: "Exporta en calidad y formato perfecto para YouTube. Sube directamente desde tu dispositivo." }
+      ],
+      features: [
+        { title: "Calidad Optimizada YouTube", description: "Exportación en calidad 1080p perfecta para los estándares de YouTube" },
+        { title: "Listo para 60 Segundos", description: "Crea Shorts de hasta 60 segundos con ritmo perfecto" },
+        { title: "Herramientas CTA Suscribirse", description: "Añade indicaciones de suscripción y branding del canal" },
+        { title: "Movimiento Amigable con Algoritmo", description: "Efectos diseñados para maximizar tiempo de visualización y retención" },
+        { title: "Efectos Cinematográficos", description: "Movimientos de cámara profesionales con aspecto de producción de estudio" },
+        { title: "Exportación Alta Calidad", description: "Sin artefactos de compresión—archivos listos para YouTube" }
+      ],
     },
     de: {
       name: "KI YouTube Shorts Generator",
       tagline: "Erstelle virale YouTube Shorts mit KI",
       description: "Generiere perfekte Shorts für YouTube aus Fotos. Optimiert für Entdeckung und Engagement.",
       detailedDescription: "Meistere YouTube Shorts mit unserem für das YouTube-Hochformat optimierten KI-Videogenerator.",
+      howItWorks: [
+        { title: "Beliebiges Bild Hochladen", description: "Beginne mit einem Foto, das deine Geschichte erzählt. Thumbnails, Produktfotos oder jedes überzeugende Bild funktioniert." },
+        { title: "KI-Bewegung Hinzufügen", description: "Wähle cinematische Bewegungseffekte, die dein Bild zum Leben erwecken und die Aufmerksamkeit der Zuschauer halten." },
+        { title: "Für YouTube Optimieren", description: "Füge Titel, Abo-Aufforderungen hinzu und optimiere für den YouTube Shorts-Algorithmus." },
+        { title: "Auf YouTube Hochladen", description: "Exportiere in YouTube-perfekter Qualität und Format. Lade direkt von deinem Gerät hoch." }
+      ],
+      features: [
+        { title: "YouTube-Optimierte Qualität", description: "1080p Exportqualität perfekt für YouTubes Standards" },
+        { title: "60-Sekunden-Fertig", description: "Erstelle Shorts bis zu 60 Sekunden mit perfektem Timing" },
+        { title: "Abonnieren-CTA-Tools", description: "Füge Abo-Aufforderungen und Kanal-Branding hinzu" },
+        { title: "Algorithmus-Freundliche Bewegung", description: "Effekte für maximale Wiedergabezeit und Retention entwickelt" },
+        { title: "Cinematische Effekte", description: "Professionelle Kamerabewegungen mit Studio-Produktionsqualität" },
+        { title: "Hochwertige Exportierung", description: "Keine Kompressionsartefakte—YouTube-fertige Dateien" }
+      ],
     },
     fr: {
       name: "Générateur YouTube Shorts IA",
       tagline: "Créez des YouTube Shorts viraux avec l'IA",
       description: "Générez des Shorts parfaits pour YouTube à partir de photos. Optimisé pour la découverte et l'engagement.",
       detailedDescription: "Maîtrisez YouTube Shorts avec notre générateur vidéo IA optimisé pour le format vertical YouTube.",
+      howItWorks: [
+        { title: "Téléchargez N'importe Quelle Image", description: "Commencez avec une photo qui raconte votre histoire. Miniatures, photos de produits ou toute image percutante fonctionne." },
+        { title: "Ajoutez du Mouvement IA", description: "Choisissez des effets de mouvement cinématographiques qui donnent vie à votre image et captent l'attention des spectateurs." },
+        { title: "Optimisez pour YouTube", description: "Ajoutez des titres, des incitations à s'abonner et optimisez pour l'algorithme YouTube Shorts." },
+        { title: "Téléchargez sur YouTube", description: "Exportez en qualité et format parfaits pour YouTube. Téléchargez directement depuis votre appareil." }
+      ],
+      features: [
+        { title: "Qualité Optimisée YouTube", description: "Exportation en qualité 1080p parfaite pour les standards YouTube" },
+        { title: "Prêt pour 60 Secondes", description: "Créez des Shorts jusqu'à 60 secondes avec un rythme parfait" },
+        { title: "Outils CTA S'abonner", description: "Ajoutez des incitations à s'abonner et le branding du canal" },
+        { title: "Mouvement Ami de l'Algorithme", description: "Effets conçus pour maximiser le temps de visionnage et la rétention" },
+        { title: "Effets Cinématographiques", description: "Mouvements de caméra professionnels avec aspect production studio" },
+        { title: "Exportation Haute Qualité", description: "Sans artefacts de compression—fichiers prêts pour YouTube" }
+      ],
     },
     pt: {
       name: "Gerador de YouTube Shorts IA",
       tagline: "Crie YouTube Shorts virais com IA",
       description: "Gere Shorts perfeitos para YouTube a partir de fotos. Otimizado para descoberta e engajamento.",
       detailedDescription: "Domine YouTube Shorts com nosso gerador de vídeos IA otimizado para o formato vertical do YouTube.",
+      howItWorks: [
+        { title: "Envie Qualquer Imagem", description: "Comece com uma foto que conte sua história. Miniaturas, fotos de produtos ou qualquer imagem impactante funciona." },
+        { title: "Adicione Movimento IA", description: "Escolha efeitos de movimento cinematográficos que dão vida à sua imagem e mantêm a atenção do espectador." },
+        { title: "Otimize para YouTube", description: "Adicione títulos, chamadas para inscrição e otimize para o algoritmo do YouTube Shorts." },
+        { title: "Envie para YouTube", description: "Exporte em qualidade e formato perfeitos para YouTube. Envie diretamente do seu dispositivo." }
+      ],
+      features: [
+        { title: "Qualidade Otimizada YouTube", description: "Exportação em qualidade 1080p perfeita para os padrões do YouTube" },
+        { title: "Pronto para 60 Segundos", description: "Crie Shorts de até 60 segundos com ritmo perfeito" },
+        { title: "Ferramentas CTA Inscrever-se", description: "Adicione indicações de inscrição e branding do canal" },
+        { title: "Movimento Amigável ao Algoritmo", description: "Efeitos projetados para maximizar tempo de visualização e retenção" },
+        { title: "Efeitos Cinematográficos", description: "Movimentos de câmera profissionais com visual de produção de estúdio" },
+        { title: "Exportação Alta Qualidade", description: "Sem artefatos de compressão—arquivos prontos para YouTube" }
+      ],
     },
     ru: {
       name: "ИИ Генератор YouTube Shorts",
       tagline: "Создавайте вирусные YouTube Shorts с ИИ",
       description: "Генерируйте идеальные Shorts для YouTube из фото. Оптимизировано для охвата и вовлечения.",
       detailedDescription: "Овладейте YouTube Shorts с нашим ИИ генератором видео, оптимизированным для вертикального формата YouTube.",
+      howItWorks: [
+        { title: "Загрузите Любое Изображение", description: "Начните с фото, которое рассказывает вашу историю. Миниатюры, фото продуктов или любое впечатляющее изображение подойдет." },
+        { title: "Добавьте ИИ Движение", description: "Выберите кинематографические эффекты движения, которые оживят изображение и удержат внимание зрителей." },
+        { title: "Оптимизируйте для YouTube", description: "Добавьте заголовки, призывы к подписке и оптимизируйте для алгоритма YouTube Shorts." },
+        { title: "Загрузите на YouTube", description: "Экспортируйте в идеальном качестве и формате для YouTube. Загружайте прямо с устройства." }
+      ],
+      features: [
+        { title: "Оптимизированное Качество YouTube", description: "Экспорт в качестве 1080p, идеальном для стандартов YouTube" },
+        { title: "Готово к 60 Секундам", description: "Создавайте Shorts до 60 секунд с идеальным ритмом" },
+        { title: "Инструменты CTA Подписка", description: "Добавляйте призывы к подписке и брендинг канала" },
+        { title: "Движение для Алгоритма", description: "Эффекты для максимального времени просмотра и удержания" },
+        { title: "Кинематографические Эффекты", description: "Профессиональные движения камеры студийного качества" },
+        { title: "Высококачественный Экспорт", description: "Без артефактов сжатия—файлы готовы для YouTube" }
+      ],
     },
     it: {
       name: "Generatore YouTube Shorts IA",
       tagline: "Crea YouTube Shorts virali con l'IA",
       description: "Genera Shorts perfetti per YouTube dalle foto. Ottimizzato per scoperta ed engagement.",
       detailedDescription: "Domina YouTube Shorts con il nostro generatore video IA ottimizzato per il formato verticale YouTube.",
+      howItWorks: [
+        { title: "Carica Qualsiasi Immagine", description: "Inizia con una foto che racconta la tua storia. Miniature, foto prodotti o qualsiasi immagine coinvolgente funziona." },
+        { title: "Aggiungi Movimento IA", description: "Scegli effetti di movimento cinematografici che danno vita alla tua immagine e mantengono l'attenzione degli spettatori." },
+        { title: "Ottimizza per YouTube", description: "Aggiungi titoli, inviti all'iscrizione e ottimizza per l'algoritmo YouTube Shorts." },
+        { title: "Carica su YouTube", description: "Esporta in qualità e formato perfetti per YouTube. Carica direttamente dal tuo dispositivo." }
+      ],
+      features: [
+        { title: "Qualità Ottimizzata YouTube", description: "Esportazione in qualità 1080p perfetta per gli standard YouTube" },
+        { title: "Pronto per 60 Secondi", description: "Crea Shorts fino a 60 secondi con ritmo perfetto" },
+        { title: "Strumenti CTA Iscriviti", description: "Aggiungi inviti all'iscrizione e branding del canale" },
+        { title: "Movimento Amico dell'Algoritmo", description: "Effetti progettati per massimizzare tempo di visione e retention" },
+        { title: "Effetti Cinematografici", description: "Movimenti di camera professionali con aspetto da produzione studio" },
+        { title: "Esportazione Alta Qualità", description: "Nessun artefatto di compressione—file pronti per YouTube" }
+      ],
     },
     nl: {
       name: "AI YouTube Shorts Generator",
       tagline: "Maak virale YouTube Shorts met AI",
       description: "Genereer perfecte Shorts voor YouTube uit foto's. Geoptimaliseerd voor ontdekking en engagement.",
       detailedDescription: "Beheers YouTube Shorts met onze AI-videogenerator geoptimaliseerd voor het verticale YouTube-formaat.",
+      howItWorks: [
+        { title: "Upload Elke Afbeelding", description: "Begin met een foto die je verhaal vertelt. Thumbnails, productfoto's of elke overtuigende afbeelding werkt." },
+        { title: "Voeg AI Beweging Toe", description: "Kies cinematische bewegingseffecten die je afbeelding tot leven brengen en de aandacht van kijkers vasthouden." },
+        { title: "Optimaliseer voor YouTube", description: "Voeg titels, abonneer-oproepen toe en optimaliseer voor het YouTube Shorts-algoritme." },
+        { title: "Upload naar YouTube", description: "Exporteer in YouTube-perfecte kwaliteit en formaat. Upload direct vanaf je apparaat." }
+      ],
+      features: [
+        { title: "YouTube-Geoptimaliseerde Kwaliteit", description: "1080p exportkwaliteit perfect voor YouTubes standaarden" },
+        { title: "60-Seconden Klaar", description: "Maak Shorts tot 60 seconden met perfecte timing" },
+        { title: "Abonneer CTA Tools", description: "Voeg abonneer-oproepen en kanaalbranding toe" },
+        { title: "Algoritme-Vriendelijke Beweging", description: "Effecten ontworpen om kijktijd en retentie te maximaliseren" },
+        { title: "Cinematische Effecten", description: "Professionele camerabewegingen met studio-productiekwaliteit" },
+        { title: "Hoogwaardige Export", description: "Geen compressieartefacten—YouTube-klare bestanden" }
+      ],
     },
     pl: {
       name: "Generator YouTube Shorts AI",
       tagline: "Twórz wiralowe YouTube Shorts z AI",
       description: "Generuj idealne Shorts dla YouTube ze zdjęć. Zoptymalizowane dla odkrywalności i zaangażowania.",
       detailedDescription: "Opanuj YouTube Shorts z naszym generatorem wideo AI zoptymalizowanym dla pionowego formatu YouTube.",
+      howItWorks: [
+        { title: "Prześlij Dowolny Obraz", description: "Zacznij od zdjęcia, które opowiada Twoją historię. Miniatury, zdjęcia produktów lub dowolny przekonujący obraz zadziała." },
+        { title: "Dodaj Ruch AI", description: "Wybierz kinematograficzne efekty ruchu, które ożywią Twój obraz i utrzymają uwagę widzów." },
+        { title: "Zoptymalizuj dla YouTube", description: "Dodaj tytuły, wezwania do subskrypcji i zoptymalizuj dla algorytmu YouTube Shorts." },
+        { title: "Prześlij na YouTube", description: "Eksportuj w idealnej jakości i formacie dla YouTube. Przesyłaj bezpośrednio z urządzenia." }
+      ],
+      features: [
+        { title: "Jakość Zoptymalizowana dla YouTube", description: "Eksport w jakości 1080p idealnej dla standardów YouTube" },
+        { title: "Gotowe na 60 Sekund", description: "Twórz Shorts do 60 sekund z idealnym tempem" },
+        { title: "Narzędzia CTA Subskrybuj", description: "Dodawaj wezwania do subskrypcji i branding kanału" },
+        { title: "Ruch Przyjazny Algorytmowi", description: "Efekty zaprojektowane dla maksymalnego czasu oglądania i retencji" },
+        { title: "Efekty Kinematograficzne", description: "Profesjonalne ruchy kamery o jakości produkcji studyjnej" },
+        { title: "Eksport Wysokiej Jakości", description: "Bez artefaktów kompresji—pliki gotowe dla YouTube" }
+      ],
     },
     ja: {
       name: "AI YouTube Shortsジェネレーター",
       tagline: "AIでバイラルYouTube Shortsを作成",
       description: "写真からYouTube用の完璧なShortsを生成。発見とエンゲージメントに最適化。",
       detailedDescription: "YouTube縦型フォーマット向けに最適化されたAIビデオジェネレーターでYouTube Shortsをマスター。",
+      howItWorks: [
+        { title: "任意の画像をアップロード", description: "ストーリーを伝える写真から始めましょう。サムネイル、商品写真、または魅力的な画像なら何でもOK。" },
+        { title: "AIモーションを追加", description: "画像に命を吹き込み、視聴者の注目を維持するシネマティックなモーションエフェクトを選択。" },
+        { title: "YouTube向けに最適化", description: "タイトル、登録促進、YouTube Shortsアルゴリズム向けの最適化を追加。" },
+        { title: "YouTubeにアップロード", description: "YouTube完璧な品質とフォーマットでエクスポート。デバイスから直接アップロード。" }
+      ],
+      features: [
+        { title: "YouTube最適化品質", description: "YouTubeの基準に完璧な1080p品質でエクスポート" },
+        { title: "60秒対応", description: "完璧なペーシングで最大60秒のShortsを作成" },
+        { title: "登録CTAツール", description: "登録促進とチャンネルブランディングを追加" },
+        { title: "アルゴリズムフレンドリーモーション", description: "視聴時間と維持率を最大化するよう設計されたエフェクト" },
+        { title: "シネマティックエフェクト", description: "スタジオ制作品質のプロフェッショナルなカメラ移動" },
+        { title: "高品質エクスポート", description: "圧縮アーティファクトなし—YouTube対応ファイル" }
+      ],
     },
     ko: {
       name: "AI YouTube Shorts 생성기",
       tagline: "AI로 바이럴 YouTube Shorts 생성",
       description: "사진에서 YouTube용 완벽한 Shorts를 생성하세요. 발견과 참여에 최적화.",
       detailedDescription: "YouTube 세로 형식에 최적화된 AI 비디오 생성기로 YouTube Shorts를 마스터하세요.",
+      howItWorks: [
+        { title: "이미지 업로드", description: "스토리를 전달하는 사진으로 시작하세요. 썸네일, 제품 사진 또는 매력적인 이미지라면 무엇이든 가능합니다." },
+        { title: "AI 모션 추가", description: "이미지에 생명을 불어넣고 시청자의 주의를 유지하는 시네마틱 모션 효과를 선택하세요." },
+        { title: "YouTube용 최적화", description: "제목, 구독 유도, YouTube Shorts 알고리즘 최적화를 추가하세요." },
+        { title: "YouTube에 업로드", description: "YouTube 완벽한 품질과 형식으로 내보내기. 기기에서 직접 업로드하세요." }
+      ],
+      features: [
+        { title: "YouTube 최적화 품질", description: "YouTube 표준에 완벽한 1080p 품질로 내보내기" },
+        { title: "60초 준비 완료", description: "완벽한 페이싱으로 최대 60초 Shorts 생성" },
+        { title: "구독 CTA 도구", description: "구독 유도와 채널 브랜딩 추가" },
+        { title: "알고리즘 친화적 모션", description: "시청 시간과 유지율을 최대화하도록 설계된 효과" },
+        { title: "시네마틱 효과", description: "스튜디오 제작 품질의 전문적인 카메라 움직임" },
+        { title: "고품질 내보내기", description: "압축 아티팩트 없음—YouTube 준비 파일" }
+      ],
     },
     zh: {
       name: "AI YouTube Shorts生成器",
       tagline: "用AI创建病毒式YouTube Shorts",
       description: "从照片生成完美的YouTube Shorts。针对发现和参与度优化。",
       detailedDescription: "使用为YouTube垂直格式优化的AI视频生成器掌握YouTube Shorts。",
+      howItWorks: [
+        { title: "上传任何图像", description: "从讲述您故事的照片开始。缩略图、产品照片或任何引人注目的图像都可以。" },
+        { title: "添加AI运动", description: "选择让图像栩栩如生并保持观众注意力的电影级运动效果。" },
+        { title: "为YouTube优化", description: "添加标题、订阅提示，并为YouTube Shorts算法优化。" },
+        { title: "上传到YouTube", description: "以YouTube完美的质量和格式导出。直接从设备上传。" }
+      ],
+      features: [
+        { title: "YouTube优化质量", description: "以符合YouTube标准的完美1080p质量导出" },
+        { title: "60秒就绪", description: "创建最长60秒的Shorts，节奏完美" },
+        { title: "订阅CTA工具", description: "添加订阅提示和频道品牌" },
+        { title: "算法友好运动", description: "旨在最大化观看时间和留存率的效果" },
+        { title: "电影级效果", description: "具有工作室制作质量的专业相机移动" },
+        { title: "高质量导出", description: "无压缩伪影——YouTube就绪文件" }
+      ],
     },
   },
   "ai-zoom-video-effect": {
