@@ -98,6 +98,9 @@ export default async function LocalizedToolPage({
   const toolName = localizedContent?.name || tool.name;
   const toolDescription = localizedContent?.description || tool.description;
   const toolDetailedDescription = localizedContent?.detailedDescription || tool.detailedDescription;
+  const toolHowItWorks = localizedContent?.howItWorks || tool.howItWorks;
+  const toolFeatures = localizedContent?.features || tool.features;
+  const toolFaqs = localizedContent?.faqs || tool.faqs;
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: t.home, url: `/${lang}` },
@@ -170,12 +173,12 @@ export default async function LocalizedToolPage({
             {t.howItWorks}
           </Heading>
           <Text variant="large">
-            {toolName} {t.inSimpleSteps.replace("{count}", String(tool.howItWorks.length))}
+            {toolName} {t.inSimpleSteps.replace("{count}", String(toolHowItWorks.length))}
           </Text>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {tool.howItWorks.map((step, index) => (
+          {toolHowItWorks.map((step, index) => (
             <div key={index}>
               <div className="mb-4">
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[var(--brand-primary)]/10 border border-[var(--brand-primary)]/30">
@@ -202,7 +205,7 @@ export default async function LocalizedToolPage({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {tool.features.map((feature, index) => (
+          {toolFeatures.map((feature, index) => (
             <Card key={index} variant="elevated">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[var(--brand-primary)]/10 border border-[var(--brand-primary)]/20 mb-4">
                 <span className="text-2xl">{feature.icon}</span>
@@ -225,7 +228,7 @@ export default async function LocalizedToolPage({
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <Accordion items={tool.faqs} />
+          <Accordion items={toolFaqs} />
           <div className="text-center mt-8">
             <Text variant="small">
               {t.stillHaveQuestions}{" "}

@@ -77,6 +77,11 @@ export default async function LocalizedUseCasePage({
   const title = localizedContent?.title || useCase.title;
   const heroHeadline = localizedContent?.heroHeadline || useCase.title;
   const heroSubheadline = localizedContent?.heroSubheadline || useCase.description;
+  const painPoints = localizedContent?.painPoints || useCase.painPoints;
+  const howHyreelHelps = localizedContent?.howHyreelHelps || useCase.howHyreelHelps;
+  const benefits = localizedContent?.benefits || useCase.benefits;
+  const testimonial = localizedContent?.testimonial || useCase.testimonial;
+  const faqs = localizedContent?.faqs || useCase.faqs;
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: t.home, url: `/${lang}` },
@@ -128,9 +133,9 @@ export default async function LocalizedUseCasePage({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {useCase.howHyreelHelps.map((item, index) => (
+          {howHyreelHelps.map((item, index) => (
             <div key={index} className="text-center">
-              <div className="text-4xl mb-4">{item.icon}</div>
+              <div className="text-4xl mb-4">{item.icon || useCase.howHyreelHelps[index]?.icon}</div>
               <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">
                 {item.title}
               </h3>
@@ -148,7 +153,7 @@ export default async function LocalizedUseCasePage({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-          {useCase.benefits.map((benefit, index) => (
+          {benefits.map((benefit, index) => (
             <div
               key={index}
               className="flex items-center gap-4 p-4 rounded-xl bg-white border border-[var(--border-color)]"

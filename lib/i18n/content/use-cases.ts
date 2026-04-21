@@ -7,7 +7,7 @@ interface UseCaseTranslation {
   heroSubheadline: string;
   description: string;
   painPoints: Array<{ title: string; description: string }>;
-  howHyreelHelps: Array<{ title: string; description: string }>;
+  howHyreelHelps: Array<{ icon?: string; title: string; description: string }>;
   benefits: string[];
   testimonial: { quote: string; author: string; role: string };
   faqs: Array<{ question: string; answer: string }>;
