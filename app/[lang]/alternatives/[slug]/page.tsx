@@ -2,16 +2,17 @@ import { notFound } from "next/navigation";
 import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Breadcrumb } from "@/components/ui/breadcrumb";
-import Link from "next/link";
 import { alternatives, getAlternativeBySlug } from "@/lib/alternatives";
+import { getToolBySlug } from "@/lib/tools";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { getTranslations } from "@/lib/i18n/translations";
 import { getLocalizedAlternativeContent } from "@/lib/i18n/content/alternatives";
+import { getLocalizedToolContent } from "@/lib/i18n/content/tools";
 import { generateBreadcrumbSchema } from "@/lib/schema";
+import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
 const SITE_URL = "https://hyreel.com";
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
 
 export async function generateStaticParams() {
   const params: { lang: string; slug: string }[] = [];
@@ -40,11 +41,12 @@ export async function generateMetadata({
 
   // Get localized content if available
   const localizedContent = getLocalizedAlternativeContent(slug, lang as Locale);
-  const title = localizedContent?.title || alt.title;
+  const metaTitle = localizedContent?.metaTitle || alt.metaTitle;
+  const metaDescription = localizedContent?.metaDescription || alt.metaDescription;
 
   return {
-    title: `${title} | Hyreel`,
-    description: alt.metaDescription,
+    title: metaTitle,
+    description: metaDescription,
     alternates: {
       canonical: `${SITE_URL}/${lang}/alternatives/${slug}`,
       languages: Object.fromEntries(
@@ -78,10 +80,34 @@ export default async function LocalizedAlternativePage({
 
   const t = getTranslations(lang as Locale);
 
-  // Get localized content if available
+  // Get localized content if available, fallback to English
   const localizedContent = getLocalizedAlternativeContent(slug, lang as Locale);
+
+  // Use localized content with fallback to original English content
   const heroHeadline = localizedContent?.heroHeadline || alt.heroHeadline;
   const heroSubheadline = localizedContent?.heroSubheadline || alt.heroSubheadline;
+  const competitorDescription = localizedContent?.competitorDescription || alt.competitorDescription;
+  const whySwitchReasons = localizedContent?.whySwitchReasons || alt.whySwitchReasons;
+  const comparisonTable = localizedContent?.comparisonTable || alt.comparisonTable;
+  const hyreelAdvantages = localizedContent?.hyreelAdvantages || alt.hyreelAdvantages;
+  const competitorLimitations = localizedContent?.competitorLimitations || alt.competitorLimitations;
+  const testimonial = localizedContent?.testimonial || alt.testimonial;
+  const faqs = localizedContent?.faqs || alt.faqs;
+  const relatedToolItems = [
+    { slug: "image-to-video-ai", href: `/${lang}/tools/image-to-video-ai` },
+    { slug: "ai-tiktok-video-generator", href: `/${lang}/tools/ai-tiktok-video-generator` },
+    { slug: "ai-zoom-video-effect", href: `/${lang}/tools/ai-zoom-video-effect` },
+    { slug: "ai-orbit-video-effect", href: `/${lang}/tools/ai-orbit-video-effect` },
+  ].map((item) => {
+    const tool = getToolBySlug(item.slug);
+    const localizedTool = getLocalizedToolContent(item.slug, lang as Locale);
+
+    return {
+      title: localizedTool?.name || tool?.name || item.slug,
+      description: localizedTool?.description || tool?.description || "",
+      href: item.href,
+    };
+  });
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: t.home, url: `/${lang}` },
@@ -96,66 +122,89 @@ export default async function LocalizedAlternativePage({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      <Section spacing="xl" className="relative overflow-hidden">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--brand-primary)]/5 rounded-full blur-3xl" />
+      {/* Hero Section */}
+      <PageHero
+        breadcrumb={[
+          { label: t.home, href: `/${lang}` },
+          { label: t.alternatives, href: `/${lang}/alternatives` },
+          { label: `vs ${alt.competitorName}` },
+        ]}
+        badge={{ text: `vs ${alt.competitorName}` }}
+        title={heroHeadline}
+        description={heroSubheadline}
+        primaryCta={{ text: t.tryItFree, href: APP_STORE_URL }}
+        secondaryCta={{ text: t.seeComparison, href: "#comparison" }}
+      />
+
+      {/* Why Switch Section */}
+      <Section spacing="xl" className="bg-[var(--surface-light)]">
+        <div className="text-center mb-10">
+          <Heading as="h2" className="mb-4">
+            {`${t.whyChooseHyreel} vs ${alt.competitorName}`}
+          </Heading>
+          <Text variant="large">
+            {competitorDescription}
+          </Text>
         </div>
 
-        <div className="text-center">
-          <Breadcrumb
-            items={[
-              { label: t.home, href: `/${lang}` },
-              { label: t.alternatives, href: `/${lang}/alternatives` },
-              { label: `vs ${alt.competitorName}` },
-            ]}
-            className="justify-center mb-6"
-          />
-
-          <Heading as="h1" className="mb-6">
-            {heroHeadline}
-          </Heading>
-
-          <Text variant="large" className="mb-8 max-w-3xl mx-auto">
-            {heroSubheadline}
-          </Text>
-
-          <Button size="lg">{t.tryItFree}</Button>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {whySwitchReasons.map((reason, index) => (
+            <Card key={index} variant="elevated">
+              <div className="text-4xl mb-4">{reason.icon}</div>
+              <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">
+                {reason.title}
+              </h3>
+              <Text variant="small">{reason.description}</Text>
+            </Card>
+          ))}
         </div>
       </Section>
 
-      <Section spacing="xl">
+      {/* Comparison Table */}
+      <Section spacing="xl" id="comparison">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            {t.featureComparison}
+            {`Hyreel vs ${alt.competitorName}: ${t.featureComparison}`}
           </Heading>
+          <Text variant="large">
+            {t.featureComparison}
+          </Text>
         </div>
 
         <div className="max-w-4xl mx-auto overflow-x-auto">
           <table className="w-full">
             <thead>
               <tr className="border-b border-[var(--border-color)]">
-                <th className="text-left py-4 px-4 text-[var(--text-primary)] font-semibold">
-                  {t.feature}
-                </th>
-                <th className="text-center py-4 px-4 text-[var(--brand-primary)] font-semibold">
-                  Hyreel
-                </th>
-                <th className="text-center py-4 px-4 text-[var(--text-primary)] font-semibold">
-                  {alt.competitorName}
-                </th>
+                <th className="text-left py-4 px-4 text-[var(--text-secondary)]">{t.feature}</th>
+                <th className="text-center py-4 px-4 text-[var(--brand-primary)] font-bold">Hyreel</th>
+                <th className="text-center py-4 px-4 text-[var(--text-secondary)]">{alt.competitorName}</th>
               </tr>
             </thead>
             <tbody>
-              {alt.comparisonTable.map((row, index) => (
-                <tr key={index} className="border-b border-[var(--border-color)]">
-                  <td className="py-4 px-4 text-[var(--text-secondary)]">
-                    {row.feature}
+              {comparisonTable.map((row, index) => (
+                <tr key={index} className="border-b border-[var(--border-color)] hover:bg-[var(--surface-light)] transition-colors">
+                  <td className="py-4 px-4 text-[var(--text-secondary)]">{row.feature}</td>
+                  <td className="py-4 px-4 text-center">
+                    {typeof row.hyreel === "boolean" ? (
+                      row.hyreel ? (
+                        <span className="text-[var(--brand-primary)] text-xl">&#10003;</span>
+                      ) : (
+                        <span className="text-[var(--text-muted)]">-</span>
+                      )
+                    ) : (
+                      <span className="text-[var(--brand-primary)]">{row.hyreel}</span>
+                    )}
                   </td>
                   <td className="py-4 px-4 text-center">
-                    {row.hyreel === true ? "✓" : row.hyreel === false ? "✗" : row.hyreel}
-                  </td>
-                  <td className="py-4 px-4 text-center">
-                    {row.competitor === true ? "✓" : row.competitor === false ? "✗" : row.competitor}
+                    {typeof row.competitor === "boolean" ? (
+                      row.competitor ? (
+                        <span className="text-[var(--text-secondary)]">&#10003;</span>
+                      ) : (
+                        <span className="text-[var(--text-muted)]">-</span>
+                      )
+                    ) : (
+                      <span className="text-[var(--text-secondary)]">{row.competitor}</span>
+                    )}
                   </td>
                 </tr>
               ))}
@@ -164,51 +213,104 @@ export default async function LocalizedAlternativePage({
         </div>
       </Section>
 
+      {/* Advantages vs Limitations */}
       <Section spacing="xl" className="bg-[var(--surface-light)]">
-        <div className="text-center mb-10">
-          <Heading as="h2" className="mb-4">
-            {t.whyChooseHyreel}
-          </Heading>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Hyreel Advantages */}
+          <div>
+            <Heading as="h2" className="mb-6 text-[var(--brand-primary)]">
+              {t.benefitsFor.replace("{name}", "Hyreel")}
+            </Heading>
+            <ul className="space-y-4">
+              {hyreelAdvantages.map((advantage, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <svg
+                    className="w-6 h-6 text-[var(--brand-primary)] flex-shrink-0 mt-1"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-lg text-[var(--text-secondary)]">
+                    {advantage}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-          {alt.hyreelAdvantages.map((advantage, index) => (
-            <div
-              key={index}
-              className="flex items-center gap-4 p-4 rounded-xl bg-white border border-[var(--border-color)]"
-            >
-              <svg
-                className="w-5 h-5 text-[var(--accent-green)] flex-shrink-0"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2.5"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path d="M5 13l4 4L19 7" />
-              </svg>
-              <span className="text-[var(--text-secondary)]">{advantage}</span>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section spacing="xl">
-        <div className="text-center">
-          <Heading as="h2" className="mb-6">
-            {t.readyToCreate}
-          </Heading>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">{t.startCreatingFree}</Button>
-            <Link href={`/${lang}/pricing`}>
-              <Button size="lg" variant="secondary">
-                {t.viewPricing}
-              </Button>
-            </Link>
+          {/* Competitor Limitations */}
+          <div>
+            <Heading as="h2" className="mb-6 text-[var(--text-secondary)]">
+              {`${alt.competitorName} ${t.painPoints}`}
+            </Heading>
+            <ul className="space-y-4">
+              {competitorLimitations.map((limitation, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <svg
+                    className="w-6 h-6 text-[var(--text-muted)] flex-shrink-0 mt-1"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                  <span className="text-lg text-[var(--text-secondary)]">
+                    {limitation}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </Section>
+
+      {/* Testimonial */}
+      {testimonial && (
+        <Section spacing="xl">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="text-6xl text-[var(--brand-primary)]/30 mb-6">&quot;</div>
+            <Text variant="large" className="italic mb-6">
+              {testimonial.quote}
+            </Text>
+            <div>
+              <p className="font-semibold text-[var(--text-primary)]">{testimonial.author}</p>
+              <p className="text-[var(--text-secondary)]">{testimonial.role}</p>
+            </div>
+          </div>
+        </Section>
+      )}
+
+      {/* FAQ */}
+      <PageFAQ
+        title={t.frequentlyAskedQuestions}
+        description={t.readyToSwitch}
+        items={faqs}
+        variant="light"
+        showContactLink={false}
+      />
+
+      {/* CTA */}
+      <FinalCTA
+        title={t.readyToSwitch}
+        description={t.joinCreators}
+        primaryCta={{ text: t.startCreatingFree, href: APP_STORE_URL }}
+        secondaryCta={{ text: t.viewPricing, href: `/${lang}/pricing` }}
+      />
+
+      {/* Related Tools */}
+      <RelatedContent
+        title={t.relatedTools}
+        items={relatedToolItems}
+        columns={4}
+      />
     </>
   );
 }

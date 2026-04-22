@@ -10,6 +10,8 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
+
 // Generate static params for all use cases
 export async function generateStaticParams() {
   return useCases.map((useCase) => ({
@@ -94,7 +96,7 @@ export default async function UseCasePage({
         badge={{ icon: useCase.icon, text: useCase.industry }}
         title={useCase.heroHeadline}
         description={useCase.heroSubheadline}
-        primaryCta={{ text: useCase.ctaText }}
+        primaryCta={{ text: useCase.ctaText, href: APP_STORE_URL }}
         secondaryCta={{ text: "View Pricing", href: "/pricing" }}
       />
 
@@ -239,7 +241,7 @@ export default async function UseCasePage({
       <FinalCTA
         title="Ready to Get Started?"
         description={`Join thousands of ${useCase.industry.toLowerCase()} professionals using Hyreel to create amazing video content.`}
-        primaryCta={{ text: useCase.ctaText }}
+        primaryCta={{ text: useCase.ctaText, href: APP_STORE_URL }}
         secondaryCta={{ text: "View All Use Cases", href: "/use-cases" }}
       />
     </>

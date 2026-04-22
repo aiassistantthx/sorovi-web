@@ -25,6 +25,17 @@ function getLocale(request: NextRequest): string {
   return i18n.defaultLocale;
 }
 
+function nextWithLocale(request: NextRequest, locale: string) {
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-hyreel-locale", locale);
+
+  return NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
+}
+
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
@@ -41,12 +52,12 @@ export function middleware(request: NextRequest) {
   }
 
   // Check if pathname already has a locale
-  const pathnameHasLocale = i18n.locales.some(
+  const pathnameLocale = i18n.locales.find(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 
-  if (pathnameHasLocale) {
-    return NextResponse.next();
+  if (pathnameLocale) {
+    return nextWithLocale(request, pathnameLocale);
   }
 
   // For the default locale (en), don't redirect - serve the page directly
@@ -60,7 +71,7 @@ export function middleware(request: NextRequest) {
     );
   }
 
-  return NextResponse.next();
+  return nextWithLocale(request, locale);
 }
 
 export const config = {

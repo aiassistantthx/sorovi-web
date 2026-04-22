@@ -1,6 +1,7 @@
 import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
 import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -22,9 +23,11 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  const t = getTranslations(lang as Locale);
+
   return {
-    title: "Privacy Policy - Hyreel",
-    description: "Read about how Hyreel collects, uses, and protects your personal information.",
+    title: `${t.privacyTitle} - Hyreel`,
+    description: t.privacySection1Text,
     alternates: {
       canonical: `${SITE_URL}/${lang}/privacy`,
       languages: Object.fromEntries(
@@ -50,49 +53,47 @@ export default async function LocalizedPrivacyPage({
     notFound();
   }
 
+  const t = getTranslations(lang as Locale);
+
   return (
     <Section spacing="xl">
       <div className="max-w-4xl mx-auto prose prose-lg">
-        <Heading as="h1" className="mb-6">Privacy Policy</Heading>
-        <Text className="text-[var(--text-muted)] mb-8">Last updated: December 2025</Text>
+        <Heading as="h1" className="mb-6">{t.privacyTitle}</Heading>
+        <Text className="text-[var(--text-muted)] mb-8">{t.privacyLastUpdated}</Text>
 
         <div className="space-y-8">
           <div>
-            <Heading as="h2" className="text-2xl mb-4">1. Information We Collect</Heading>
+            <Heading as="h2" className="text-2xl mb-4">{t.privacySection1Title}</Heading>
             <Text className="mb-4">
-              We collect information you provide directly to us, such as when you create an account,
-              upload content, or contact us for support.
+              {t.privacySection1Text}
             </Text>
           </div>
 
           <div>
-            <Heading as="h2" className="text-2xl mb-4">2. How We Use Your Information</Heading>
+            <Heading as="h2" className="text-2xl mb-4">{t.privacySection2Title}</Heading>
             <Text className="mb-4">
-              We use the information we collect to provide, maintain, and improve our services,
-              process transactions, and communicate with you.
+              {t.privacySection2Text}
             </Text>
           </div>
 
           <div>
-            <Heading as="h2" className="text-2xl mb-4">3. Information Sharing</Heading>
+            <Heading as="h2" className="text-2xl mb-4">{t.privacySection3Title}</Heading>
             <Text className="mb-4">
-              We do not share your personal information with third parties except as described
-              in this policy or with your consent.
+              {t.privacySection3Text}
             </Text>
           </div>
 
           <div>
-            <Heading as="h2" className="text-2xl mb-4">4. Data Security</Heading>
+            <Heading as="h2" className="text-2xl mb-4">{t.privacySection4Title}</Heading>
             <Text className="mb-4">
-              We take reasonable measures to help protect your personal information from loss,
-              theft, misuse, and unauthorized access.
+              {t.privacySection4Text}
             </Text>
           </div>
 
           <div>
-            <Heading as="h2" className="text-2xl mb-4">5. Contact Us</Heading>
+            <Heading as="h2" className="text-2xl mb-4">{t.privacySection5Title}</Heading>
             <Text>
-              If you have any questions about this Privacy Policy, please contact us at{" "}
+              {t.privacySection5Text}{" "}
               <a href="mailto:privacy@hyreel.com" className="text-[var(--brand-primary)]">
                 privacy@hyreel.com
               </a>

@@ -12,6 +12,7 @@ import { getLocalizedAudienceContent } from "@/lib/i18n/content/audiences";
 import { generateBreadcrumbSchema } from "@/lib/schema";
 
 const SITE_URL = "https://hyreel.com";
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
 
 export async function generateStaticParams() {
   const params: { lang: string; slug: string }[] = [];
@@ -41,10 +42,12 @@ export async function generateMetadata({
   // Get localized content if available
   const localizedContent = getLocalizedAudienceContent(slug, lang as Locale);
   const audienceName = localizedContent?.name || audience.name;
+  const metaTitle = localizedContent?.metaTitle || `Hyreel for ${audienceName}`;
+  const metaDescription = localizedContent?.metaDescription || audience.description;
 
   return {
-    title: `Hyreel for ${audienceName}`,
-    description: audience.description,
+    title: metaTitle,
+    description: metaDescription,
     alternates: {
       canonical: `${SITE_URL}/${lang}/for/${slug}`,
       languages: Object.fromEntries(
@@ -83,6 +86,10 @@ export default async function LocalizedForPage({
   const audienceName = localizedContent?.name || audience.name;
   const heroHeadline = localizedContent?.heroHeadline || audience.heroHeadline;
   const heroSubheadline = localizedContent?.heroSubheadline || audience.heroSubheadline;
+  const description = localizedContent?.description || audience.description;
+  const benefits = localizedContent?.benefits || audience.benefits;
+  const features = localizedContent?.features || audience.features;
+  const ctaText = localizedContent?.ctaText || audience.ctaText;
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: t.home, url: `/${lang}` },
@@ -122,7 +129,9 @@ export default async function LocalizedForPage({
             {heroSubheadline}
           </Text>
 
-          <Button size="lg">{t.startCreatingFree}</Button>
+          <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">{ctaText}</Button>
+            </Link>
         </div>
       </Section>
 
@@ -131,10 +140,13 @@ export default async function LocalizedForPage({
           <Heading as="h2" className="mb-4">
             {t.whyLoveHyreel.replace("{name}", audienceName)}
           </Heading>
+          <Text variant="large" className="max-w-3xl mx-auto">
+            {description}
+          </Text>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-          {audience.benefits.map((benefit, index) => (
+          {benefits.map((benefit, index) => (
             <div
               key={index}
               className="flex items-start gap-4 p-4 rounded-xl bg-[var(--surface-light)] border border-[var(--border-color)]"
@@ -157,7 +169,7 @@ export default async function LocalizedForPage({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {audience.features.map((feature, index) => (
+          {features.map((feature, index) => (
             <Card key={index} variant="elevated">
               <Text className="text-[var(--text-secondary)]">{feature}</Text>
             </Card>
@@ -171,7 +183,9 @@ export default async function LocalizedForPage({
             {t.readyToCreate}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">{t.startCreatingFree}</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">{ctaText}</Button>
+            </Link>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
                 {t.viewPricing}

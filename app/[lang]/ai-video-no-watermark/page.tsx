@@ -5,9 +5,11 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { getTranslations } from "@/lib/i18n/translations";
+import { commonCopy, type NonEnLocale } from "@/lib/i18n/content/localized-fallbacks";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
 
 export async function generateStaticParams() {
   return i18n.locales
@@ -26,9 +28,11 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  const t = getTranslations(lang as Locale);
+
   return {
-    title: "AI Video Generator Without Watermark | Hyreel",
-    description: "Create professional AI videos without watermarks. Clean exports for TikTok, Instagram, and YouTube. No branding on your content.",
+    title: `${t.aiVideoNoWatermark} | Hyreel`,
+    description: t.downloadHyreelCta,
     alternates: {
       canonical: `${SITE_URL}/${lang}/ai-video-no-watermark`,
       languages: Object.fromEntries(
@@ -55,6 +59,7 @@ export default async function LocalizedNoWatermarkPage({
   }
 
   const t = getTranslations(lang as Locale);
+  const c = commonCopy(lang as NonEnLocale);
 
   return (
     <>
@@ -69,27 +74,24 @@ export default async function LocalizedNoWatermarkPage({
           </Heading>
 
           <Text variant="large" className="mb-8">
-            Create professional videos with no watermarks or branding. Your content, your way.
+            {c.desc(t.aiVideoNoWatermark)}
           </Text>
 
-          <Button size="lg">{t.startCreating}</Button>
+          <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="lg">{t.startCreating}</Button>
+          </Link>
         </div>
       </Section>
 
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            Why No Watermark Matters
+            {t.benefits}
           </Heading>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-          {[
-            "Professional appearance for your brand",
-            "Better engagement on social media",
-            "Use videos for commercial purposes",
-            "Build your personal brand",
-          ].map((benefit, index) => (
+          {c.features.map((benefit, index) => (
             <div
               key={index}
               className="flex items-center gap-4 p-4 rounded-xl bg-white border border-[var(--border-color)]"
@@ -117,7 +119,9 @@ export default async function LocalizedNoWatermarkPage({
             {t.readyToCreate}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">{t.tryItFree}</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">{t.tryItFree}</Button>
+            </Link>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
                 {t.viewPricing}

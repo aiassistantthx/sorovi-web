@@ -31,7 +31,7 @@ export default function TermsPage() {
                 1. Acceptance of Terms
               </Heading>
               <Text variant="body" className="mb-4">
-                By accessing or using Hyreel's AI video creation platform, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our service.
+                By accessing or using Hyreel&apos;s AI video creation platform, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our service.
               </Text>
               <Text variant="body">
                 We reserve the right to modify these terms at any time. Continued use of the service after changes constitutes acceptance of the updated terms.
@@ -123,7 +123,7 @@ export default function TermsPage() {
               </ul>
 
               <Heading as="h3" className="mb-3">
-                5.3 Hyreel's Content
+                5.3 Hyreel&apos;s Content
               </Heading>
               <Text variant="body">
                 All templates, tools, software, and other materials provided by Hyreel remain our property. You may not copy, modify, or redistribute our content without permission.
@@ -183,7 +183,7 @@ export default function TermsPage() {
                 To the maximum extent permitted by law:
               </Text>
               <ul className="space-y-2 mb-4 list-disc list-inside text-[var(--text-gray-300)]">
-                <li>Hyreel is provided "as is" without warranties of any kind</li>
+                <li>Hyreel is provided &quot;as is&quot; without warranties of any kind</li>
                 <li>We are not liable for indirect, incidental, or consequential damages</li>
                 <li>Our total liability is limited to the fees you paid in the past 12 months</li>
                 <li>You use our service at your own risk</li>

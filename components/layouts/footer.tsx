@@ -1,37 +1,47 @@
+"use client";
+
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { Container } from "./container";
-
-const footerLinks = {
-  product: [
-    { label: "AI Video Tools", href: "/tools" },
-    { label: "Templates", href: "/templates" },
-    { label: "Use Cases", href: "/use-cases" },
-    { label: "Industries", href: "/industries" },
-    { label: "Pricing", href: "/pricing" },
-  ],
-  solutions: [
-    { label: "For Creators", href: "/for/creators" },
-    { label: "For Small Business", href: "/for/small-business" },
-    { label: "For Agencies", href: "/for/agencies" },
-    { label: "TikTok Videos", href: "/platforms/tiktok" },
-    { label: "Instagram Reels", href: "/platforms/instagram" },
-    { label: "All Solutions", href: "/solutions" },
-  ],
-  resources: [
-    { label: "Blog", href: "/blog" },
-    { label: "Alternatives", href: "/alternatives" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
-  ],
-  legal: [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" },
-  ],
-};
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const pathname = usePathname();
+  const firstSegment = pathname.split("/")[1];
+  const locale = i18n.locales.includes(firstSegment as Locale)
+    ? (firstSegment as Locale)
+    : i18n.defaultLocale;
+  const t = getTranslations(locale);
+  const prefix = locale === i18n.defaultLocale ? "" : `/${locale}`;
+  const footerLinks = {
+    product: [
+      { label: t.aiVideoTools, href: `${prefix}/tools` },
+      { label: t.templates, href: `${prefix}/templates` },
+      { label: t.useCases, href: `${prefix}/use-cases` },
+      { label: t.industries, href: `${prefix}/industries` },
+      { label: t.pricing, href: `${prefix}/pricing` },
+    ],
+    solutions: [
+      { label: `${t.forAudience} ${t.activeCreators}`, href: `${prefix}/for/creators` },
+      { label: `${t.forAudience} ${t.business}`, href: `${prefix}/for/small-business` },
+      { label: t.solutions, href: `${prefix}/solutions` },
+      { label: "TikTok", href: `${prefix}/platforms/tiktok` },
+      { label: "Instagram Reels", href: `${prefix}/platforms/instagram` },
+    ],
+    resources: [
+      { label: t.blog, href: `${prefix}/blog` },
+      { label: t.alternatives, href: `${prefix}/alternatives` },
+      { label: t.about, href: `${prefix}/about` },
+      { label: t.contact, href: `${prefix}/contact` },
+    ],
+    legal: [
+      { label: t.privacy, href: `${prefix}/privacy` },
+      { label: t.terms, href: `${prefix}/terms` },
+    ],
+  };
 
   return (
     <footer className="bg-[var(--surface-light)] border-t border-[var(--border-color)]">
@@ -41,7 +51,7 @@ export function Footer() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
             {/* Product */}
             <div>
-              <span className="block text-[var(--text-primary)] font-semibold mb-4">Product</span>
+              <span className="block text-[var(--text-primary)] font-semibold mb-4">{t.tools}</span>
               <ul className="space-y-3">
                 {footerLinks.product.map((link) => (
                   <li key={link.href}>
@@ -58,7 +68,7 @@ export function Footer() {
 
             {/* Solutions */}
             <div>
-              <span className="block text-[var(--text-primary)] font-semibold mb-4">Solutions</span>
+              <span className="block text-[var(--text-primary)] font-semibold mb-4">{t.solutions}</span>
               <ul className="space-y-3">
                 {footerLinks.solutions.map((link) => (
                   <li key={link.href}>
@@ -75,7 +85,7 @@ export function Footer() {
 
             {/* Resources */}
             <div>
-              <span className="block text-[var(--text-primary)] font-semibold mb-4">Resources</span>
+              <span className="block text-[var(--text-primary)] font-semibold mb-4">{t.blog}</span>
               <ul className="space-y-3">
                 {footerLinks.resources.map((link) => (
                   <li key={link.href}>
@@ -92,7 +102,7 @@ export function Footer() {
 
             {/* Legal */}
             <div>
-              <span className="block text-[var(--text-primary)] font-semibold mb-4">Legal</span>
+              <span className="block text-[var(--text-primary)] font-semibold mb-4">{t.terms}</span>
               <ul className="space-y-3">
                 {footerLinks.legal.map((link) => (
                   <li key={link.href}>
@@ -117,7 +127,7 @@ export function Footer() {
                   Hyreel
                 </div>
                 <span className="text-[var(--text-muted)] text-sm">
-                  © {currentYear} Hyreel. All rights reserved.
+                  © {currentYear} Hyreel.
                 </span>
               </div>
 

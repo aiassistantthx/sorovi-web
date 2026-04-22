@@ -11,6 +11,7 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 import { getLocalizedTemplateContent } from "@/lib/i18n/content/templates";
 
 const SITE_URL = "https://hyreel.com";
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
 
 export async function generateStaticParams() {
   const params: { lang: string; slug: string }[] = [];
@@ -37,9 +38,13 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  const localizedContent = getLocalizedTemplateContent(slug, lang as Locale);
+  const title = localizedContent?.metaTitle || `${template.name} Template`;
+  const description = localizedContent?.metaDescription || localizedContent?.description || template.description;
+
   return {
-    title: `${template.name} Template`,
-    description: template.description,
+    title,
+    description,
     alternates: {
       canonical: `${SITE_URL}/${lang}/templates/${slug}`,
       languages: Object.fromEntries(
@@ -74,8 +79,17 @@ export default async function LocalizedTemplatePage({
   const t = getTranslations(lang as Locale);
   const localizedContent = getLocalizedTemplateContent(slug, lang as Locale);
   const name = localizedContent?.name || template.name;
-  const heroHeadline = localizedContent?.heroHeadline || template.name;
-  const heroSubheadline = localizedContent?.heroSubheadline || template.description;
+  const heroHeadline = localizedContent?.heroHeadline || template.heroHeadline;
+  const heroSubheadline = localizedContent?.heroSubheadline || template.heroSubheadline;
+
+  // Build localized features by merging with template data (for icons)
+  const features = template.features.map((feature, index) => ({
+    icon: feature.icon,
+    title: localizedContent?.features?.[index]?.title || feature.title,
+    description: localizedContent?.features?.[index]?.description || feature.description,
+  }));
+
+  const ctaText = localizedContent?.ctaText || template.ctaText;
 
   const breadcrumbSchema = generateBreadcrumbSchema([
     { name: t.home, url: `/${lang}` },
@@ -115,7 +129,9 @@ export default async function LocalizedTemplatePage({
             {heroSubheadline}
           </Text>
 
-          <Button size="lg">{t.useThisTemplate}</Button>
+          <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="lg">{ctaText}</Button>
+          </Link>
         </div>
       </Section>
 
@@ -127,7 +143,7 @@ export default async function LocalizedTemplatePage({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {template.features.map((feature, index) => (
+          {features.map((feature, index) => (
             <div
               key={index}
               className="text-center p-6 rounded-xl bg-white border border-[var(--border-color)]"
@@ -148,7 +164,9 @@ export default async function LocalizedTemplatePage({
             {t.readyToUseTemplate}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">{t.startCreating}</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">{t.startCreating}</Button>
+            </Link>
             <Link href={`/${lang}/templates`}>
               <Button size="lg" variant="secondary">
                 {t.browseAllTemplates}

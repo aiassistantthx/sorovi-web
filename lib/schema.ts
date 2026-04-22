@@ -140,7 +140,6 @@ export function generateOrganizationSchema() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      contactType: "customer support",
       url: `${SITE_URL}/contact`,
       email: "support@hyreel.com",
     },
@@ -150,8 +149,6 @@ export function generateOrganizationSchema() {
       "https://tiktok.com/@hyreelapp",
       "https://youtube.com/@hyreelapp",
     ],
-    description:
-      "AI-powered video generation app for creators and businesses.",
   };
 }
 

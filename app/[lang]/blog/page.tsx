@@ -44,7 +44,7 @@ export async function generateMetadata({
 
   return {
     title: titles[lang as Locale],
-    description: "Learn how to create viral videos with AI. Tips, tutorials, and guides for content creators.",
+    description: getTranslations(lang as Locale).blogPageSubtitle,
     alternates: {
       canonical: `${SITE_URL}/${lang}/blog`,
       languages: Object.fromEntries(
@@ -102,7 +102,7 @@ export default async function LocalizedBlogPage({
                 <Link href={`/${lang}/blog/${post.slug}`}>
                   <div className="mb-4">
                     <span className="text-xs text-[var(--brand-primary)] font-medium uppercase tracking-wider">
-                      {post.category}
+                      {t.blog}
                     </span>
                   </div>
                   <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-3 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">

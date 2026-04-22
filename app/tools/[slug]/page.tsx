@@ -15,6 +15,8 @@ import {
 } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
+
 // Generate static params for all tools
 export async function generateStaticParams() {
   return tools.map((tool) => ({
@@ -188,7 +190,9 @@ export default async function ToolPage({
           </Text>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <Button size="lg">Try It Free</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">Try It Free</Button>
+            </Link>
             <a href="#how-it-works">
               <Button size="lg" variant="secondary">
                 See How It Works
@@ -449,7 +453,9 @@ export default async function ToolPage({
           <Text variant="large" className="mb-6">
             Start creating videos for free — no credit card required
           </Text>
-          <Button size="lg">Get Started Free</Button>
+          <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="lg">Get Started Free</Button>
+          </Link>
         </div>
       </Section>
 
@@ -547,13 +553,10 @@ export default async function ToolPage({
             </span>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-            <Link href="https://apps.apple.com/app/hyreel-ai-video-generator/id6738042296">
+          <div className="flex items-center justify-center mb-6">
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
               <Button size="lg">Download for iOS</Button>
             </Link>
-            <Button size="lg" variant="secondary">
-              Android Coming Soon
-            </Button>
           </div>
 
           <Text variant="small" className="text-[var(--text-muted)]">

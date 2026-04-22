@@ -12,7 +12,7 @@ export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
   ({ as: Tag = "h2", gradient = false, className, children, ...props }, ref) => {
     return (
       <Tag
-        ref={ref as any}
+        ref={ref}
         className={cn(
           "font-bold leading-tight tracking-tight",
           Tag === "h1" && "text-5xl md:text-6xl lg:text-7xl",

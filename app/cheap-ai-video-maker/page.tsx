@@ -6,6 +6,8 @@ import Link from "next/link";
 import { PageFAQ, FinalCTA } from "@/components/sections";
 import { generateAlternates } from "@/lib/seo/alternates";
 
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
+
 export const metadata = {
   title: "Affordable AI Video Maker | Hyreel - Pro Videos from $39/mo",
   description:
@@ -79,7 +81,9 @@ export default function CheapAIVideoMakerPage() {
             videos from just $9.99/month. Free plan available.
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Start Free</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">Start Free</Button>
+            </Link>
             <Link href="/pricing">
               <Button size="lg" variant="secondary">
                 See Pricing
@@ -298,7 +302,7 @@ export default function CheapAIVideoMakerPage() {
       <FinalCTA
         title="Start Creating Affordable Videos"
         description="Professional AI videos at a fraction of the cost. Start free today."
-        primaryCta={{ text: "Start Free" }}
+        primaryCta={{ text: "Start Free", href: APP_STORE_URL }}
         secondaryCta={{ text: "View Pricing", href: "/pricing" }}
       />
     </>

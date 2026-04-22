@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { getTranslations } from "@/lib/i18n/translations";
+import { commonCopy, type NonEnLocale } from "@/lib/i18n/content/localized-fallbacks";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -26,9 +27,11 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  const t = getTranslations(lang as Locale);
+
   return {
-    title: "Free AI Video Generator - Create Videos for Free | Hyreel",
-    description: "Create stunning videos from photos for free with Hyreel's AI. No credit card required. TikTok, Instagram, YouTube ready.",
+    title: `${t.freeAIVideoGenerator} | Hyreel`,
+    description: t.downloadHyreelCta,
     alternates: {
       canonical: `${SITE_URL}/${lang}/free-ai-video-generator`,
       languages: Object.fromEntries(
@@ -55,6 +58,7 @@ export default async function LocalizedFreeAIVideoGeneratorPage({
   }
 
   const t = getTranslations(lang as Locale);
+  const c = commonCopy(lang as NonEnLocale);
 
   return (
     <>
@@ -67,7 +71,7 @@ export default async function LocalizedFreeAIVideoGeneratorPage({
         <div className="text-center max-w-4xl mx-auto">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-[var(--accent-green)]/10 border border-[var(--accent-green)]/20 mb-6">
             <span className="text-sm font-medium text-[var(--accent-green)]">
-              100% Free to Start
+              {t.noCreditCard}
             </span>
           </div>
 
@@ -76,7 +80,7 @@ export default async function LocalizedFreeAIVideoGeneratorPage({
           </Heading>
 
           <Text variant="large" className="mb-8">
-            Create stunning videos from your photos — completely free. {t.noCreditCard}.
+            {c.desc(t.freeAIVideoGenerator)} {t.noCreditCard}.
           </Text>
 
           <Button size="lg">{t.startCreatingFree}</Button>
@@ -86,15 +90,15 @@ export default async function LocalizedFreeAIVideoGeneratorPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center mb-10">
           <Heading as="h2" className="mb-4">
-            What's Included Free
+            {t.features}
           </Heading>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {[
-            { title: "3 Videos/Month", description: "Create up to 3 videos every month" },
-            { title: "720p Quality", description: "High-quality video output" },
-            { title: "Basic AI Effects", description: "Access to essential AI tools" },
+            { title: t.videosPerMonth, description: t.planDescFree },
+            { title: t.quality720p, description: t.basicAiFeatures },
+            { title: t.aiVideoTools, description: c.featureDesc[0] },
           ].map((feature, index) => (
             <Card key={index} variant="elevated" className="text-center">
               <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">

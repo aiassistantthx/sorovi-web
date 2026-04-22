@@ -39,9 +39,11 @@ export async function generateMetadata({
     zh: "联系我们 - Hyreel",
   };
 
+  const t = getTranslations(lang as Locale);
+
   return {
     title: titles[lang as Locale],
-    description: "Get in touch with the Hyreel team for support, partnerships, or press inquiries.",
+    description: t.contactHeroSubtitle,
     alternates: {
       canonical: `${SITE_URL}/${lang}/contact`,
       languages: Object.fromEntries(
@@ -71,19 +73,19 @@ export default async function LocalizedContactPage({
 
   const contacts = [
     {
-      title: "General Support",
+      title: t.contactGeneralSupport,
       email: "support@hyreel.com",
-      description: "For help with your account, billing, or technical issues.",
+      description: t.contactGeneralSupportDesc,
     },
     {
-      title: "Sales",
+      title: t.contactSales,
       email: "sales@hyreel.com",
-      description: "For enterprise plans, custom solutions, and partnerships.",
+      description: t.contactSalesDesc,
     },
     {
-      title: "Press & Media",
+      title: t.contactPressMedia,
       email: "press@hyreel.com",
-      description: "For press inquiries, interviews, and media resources.",
+      description: t.contactPressMediaDesc,
     },
   ];
 
@@ -97,10 +99,10 @@ export default async function LocalizedContactPage({
 
         <div className="text-center max-w-3xl mx-auto">
           <Heading as="h1" className="mb-6">
-            Get in Touch
+            {t.contactHeroTitle}
           </Heading>
           <Text variant="large">
-            We'd love to hear from you. Reach out to us through any of the channels below.
+            {t.contactHeroSubtitle}
           </Text>
         </div>
       </Section>
@@ -127,7 +129,7 @@ export default async function LocalizedContactPage({
       <Section spacing="xl" className="bg-[var(--surface-light)]">
         <div className="text-center max-w-3xl mx-auto">
           <Heading as="h2" className="mb-6">
-            Follow Us
+            {t.contactFollowUs}
           </Heading>
           <div className="flex justify-center gap-6">
             {[

@@ -7,6 +7,8 @@ import { i18n, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { notFound } from "next/navigation";
 
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
+
 export async function generateStaticParams() {
   // Generate all non-default locale pages
   return i18n.locales
@@ -78,9 +80,11 @@ export default async function LocalizedHomePage({
           <Text variant="large" className="mb-10 max-w-2xl mx-auto">
             {dict.hero.description}
           </Text>
-          <Button size="lg" className="text-base sm:text-lg px-10 py-3">
-            {dict.hero.cta}
-          </Button>
+          <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="lg" className="text-base sm:text-lg px-10 py-3">
+              {dict.hero.cta}
+            </Button>
+          </Link>
         </div>
       </Section>
 
@@ -166,7 +170,9 @@ export default async function LocalizedHomePage({
             {dict.cta.description}
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">{dict.cta.primary}</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">{dict.cta.primary}</Button>
+            </Link>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
                 {dict.cta.secondary}

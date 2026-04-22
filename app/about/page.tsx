@@ -5,6 +5,9 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { generateAboutPageSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
+import Link from "next/link";
+
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
 
 export const metadata = {
   title: "About Us - Hyreel AI Video Generation",
@@ -86,7 +89,7 @@ export default function AboutPage() {
             Making Video Creation Accessible to Everyone
           </Heading>
           <Text variant="large">
-            Hyreel was born from a simple belief: everyone has stories worth sharing, but not everyone has the time, skills, or budget to create professional videos. We're changing that with AI.
+            Hyreel was born from a simple belief: everyone has stories worth sharing, but not everyone has the time, skills, or budget to create professional videos. We&apos;re changing that with AI.
           </Text>
         </div>
       </Section>
@@ -180,12 +183,16 @@ export default function AboutPage() {
             Be part of the AI video revolution. Start creating professional content today.
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">
-              Get Started Free
-            </Button>
-            <Button size="lg" variant="secondary">
-              Contact Us
-            </Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">
+                Get Started Free
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button size="lg" variant="secondary">
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </div>
       </Section>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { headers } from "next/headers";
 import Script from "next/script";
 import "./globals.css";
 import { Navigation } from "@/components/layouts/navigation";
@@ -8,6 +9,7 @@ import {
   generateOrganizationSchema,
   generateWebSiteSchema,
 } from "@/lib/schema";
+import { i18n, type Locale } from "@/lib/i18n/config";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://hyreel.com"),
   title: {
     default: "Hyreel - AI Video Generation App",
-    template: "%s | Hyreel",
+    template: "%s",
   },
   description:
     "Create viral videos in minutes with AI. TikTok, Instagram Reels, YouTube Shorts and more.",
@@ -28,30 +30,6 @@ export const metadata: Metadata = {
   publisher: "Hyreel",
   other: {
     "msapplication-TileColor": "#7c3aed",
-  },
-  openGraph: {
-    title: "Hyreel - AI Video Generation App",
-    description:
-      "Create viral videos in minutes with AI. Transform photos into stunning videos for TikTok, Instagram Reels, and YouTube Shorts.",
-    type: "website",
-    locale: "en_US",
-    siteName: "Hyreel",
-    url: "https://hyreel.com",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Hyreel - AI Video Generation App",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Hyreel - AI Video Generation App",
-    description: "Create viral videos in minutes with AI",
-    images: ["/og-image.png"],
-    creator: "@hyreelapp",
   },
   robots: {
     index: true,
@@ -66,13 +44,25 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+function getDocumentLang(lang?: string): Locale {
+  return i18n.locales.includes(lang as Locale) ? (lang as Locale) : i18n.defaultLocale;
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params?: Promise<{ lang?: string }>;
 }>) {
+  const resolvedParams = params ? await params : undefined;
+  const requestHeaders = await headers();
+  const documentLang = getDocumentLang(
+    requestHeaders.get("x-hyreel-locale") ?? resolvedParams?.lang
+  );
+
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang={documentLang} className={inter.variable}>
       <head>
         {/* Preload critical resources for better LCP */}
         <link
@@ -91,7 +81,7 @@ export default function RootLayout({
         <link
           rel="alternate"
           type="application/rss+xml"
-          title="Hyreel Blog RSS Feed"
+          title="Hyreel RSS"
           href="/feed.xml"
         />
 

@@ -12,6 +12,7 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 import { getLocalizedUseCaseContent } from "@/lib/i18n/content/use-cases";
 
 const SITE_URL = "https://hyreel.com";
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
 
 export async function generateStaticParams() {
   const params: { lang: string; slug: string }[] = [];
@@ -121,7 +122,9 @@ export default async function LocalizedUseCasePage({
             {heroSubheadline}
           </Text>
 
-          <Button size="lg">{t.startCreatingFree}</Button>
+          <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="lg">{t.startCreatingFree}</Button>
+          </Link>
         </div>
       </Section>
 
@@ -181,7 +184,9 @@ export default async function LocalizedUseCasePage({
             {t.readyToGetStarted}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">{t.startCreatingFree}</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">{t.startCreatingFree}</Button>
+            </Link>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
                 {t.viewPricing}

@@ -10,6 +10,8 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
+
 export async function generateStaticParams() {
   return alternatives.map((alt) => ({
     slug: alt.slug,
@@ -64,7 +66,7 @@ export default async function AlternativePage({ params }: { params: Promise<{ sl
         badge={{ text: `vs ${alternative.competitorName}` }}
         title={alternative.heroHeadline}
         description={alternative.heroSubheadline}
-        primaryCta={{ text: "Try Hyreel Free" }}
+        primaryCta={{ text: "Try Hyreel Free", href: APP_STORE_URL }}
         secondaryCta={{ text: "See Comparison", href: "#comparison" }}
       />
 
@@ -208,7 +210,7 @@ export default async function AlternativePage({ params }: { params: Promise<{ sl
       {alternative.testimonial && (
         <Section spacing="xl">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="text-6xl text-[var(--brand-primary)]/30 mb-6">"</div>
+            <div className="text-6xl text-[var(--brand-primary)]/30 mb-6">&quot;</div>
             <Text variant="large" className="italic mb-6">
               {alternative.testimonial.quote}
             </Text>
@@ -232,7 +234,7 @@ export default async function AlternativePage({ params }: { params: Promise<{ sl
       <FinalCTA
         title="Ready to Switch to Hyreel?"
         description="Join thousands of creators who made the switch. Try Hyreel free today."
-        primaryCta={{ text: "Start Creating Free" }}
+        primaryCta={{ text: "Start Creating Free", href: APP_STORE_URL }}
         secondaryCta={{ text: "Compare Plans", href: "/pricing" }}
       />
 

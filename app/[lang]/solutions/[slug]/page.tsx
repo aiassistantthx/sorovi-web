@@ -12,6 +12,7 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 import { getLocalizedSolutionContent } from "@/lib/i18n/content/solutions";
 
 const SITE_URL = "https://hyreel.com";
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
 
 export async function generateStaticParams() {
   const params: { lang: string; slug: string }[] = [];
@@ -38,9 +39,13 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  const localizedContent = getLocalizedSolutionContent(slug, lang as Locale);
+  const title = localizedContent?.metaTitle || solution.metaTitle;
+  const description = localizedContent?.metaDescription || solution.metaDescription;
+
   return {
-    title: solution.name,
-    description: solution.description,
+    title,
+    description,
     alternates: {
       canonical: `${SITE_URL}/${lang}/solutions/${slug}`,
       languages: Object.fromEntries(
@@ -116,7 +121,9 @@ export default async function LocalizedSolutionPage({
             {heroSubheadline}
           </Text>
 
-          <Button size="lg">{t.startCreatingFree}</Button>
+          <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">{t.startCreatingFree}</Button>
+            </Link>
         </div>
       </Section>
 
@@ -128,15 +135,18 @@ export default async function LocalizedSolutionPage({
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-          {solution.benefits.map((benefit, index) => (
-            <Card key={index} variant="elevated">
-              <div className="text-3xl mb-3">{benefit.icon}</div>
-              <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">
-                {benefit.title}
-              </h3>
-              <Text variant="small">{benefit.description}</Text>
-            </Card>
-          ))}
+          {solution.benefits.map((benefit, index) => {
+            const localizedBenefit = localizedContent?.benefits?.[index];
+            return (
+              <Card key={index} variant="elevated">
+                <div className="text-3xl mb-3">{benefit.icon}</div>
+                <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">
+                  {localizedBenefit?.title || benefit.title}
+                </h3>
+                <Text variant="small">{localizedBenefit?.description || benefit.description}</Text>
+              </Card>
+            );
+          })}
         </div>
       </Section>
 
@@ -146,7 +156,9 @@ export default async function LocalizedSolutionPage({
             {t.readyToGetStarted}
           </Heading>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">{t.startCreatingFree}</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">{t.startCreatingFree}</Button>
+            </Link>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
                 {t.viewPricing}

@@ -19,8 +19,10 @@ import {
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { getTranslations } from "@/lib/i18n/translations";
 import { getLocalizedBlogContent } from "@/lib/i18n/content/blog";
+import { getLocalizedToolContent } from "@/lib/i18n/content/tools";
 
 const SITE_URL = "https://hyreel.com";
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
 
 export async function generateStaticParams() {
   const params: { lang: string; slug: string }[] = [];
@@ -103,6 +105,7 @@ export default async function LocalizedBlogPostPage({
   const localizedContent = getLocalizedBlogContent(slug, lang as Locale);
   const title = localizedContent?.title || post.title;
   const excerpt = localizedContent?.excerpt || post.excerpt;
+  const content = localizedContent?.content || post.content;
 
   const articleSchema = generateArticleSchema({
     title: title,
@@ -119,7 +122,7 @@ export default async function LocalizedBlogPostPage({
   ]);
 
   const formattedDate = new Date(post.publishedAt).toLocaleDateString(
-    "en-US",
+    lang,
     {
       year: "numeric",
       month: "long",
@@ -165,7 +168,7 @@ export default async function LocalizedBlogPostPage({
 
         <div className="max-w-3xl mx-auto text-center">
           <div className="flex items-center justify-center gap-3 mb-8">
-            <Badge variant="primary">{post.category}</Badge>
+            <Badge variant="primary">{t.blog}</Badge>
             <span className="text-sm text-[var(--text-muted)]">
               {post.readingTime} {t.minRead}
             </span>
@@ -182,9 +185,9 @@ export default async function LocalizedBlogPostPage({
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
-            {post.tags.map((tag) => (
-              <Badge key={tag} variant="outline">{tag}</Badge>
-            ))}
+            <Badge variant="outline">{t.aiVideoTools}</Badge>
+            <Badge variant="outline">{t.howItWorks}</Badge>
+            <Badge variant="outline">{t.bestPractices}</Badge>
           </div>
         </div>
       </Section>
@@ -197,7 +200,7 @@ export default async function LocalizedBlogPostPage({
       {/* Article Content */}
       <Section spacing="lg" containerSize="md" className="pt-0 md:pt-0">
         <article className="max-w-[680px] mx-auto">
-          <MarkdownRenderer content={post.content} />
+          <MarkdownRenderer content={content} />
         </article>
       </Section>
 
@@ -213,19 +216,25 @@ export default async function LocalizedBlogPostPage({
             </Text>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {relatedTools.map((tool) => (
+              {relatedTools.map((tool) => {
+                const localizedTool = getLocalizedToolContent(tool.slug, lang as Locale);
+                const toolName = localizedTool?.name || tool.name;
+                const toolTagline = localizedTool?.tagline || tool.tagline;
+
+                return (
                 <Link key={tool.slug} href={`/${lang}/tools/${tool.slug}`}>
                   <Card variant="elevated" className="group cursor-pointer h-full hover:border-[var(--brand-primary)]/30 transition-all">
                     <div className="text-3xl mb-3">{tool.icon}</div>
                     <h3 className="text-base font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors">
-                      {tool.name}
+                      {toolName}
                     </h3>
                     <Text variant="small" className="line-clamp-2">
-                      {tool.tagline}
+                      {toolTagline}
                     </Text>
                   </Card>
                 </Link>
-              ))}
+              );
+              })}
             </div>
           </div>
         </Section>
@@ -251,9 +260,9 @@ export default async function LocalizedBlogPostPage({
                 <Link key={relatedPost.slug} href={`/${lang}/blog/${relatedPost.slug}`}>
                   <Card variant="elevated" className="group cursor-pointer h-full flex flex-col hover:border-[var(--brand-primary)]/30 transition-all">
                     <div className="flex items-center justify-between mb-3">
-                      <Badge variant="primary">{relatedPost.category}</Badge>
+                      <Badge variant="primary">{t.blog}</Badge>
                       <span className="text-xs text-[var(--text-muted)]">
-                        {relatedPost.readingTime} min
+                        {relatedPost.readingTime} {t.minRead}
                       </span>
                     </div>
                     <h3 className="text-base font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">
@@ -281,7 +290,9 @@ export default async function LocalizedBlogPostPage({
             {t.startTransforming}
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">{t.startCreatingFree}</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">{t.startCreatingFree}</Button>
+            </Link>
             <Link href={`/${lang}/blog`}>
               <Button size="lg" variant="secondary">
                 {t.backToBlog}

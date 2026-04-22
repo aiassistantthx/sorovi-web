@@ -6,6 +6,8 @@ import Link from "next/link";
 import { platforms } from "@/lib/platforms";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { getTranslations } from "@/lib/i18n/translations";
+import { getLocalizedPlatformContent } from "@/lib/i18n/content/platforms";
+import { commonCopy, type NonEnLocale } from "@/lib/i18n/content/localized-fallbacks";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -27,9 +29,11 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  const t = getTranslations(lang as Locale);
+
   return {
-    title: "Platforms - Create Videos for Any Platform | Hyreel",
-    description: "Create optimized videos for TikTok, Instagram, YouTube, and more. Perfect formats for every platform.",
+    title: `${t.platforms} | Hyreel`,
+    description: t.toolsPageSubtitle,
     alternates: {
       canonical: `${SITE_URL}/${lang}/platforms`,
       languages: Object.fromEntries(
@@ -56,6 +60,7 @@ export default async function LocalizedPlatformsPage({
   }
 
   const t = getTranslations(lang as Locale);
+  const c = commonCopy(lang as NonEnLocale);
 
   return (
     <>
@@ -70,7 +75,7 @@ export default async function LocalizedPlatformsPage({
             {t.platforms}
           </Heading>
           <Text variant="large" className="mb-8">
-            Optimized video formats for TikTok, Instagram, YouTube, and more.
+            {c.desc(t.platforms)}
           </Text>
           <Button size="lg">{t.startCreating}</Button>
         </div>
@@ -78,15 +83,17 @@ export default async function LocalizedPlatformsPage({
 
       <Section spacing="xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {platforms.map((platform, index) => (
+          {platforms.map((platform, index) => {
+            const localized = getLocalizedPlatformContent(platform.slug, lang as Locale);
+            return (
             <Card key={index} variant="elevated" className="group cursor-pointer">
               <Link href={`/${lang}/platforms/${platform.slug}`}>
                 <div className="text-4xl mb-4">{platform.icon}</div>
                 <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors">
-                  {platform.name}
+                  {localized?.name || platform.name}
                 </h2>
                 <Text variant="small" className="mb-4 line-clamp-2">
-                  {platform.heroSubheadline}
+                  {localized?.heroSubheadline || platform.heroSubheadline}
                 </Text>
                 <div className="flex items-center gap-2 text-[var(--brand-primary)] text-sm font-medium">
                   {t.learnMore}
@@ -104,7 +111,7 @@ export default async function LocalizedPlatformsPage({
                 </div>
               </Link>
             </Card>
-          ))}
+          )})}
         </div>
       </Section>
     </>

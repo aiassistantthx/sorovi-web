@@ -6,6 +6,8 @@ import Link from "next/link";
 import { alternatives } from "@/lib/alternatives";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { getTranslations } from "@/lib/i18n/translations";
+import { getLocalizedAlternativeContent } from "@/lib/i18n/content/alternatives";
+import { commonCopy, type NonEnLocale } from "@/lib/i18n/content/localized-fallbacks";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -27,9 +29,11 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  const t = getTranslations(lang as Locale);
+
   return {
-    title: "Alternatives - Compare Hyreel to Other Tools | Hyreel",
-    description: "Compare Hyreel to other video creation tools. See why creators choose Hyreel for AI video generation.",
+    title: `${t.alternatives} | Hyreel`,
+    description: t.featureComparison,
     alternates: {
       canonical: `${SITE_URL}/${lang}/alternatives`,
       languages: Object.fromEntries(
@@ -56,6 +60,7 @@ export default async function LocalizedAlternativesPage({
   }
 
   const t = getTranslations(lang as Locale);
+  const c = commonCopy(lang as NonEnLocale);
 
   return (
     <>
@@ -70,7 +75,7 @@ export default async function LocalizedAlternativesPage({
             Hyreel {t.alternatives}
           </Heading>
           <Text variant="large" className="mb-8">
-            See how Hyreel compares to other video creation tools.
+            {c.desc(t.alternatives)}
           </Text>
           <Button size="lg">{t.tryItFree}</Button>
         </div>
@@ -78,17 +83,19 @@ export default async function LocalizedAlternativesPage({
 
       <Section spacing="xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {alternatives.map((alt, index) => (
+          {alternatives.map((alt, index) => {
+            const localized = getLocalizedAlternativeContent(alt.slug, lang as Locale);
+            return (
             <Card key={index} variant="elevated" className="group cursor-pointer">
               <Link href={`/${lang}/alternatives/${alt.slug}`}>
                 <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors">
-                  Hyreel vs {alt.competitorName}
+                  {localized?.title || `Hyreel vs ${alt.competitorName}`}
                 </h2>
                 <Text variant="small" className="mb-4 line-clamp-2">
-                  {alt.heroSubheadline}
+                  {localized?.heroSubheadline || alt.heroSubheadline}
                 </Text>
                 <div className="flex items-center gap-2 text-[var(--brand-primary)] text-sm font-medium">
-                  Compare
+                  {t.seeComparison}
                   <svg
                     className="w-4 h-4 group-hover:translate-x-1 transition-transform"
                     fill="none"
@@ -103,7 +110,7 @@ export default async function LocalizedAlternativesPage({
                 </div>
               </Link>
             </Card>
-          ))}
+          )})}
         </div>
       </Section>
     </>

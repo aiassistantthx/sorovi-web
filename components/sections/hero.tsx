@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
+import Link from "next/link";
+
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
 
 export function HeroSection() {
   return (
@@ -28,9 +31,11 @@ export function HeroSection() {
         </Text>
 
         {/* Single CTA Button */}
-        <Button size="lg" className="text-base sm:text-lg px-10 py-3">
-          Start Creating
-        </Button>
+        <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+          <Button size="lg" className="text-base sm:text-lg px-10 py-3">
+            Start Creating
+          </Button>
+        </Link>
       </div>
     </Section>
   );

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { audiences } from "@/lib/audiences";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { getTranslations } from "@/lib/i18n/translations";
+import { getLocalizedAudienceContent } from "@/lib/i18n/content/audiences";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -27,9 +28,11 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  const t = getTranslations(lang as Locale);
+
   return {
-    title: "Hyreel For - AI Video for Creators, Brands & Teams | Hyreel",
-    description: "Discover how Hyreel helps different types of users create amazing video content with AI.",
+    title: `${t.forAudience} - Hyreel`,
+    description: t.joinCreators,
     alternates: {
       canonical: `${SITE_URL}/${lang}/for`,
       languages: Object.fromEntries(
@@ -56,6 +59,7 @@ export default async function LocalizedForPage({
   }
 
   const t = getTranslations(lang as Locale);
+  const locale = lang as Locale;
 
   return (
     <>
@@ -70,7 +74,7 @@ export default async function LocalizedForPage({
             Hyreel {t.forAudience}
           </Heading>
           <Text variant="large" className="mb-8">
-            Whether you're a creator, brand, or team — we've got you covered.
+            {t.joinCreators}
           </Text>
           <Button size="lg">{t.learnMore}</Button>
         </div>
@@ -78,33 +82,39 @@ export default async function LocalizedForPage({
 
       <Section spacing="xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {audiences.map((audience, index) => (
-            <Card key={index} variant="elevated" className="group cursor-pointer">
-              <Link href={`/${lang}/for/${audience.slug}`}>
-                <div className="text-4xl mb-4">{audience.icon}</div>
-                <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors">
-                  {audience.name}
-                </h2>
-                <Text variant="small" className="mb-4 line-clamp-2">
-                  {audience.heroSubheadline}
-                </Text>
-                <div className="flex items-center gap-2 text-[var(--brand-primary)] text-sm font-medium">
-                  {t.learnMore}
-                  <svg
-                    className="w-4 h-4 group-hover:translate-x-1 transition-transform"
-                    fill="none"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-              </Link>
-            </Card>
-          ))}
+          {audiences.map((audience) => {
+            const localizedAudience = getLocalizedAudienceContent(audience.slug, locale);
+            const name = localizedAudience?.name || audience.name;
+            const heroSubheadline = localizedAudience?.heroSubheadline || audience.heroSubheadline;
+
+            return (
+              <Card key={audience.slug} variant="elevated" className="group cursor-pointer">
+                <Link href={`/${lang}/for/${audience.slug}`}>
+                  <div className="text-4xl mb-4">{audience.icon}</div>
+                  <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors">
+                    {name}
+                  </h2>
+                  <Text variant="small" className="mb-4 line-clamp-2">
+                    {heroSubheadline}
+                  </Text>
+                  <div className="flex items-center gap-2 text-[var(--brand-primary)] text-sm font-medium">
+                    {t.learnMore}
+                    <svg
+                      className="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                      fill="none"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </Link>
+              </Card>
+            );
+          })}
         </div>
       </Section>
     </>

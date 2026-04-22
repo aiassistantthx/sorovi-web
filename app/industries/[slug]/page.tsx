@@ -10,6 +10,8 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
+
 // Generate static params for all industries
 export async function generateStaticParams() {
   return industries.map((industry) => ({
@@ -89,7 +91,7 @@ export default async function IndustryPage({
         badge={{ icon: industry.icon, text: industry.name }}
         title={industry.heroHeadline}
         description={industry.heroSubheadline}
-        primaryCta={{ text: industry.ctaText }}
+        primaryCta={{ text: industry.ctaText, href: APP_STORE_URL }}
         secondaryCta={{ text: "View Pricing", href: "/pricing" }}
       />
 
@@ -231,7 +233,7 @@ export default async function IndustryPage({
               </svg>
             </div>
             <blockquote className="text-lg md:text-xl text-[var(--text-primary)] leading-relaxed mb-6">
-              "{industry.testimonial.quote}"
+              &quot;{industry.testimonial.quote}&quot;
             </blockquote>
             <div>
               <div className="font-semibold text-[var(--text-primary)]">
@@ -275,7 +277,7 @@ export default async function IndustryPage({
       <FinalCTA
         title={`Ready to Transform ${industry.name} Video?`}
         description={`Join thousands of ${industry.name.toLowerCase()} businesses using Hyreel to create professional video content.`}
-        primaryCta={{ text: industry.ctaText }}
+        primaryCta={{ text: industry.ctaText, href: APP_STORE_URL }}
         secondaryCta={{ text: "View All Industries", href: "/industries" }}
       />
     </>

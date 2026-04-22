@@ -10,6 +10,8 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
+
 export async function generateStaticParams() {
   return audiences.map((audience) => ({ slug: audience.slug }));
 }
@@ -78,7 +80,7 @@ export default async function AudiencePage({
         badge={{ icon: audience.icon, text: `For ${audience.name}` }}
         title={audience.heroHeadline}
         description={audience.heroSubheadline}
-        primaryCta={{ text: audience.ctaText }}
+        primaryCta={{ text: audience.ctaText, href: APP_STORE_URL }}
         secondaryCta={{ text: "View Pricing", href: "/pricing" }}
       />
 
@@ -227,7 +229,7 @@ export default async function AudiencePage({
       <FinalCTA
         title={`Ready to Transform Your ${audience.name} Content?`}
         description={`Join thousands of ${audience.name.toLowerCase()} using Hyreel to create professional video content.`}
-        primaryCta={{ text: audience.ctaText }}
+        primaryCta={{ text: audience.ctaText, href: APP_STORE_URL }}
         secondaryCta={{ text: "View All Audiences", href: "/for" }}
       />
     </>

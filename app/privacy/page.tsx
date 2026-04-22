@@ -177,7 +177,7 @@ export default function PrivacyPage() {
 
             <div>
               <Heading as="h2" className="mb-4">
-                10. Children's Privacy
+                10. Children&apos;s Privacy
               </Heading>
               <Text variant="body">
                 Hyreel is not intended for users under 13 years of age. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.

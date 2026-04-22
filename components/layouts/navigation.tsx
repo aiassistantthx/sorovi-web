@@ -2,26 +2,30 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils/cn";
 import { Button } from "@/components/ui/button";
+import { i18n, type Locale } from "@/lib/i18n/config";
+import { getTranslations } from "@/lib/i18n/translations";
 import { Container } from "./container";
-
-interface NavLink {
-  label: string;
-  href: string;
-}
-
-const navLinks: NavLink[] = [
-  { label: "Tools", href: "/tools" },
-  { label: "Templates", href: "/templates" },
-  { label: "Use Cases", href: "/use-cases" },
-  { label: "Industries", href: "/industries" },
-  { label: "Pricing", href: "/pricing" },
-];
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const pathname = usePathname();
+  const firstSegment = pathname.split("/")[1];
+  const locale = i18n.locales.includes(firstSegment as Locale)
+    ? (firstSegment as Locale)
+    : i18n.defaultLocale;
+  const t = getTranslations(locale);
+  const prefix = locale === i18n.defaultLocale ? "" : `/${locale}`;
+  const navLinks = [
+    { label: t.tools, href: `${prefix}/tools` },
+    { label: t.templates, href: `${prefix}/templates` },
+    { label: t.useCases, href: `${prefix}/use-cases` },
+    { label: t.industries, href: `${prefix}/industries` },
+    { label: t.pricing, href: `${prefix}/pricing` },
+  ];
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +49,7 @@ export function Navigation() {
         <nav className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link
-            href="/"
+            href={prefix || "/"}
             className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
           >
             <div className="text-2xl font-bold text-[var(--text-primary)]">
@@ -68,14 +72,16 @@ export function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button size="sm">Download App</Button>
+            <Link href="https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170" target="_blank" rel="noopener noreferrer">
+              <Button size="sm">{t.downloadForIOS}</Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 text-[var(--text-primary)]"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={t.viewAll}
           >
             <svg
               className="w-6 h-6"
@@ -109,9 +115,11 @@ export function Navigation() {
                   {link.label}
                 </Link>
               ))}
-              <Button size="sm" className="w-full">
-                Download App
-              </Button>
+              <Link href="https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170" target="_blank" rel="noopener noreferrer">
+                <Button size="sm" className="w-full">
+                  {t.downloadForIOS}
+                </Button>
+              </Link>
             </div>
           </div>
         )}

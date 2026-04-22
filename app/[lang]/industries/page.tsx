@@ -6,6 +6,8 @@ import Link from "next/link";
 import { industries } from "@/lib/industries";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { getTranslations } from "@/lib/i18n/translations";
+import { getLocalizedIndustryContent } from "@/lib/i18n/content/industries";
+import { commonCopy, type NonEnLocale } from "@/lib/i18n/content/localized-fallbacks";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -27,9 +29,11 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  const t = getTranslations(lang as Locale);
+
   return {
-    title: "Industries - AI Video Solutions by Industry | Hyreel",
-    description: "Discover how Hyreel helps businesses in different industries create engaging video content with AI.",
+    title: `${t.industries} | Hyreel`,
+    description: t.toolsPageSubtitle,
     alternates: {
       canonical: `${SITE_URL}/${lang}/industries`,
       languages: Object.fromEntries(
@@ -56,6 +60,7 @@ export default async function LocalizedIndustriesPage({
   }
 
   const t = getTranslations(lang as Locale);
+  const c = commonCopy(lang as NonEnLocale);
 
   return (
     <>
@@ -70,7 +75,7 @@ export default async function LocalizedIndustriesPage({
             {t.industries}
           </Heading>
           <Text variant="large" className="mb-8">
-            See how businesses across industries use Hyreel to create engaging content.
+            {c.desc(t.industries)}
           </Text>
           <Button size="lg">{t.getStartedFree}</Button>
         </div>
@@ -78,15 +83,17 @@ export default async function LocalizedIndustriesPage({
 
       <Section spacing="xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {industries.map((industry, index) => (
+          {industries.map((industry, index) => {
+            const localized = getLocalizedIndustryContent(industry.slug, lang as Locale);
+            return (
             <Card key={index} variant="elevated" className="group cursor-pointer">
               <Link href={`/${lang}/industries/${industry.slug}`}>
                 <div className="text-4xl mb-4">{industry.icon}</div>
                 <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors">
-                  {industry.name}
+                  {localized?.name || industry.name}
                 </h2>
                 <Text variant="small" className="mb-4 line-clamp-2">
-                  {industry.heroSubheadline}
+                  {localized?.heroSubheadline || industry.heroSubheadline}
                 </Text>
                 <div className="flex items-center gap-2 text-[var(--brand-primary)] text-sm font-medium">
                   {t.learnMore}
@@ -104,7 +111,7 @@ export default async function LocalizedIndustriesPage({
                 </div>
               </Link>
             </Card>
-          ))}
+          )})}
         </div>
       </Section>
     </>

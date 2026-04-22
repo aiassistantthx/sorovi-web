@@ -16,6 +16,7 @@ import {
 } from "@/lib/schema";
 
 const SITE_URL = "https://hyreel.com";
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
 
 export async function generateStaticParams() {
   const params: { lang: string; slug: string }[] = [];
@@ -72,6 +73,79 @@ function getRelatedTools(currentTool: Tool): Tool[] {
     (t) => t.category !== currentTool.category && t.slug !== currentTool.slug
   );
   return [...sameCategory, ...otherTools].slice(0, 3);
+}
+
+function getLocalizedCategory(category: string, locale: Locale): string {
+  const categories: Partial<Record<Locale, Record<string, string>>> = {
+    es: {
+      "Video Effects": "Efectos de video",
+      "Content Creation": "Creacion de contenido",
+      "Social Media": "Redes sociales",
+      "E-commerce": "E-commerce",
+    },
+    de: {
+      "Video Effects": "Videoeffekte",
+      "Content Creation": "Content-Erstellung",
+      "Social Media": "Social Media",
+      "E-commerce": "E-Commerce",
+    },
+    fr: {
+      "Video Effects": "Effets video",
+      "Content Creation": "Creation de contenu",
+      "Social Media": "Reseaux sociaux",
+      "E-commerce": "E-commerce",
+    },
+    pt: {
+      "Video Effects": "Efeitos de video",
+      "Content Creation": "Criacao de conteudo",
+      "Social Media": "Redes sociais",
+      "E-commerce": "E-commerce",
+    },
+    ru: {
+      "Video Effects": "Видеоэффекты",
+      "Content Creation": "Создание контента",
+      "Social Media": "Соцсети",
+      "E-commerce": "E-commerce",
+    },
+    it: {
+      "Video Effects": "Effetti video",
+      "Content Creation": "Creazione contenuti",
+      "Social Media": "Social media",
+      "E-commerce": "E-commerce",
+    },
+    nl: {
+      "Video Effects": "Video-effecten",
+      "Content Creation": "Contentcreatie",
+      "Social Media": "Social media",
+      "E-commerce": "E-commerce",
+    },
+    pl: {
+      "Video Effects": "Efekty wideo",
+      "Content Creation": "Tworzenie tresci",
+      "Social Media": "Social media",
+      "E-commerce": "E-commerce",
+    },
+    ja: {
+      "Video Effects": "動画エフェクト",
+      "Content Creation": "コンテンツ作成",
+      "Social Media": "ソーシャルメディア",
+      "E-commerce": "Eコマース",
+    },
+    ko: {
+      "Video Effects": "비디오 효과",
+      "Content Creation": "콘텐츠 제작",
+      "Social Media": "소셜 미디어",
+      "E-commerce": "이커머스",
+    },
+    zh: {
+      "Video Effects": "视频效果",
+      "Content Creation": "内容创作",
+      "Social Media": "社交媒体",
+      "E-commerce": "电商",
+    },
+  };
+
+  return categories[locale]?.[category] || category;
 }
 
 export default async function LocalizedToolPage({
@@ -143,7 +217,7 @@ export default async function LocalizedToolPage({
           />
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-[var(--brand-primary)]/10 border border-[var(--brand-primary)]/20 mb-6">
             <span className="text-sm font-medium text-[var(--brand-primary)]">
-              {tool.icon} {tool.category}
+              {tool.icon} {getLocalizedCategory(tool.category, lang as Locale)}
             </span>
           </div>
 
@@ -156,7 +230,9 @@ export default async function LocalizedToolPage({
           </Text>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">{t.tryItFree}</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">{t.tryItFree}</Button>
+            </Link>
             <a href="#how-it-works">
               <Button size="lg" variant="secondary">
                 {t.howItWorks}
@@ -253,21 +329,27 @@ export default async function LocalizedToolPage({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {relatedTools.map((related) => (
-              <Link
-                key={related.slug}
-                href={`/${lang}/tools/${related.slug}`}
-                className="block"
-              >
-                <Card variant="elevated">
-                  <div className="text-3xl mb-3">{related.icon}</div>
-                  <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">
-                    {related.name}
-                  </h3>
-                  <Text variant="small">{related.tagline}</Text>
-                </Card>
-              </Link>
-            ))}
+            {relatedTools.map((related) => {
+              const localizedRelated = getLocalizedToolContent(related.slug, lang as Locale);
+
+              return (
+                <Link
+                  key={related.slug}
+                  href={`/${lang}/tools/${related.slug}`}
+                  className="block"
+                >
+                  <Card variant="elevated">
+                    <div className="text-3xl mb-3">{related.icon}</div>
+                    <h3 className="text-lg font-semibold text-[var(--text-primary)] mb-2">
+                      {localizedRelated?.name || related.name}
+                    </h3>
+                    <Text variant="small">
+                      {localizedRelated?.tagline || localizedRelated?.description || related.tagline}
+                    </Text>
+                  </Card>
+                </Link>
+              );
+            })}
           </div>
 
           <div className="text-center mt-8">
@@ -288,7 +370,9 @@ export default async function LocalizedToolPage({
             {t.downloadHyreelCta}
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">{t.downloadForIOS}</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">{t.downloadForIOS}</Button>
+            </Link>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
                 {t.viewPricing}

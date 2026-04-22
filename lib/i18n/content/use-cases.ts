@@ -6660,6 +6660,82 @@ export const useCaseTranslations: Record<string, UseCaseTranslations> = {
       ],
       ctaText: "無料で動画ピンを作成開始"
     },
+    ko: {
+      name: "Pinterest 동영상 핀",
+      title: "Pinterest용 AI 동영상 핀",
+      heroHeadline: "트래픽을 유도하는 바이럴 동영상 핀 제작",
+      heroSubheadline: "AI 생성 동영상 핀으로 Pinterest 전략을 혁신하세요. 5배 더 많은 노출, 저장 수 증가, 스크롤을 멈추게 하는 동영상 콘텐츠로 웹사이트에 대량 트래픽을 유도하세요.",
+      description: "Pinterest 마케터들이 웹사이트 및 제휴 오퍼로의 노출, 저장, 아웃바운드 클릭을 늘리기 위해 동영상 핀을 제작합니다.",
+      painPoints: [
+        { title: "정적 핀은 묻힌다", description: "Pinterest 알고리즘은 동영상 핀을 강력히 선호합니다. 정적 이미지 핀은 이전에 비해 노출과 참여의 일부만 받습니다." },
+        { title: "동영상 제작이 부담스러워 보인다", description: "Pinterest 마케터는 종종 동영상 편집 기술이나 장비 없는 1인 기업가입니다. 동영상 핀 제작은 불가능해 보입니다." },
+        { title: "관심을 끌기 위한 경쟁이 치열하다", description: "Pinterest는 콘텐츠로 포화되어 있습니다. 돋보이려면 대부분의 마케터가 제작할 수 없는 스크롤을 멈추게 하는 시각적 콘텐츠가 필요합니다." },
+        { title: "신선한 콘텐츠가 지속적으로 필요하다", description: "Pinterest는 새로운 핀에 보상합니다. 피드에서 보이도록 충분한 동영상 콘텐츠를 만드는 것은 지속적인 과제입니다." }
+      ],
+      howHyreelHelps: [
+        { title: "이미지를 동영상 핀으로 즉시 변환", description: "기존 핀 이미지를 시네마틱 모션 효과가 적용된 매력적인 동영상 핀으로 변환하세요. 편집 기술이나 장비가 필요 없습니다." },
+        { title: "5배 더 많은 노출", description: "동영상 핀은 Pinterest 알고리즘에서 훨씬 더 많은 배포를 받습니다. 더 많은 잠재 방문자에게 콘텐츠를 보여주세요." },
+        { title: "Pinterest 최적화 형식", description: "Hyreel은 Pinterest가 선호하는 정확한 사양(2:3 화면비, 최적 길이, 이상적인 파일 크기)으로 동영상 핀을 내보냅니다." },
+        { title: "대규모 신선한 콘텐츠", description: "기존 콘텐츠 라이브러리에서 수십 개의 동영상 핀을 만드세요. 최소한의 노력으로 프로필을 신선하게 유지하세요." }
+      ],
+      benefits: [
+        "동영상 핀으로 Pinterest 노출을 극적으로 증가",
+        "동영상 편집 기술 없이 전문적인 동영상 핀 제작",
+        "웹사이트 또는 제휴 오퍼로 더 많은 트래픽 유도",
+        "스크롤을 멈추게 하는 움직임으로 피드에서 돋보이기",
+        "일관되고 신선한 핀 일정 유지"
+      ],
+      testimonial: {
+        quote: "Hyreel로 상위 100개 핀을 정적에서 동영상으로 전환했습니다. 월간 노출이 50만에서 250만으로 늘었습니다. Pinterest에서 웹사이트 트래픽이 3배 증가했습니다.",
+        author: "Rachel S.",
+        role: "Pinterest 블로거, DIY 및 공예 니치"
+      },
+      faqs: [
+        { question: "동영상 핀이 정적 핀보다 얼마나 더 효과적인가요?", answer: "Pinterest 동영상 핀은 일반적으로 정적 핀보다 3-5배 더 많은 노출을 받습니다. 피드에서 주목을 끌기 때문에 저장률과 클릭률도 더 높습니다." },
+        { question: "동영상 핀의 이상적인 길이는 얼마인가요?", answer: "Pinterest는 6-15초 길이의 동영상 핀을 권장합니다. Hyreel은 시청자의 관심을 잃지 않고 콘텐츠를 보여주는 완벽한 타이밍의 동영상을 만듭니다." },
+        { question: "모든 핀을 동영상으로 다시 만들어야 하나요?", answer: "가장 성과가 좋은 정적 핀부터 시작하세요. 먼저 최고의 콘텐츠를 동영상 핀으로 변환한 다음 확장하세요. Hyreel을 사용하면 시간이 지남에 따라 전체 카탈로그를 쉽게 변환할 수 있습니다." },
+        { question: "동영상 핀도 일반 핀처럼 예약할 수 있나요?", answer: "네! Hyreel에서 동영상 핀을 내보내 Pinterest에 직접 업로드하거나 Tailwind와 같은 예약 도구를 통해 업로드하세요. 동영상 핀 전략을 계획하고 자동화하세요." }
+      ],
+      ctaText: "무료로 동영상 핀 제작 시작"
+    },
+    zh: {
+      name: "Pinterest视频图钉",
+      title: "Pinterest AI视频图钉",
+      heroHeadline: "创建能带来流量的病毒式视频图钉",
+      heroSubheadline: "用AI生成的视频图钉革新您的Pinterest策略。获得5倍的展示量，增加收藏，用能让人停止滚动的视频内容为您的网站带来大量流量。",
+      description: "Pinterest营销人员创建视频图钉以增加网站和联盟优惠的展示量、收藏和外链点击。",
+      painPoints: [
+        { title: "静态图钉被埋没", description: "Pinterest算法强烈偏向视频图钉。静态图片图钉获得的展示和参与度只是以前的一小部分。" },
+        { title: "视频制作看起来令人生畏", description: "Pinterest营销人员通常是没有视频编辑技能或设备的个人创业者。创建视频图钉看起来不可能。" },
+        { title: "争夺注意力的竞争激烈", description: "Pinterest内容已经饱和。脱颖而出需要大多数营销人员无法制作的能让人停止滚动的视觉内容。" },
+        { title: "持续需要新鲜内容", description: "Pinterest奖励新鲜的图钉。创建足够的视频内容以保持在动态中可见是一个持续的挑战。" }
+      ],
+      howHyreelHelps: [
+        { title: "图片即刻变视频图钉", description: "将现有的图钉图片转换为带有电影级动态效果的引人注目的视频图钉。无需编辑技能或设备。" },
+        { title: "5倍展示量", description: "视频图钉在Pinterest算法中获得显著更多的分发。让更多潜在访客看到您的内容。" },
+        { title: "Pinterest优化格式", description: "Hyreel以Pinterest偏好的精确规格导出视频图钉——2:3宽高比、最佳时长和理想文件大小。" },
+        { title: "大规模新鲜内容", description: "从现有内容库创建数十个视频图钉。用最少的努力保持个人资料的新鲜度。" }
+      ],
+      benefits: [
+        "用视频图钉大幅增加Pinterest展示量",
+        "无需视频编辑技能即可创建专业视频图钉",
+        "为网站或联盟优惠带来更多流量",
+        "用能停止滚动的动态效果在动态中脱颖而出",
+        "保持一致的新鲜图钉发布时间表"
+      ],
+      testimonial: {
+        quote: "我用Hyreel将排名前100的图钉从静态转换为视频。我的月展示量从50万增长到250万。来自Pinterest的网站流量增加了三倍。",
+        author: "Rachel S.",
+        role: "Pinterest博主，DIY和手工艺细分市场"
+      },
+      faqs: [
+        { question: "视频图钉比静态图钉效果好多少？", answer: "Pinterest视频图钉通常获得静态图钉3-5倍的展示量。它们的收藏率和点击率也更高，因为它们能在动态中吸引注意力。" },
+        { question: "视频图钉的理想长度是多少？", answer: "Pinterest建议视频图钉长度在6-15秒之间。Hyreel创建完美定时的视频，在不失去观众注意力的情况下展示您的内容。" },
+        { question: "我需要把所有图钉都重新制作成视频吗？", answer: "从表现最好的静态图钉开始。首先将最佳内容转换为视频图钉，然后扩展。Hyreel让您可以轻松地随着时间推移转换整个目录。" },
+        { question: "视频图钉可以像普通图钉一样安排发布吗？", answer: "可以！从Hyreel导出视频图钉，直接上传到Pinterest或通过Tailwind等调度工具上传。规划并自动化您的视频图钉策略。" }
+      ],
+      ctaText: "免费开始创建视频图钉"
+    },
   },
 };
 

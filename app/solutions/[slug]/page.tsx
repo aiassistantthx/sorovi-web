@@ -10,6 +10,8 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
+
 export async function generateStaticParams() {
   return solutions.map((solution) => ({ slug: solution.slug }));
 }
@@ -78,7 +80,7 @@ export default async function SolutionPage({
         badge={{ icon: solution.icon, text: "Solution" }}
         title={solution.heroHeadline}
         description={solution.heroSubheadline}
-        primaryCta={{ text: solution.ctaText }}
+        primaryCta={{ text: solution.ctaText, href: APP_STORE_URL }}
         secondaryCta={{ text: "All Solutions", href: "/solutions" }}
       />
 
@@ -255,7 +257,7 @@ export default async function SolutionPage({
       <FinalCTA
         title="Ready to Solve This Challenge?"
         description="Join thousands using Hyreel to overcome video content obstacles."
-        primaryCta={{ text: solution.ctaText }}
+        primaryCta={{ text: solution.ctaText, href: APP_STORE_URL }}
         secondaryCta={{ text: "All Solutions", href: "/solutions" }}
       />
     </>

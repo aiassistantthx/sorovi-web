@@ -6,6 +6,8 @@ import Link from "next/link";
 import { PageFAQ, FinalCTA } from "@/components/sections";
 import { generateAlternates } from "@/lib/seo/alternates";
 
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
+
 export const metadata = {
   title: "AI Video Generator Without Watermark | Hyreel - Clean Pro Videos",
   description:
@@ -70,7 +72,9 @@ export default function AIVideoNoWatermarkPage() {
             marketing, and brand content. Starting at just $9.99/month.
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Start 7-Day Free Trial</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">Start 7-Day Free Trial</Button>
+            </Link>
             <Link href="/pricing">
               <Button size="lg" variant="secondary">
                 Compare Plans
@@ -206,7 +210,9 @@ export default function AIVideoNoWatermarkPage() {
                 </li>
               ))}
             </ul>
-            <Button className="w-full">Start Free Trial</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button className="w-full">Start Free Trial</Button>
+            </Link>
           </Card>
 
           <Card variant="elevated">
@@ -244,9 +250,11 @@ export default function AIVideoNoWatermarkPage() {
                 </li>
               ))}
             </ul>
-            <Button variant="secondary" className="w-full">
-              Start Free Trial
-            </Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="secondary" className="w-full">
+                Start Free Trial
+              </Button>
+            </Link>
           </Card>
         </div>
       </Section>
@@ -262,7 +270,7 @@ export default function AIVideoNoWatermarkPage() {
       <FinalCTA
         title="Get Clean, Professional Videos"
         description="Start your 7-day free trial. No watermarks. No commitment."
-        primaryCta={{ text: "Start Free Trial" }}
+        primaryCta={{ text: "Start Free Trial", href: APP_STORE_URL }}
         secondaryCta={{ text: "View All Plans", href: "/pricing" }}
       />
     </>

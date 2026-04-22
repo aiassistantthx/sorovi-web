@@ -39,9 +39,11 @@ export async function generateMetadata({
     zh: "关于我们 - Hyreel",
   };
 
+  const t = getTranslations(lang as Locale);
+
   return {
     title: titles[lang as Locale],
-    description: "Learn about Hyreel - the AI video generation platform empowering creators worldwide.",
+    description: t.aboutHeroSubtitle,
     alternates: {
       canonical: `${SITE_URL}/${lang}/about`,
       languages: Object.fromEntries(
@@ -69,6 +71,12 @@ export default async function LocalizedAboutPage({
 
   const t = getTranslations(lang as Locale);
 
+  const values = [
+    { title: t.aboutValueInnovation, description: t.aboutValueInnovationDesc },
+    { title: t.aboutValueAccessibility, description: t.aboutValueAccessibilityDesc },
+    { title: t.aboutValueCommunity, description: t.aboutValueCommunityDesc },
+  ];
+
   return (
     <>
       <Section spacing="xl" className="relative overflow-hidden">
@@ -79,10 +87,10 @@ export default async function LocalizedAboutPage({
 
         <div className="text-center max-w-3xl mx-auto">
           <Heading as="h1" className="mb-6">
-            Empowering Creators with AI
+            {t.aboutHeroTitle}
           </Heading>
           <Text variant="large">
-            We're building the future of video creation, making professional content accessible to everyone.
+            {t.aboutHeroSubtitle}
           </Text>
         </div>
       </Section>
@@ -90,15 +98,12 @@ export default async function LocalizedAboutPage({
       <Section spacing="xl">
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg">
-            <Heading as="h2" className="mb-6">Our Story</Heading>
+            <Heading as="h2" className="mb-6">{t.aboutOurStory}</Heading>
             <Text className="mb-6">
-              In 2023, our founders noticed something: creating viral video content was
-              hard. It required expensive software, hours of editing, and years of experience.
-              We knew there had to be a better way.
+              {t.aboutStoryPara1}
             </Text>
             <Text className="mb-6">
-              That's why we built Hyreel — an AI-powered platform that lets anyone create
-              stunning videos from simple photos. No editing experience required.
+              {t.aboutStoryPara2}
             </Text>
           </div>
         </div>
@@ -110,7 +115,7 @@ export default async function LocalizedAboutPage({
             { value: "240,909+", label: t.videosCreated },
             { value: "14,258+", label: t.activeCreators },
             { value: "32", label: t.languages },
-            { value: "2023", label: "Founded" },
+            { value: "2023", label: t.aboutFounded },
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-4xl font-bold text-[var(--text-primary)] mb-2">
@@ -124,13 +129,9 @@ export default async function LocalizedAboutPage({
 
       <Section spacing="xl">
         <div className="max-w-4xl mx-auto">
-          <Heading as="h2" className="mb-8 text-center">Our Values</Heading>
+          <Heading as="h2" className="mb-8 text-center">{t.aboutOurValues}</Heading>
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { title: "Innovation", description: "Pushing the boundaries of AI to make video creation effortless." },
-              { title: "Accessibility", description: "Making professional tools available to everyone, everywhere." },
-              { title: "Community", description: "Building a platform where creators support and inspire each other." },
-            ].map((value, index) => (
+            {values.map((value, index) => (
               <Card key={index} variant="elevated">
                 <h3 className="text-xl font-semibold text-[var(--text-primary)] mb-2">
                   {value.title}

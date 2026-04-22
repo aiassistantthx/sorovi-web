@@ -2,7 +2,6 @@ import { Heading, Text } from "@/components/ui/typography";
 import { Section } from "@/components/layouts/section";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { generatePricingSchema } from "@/lib/schema";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { getTranslations } from "@/lib/i18n/translations";
 import { notFound } from "next/navigation";
@@ -85,7 +84,6 @@ export default async function LocalizedPricingPage({
   }
 
   const t = getTranslations(lang as Locale);
-  const pricingSchema = generatePricingSchema();
 
   const plans = [
     {
@@ -142,6 +140,32 @@ export default async function LocalizedPricingPage({
       popular: false,
     },
   ];
+
+  const pricingSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: `${t.pricingPageTitle} - Hyreel`,
+    description: t.pricingPageSubtitle,
+    brand: {
+      "@type": "Brand",
+      name: "Hyreel",
+    },
+    offers: plans.map((plan) => ({
+      "@type": "Offer",
+      name: plan.name,
+      price: plan.price.replace("$", ""),
+      priceCurrency: "USD",
+      description: plan.description,
+      availability: "https://schema.org/InStock",
+    })),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      ratingCount: "2847",
+      bestRating: "5",
+      worstRating: "1",
+    },
+  };
 
   const faqs = [
     { q: t.pricingFaq1Q, a: t.pricingFaq1A },

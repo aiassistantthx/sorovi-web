@@ -6,6 +6,8 @@ import Link from "next/link";
 import { templates } from "@/lib/templates";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { getTranslations } from "@/lib/i18n/translations";
+import { getLocalizedTemplateContent } from "@/lib/i18n/content/templates";
+import { commonCopy, type NonEnLocale } from "@/lib/i18n/content/localized-fallbacks";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
@@ -27,9 +29,11 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  const t = getTranslations(lang as Locale);
+
   return {
-    title: "Video Templates - Ready-to-Use AI Templates | Hyreel",
-    description: "Browse 100+ video templates for TikTok, Instagram Reels, YouTube Shorts. Start creating in seconds.",
+    title: `${t.templates} | Hyreel`,
+    description: t.toolsPageSubtitle,
     alternates: {
       canonical: `${SITE_URL}/${lang}/templates`,
       languages: Object.fromEntries(
@@ -56,6 +60,7 @@ export default async function LocalizedTemplatesPage({
   }
 
   const t = getTranslations(lang as Locale);
+  const c = commonCopy(lang as NonEnLocale);
 
   return (
     <>
@@ -70,7 +75,7 @@ export default async function LocalizedTemplatesPage({
             {t.templates}
           </Heading>
           <Text variant="large" className="mb-8">
-            100+ ready-to-use templates for viral content. Just add your photo.
+            {c.desc(t.templates)}
           </Text>
           <Button size="lg">{t.viewAll}</Button>
         </div>
@@ -78,18 +83,20 @@ export default async function LocalizedTemplatesPage({
 
       <Section spacing="xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {templates.map((template, index) => (
+          {templates.map((template, index) => {
+            const localized = getLocalizedTemplateContent(template.slug, lang as Locale);
+            return (
             <Card key={index} variant="elevated" className="group cursor-pointer">
               <Link href={`/${lang}/templates/${template.slug}`}>
                 <div className="text-4xl mb-4">{template.icon}</div>
                 <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-2 group-hover:text-[var(--brand-primary)] transition-colors">
-                  {template.name}
+                  {localized?.name || template.name}
                 </h2>
                 <Text variant="small" className="mb-4 line-clamp-2">
-                  {template.description}
+                  {localized?.description || template.description}
                 </Text>
                 <div className="flex items-center gap-2 text-[var(--brand-primary)] text-sm font-medium">
-                  Use Template
+                  {t.useThisTemplate}
                   <svg
                     className="w-4 h-4 group-hover:translate-x-1 transition-transform"
                     fill="none"
@@ -104,7 +111,7 @@ export default async function LocalizedTemplatesPage({
                 </div>
               </Link>
             </Card>
-          ))}
+          )})}
         </div>
       </Section>
     </>

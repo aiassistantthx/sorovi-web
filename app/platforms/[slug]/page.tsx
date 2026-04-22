@@ -10,6 +10,8 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
+
 export async function generateStaticParams() {
   return platforms.map((platform) => ({ slug: platform.slug }));
 }
@@ -78,7 +80,7 @@ export default async function PlatformPage({
         badge={{ icon: platform.icon, text: platform.name }}
         title={platform.heroHeadline}
         description={platform.heroSubheadline}
-        primaryCta={{ text: platform.ctaText }}
+        primaryCta={{ text: platform.ctaText, href: APP_STORE_URL }}
         secondaryCta={{ text: "All Platforms", href: "/platforms" }}
       />
 
@@ -248,7 +250,7 @@ export default async function PlatformPage({
       <FinalCTA
         title={`Start Creating ${platform.name} Videos`}
         description={`Join thousands of creators making viral ${platform.name} content with Hyreel.`}
-        primaryCta={{ text: platform.ctaText }}
+        primaryCta={{ text: platform.ctaText, href: APP_STORE_URL }}
         secondaryCta={{ text: "All Platforms", href: "/platforms" }}
       />
     </>

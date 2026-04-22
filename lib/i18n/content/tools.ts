@@ -1,4 +1,10 @@
 import type { Locale } from "../config";
+import { getToolBySlug } from "@/lib/tools";
+import {
+  localizedName,
+  pageSpecificCopy,
+  type NonEnLocale,
+} from "./localized-fallbacks";
 
 // Translations for tool content (name, tagline, description, howItWorks, features, faqs)
 // Key is tool slug, value is translations per locale
@@ -32,6 +38,27 @@ interface ToolTranslation {
 
 type ToolTranslations = Partial<Record<Locale, ToolTranslation>>;
 
+function createToolFallback(
+  slug: string,
+  locale: NonEnLocale,
+  displayName?: string
+): ToolTranslation | null {
+  const tool = getToolBySlug(slug);
+  if (!tool) return null;
+  const name = displayName || localizedName(slug, tool.name, locale);
+  const specific = pageSpecificCopy(slug, name, locale);
+
+  return {
+    name,
+    tagline: specific.heroHeadline,
+    description: specific.description,
+    detailedDescription: specific.metaDescription,
+    howItWorks: specific.steps,
+    features: specific.features,
+    faqs: specific.faqs,
+  };
+}
+
 export const toolTranslations: Record<string, ToolTranslations> = {
   "ai-script-generator": {
     es: {
@@ -41,13 +68,13 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Nuestro Generador de Guiones IA revoluciona la creación de contenido al transformar ideas simples en guiones profesionales y atractivos al instante.",
       howItWorks: [
         { title: "Ingresa Tu Tema", description: "Cuéntale a nuestra IA de qué trata tu video. Unas pocas palabras o un brief detallado, lo que te funcione." },
-        { title: "Elige Tu Estilo", description: "Selecciona el tono, duración y formato. Casual, profesional, educativo o entretenido, tú decides." },
+        { title: "Elige Tu Estilo", description: "Selecciona el tono, duración y formato. Informal, profesional, educativo o entretenido, tú decides." },
         { title: "Genera y Refina", description: "Obtén tu guión al instante. Edita, regenera secciones o úsalo tal cual. Control creativo total." },
         { title: "Crea Tu Video", description: "Usa el guión con nuestra voz IA, avatares y editor de video para crear tu video completo." },
       ],
       features: [
         { title: "Múltiples Formatos", description: "Guiones optimizados para TikTok, YouTube, Instagram y más" },
-        { title: "Tono Personalizable", description: "Profesional, casual, divertido, educativo: más de 20 estilos de escritura" },
+        { title: "Tono Personalizable", description: "Profesional, informal, divertido, educativo: más de 20 estilos de escritura" },
         { title: "Generación Instantánea", description: "Obtén guiones completos en menos de 10 segundos" },
         { title: "Revisiones Ilimitadas", description: "Regenera secciones o guiones enteros hasta que sea perfecto" },
         { title: "Control de Duración", description: "Clips de 15 segundos a videos de 10 minutos, cualquier duración" },
@@ -101,13 +128,13 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Nosso Gerador de Roteiros IA revoluciona a criação de conteúdo ao transformar ideias simples em roteiros profissionais e envolventes instantaneamente.",
       howItWorks: [
         { title: "Digite seu tema", description: "Diga à nossa IA sobre o que é seu vídeo. Algumas palavras ou um briefing detalhado - o que funcionar para você." },
-        { title: "Escolha seu estilo", description: "Selecione o tom, duração e formato. Casual, profissional, educacional ou divertido - você decide." },
+        { title: "Escolha seu estilo", description: "Selecione o tom, duração e formato. Descontraído, profissional, educacional ou divertido - você decide." },
         { title: "Gerar e refinar", description: "Obtenha seu roteiro instantaneamente. Edite, regenere seções ou use como está. Controle criativo total." },
         { title: "Crie seu vídeo", description: "Use o roteiro com nossa voz IA, avatares e editor de vídeo para criar seu vídeo completo." },
       ],
       features: [
         { title: "Múltiplos formatos", description: "Roteiros otimizados para TikTok, YouTube, Instagram e mais" },
-        { title: "Tom personalizável", description: "Profissional, casual, engraçado, educacional - mais de 20 estilos de escrita" },
+        { title: "Tom personalizável", description: "Profissional, descontraído, engraçado, educacional - mais de 20 estilos de escrita" },
         { title: "Geração instantânea", description: "Obtenha roteiros completos em menos de 10 segundos" },
         { title: "Revisões ilimitadas", description: "Regenere seções ou roteiros inteiros até a perfeição" },
         { title: "Controle de duração", description: "De clipes de 15 segundos a vídeos de 10 minutos, qualquer duração" },
@@ -121,13 +148,13 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Наш ИИ Генератор Сценариев революционизирует создание контента, мгновенно превращая идеи в профессиональные сценарии.",
       howItWorks: [
         { title: "Введите тему", description: "Расскажите нашему ИИ, о чём ваше видео. Несколько слов или подробное описание - как вам удобно." },
-        { title: "Выберите стиль", description: "Выберите тон, длительность и формат. Casual, профессиональный, образовательный или развлекательный - решать вам." },
+        { title: "Выберите стиль", description: "Выберите тон, длительность и формат. Повседневный, профессиональный, образовательный или развлекательный - решать вам." },
         { title: "Генерация и доработка", description: "Получите сценарий мгновенно. Редактируйте, перегенерируйте разделы или используйте как есть. Полный творческий контроль." },
         { title: "Создайте видео", description: "Используйте сценарий с нашей ИИ-озвучкой, аватарами и видеоредактором для создания готового видео." },
       ],
       features: [
         { title: "Множество форматов", description: "Сценарии, оптимизированные для TikTok, YouTube, Instagram и других платформ" },
-        { title: "Настраиваемый тон", description: "Профессиональный, casual, весёлый, образовательный - более 20 стилей письма" },
+        { title: "Настраиваемый тон", description: "Профессиональный, повседневный, весёлый, образовательный - более 20 стилей письма" },
         { title: "Мгновенная генерация", description: "Получайте готовые сценарии менее чем за 10 секунд" },
         { title: "Безлимитные правки", description: "Перегенерируйте разделы или целые сценарии до идеала" },
         { title: "Контроль длительности", description: "От 15-секундных клипов до 10-минутных видео, любая длина" },
@@ -141,13 +168,13 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Il nostro Generatore di Script IA rivoluziona la creazione di contenuti trasformando istantaneamente semplici idee in script professionali.",
       howItWorks: [
         { title: "Inserisci il tuo argomento", description: "Racconta alla nostra IA di cosa parla il tuo video. Poche parole o un brief dettagliato - quello che funziona per te." },
-        { title: "Scegli il tuo stile", description: "Seleziona tono, durata e formato. Casual, professionale, educativo o divertente - decidi tu." },
+        { title: "Scegli il tuo stile", description: "Seleziona tono, durata e formato. Informale, professionale, educativo o divertente - decidi tu." },
         { title: "Genera e perfeziona", description: "Ottieni il tuo script istantaneamente. Modifica, rigenera sezioni o usalo così com'è. Controllo creativo totale." },
         { title: "Crea il tuo video", description: "Usa lo script con la nostra voce IA, avatar ed editor video per creare il tuo video completo." },
       ],
       features: [
         { title: "Formati multipli", description: "Script ottimizzati per TikTok, YouTube, Instagram e altro" },
-        { title: "Tono personalizzabile", description: "Professionale, casual, divertente, educativo - oltre 20 stili di scrittura" },
+        { title: "Tono personalizzabile", description: "Professionale, informale, divertente, educativo - oltre 20 stili di scrittura" },
         { title: "Generazione istantanea", description: "Ottieni script completi in meno di 10 secondi" },
         { title: "Revisioni illimitate", description: "Rigenera sezioni o interi script fino alla perfezione" },
         { title: "Controllo durata", description: "Da clip di 15 secondi a video di 10 minuti, qualsiasi durata" },
@@ -161,13 +188,13 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Onze AI Script Generator revolutioneert contentcreatie door eenvoudige ideeën direct om te zetten in professionele videoscripts.",
       howItWorks: [
         { title: "Voer je onderwerp in", description: "Vertel onze AI waar je video over gaat. Een paar woorden of een gedetailleerde briefing - wat voor jou werkt." },
-        { title: "Kies je stijl", description: "Selecteer toon, lengte en formaat. Casual, professioneel, educatief of vermakelijk - jij beslist." },
+        { title: "Kies je stijl", description: "Selecteer toon, lengte en formaat. Informeel, professioneel, educatief of vermakelijk - jij beslist." },
         { title: "Genereren & verfijnen", description: "Krijg je script direct. Bewerk, regenereer secties of gebruik het zoals het is. Volledige creatieve controle." },
         { title: "Maak je video", description: "Gebruik het script met onze AI-stem, avatars en video-editor om je complete video te maken." },
       ],
       features: [
         { title: "Meerdere formaten", description: "Geoptimaliseerde scripts voor TikTok, YouTube, Instagram en meer" },
-        { title: "Aanpasbare toon", description: "Professioneel, casual, grappig, educatief - meer dan 20 schrijfstijlen" },
+        { title: "Aanpasbare toon", description: "Professioneel, informeel, grappig, educatief - meer dan 20 schrijfstijlen" },
         { title: "Directe generatie", description: "Krijg complete scripts in minder dan 10 seconden" },
         { title: "Onbeperkte revisies", description: "Regenereer secties of hele scripts tot perfectie" },
         { title: "Lengtecontrole", description: "Van 15-seconden clips tot 10-minuten video's, elke lengte" },
@@ -181,13 +208,13 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Nasz Generator Scenariuszy AI rewolucjonizuje tworzenie treści, natychmiast przekształcając pomysły w profesjonalne scenariusze.",
       howItWorks: [
         { title: "Wprowadź swój temat", description: "Powiedz naszej AI, o czym jest twój film. Kilka słów lub szczegółowy brief - cokolwiek ci odpowiada." },
-        { title: "Wybierz swój styl", description: "Wybierz ton, długość i format. Casualowy, profesjonalny, edukacyjny lub rozrywkowy - ty decydujesz." },
+        { title: "Wybierz swój styl", description: "Wybierz ton, długość i format. Swobodny, profesjonalny, edukacyjny lub rozrywkowy - ty decydujesz." },
         { title: "Generuj i dopracuj", description: "Otrzymaj scenariusz natychmiast. Edytuj, regeneruj sekcje lub użyj go tak jak jest. Pełna kontrola twórcza." },
         { title: "Stwórz swój film", description: "Użyj scenariusza z naszym głosem AI, awatarami i edytorem wideo, aby stworzyć kompletny film." },
       ],
       features: [
         { title: "Wiele formatów", description: "Scenariusze zoptymalizowane dla TikTok, YouTube, Instagram i innych" },
-        { title: "Konfigurowalny ton", description: "Profesjonalny, casualowy, zabawny, edukacyjny - ponad 20 stylów pisania" },
+        { title: "Konfigurowalny ton", description: "Profesjonalny, swobodny, zabawny, edukacyjny - ponad 20 stylów pisania" },
         { title: "Natychmiastowa generacja", description: "Otrzymuj kompletne scenariusze w mniej niż 10 sekund" },
         { title: "Nieograniczone poprawki", description: "Regeneruj sekcje lub całe scenariusze do perfekcji" },
         { title: "Kontrola długości", description: "Od 15-sekundowych klipów do 10-minutowych filmów, dowolna długość" },
@@ -707,7 +734,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Transforma imágenes estáticas en videos cautivadores con la tecnología de Imagen a Video IA de Hyreel.",
       howItWorks: [
         { title: "Sube Tu Imagen", description: "Elige cualquier foto de tu galería o toma una nueva. Fotos de productos, retratos, paisajes—cualquier imagen funciona." },
-        { title: "Selecciona Efecto de Movimiento", description: "Elige entre efectos IA: Zoom In/Out, Órbita 360°, Seguir Sujeto, Parallax 3D, Dolly Zoom y más." },
+        { title: "Selecciona Efecto de Movimiento", description: "Elige entre efectos IA: acercamiento/alejamiento, Órbita 360°, Seguir Sujeto, Parallax 3D, Dolly Zoom y más." },
         { title: "Personaliza Duración y Estilo", description: "Configura la duración del video (2-30 segundos), ajusta la velocidad de movimiento, añade música y afina los ajustes de generación IA." },
         { title: "Genera y Comparte", description: "La IA genera tu video en segundos. Comparte en TikTok, Instagram, YouTube o guarda en tu dispositivo." }
       ],
@@ -717,7 +744,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "IA Seguir Sujeto", description: "La IA rastrea y sigue al sujeto principal con movimientos de cámara naturales" },
         { title: "Efecto Parallax 3D", description: "Crea profundidad y dimensión realistas desde imágenes 2D planas" },
         { title: "Generación Instantánea", description: "Obtén tu video IA en menos de 10 segundos—sin esperas ni retrasos de renderizado" },
-        { title: "App iOS Mobile-First", description: "Crea y comparte videos directamente desde tu iPhone—optimizado para creadores en movimiento" }
+        { title: "App iOS para creación móvil", description: "Crea y comparte videos directamente desde tu iPhone—optimizado para creadores en movimiento" }
       ],
     },
     de: {
@@ -727,7 +754,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Verwandle statische Bilder in fesselnde Videos mit Hyreels Bild-zu-Video-KI-Technologie.",
       howItWorks: [
         { title: "Bild Hochladen", description: "Wähle ein Foto aus deiner Galerie oder mache ein neues. Produktfotos, Porträts, Landschaften—jedes Bild funktioniert." },
-        { title: "Bewegungseffekt Wählen", description: "Wähle aus KI-Effekten: Zoom In/Out, 360° Orbit, Subjekt Folgen, 3D Parallax, Dolly Zoom und mehr." },
+        { title: "Bewegungseffekt Wählen", description: "Wähle aus KI-Effekten: Heran-/Herauszoomen, 360° Orbit, Subjekt Folgen, 3D Parallax, Dolly Zoom und mehr." },
         { title: "Dauer und Stil Anpassen", description: "Stelle die Videodauer ein (2-30 Sekunden), passe die Bewegungsgeschwindigkeit an, füge Musik hinzu und optimiere die KI-Generierungseinstellungen." },
         { title: "Generieren und Teilen", description: "KI generiert dein Video in Sekunden. Teile auf TikTok, Instagram, YouTube oder speichere auf deinem Gerät." }
       ],
@@ -737,7 +764,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "KI Subjekt-Tracking", description: "KI verfolgt und folgt dem Hauptmotiv mit natürlichen Kamerabewegungen" },
         { title: "3D Parallax-Effekt", description: "Erzeuge realistische Tiefe und Dimension aus flachen 2D-Bildern" },
         { title: "Sofortige Generierung", description: "Erhalte dein KI-Video in unter 10 Sekunden—keine Wartezeit oder Rendering-Verzögerungen" },
-        { title: "Mobile-First iOS App", description: "Erstelle und teile Videos direkt von deinem iPhone—optimiert für Content-Ersteller unterwegs" }
+        { title: "iOS-App für mobiles Erstellen", description: "Erstelle und teile Videos direkt von deinem iPhone—optimiert für Content-Ersteller unterwegs" }
       ],
     },
     fr: {
@@ -747,7 +774,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Transformez des images statiques en vidéos captivantes avec la technologie Image vers Vidéo IA de Hyreel.",
       howItWorks: [
         { title: "Téléchargez Votre Image", description: "Choisissez une photo de votre galerie ou prenez-en une nouvelle. Photos de produits, portraits, paysages—n'importe quelle image fonctionne." },
-        { title: "Sélectionnez l'Effet de Mouvement", description: "Choisissez parmi les effets IA: Zoom In/Out, Orbite 360°, Suivi de Sujet, Parallax 3D, Dolly Zoom et plus." },
+        { title: "Sélectionnez l'Effet de Mouvement", description: "Choisissez parmi les effets IA: zoom avant/arrière, Orbite 360°, Suivi de Sujet, Parallax 3D, Dolly Zoom et plus." },
         { title: "Personnalisez Durée et Style", description: "Définissez la durée de la vidéo (2-30 secondes), ajustez la vitesse de mouvement, ajoutez de la musique et affinez les paramètres de génération IA." },
         { title: "Générez et Partagez", description: "L'IA génère votre vidéo en secondes. Partagez sur TikTok, Instagram, YouTube ou enregistrez sur votre appareil." }
       ],
@@ -757,7 +784,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "Suivi de Sujet IA", description: "L'IA suit le sujet principal avec des mouvements de caméra naturels" },
         { title: "Effet Parallax 3D", description: "Créez une profondeur et dimension réalistes à partir d'images 2D plates" },
         { title: "Génération Instantanée", description: "Obtenez votre vidéo IA en moins de 10 secondes—pas d'attente ni de délais de rendu" },
-        { title: "App iOS Mobile-First", description: "Créez et partagez des vidéos directement depuis votre iPhone—optimisé pour les créateurs en déplacement" }
+        { title: "App iOS pour création mobile", description: "Créez et partagez des vidéos directement depuis votre iPhone—optimisé pour les créateurs en déplacement" }
       ],
     },
     pt: {
@@ -767,7 +794,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Transforme imagens estáticas em vídeos cativantes com a tecnologia de Imagem para Vídeo IA da Hyreel.",
       howItWorks: [
         { title: "Envie Sua Imagem", description: "Escolha uma foto da sua galeria ou tire uma nova. Fotos de produtos, retratos, paisagens—qualquer imagem funciona." },
-        { title: "Selecione o Efeito de Movimento", description: "Escolha entre efeitos IA: Zoom In/Out, Órbita 360°, Seguir Sujeito, Parallax 3D, Dolly Zoom e mais." },
+        { title: "Selecione o Efeito de Movimento", description: "Escolha entre efeitos IA: aproximação/afastamento, Órbita 360°, Seguir Sujeito, Parallax 3D, Dolly Zoom e mais." },
         { title: "Personalize Duração e Estilo", description: "Defina a duração do vídeo (2-30 segundos), ajuste a velocidade do movimento, adicione música e refine as configurações de geração IA." },
         { title: "Gere e Compartilhe", description: "A IA gera seu vídeo em segundos. Compartilhe no TikTok, Instagram, YouTube ou salve no seu dispositivo." }
       ],
@@ -777,7 +804,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "Rastreamento de Sujeito IA", description: "A IA rastreia e segue o sujeito principal com movimentos de câmera naturais" },
         { title: "Efeito Parallax 3D", description: "Crie profundidade e dimensão realistas a partir de imagens 2D planas" },
         { title: "Geração Instantânea", description: "Obtenha seu vídeo IA em menos de 10 segundos—sem espera ou atrasos de renderização" },
-        { title: "App iOS Mobile-First", description: "Crie e compartilhe vídeos diretamente do seu iPhone—otimizado para criadores em movimento" }
+        { title: "App iOS para criação móvel", description: "Crie e compartilhe vídeos diretamente do seu iPhone—otimizado para criadores em movimento" }
       ],
     },
     ru: {
@@ -787,7 +814,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Превращайте статичные изображения в захватывающие видео с технологией Изображение в Видео ИИ от Hyreel.",
       howItWorks: [
         { title: "Загрузите Изображение", description: "Выберите фото из галереи или сделайте новое. Фото продуктов, портреты, пейзажи—любое изображение подойдет." },
-        { title: "Выберите Эффект Движения", description: "Выбирайте из ИИ эффектов: Zoom In/Out, Орбита 360°, Слежение за Объектом, 3D Параллакс, Dolly Zoom и другие." },
+        { title: "Выберите Эффект Движения", description: "Выбирайте из ИИ-эффектов: приближение/отдаление, орбита 360°, слежение за объектом, 3D-параллакс, Dolly Zoom и другие." },
         { title: "Настройте Длительность и Стиль", description: "Установите длительность видео (2-30 секунд), настройте скорость движения, добавьте музыку и отрегулируйте параметры генерации ИИ." },
         { title: "Генерируйте и Делитесь", description: "ИИ создает видео за секунды. Делитесь в TikTok, Instagram, YouTube или сохраняйте на устройство." }
       ],
@@ -797,7 +824,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "ИИ Слежение за Объектом", description: "ИИ отслеживает и следует за главным объектом с естественными движениями камеры" },
         { title: "3D Эффект Параллакс", description: "Создавайте реалистичную глубину и объем из плоских 2D изображений" },
         { title: "Мгновенная Генерация", description: "Получите ИИ видео менее чем за 10 секунд—без ожидания и задержек рендеринга" },
-        { title: "Mobile-First iOS Приложение", description: "Создавайте и делитесь видео прямо с iPhone—оптимизировано для создателей в движении" }
+        { title: "iOS-приложение для мобильного создания", description: "Создавайте и делитесь видео прямо с iPhone—оптимизировано для создателей в движении" }
       ],
     },
     it: {
@@ -807,7 +834,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Trasforma immagini statiche in video accattivanti con la tecnologia Immagine a Video IA di Hyreel.",
       howItWorks: [
         { title: "Carica la Tua Immagine", description: "Scegli una foto dalla tua galleria o scattane una nuova. Foto di prodotti, ritratti, paesaggi—qualsiasi immagine funziona." },
-        { title: "Seleziona l'Effetto di Movimento", description: "Scegli tra effetti IA: Zoom In/Out, Orbita 360°, Tracciamento Soggetto, Parallax 3D, Dolly Zoom e altro." },
+        { title: "Seleziona l'Effetto di Movimento", description: "Scegli tra effetti IA: avvicinamento/allontanamento, Orbita 360°, Tracciamento Soggetto, Parallax 3D, Dolly Zoom e altro." },
         { title: "Personalizza Durata e Stile", description: "Imposta la durata del video (2-30 secondi), regola la velocità del movimento, aggiungi musica e affina le impostazioni di generazione IA." },
         { title: "Genera e Condividi", description: "L'IA genera il tuo video in secondi. Condividi su TikTok, Instagram, YouTube o salva sul tuo dispositivo." }
       ],
@@ -817,7 +844,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "Tracciamento Soggetto IA", description: "L'IA traccia e segue il soggetto principale con movimenti naturali della telecamera" },
         { title: "Effetto Parallax 3D", description: "Crea profondità e dimensione realistiche da immagini 2D piatte" },
         { title: "Generazione Istantanea", description: "Ottieni il tuo video IA in meno di 10 secondi—nessuna attesa o ritardi di rendering" },
-        { title: "App iOS Mobile-First", description: "Crea e condividi video direttamente dal tuo iPhone—ottimizzato per creatori in movimento" }
+        { title: "App iOS per creare in mobilità", description: "Crea e condividi video direttamente dal tuo iPhone—ottimizzato per creatori in movimento" }
       ],
     },
     nl: {
@@ -827,7 +854,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Transformeer statische afbeeldingen in boeiende video's met Hyreel's Afbeelding naar Video AI-technologie.",
       howItWorks: [
         { title: "Upload Je Afbeelding", description: "Kies een foto uit je galerij of maak een nieuwe. Productfoto's, portretten, landschappen—elke afbeelding werkt." },
-        { title: "Selecteer Bewegingseffect", description: "Kies uit AI-effecten: Zoom In/Out, 360° Orbit, Onderwerp Volgen, 3D Parallax, Dolly Zoom en meer." },
+        { title: "Selecteer Bewegingseffect", description: "Kies uit AI-effecten: inzoomen/uitzoomen, 360° Orbit, Onderwerp Volgen, 3D Parallax, Dolly Zoom en meer." },
         { title: "Pas Duur en Stijl Aan", description: "Stel de videoduur in (2-30 seconden), pas de bewegingssnelheid aan, voeg muziek toe en verfijn de AI-generatie-instellingen." },
         { title: "Genereer en Deel", description: "AI genereert je video in seconden. Deel op TikTok, Instagram, YouTube of sla op naar je apparaat." }
       ],
@@ -837,7 +864,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "AI Onderwerp Tracking", description: "AI volgt het hoofdonderwerp met natuurlijke camerabewegingen" },
         { title: "3D Parallax Effect", description: "Creëer realistische diepte en dimensie uit platte 2D-afbeeldingen" },
         { title: "Directe Generatie", description: "Krijg je AI-video in minder dan 10 seconden—geen wachten of rendering-vertragingen" },
-        { title: "Mobile-First iOS App", description: "Maak en deel video's rechtstreeks vanaf je iPhone—geoptimaliseerd voor makers onderweg" }
+        { title: "iOS-app voor mobiel maken", description: "Maak en deel video's rechtstreeks vanaf je iPhone—geoptimaliseerd voor makers onderweg" }
       ],
     },
     pl: {
@@ -847,7 +874,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       detailedDescription: "Przekształcaj statyczne obrazy w wciągające filmy dzięki technologii Obraz na Wideo AI od Hyreel.",
       howItWorks: [
         { title: "Prześlij Swój Obraz", description: "Wybierz zdjęcie z galerii lub zrób nowe. Zdjęcia produktów, portrety, krajobrazy—każdy obraz zadziała." },
-        { title: "Wybierz Efekt Ruchu", description: "Wybierz spośród efektów AI: Zoom In/Out, Orbita 360°, Śledzenie Obiektu, Parallax 3D, Dolly Zoom i więcej." },
+        { title: "Wybierz Efekt Ruchu", description: "Wybierz spośród efektów AI: przybliżanie/oddalanie, Orbita 360°, Śledzenie Obiektu, Parallax 3D, Dolly Zoom i więcej." },
         { title: "Dostosuj Czas Trwania i Styl", description: "Ustaw czas trwania wideo (2-30 sekund), dostosuj prędkość ruchu, dodaj muzykę i dopracuj ustawienia generacji AI." },
         { title: "Generuj i Udostępniaj", description: "AI generuje Twoje wideo w sekundy. Udostępniaj na TikTok, Instagram, YouTube lub zapisz na urządzeniu." }
       ],
@@ -857,7 +884,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "Śledzenie Obiektu AI", description: "AI śledzi i podąża za głównym obiektem z naturalnymi ruchami kamery" },
         { title: "Efekt Parallax 3D", description: "Twórz realistyczną głębię i wymiar z płaskich obrazów 2D" },
         { title: "Natychmiastowa Generacja", description: "Otrzymaj swoje wideo AI w mniej niż 10 sekund—bez czekania i opóźnień renderowania" },
-        { title: "Aplikacja iOS Mobile-First", description: "Twórz i udostępniaj filmy bezpośrednio z iPhone'a—zoptymalizowane dla twórców w ruchu" }
+        { title: "Aplikacja iOS do tworzenia mobilnego", description: "Twórz i udostępniaj filmy bezpośrednio z iPhone'a—zoptymalizowane dla twórców w ruchu" }
       ],
     },
     ja: {
@@ -1603,7 +1630,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "Deteccion Focal Inteligente", description: "La IA identifica automaticamente los mejores puntos focales en tu imagen" },
         { title: "Suavidad Cinematografica", description: "Curvas de zoom ultra suaves que parecen filmadas profesionalmente" },
         { title: "Velocidad Personalizable", description: "Controla la velocidad del zoom desde dramatico lento hasta revelacion rapida" },
-        { title: "Opciones Zoom In/Out", description: "Elige la direccion y crea efectos de zoom compuestos" },
+        { title: "Opciones de acercamiento y alejamiento", description: "Elige la direccion y crea efectos de zoom compuestos" },
         { title: "Procesamiento con Profundidad", description: "La IA entiende la profundidad 3D para perspectiva de zoom realista" },
         { title: "Vista Previa Instantanea", description: "Ve los resultados antes del render final, ajusta en tiempo real" },
       ],
@@ -1623,7 +1650,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "Intelligente Fokuserkennung", description: "KI identifiziert automatisch die besten Fokuspunkte in deinem Bild" },
         { title: "Cinematische Geschmeidigkeit", description: "Butterweiche Zoom-Kurven, die professionell gefilmt aussehen" },
         { title: "Anpassbare Geschwindigkeit", description: "Steuere die Zoom-Geschwindigkeit von langsam-dramatisch bis schnelle Enthuellung" },
-        { title: "Zoom In/Out Optionen", description: "Waehle Richtung und erstelle kombinierte Zoom-Effekte" },
+        { title: "Optionen zum Heran- und Herauszoomen", description: "Waehle Richtung und erstelle kombinierte Zoom-Effekte" },
         { title: "Tiefenbewusste Verarbeitung", description: "KI versteht 3D-Tiefe fuer realistische Zoom-Perspektive" },
         { title: "Sofortige Vorschau", description: "Siehe Ergebnisse vor dem finalen Render, passe in Echtzeit an" },
       ],
@@ -1643,7 +1670,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "Detection Focale Intelligente", description: "L'IA identifie automatiquement les meilleurs points focaux dans votre image" },
         { title: "Fluidite Cinematographique", description: "Courbes de zoom ultra-fluides qui semblent filmees professionnellement" },
         { title: "Vitesse Personnalisable", description: "Controlez la vitesse du zoom, du lent dramatique a la revelation rapide" },
-        { title: "Options Zoom In/Out", description: "Choisissez la direction et creez des effets de zoom composes" },
+        { title: "Options de zoom avant/arrière", description: "Choisissez la direction et creez des effets de zoom composes" },
         { title: "Traitement avec Profondeur", description: "L'IA comprend la profondeur 3D pour une perspective de zoom realiste" },
         { title: "Apercu Instantane", description: "Voyez les resultats avant le rendu final, ajustez en temps reel" },
       ],
@@ -1663,7 +1690,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "Deteccao Focal Inteligente", description: "A IA identifica automaticamente os melhores pontos focais na sua imagem" },
         { title: "Suavidade Cinematografica", description: "Curvas de zoom ultra suaves que parecem filmadas profissionalmente" },
         { title: "Velocidade Personalizavel", description: "Controle a velocidade do zoom de dramatico lento a revelacao rapida" },
-        { title: "Opcoes Zoom In/Out", description: "Escolha a direcao e crie efeitos de zoom compostos" },
+        { title: "Opções de aproximação e afastamento", description: "Escolha a direcao e crie efeitos de zoom compostos" },
         { title: "Processamento com Profundidade", description: "A IA entende a profundidade 3D para perspectiva de zoom realista" },
         { title: "Pre-visualizacao Instantanea", description: "Veja os resultados antes do render final, ajuste em tempo real" },
       ],
@@ -1683,7 +1710,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "Умное Определение Фокуса", description: "ИИ автоматически определяет лучшие фокусные точки на изображении" },
         { title: "Кинематографическая Плавность", description: "Сверхплавные кривые зума, выглядящие профессионально снятыми" },
         { title: "Настраиваемая Скорость", description: "Управляйте скоростью зума от медленного драматичного до быстрого раскрытия" },
-        { title: "Опции Zoom In/Out", description: "Выбирайте направление и создавайте составные эффекты зума" },
+        { title: "Опции приближения и отдаления", description: "Выбирайте направление и создавайте составные эффекты зума" },
         { title: "Обработка с Учётом Глубины", description: "ИИ понимает 3D-глубину для реалистичной перспективы зума" },
         { title: "Мгновенный Предпросмотр", description: "Смотрите результаты до финального рендера, настраивайте в реальном времени" },
       ],
@@ -1703,7 +1730,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "Rilevamento Focale Intelligente", description: "L'IA identifica automaticamente i migliori punti focali nella tua immagine" },
         { title: "Fluidita Cinematografica", description: "Curve di zoom ultra fluide che sembrano filmate professionalmente" },
         { title: "Velocita Personalizzabile", description: "Controlla la velocita dello zoom da lento drammatico a rivelazione rapida" },
-        { title: "Opzioni Zoom In/Out", description: "Scegli la direzione e crea effetti di zoom composti" },
+        { title: "Opzioni di avvicinamento e allontanamento", description: "Scegli la direzione e crea effetti di zoom composti" },
         { title: "Elaborazione con Profondita", description: "L'IA comprende la profondita 3D per prospettiva di zoom realistica" },
         { title: "Anteprima Istantanea", description: "Vedi i risultati prima del render finale, regola in tempo reale" },
       ],
@@ -1723,7 +1750,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "Slimme Focus Detectie", description: "AI identificeert automatisch de beste focuspunten in je afbeelding" },
         { title: "Cinematische Vloeiendheid", description: "Boterzachte zoom curves die professioneel gefilmd lijken" },
         { title: "Aanpasbare Snelheid", description: "Regel de zoomsnelheid van langzaam dramatisch tot snelle onthulling" },
-        { title: "Zoom In/Out Opties", description: "Kies richting en creeer samengestelde zoom-effecten" },
+        { title: "Opties voor inzoomen en uitzoomen", description: "Kies richting en creeer samengestelde zoom-effecten" },
         { title: "Dieptebewuste Verwerking", description: "AI begrijpt 3D-diepte voor realistische zoom perspectief" },
         { title: "Directe Preview", description: "Bekijk resultaten voor de finale render, pas aan in real-time" },
       ],
@@ -1743,7 +1770,7 @@ export const toolTranslations: Record<string, ToolTranslations> = {
         { title: "Inteligentna Detekcja Fokusa", description: "AI automatycznie identyfikuje najlepsze punkty fokalne na obrazie" },
         { title: "Kinowa Plynnosc", description: "Gladkie jak maslo krzywe zoomu, które wygladaja profesjonalnie nakrecone" },
         { title: "Regulowana Predkosc", description: "Kontroluj szybkosc zoomu od wolnego dramatycznego po szybkie odsloniecie" },
-        { title: "Opcje Zoom In/Out", description: "Wybierz kierunek i twórz zlozone efekty zoomu" },
+        { title: "Opcje przybliżania i oddalania", description: "Wybierz kierunek i twórz zlozone efekty zoomu" },
         { title: "Przetwarzanie z Glebia", description: "AI rozumie glebie 3D dla realistycznej perspektywy zoomu" },
         { title: "Natychmiastowy Podglad", description: "Zobacz wyniki przed finalnym renderem, dostosuj w czasie rzeczywistym" },
       ],
@@ -2704,6 +2731,12 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       description: "Crea videos perfectos para TikTok, Instagram, YouTube y más. Formatos y efectos optimizados para cada red.",
       detailedDescription: "Domina todas las redes sociales con videos optimizados para cada plataforma.",
     },
+    pt: {
+      name: "Criador de Vídeos para Redes Sociais IA",
+      tagline: "Vídeos otimizados para todas as plataformas",
+      description: "Crie vídeos perfeitos para TikTok, Instagram, YouTube e mais. Formatos e efeitos otimizados para cada rede.",
+      detailedDescription: "Domine todas as redes sociais com vídeos otimizados para cada plataforma.",
+    },
     ru: {
       name: "ИИ Создатель Видео для Соцсетей",
       tagline: "Видео оптимизированные для всех платформ",
@@ -2716,6 +2749,36 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       description: "为TikTok、Instagram、YouTube等创建完美视频。为每个网络优化的格式和效果。",
       detailedDescription: "使用为每个平台优化的视频征服所有社交媒体。",
     },
+    it: {
+      name: "Creatore Video Social Media IA",
+      tagline: "Video ottimizzati per tutte le piattaforme",
+      description: "Crea video perfetti per TikTok, Instagram, YouTube e altro. Formati ed effetti ottimizzati per ogni rete.",
+      detailedDescription: "Domina tutti i social media con video ottimizzati per ogni piattaforma.",
+    },
+    nl: {
+      name: "AI Social Media Video Maker",
+      tagline: "Video's geoptimaliseerd voor alle platformen",
+      description: "Maak perfecte video's voor TikTok, Instagram, YouTube en meer. Formaten en effecten geoptimaliseerd voor elk netwerk.",
+      detailedDescription: "Beheers alle sociale media met video's die voor elk platform zijn geoptimaliseerd.",
+    },
+    pl: {
+      name: "Kreator Wideo Social Media AI",
+      tagline: "Filmy zoptymalizowane dla wszystkich platform",
+      description: "Twórz idealne filmy na TikTok, Instagram, YouTube i inne. Formaty i efekty zoptymalizowane dla każdej sieci.",
+      detailedDescription: "Opanuj wszystkie media społecznościowe z filmami zoptymalizowanymi dla każdej platformy.",
+    },
+    ja: {
+      name: "AIソーシャルメディア動画メーカー",
+      tagline: "すべてのプラットフォームに最適化された動画",
+      description: "TikTok、Instagram、YouTubeなどに最適な動画を作成。各ネットワーク向けに最適化されたフォーマットとエフェクト。",
+      detailedDescription: "各プラットフォームに最適化された動画ですべてのソーシャルメディアを制覇。",
+    },
+    ko: {
+      name: "AI 소셜 미디어 비디오 메이커",
+      tagline: "모든 플랫폼에 최적화된 비디오",
+      description: "TikTok, Instagram, YouTube 등에 완벽한 비디오 제작. 각 네트워크에 최적화된 형식과 효과.",
+      detailedDescription: "각 플랫폼에 최적화된 비디오로 모든 소셜 미디어를 정복하세요.",
+    },
   },
   "ai-video-generator-app": {
     es: {
@@ -2723,6 +2786,12 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "Crea videos IA directamente en tu iPhone",
       description: "La app más potente de generación de video IA para iOS. Crea, edita y comparte videos desde tu móvil.",
       detailedDescription: "Lleva el poder de la generación de video IA en tu bolsillo con nuestra app para iOS.",
+    },
+    pt: {
+      name: "App Gerador de Vídeo IA",
+      tagline: "Crie vídeos IA diretamente no seu iPhone",
+      description: "O aplicativo mais poderoso de geração de vídeo IA para iOS. Crie, edite e compartilhe vídeos do seu celular.",
+      detailedDescription: "Leve o poder da geração de vídeo IA no seu bolso com nosso aplicativo para iOS.",
     },
     ru: {
       name: "Приложение ИИ Генератор Видео",
@@ -2735,6 +2804,18 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "直接在iPhone上创建AI视频",
       description: "最强大的iOS AI视频生成应用。从手机创建、编辑和分享视频。",
       detailedDescription: "通过我们的iOS应用将AI视频生成的力量装进口袋。",
+    },
+    ja: {
+      name: "AI動画ジェネレーターアプリ",
+      tagline: "iPhoneで直接AI動画を作成",
+      description: "最も強力なiOS向けAI動画生成アプリ。モバイルから動画を作成、編集、共有。",
+      detailedDescription: "AI動画生成のパワーをポケットに。iOS向けアプリで。",
+    },
+    ko: {
+      name: "AI 비디오 생성기 앱",
+      tagline: "iPhone에서 직접 AI 비디오 제작",
+      description: "가장 강력한 iOS용 AI 비디오 생성 앱. 모바일에서 비디오 제작, 편집, 공유.",
+      detailedDescription: "iOS 앱으로 AI 비디오 생성의 힘을 주머니에.",
     },
   },
   "ai-faceless-video-generator": {
@@ -3232,6 +3313,12 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       description: "Crea videos de producto que convierten visitantes en compradores. Optimizado para tiendas online.",
       detailedDescription: "Aumenta tus ventas con videos de producto profesionales creados con IA.",
     },
+    pt: {
+      name: "Criador de Vídeos E-commerce IA",
+      tagline: "Vídeos de produto que vendem",
+      description: "Crie vídeos de produto que convertem visitantes em compradores. Otimizado para lojas online.",
+      detailedDescription: "Aumente suas vendas com vídeos de produto profissionais criados com IA.",
+    },
     ru: {
       name: "ИИ Создатель Видео для E-commerce",
       tagline: "Видео продуктов, которые продают",
@@ -3244,6 +3331,36 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       description: "创建将访客转化为买家的产品视频。为在线商店优化。",
       detailedDescription: "通过AI创建的专业产品视频提升销量。",
     },
+    ja: {
+      name: "AI Eコマース動画クリエイター",
+      tagline: "売れる商品動画",
+      description: "訪問者を購入者に変える商品動画を作成。オンラインストア向けに最適化。",
+      detailedDescription: "AIで作成したプロの商品動画で売上を増加。",
+    },
+    ko: {
+      name: "AI 이커머스 비디오 크리에이터",
+      tagline: "판매를 부르는 제품 비디오",
+      description: "방문자를 구매자로 전환하는 제품 비디오 제작. 온라인 스토어에 최적화.",
+      detailedDescription: "AI로 제작한 전문 제품 비디오로 매출 증대.",
+    },
+    it: {
+      name: "Creatore Video E-commerce IA",
+      tagline: "Video di prodotti che vendono",
+      description: "Crea video di prodotti che convertono i visitatori in acquirenti. Ottimizzato per negozi online.",
+      detailedDescription: "Aumenta le tue vendite con video di prodotti professionali creati con l'IA.",
+    },
+    nl: {
+      name: "AI E-commerce Video Maker",
+      tagline: "Productvideo's die verkopen",
+      description: "Maak productvideo's die bezoekers omzetten in kopers. Geoptimaliseerd voor online winkels.",
+      detailedDescription: "Verhoog je verkoop met professionele productvideo's gemaakt met AI.",
+    },
+    pl: {
+      name: "Kreator Wideo E-commerce AI",
+      tagline: "Filmy produktowe, które sprzedają",
+      description: "Twórz filmy produktowe, które przekształcają odwiedzających w kupujących. Zoptymalizowane dla sklepów online.",
+      detailedDescription: "Zwiększ sprzedaż dzięki profesjonalnym filmom produktowym tworzonym przez AI.",
+    },
   },
   "ai-photo-animation": {
     es: {
@@ -3251,6 +3368,12 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "Da vida a tus fotos con animación IA",
       description: "Anima cualquier foto con movimientos realistas. Crea contenido único y atractivo.",
       detailedDescription: "Transforma fotos estáticas en animaciones cautivadoras con nuestra tecnología de animación IA.",
+    },
+    pt: {
+      name: "Animação de Fotos IA",
+      tagline: "Dê vida às suas fotos com animação IA",
+      description: "Anime qualquer foto com movimentos realistas. Crie conteúdo único e atraente.",
+      detailedDescription: "Transforme fotos estáticas em animações cativantes com nossa tecnologia de animação IA.",
     },
     ru: {
       name: "ИИ Анимация Фото",
@@ -3264,6 +3387,36 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       description: "用逼真的动作为任何照片制作动画。创建独特有吸引力的内容。",
       detailedDescription: "使用我们的AI动画技术将静态照片转化为引人入胜的动画。",
     },
+    ja: {
+      name: "AIフォトアニメーション",
+      tagline: "AIアニメーションで写真に命を",
+      description: "リアルな動きで写真をアニメーション化。ユニークで魅力的なコンテンツを作成。",
+      detailedDescription: "AIアニメーション技術で静止画を魅力的なアニメーションに変換。",
+    },
+    ko: {
+      name: "AI 포토 애니메이션",
+      tagline: "AI 애니메이션으로 사진에 생명을",
+      description: "사실적인 움직임으로 사진 애니메이션화. 독특하고 매력적인 콘텐츠 제작.",
+      detailedDescription: "AI 애니메이션 기술로 정적 사진을 매력적인 애니메이션으로 변환.",
+    },
+    it: {
+      name: "Animazione Foto IA",
+      tagline: "Dai vita alle tue foto con l'animazione IA",
+      description: "Anima qualsiasi foto con movimenti realistici. Crea contenuti unici e coinvolgenti.",
+      detailedDescription: "Trasforma foto statiche in animazioni accattivanti con la nostra tecnologia di animazione IA.",
+    },
+    nl: {
+      name: "AI Foto Animatie",
+      tagline: "Breng je foto's tot leven met AI-animatie",
+      description: "Animeer elke foto met realistische bewegingen. Maak unieke en boeiende content.",
+      detailedDescription: "Transformeer statische foto's in boeiende animaties met onze AI-animatietechnologie.",
+    },
+    pl: {
+      name: "Animacja Zdjęć AI",
+      tagline: "Ożyw swoje zdjęcia dzięki animacji AI",
+      description: "Animuj dowolne zdjęcie z realistycznymi ruchami. Twórz unikalne i atrakcyjne treści.",
+      detailedDescription: "Przekształć statyczne zdjęcia w fascynujące animacje dzięki naszej technologii animacji AI.",
+    },
   },
   "ai-3d-photo-video": {
     es: {
@@ -3271,6 +3424,12 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "Convierte fotos 2D en videos 3D",
       description: "Crea impresionantes videos 3D desde fotos planas. Profundidad y dimensión cinematográfica.",
       detailedDescription: "Añade profundidad 3D a tus fotos con nuestra tecnología de video foto 3D IA.",
+    },
+    pt: {
+      name: "Vídeo Foto 3D IA",
+      tagline: "Converta fotos 2D em vídeos 3D",
+      description: "Crie vídeos 3D impressionantes a partir de fotos planas. Profundidade e dimensão cinematográfica.",
+      detailedDescription: "Adicione profundidade 3D às suas fotos com nossa tecnologia de vídeo foto 3D IA.",
     },
     ru: {
       name: "ИИ 3D Фото Видео",
@@ -3284,6 +3443,36 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       description: "从平面照片创建令人惊叹的3D视频。电影级深度和维度。",
       detailedDescription: "使用我们的AI 3D照片视频技术为照片添加3D深度。",
     },
+    ja: {
+      name: "AI 3Dフォトビデオ",
+      tagline: "2D写真を3D動画に変換",
+      description: "平面写真から印象的な3D動画を作成。シネマティックな奥行きと立体感。",
+      detailedDescription: "AI 3Dフォトビデオ技術で写真に3D深度を追加。",
+    },
+    ko: {
+      name: "AI 3D 포토 비디오",
+      tagline: "2D 사진을 3D 비디오로 변환",
+      description: "평면 사진에서 인상적인 3D 비디오 제작. 시네마틱한 깊이와 차원.",
+      detailedDescription: "AI 3D 포토 비디오 기술로 사진에 3D 깊이 추가.",
+    },
+    it: {
+      name: "Video Foto 3D IA",
+      tagline: "Converti foto 2D in video 3D",
+      description: "Crea video 3D straordinari da foto piatte. Profondità e dimensione cinematografica.",
+      detailedDescription: "Aggiungi profondità 3D alle tue foto con la nostra tecnologia video foto 3D IA.",
+    },
+    nl: {
+      name: "AI 3D Foto Video",
+      tagline: "Zet 2D-foto's om in 3D-video's",
+      description: "Maak verbluffende 3D-video's van platte foto's. Cinematische diepte en dimensie.",
+      detailedDescription: "Voeg 3D-diepte toe aan je foto's met onze AI 3D-fotovideotechnologie.",
+    },
+    pl: {
+      name: "Wideo Zdjęcie 3D AI",
+      tagline: "Konwertuj zdjęcia 2D na filmy 3D",
+      description: "Twórz oszałamiające filmy 3D z płaskich zdjęć. Kinematograficzna głębia i wymiar.",
+      detailedDescription: "Dodaj głębię 3D do swoich zdjęć dzięki naszej technologii wideo zdjęcie 3D AI.",
+    },
   },
   "ai-follow-video-effect": {
     es: {
@@ -3291,6 +3480,12 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "La cámara sigue automáticamente al sujeto",
       description: "Crea videos donde la cámara sigue al sujeto principal. Movimiento natural y cinematográfico.",
       detailedDescription: "Añade seguimiento inteligente de cámara a tus fotos con nuestro efecto de seguimiento IA.",
+    },
+    pt: {
+      name: "Efeito de Seguimento IA",
+      tagline: "A câmera segue automaticamente o sujeito",
+      description: "Crie vídeos onde a câmera segue o sujeito principal. Movimento natural e cinematográfico.",
+      detailedDescription: "Adicione rastreamento inteligente de câmera às suas fotos com nosso efeito de seguimento IA.",
     },
     ru: {
       name: "ИИ Эффект Слежения",
@@ -3304,6 +3499,36 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       description: "创建相机跟随主体的视频。自然的电影级运动。",
       detailedDescription: "使用我们的AI跟随效果为照片添加智能相机跟踪。",
     },
+    ja: {
+      name: "AI追従エフェクト",
+      tagline: "カメラが被写体を自動追従",
+      description: "被写体を追従するカメラ動画を作成。自然でシネマティックな動き。",
+      detailedDescription: "AI追従エフェクトで写真にスマートなカメラトラッキングを追加。",
+    },
+    ko: {
+      name: "AI 팔로우 효과",
+      tagline: "카메라가 피사체를 자동으로 추적",
+      description: "피사체를 따라가는 카메라 비디오 제작. 자연스럽고 시네마틱한 움직임.",
+      detailedDescription: "AI 팔로우 효과로 사진에 스마트 카메라 트래킹 추가.",
+    },
+    it: {
+      name: "Effetto Seguimento IA",
+      tagline: "La fotocamera segue automaticamente il soggetto",
+      description: "Crea video dove la fotocamera segue il soggetto principale. Movimento naturale e cinematografico.",
+      detailedDescription: "Aggiungi tracciamento intelligente della fotocamera alle tue foto con il nostro effetto seguimento IA.",
+    },
+    nl: {
+      name: "AI Volg Effect",
+      tagline: "Camera volgt automatisch het onderwerp",
+      description: "Maak video's waarbij de camera het hoofdonderwerp volgt. Natuurlijke cinematische beweging.",
+      detailedDescription: "Voeg slimme cameratracking toe aan je foto's met ons AI volg-effect.",
+    },
+    pl: {
+      name: "Efekt Śledzenia AI",
+      tagline: "Kamera automatycznie śledzi obiekt",
+      description: "Twórz filmy, gdzie kamera podąża za głównym obiektem. Naturalny kinematograficzny ruch.",
+      detailedDescription: "Dodaj inteligentne śledzenie kamery do swoich zdjęć z naszym efektem śledzenia AI.",
+    },
   },
   "ai-dolly-zoom-effect": {
     es: {
@@ -3311,6 +3536,12 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "El icónico efecto de vértigo cinematográfico",
       description: "Crea el famoso efecto de vértigo donde el fondo se acerca mientras el sujeto se mantiene. Cinematográfico al instante.",
       detailedDescription: "Añade el icónico efecto dolly zoom de Hitchcock a tus fotos con nuestra tecnología IA.",
+    },
+    pt: {
+      name: "Efeito Dolly Zoom IA",
+      tagline: "O icônico efeito de vertigem cinematográfico",
+      description: "Crie o famoso efeito de vertigem onde o fundo se aproxima enquanto o sujeito permanece. Cinematográfico instantaneamente.",
+      detailedDescription: "Adicione o icônico efeito dolly zoom de Hitchcock às suas fotos com nossa tecnologia IA.",
     },
     ru: {
       name: "ИИ Эффект Долли Зум",
@@ -3324,6 +3555,36 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       description: "创建著名的眩晕效果，背景靠近而主体保持不变。即时电影感。",
       detailedDescription: "使用我们的AI技术为照片添加希区柯克标志性的推拉变焦效果。",
     },
+    ja: {
+      name: "AIドリーズームエフェクト",
+      tagline: "象徴的なシネマティック眩暈エフェクト",
+      description: "被写体は固定のまま背景が近づく有名な眩暈エフェクトを作成。即座にシネマティック。",
+      detailedDescription: "AI技術でヒッチコックの象徴的なドリーズームエフェクトを写真に追加。",
+    },
+    ko: {
+      name: "AI 돌리 줌 효과",
+      tagline: "상징적인 시네마틱 현기증 효과",
+      description: "피사체는 고정된 채 배경이 다가오는 유명한 현기증 효과 제작. 즉각적인 시네마틱.",
+      detailedDescription: "AI 기술로 히치콕의 상징적인 돌리 줌 효과를 사진에 추가.",
+    },
+    it: {
+      name: "Effetto Dolly Zoom IA",
+      tagline: "L'iconico effetto vertigine cinematografico",
+      description: "Crea il famoso effetto vertigine dove lo sfondo si avvicina mentre il soggetto rimane. Cinematografico istantaneamente.",
+      detailedDescription: "Aggiungi l'iconico effetto dolly zoom di Hitchcock alle tue foto con la nostra tecnologia IA.",
+    },
+    nl: {
+      name: "AI Dolly Zoom Effect",
+      tagline: "Het iconische cinematische duizeleffect",
+      description: "Maak het beroemde duizeleffect waarbij de achtergrond nadert terwijl het onderwerp blijft. Direct cinematisch.",
+      detailedDescription: "Voeg het iconische Hitchcock dolly zoom effect toe aan je foto's met onze AI-technologie.",
+    },
+    pl: {
+      name: "Efekt Dolly Zoom AI",
+      tagline: "Ikoniczny kinematograficzny efekt zawrotu głowy",
+      description: "Stwórz słynny efekt zawrotu głowy, gdzie tło się zbliża, a obiekt pozostaje. Natychmiast kinematograficznie.",
+      detailedDescription: "Dodaj ikoniczny efekt dolly zoom Hitchcocka do swoich zdjęć z naszą technologią AI.",
+    },
   },
   "ai-camera-pan-effect": {
     es: {
@@ -3331,6 +3592,12 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "Movimiento de cámara panorámico suave",
       description: "Añade movimiento de paneo horizontal o vertical a cualquier foto. Cinematográfico y profesional.",
       detailedDescription: "Crea movimientos de paneo cinematográficos con nuestro efecto de paneo IA.",
+    },
+    pt: {
+      name: "Efeito de Panorâmica IA",
+      tagline: "Movimento de câmera panorâmico suave",
+      description: "Adicione movimento de panorâmica horizontal ou vertical a qualquer foto. Cinematográfico e profissional.",
+      detailedDescription: "Crie movimentos de panorâmica cinematográficos com nosso efeito de panorâmica IA.",
     },
     ru: {
       name: "ИИ Эффект Панорамирования",
@@ -3344,6 +3611,36 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       description: "为任何照片添加水平或垂直平移移动。电影级专业效果。",
       detailedDescription: "使用我们的AI平移效果创建电影级平移运动。",
     },
+    ja: {
+      name: "AIカメラパンエフェクト",
+      tagline: "滑らかなパノラマカメラ移動",
+      description: "写真に水平または垂直のパン移動を追加。シネマティックでプロフェッショナル。",
+      detailedDescription: "AIパンエフェクトでシネマティックなパン移動を作成。",
+    },
+    ko: {
+      name: "AI 카메라 팬 효과",
+      tagline: "부드러운 파노라마 카메라 움직임",
+      description: "사진에 수평 또는 수직 팬 움직임 추가. 시네마틱하고 전문적.",
+      detailedDescription: "AI 팬 효과로 시네마틱 팬 움직임 생성.",
+    },
+    it: {
+      name: "Effetto Panoramica IA",
+      tagline: "Movimento fluido della panoramica",
+      description: "Aggiungi movimento panoramico orizzontale o verticale a qualsiasi foto. Cinematografico e professionale.",
+      detailedDescription: "Crea movimenti panoramici cinematografici con il nostro effetto panoramica IA.",
+    },
+    nl: {
+      name: "AI Pan Effect",
+      tagline: "Vloeiende panoramische camerabeweging",
+      description: "Voeg horizontale of verticale panbeweging toe aan elke foto. Cinematisch en professioneel.",
+      detailedDescription: "Maak cinematische panbeweging met ons AI pan-effect.",
+    },
+    pl: {
+      name: "Efekt Panoramy AI",
+      tagline: "Płynny panoramiczny ruch kamery",
+      description: "Dodaj poziomy lub pionowy ruch panoramiczny do dowolnego zdjęcia. Kinematograficzny i profesjonalny.",
+      detailedDescription: "Twórz kinematograficzne ruchy panoramiczne z naszym efektem panoramy AI.",
+    },
   },
   "ai-ken-burns-effect": {
     es: {
@@ -3351,6 +3648,12 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "El clásico efecto de documentales",
       description: "Añade el icónico zoom y paneo lento usado en documentales. Da vida a fotos con movimiento sutil.",
       detailedDescription: "Crea el famoso efecto Ken Burns para dar vida a fotos con movimiento cinematográfico sutil.",
+    },
+    pt: {
+      name: "Efeito Ken Burns IA",
+      tagline: "O clássico efeito de documentários",
+      description: "Adicione o icônico zoom e panorâmica lenta usados em documentários. Dê vida às fotos com movimento sutil.",
+      detailedDescription: "Crie o famoso efeito Ken Burns para dar vida às fotos com movimento cinematográfico sutil.",
     },
     ru: {
       name: "ИИ Эффект Кена Бёрнса",
@@ -3364,6 +3667,36 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       description: "添加纪录片中使用的标志性慢速缩放和平移。用微妙的运动让照片活起来。",
       detailedDescription: "创建著名的肯伯恩斯效果，用微妙的电影运动让照片栩栩如生。",
     },
+    ja: {
+      name: "AIケンバーンズエフェクト",
+      tagline: "クラシックなドキュメンタリーエフェクト",
+      description: "ドキュメンタリーで使われる象徴的なスローズームとパンを追加。微妙な動きで写真に命を。",
+      detailedDescription: "有名なケンバーンズエフェクトで微妙なシネマティック動きを写真に。",
+    },
+    ko: {
+      name: "AI 켄 번즈 효과",
+      tagline: "클래식 다큐멘터리 효과",
+      description: "다큐멘터리에서 사용되는 상징적인 슬로우 줌과 팬 추가. 미묘한 움직임으로 사진에 생명을.",
+      detailedDescription: "유명한 켄 번즈 효과로 미묘한 시네마틱 움직임을 사진에.",
+    },
+    it: {
+      name: "Effetto Ken Burns IA",
+      tagline: "Il classico effetto dei documentari",
+      description: "Aggiungi l'iconico zoom lento e panoramica usati nei documentari. Dai vita alle foto con movimento sottile.",
+      detailedDescription: "Crea il famoso effetto Ken Burns per dare vita alle foto con movimento cinematografico sottile.",
+    },
+    nl: {
+      name: "AI Ken Burns Effect",
+      tagline: "Het klassieke documentaire-effect",
+      description: "Voeg de iconische langzame zoom en pan toe die in documentaires worden gebruikt. Breng foto's tot leven met subtiele beweging.",
+      detailedDescription: "Maak het beroemde Ken Burns effect om foto's tot leven te brengen met subtiele cinematische beweging.",
+    },
+    pl: {
+      name: "Efekt Ken Burns AI",
+      tagline: "Klasyczny efekt dokumentalny",
+      description: "Dodaj ikoniczny powolny zoom i panoramę używane w dokumentach. Ożyw zdjęcia subtelnym ruchem.",
+      detailedDescription: "Stwórz słynny efekt Ken Burns, aby ożywić zdjęcia subtelnym kinematograficznym ruchem.",
+    },
   },
   "ai-slow-motion-video": {
     es: {
@@ -3371,6 +3704,12 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "Movimiento fluido en cámara lenta",
       description: "Crea impresionantes videos en cámara lenta desde cualquier foto. Movimiento suave y dramático.",
       detailedDescription: "Añade efecto de cámara lenta cinematográfica a tus fotos con nuestra tecnología IA.",
+    },
+    pt: {
+      name: "Vídeo em Câmera Lenta IA",
+      tagline: "Movimento fluido em câmera lenta",
+      description: "Crie vídeos impressionantes em câmera lenta a partir de qualquer foto. Movimento suave e dramático.",
+      detailedDescription: "Adicione efeito de câmera lenta cinematográfica às suas fotos com nossa tecnologia IA.",
     },
     ru: {
       name: "ИИ Видео Замедленная Съёмка",
@@ -3384,6 +3723,36 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       description: "从任何照片创建令人惊叹的慢动作视频。平滑戏剧性的运动。",
       detailedDescription: "使用我们的AI技术为照片添加电影级慢动作效果。",
     },
+    ja: {
+      name: "AIスローモーション動画",
+      tagline: "滑らかなスローモーション",
+      description: "写真から印象的なスローモーション動画を作成。滑らかでドラマチックな動き。",
+      detailedDescription: "AI技術でシネマティックなスローモーションエフェクトを写真に追加。",
+    },
+    ko: {
+      name: "AI 슬로우 모션 비디오",
+      tagline: "부드러운 슬로우 모션",
+      description: "사진에서 인상적인 슬로우 모션 비디오 제작. 부드럽고 드라마틱한 움직임.",
+      detailedDescription: "AI 기술로 시네마틱 슬로우 모션 효과를 사진에 추가.",
+    },
+    it: {
+      name: "Video Slow Motion IA",
+      tagline: "Movimento fluido al rallentatore",
+      description: "Crea video al rallentatore straordinari da qualsiasi foto. Movimento fluido e drammatico.",
+      detailedDescription: "Aggiungi effetto slow motion cinematografico alle tue foto con la nostra tecnologia IA.",
+    },
+    nl: {
+      name: "AI Slow Motion Video",
+      tagline: "Vloeiende slow motion beweging",
+      description: "Maak verbluffende slow motion video's van elke foto. Vloeiende dramatische beweging.",
+      detailedDescription: "Voeg cinematisch slow motion effect toe aan je foto's met onze AI-technologie.",
+    },
+    pl: {
+      name: "Wideo Slow Motion AI",
+      tagline: "Płynny ruch w zwolnionym tempie",
+      description: "Twórz oszałamiające filmy w zwolnionym tempie z dowolnego zdjęcia. Płynny dramatyczny ruch.",
+      detailedDescription: "Dodaj kinematograficzny efekt zwolnionego tempa do swoich zdjęć z naszą technologią AI.",
+    },
   },
   "ai-loop-video-generator": {
     es: {
@@ -3391,6 +3760,12 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "Videos en bucle perfecto sin costuras",
       description: "Crea videos que se repiten perfectamente. Ideal para fondos, redes sociales y arte digital.",
       detailedDescription: "Genera videos en bucle perfecto para contenido hipnótico que engancha a los espectadores.",
+    },
+    pt: {
+      name: "Gerador de Vídeos Loop IA",
+      tagline: "Vídeos em loop perfeito sem emendas",
+      description: "Crie vídeos que se repetem perfeitamente. Ideal para fundos, redes sociais e arte digital.",
+      detailedDescription: "Gere vídeos em loop perfeito para conteúdo hipnótico que prende os espectadores.",
     },
     ru: {
       name: "ИИ Генератор Зацикленных Видео",
@@ -3404,6 +3779,36 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       description: "创建完美重复的视频。非常适合背景、社交媒体和数字艺术。",
       detailedDescription: "生成完美循环的视频，创建吸引观众的催眠内容。",
     },
+    ja: {
+      name: "AIループ動画ジェネレーター",
+      tagline: "完璧なシームレスループ動画",
+      description: "完璧にループする動画を作成。背景、SNS、デジタルアートに最適。",
+      detailedDescription: "視聴者を引き付ける催眠的なコンテンツのための完璧なループ動画を生成。",
+    },
+    ko: {
+      name: "AI 루프 비디오 생성기",
+      tagline: "완벽한 심리스 루프 비디오",
+      description: "완벽하게 반복되는 비디오 제작. 배경, SNS, 디지털 아트에 최적.",
+      detailedDescription: "시청자를 사로잡는 최면적 콘텐츠를 위한 완벽한 루프 비디오 생성.",
+    },
+    it: {
+      name: "Generatore Video Loop IA",
+      tagline: "Video in loop perfetto senza interruzioni",
+      description: "Crea video che si ripetono perfettamente. Ideale per sfondi, social media e arte digitale.",
+      detailedDescription: "Genera video in loop perfetto per contenuti ipnotici che catturano gli spettatori.",
+    },
+    nl: {
+      name: "AI Loop Video Generator",
+      tagline: "Naadloze perfect geloopte video's",
+      description: "Maak video's die perfect herhalen. Ideaal voor achtergronden, sociale media en digitale kunst.",
+      detailedDescription: "Genereer perfect geloopte video's voor hypnotiserende content die kijkers boeit.",
+    },
+    pl: {
+      name: "Generator Wideo Loop AI",
+      tagline: "Idealnie zapętlone filmy bez szwów",
+      description: "Twórz filmy, które idealnie się powtarzają. Idealne do teł, mediów społecznościowych i sztuki cyfrowej.",
+      detailedDescription: "Generuj idealnie zapętlone filmy dla hipnotyzujących treści, które angażują widzów.",
+    },
   },
   "ai-cinemagraph-maker": {
     es: {
@@ -3411,6 +3816,12 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "Fotos con movimiento sutil y mágico",
       description: "Crea cinemagraphs donde solo una parte de la imagen se mueve. Efecto mágico e hipnótico.",
       detailedDescription: "Transforma fotos en cinemagraphs cautivadores con movimiento sutil y mágico.",
+    },
+    pt: {
+      name: "Criador de Cinemagraphs IA",
+      tagline: "Fotos com movimento sutil e mágico",
+      description: "Crie cinemagraphs onde apenas uma parte da imagem se move. Efeito mágico e hipnótico.",
+      detailedDescription: "Transforme fotos em cinemagraphs cativantes com movimento sutil e mágico.",
     },
     ru: {
       name: "ИИ Создатель Синемаграфов",
@@ -3423,6 +3834,18 @@ export const toolTranslations: Record<string, ToolTranslations> = {
       tagline: "带有微妙神奇运动的照片",
       description: "创建只有图像一部分移动的电影图。神奇催眠的效果。",
       detailedDescription: "将照片转化为带有微妙神奇运动的迷人电影图。",
+    },
+    ja: {
+      name: "AIシネマグラフメーカー",
+      tagline: "微妙で魔法のような動きを持つ写真",
+      description: "画像の一部だけが動くシネマグラフを作成。魔法のような催眠的なエフェクト。",
+      detailedDescription: "微妙で魔法のような動きを持つ魅惑的なシネマグラフに写真を変換。",
+    },
+    ko: {
+      name: "AI 시네마그래프 메이커",
+      tagline: "미묘하고 마법 같은 움직임을 가진 사진",
+      description: "이미지의 일부만 움직이는 시네마그래프 제작. 마법같고 최면적인 효과.",
+      detailedDescription: "미묘하고 마법 같은 움직임을 가진 매력적인 시네마그래프로 사진 변환.",
     },
   },
 };
@@ -3439,7 +3862,17 @@ export function getLocalizedToolContent(
   if (locale === "en") return null;
 
   const translations = toolTranslations[slug];
-  if (!translations) return null;
+  const translated = translations?.[locale];
+  const fallback = createToolFallback(slug, locale as NonEnLocale, translated?.name);
+  if (!translated) return fallback;
 
-  return translations[locale] || null;
+  return fallback
+    ? {
+        ...fallback,
+        ...translated,
+        howItWorks: translated.howItWorks || fallback.howItWorks,
+        features: translated.features || fallback.features,
+        faqs: translated.faqs || fallback.faqs,
+      }
+    : translated;
 }

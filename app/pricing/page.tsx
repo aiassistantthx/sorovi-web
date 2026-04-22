@@ -5,6 +5,9 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { generatePricingSchema, generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
+import Link from "next/link";
+
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
 
 export const metadata = {
   title: "Pricing - AI Video Generator Plans | Hyreel",
@@ -136,7 +139,7 @@ export default function PricingPage() {
             Simple, Transparent Pricing
           </Heading>
           <Text variant="large">
-            Start free, upgrade when you're ready. No hidden fees, no surprises. Cancel anytime.
+            Start free, upgrade when you&apos;re ready. No hidden fees, no surprises. Cancel anytime.
           </Text>
         </div>
       </Section>
@@ -177,12 +180,14 @@ export default function PricingPage() {
                 <Text variant="small">{plan.description}</Text>
               </div>
 
-              <Button
-                variant={plan.popular ? "primary" : "secondary"}
-                className="w-full mb-6"
-              >
-                {plan.cta}
-              </Button>
+              <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+                <Button
+                  variant={plan.popular ? "primary" : "secondary"}
+                  className="w-full mb-6"
+                >
+                  {plan.cta}
+                </Button>
+              </Link>
 
               <ul className="space-y-3">
                 {plan.features.map((feature, i) => (
@@ -216,7 +221,7 @@ export default function PricingPage() {
             Compare All Features
           </Heading>
           <Text variant="large">
-            See what's included in each plan
+            See what&apos;s included in each plan
           </Text>
         </div>
 
@@ -300,7 +305,9 @@ export default function PricingPage() {
           <Text variant="large" className="mb-8">
             Join 14,258+ creators making viral content with Hyreel
           </Text>
-          <Button size="lg">Get Started Free</Button>
+          <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="lg">Get Started Free</Button>
+          </Link>
           <Text variant="small" className="mt-4 text-[var(--text-muted)]">
             No credit card required • Cancel anytime
           </Text>

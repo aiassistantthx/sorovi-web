@@ -28,9 +28,11 @@ export async function generateMetadata({
     return { title: "Not Found" };
   }
 
+  const t = getTranslations(lang as Locale);
+
   return {
-    title: "Use Cases - AI Video for Every Purpose | Hyreel",
-    description: "Discover how creators use Hyreel to make viral videos for TikTok, Instagram, YouTube and more.",
+    title: `${t.useCases} - Hyreel`,
+    description: t.useCasesPageSubtitle,
     alternates: {
       canonical: `${SITE_URL}/${lang}/use-cases`,
       languages: Object.fromEntries(

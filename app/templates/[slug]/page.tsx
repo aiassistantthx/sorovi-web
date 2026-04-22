@@ -9,6 +9,8 @@ import { generateBreadcrumbSchema } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 import { PageHero, PageFAQ, FinalCTA, RelatedContent } from "@/components/sections";
 
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
+
 // Generate static params for all templates
 export async function generateStaticParams() {
   return templates.map((template) => ({
@@ -88,7 +90,7 @@ export default async function TemplatePage({
         badge={{ icon: template.icon, text: template.category }}
         title={template.heroHeadline}
         description={template.heroSubheadline}
-        primaryCta={{ text: template.ctaText }}
+        primaryCta={{ text: template.ctaText, href: APP_STORE_URL }}
         secondaryCta={{ text: "View All Templates", href: "/templates" }}
       />
 
@@ -306,7 +308,7 @@ export default async function TemplatePage({
       <FinalCTA
         title={`Start Creating ${template.name}`}
         description={`Join thousands of creators using Hyreel templates to create professional video content.`}
-        primaryCta={{ text: template.ctaText }}
+        primaryCta={{ text: template.ctaText, href: APP_STORE_URL }}
         secondaryCta={{ text: "View All Templates", href: "/templates" }}
       />
     </>

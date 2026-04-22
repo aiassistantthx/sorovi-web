@@ -6,9 +6,11 @@ import Link from "next/link";
 import { tools, getAllCategories } from "@/lib/tools";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { getTranslations } from "@/lib/i18n/translations";
+import { getLocalizedToolContent } from "@/lib/i18n/content/tools";
 import { notFound } from "next/navigation";
 
 const SITE_URL = "https://hyreel.com";
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
 
 export async function generateStaticParams() {
   return i18n.locales
@@ -76,7 +78,9 @@ export default async function LocalizedToolsPage({
           <Text variant="large" className="mb-8">
             {t.toolsPageSubtitle}
           </Text>
-          <Button size="lg">{t.startCreatingFree}</Button>
+          <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="lg">{t.startCreatingFree}</Button>
+          </Link>
         </div>
       </Section>
 
@@ -111,7 +115,7 @@ export default async function LocalizedToolsPage({
           >
             <div className="mb-10">
               <Heading as="h2" className="mb-4">
-                {category} {t.tools}
+              {t.tools}
               </Heading>
               <Text variant="large">
                 {t.toolsPageSubtitle}
@@ -119,15 +123,17 @@ export default async function LocalizedToolsPage({
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
-              {categoryTools.map((tool, index) => (
+              {categoryTools.map((tool, index) => {
+                const localized = getLocalizedToolContent(tool.slug, lang as Locale);
+                return (
                 <Card key={index} variant="elevated" className="group cursor-pointer hover:border-[var(--brand-primary)]/30 transition-all">
                   <Link href={`/${lang}/tools/${tool.slug}`}>
                     <div className="text-3xl md:text-5xl mb-2 md:mb-4">{tool.icon}</div>
                     <h3 className="text-base md:text-xl font-semibold text-[var(--text-primary)] mb-1 md:mb-2 group-hover:text-[var(--brand-primary)] transition-colors line-clamp-2">
-                      {tool.name}
+                      {localized?.name || tool.name}
                     </h3>
                     <Text variant="small" className="mb-2 md:mb-4 line-clamp-2 hidden sm:block">
-                      {tool.tagline}
+                      {localized?.tagline || tool.tagline}
                     </Text>
                     <div className="flex items-center gap-1 md:gap-2 text-[var(--brand-primary)] text-xs md:text-sm font-medium">
                       {t.learnMore}
@@ -145,7 +151,7 @@ export default async function LocalizedToolsPage({
                     </div>
                   </Link>
                 </Card>
-              ))}
+              )})}
             </div>
           </Section>
         );
@@ -160,7 +166,9 @@ export default async function LocalizedToolsPage({
             {t.noCreditCard}
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">{t.getStartedFree}</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">{t.getStartedFree}</Button>
+            </Link>
             <Link href={`/${lang}/pricing`}>
               <Button size="lg" variant="secondary">
                 {t.viewPricing}

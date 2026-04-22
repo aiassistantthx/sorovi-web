@@ -25,6 +25,7 @@ export interface Translations {
   tryItFree: string;
   getStartedFree: string;
   viewPricing: string;
+  seeComparison: string;
   downloadForIOS: string;
   learnMore: string;
   viewAll: string;
@@ -147,6 +148,9 @@ export interface Translations {
   readyToUseTemplate: string;
   browseAllTemplates: string;
   solutionsFor: string;
+  challengesIn: string;
+  videoTypesFor: string;
+  benefitsFor: string;
   readyToTransformContent: string;
   keyBenefits: string;
   readyToGetStarted: string;
@@ -176,6 +180,46 @@ export interface Translations {
   fruitCharactersCreateVideo: string;
   fruitCharactersTryTextToVideo: string;
   fruitCharactersUnlimited: string;
+
+  // About page
+  aboutHeroTitle: string;
+  aboutHeroSubtitle: string;
+  aboutOurStory: string;
+  aboutStoryPara1: string;
+  aboutStoryPara2: string;
+  aboutFounded: string;
+  aboutOurValues: string;
+  aboutValueInnovation: string;
+  aboutValueInnovationDesc: string;
+  aboutValueAccessibility: string;
+  aboutValueAccessibilityDesc: string;
+  aboutValueCommunity: string;
+  aboutValueCommunityDesc: string;
+
+  // Contact page
+  contactHeroTitle: string;
+  contactHeroSubtitle: string;
+  contactGeneralSupport: string;
+  contactGeneralSupportDesc: string;
+  contactSales: string;
+  contactSalesDesc: string;
+  contactPressMedia: string;
+  contactPressMediaDesc: string;
+  contactFollowUs: string;
+
+  // Privacy page
+  privacyTitle: string;
+  privacyLastUpdated: string;
+  privacySection1Title: string;
+  privacySection1Text: string;
+  privacySection2Title: string;
+  privacySection2Text: string;
+  privacySection3Title: string;
+  privacySection3Text: string;
+  privacySection4Title: string;
+  privacySection4Text: string;
+  privacySection5Title: string;
+  privacySection5Text: string;
 }
 
 const en: Translations = {
@@ -203,6 +247,7 @@ const en: Translations = {
   tryItFree: "Try It Free",
   getStartedFree: "Get Started Free",
   viewPricing: "View Pricing",
+  seeComparison: "See Comparison",
   downloadForIOS: "Download for iOS",
   learnMore: "Learn More",
   viewAll: "View All",
@@ -321,6 +366,9 @@ const en: Translations = {
   readyToUseTemplate: "Ready to Use This Template?",
   browseAllTemplates: "Browse All Templates",
   solutionsFor: "Solutions for {name}",
+  challengesIn: "Challenges in {name}",
+  videoTypesFor: "Video Types for {name}",
+  benefitsFor: "Benefits for {name}",
   readyToTransformContent: "Ready to Transform Your {name} Content?",
   keyBenefits: "Key Benefits",
   readyToGetStarted: "Ready to Get Started?",
@@ -350,6 +398,46 @@ const en: Translations = {
   fruitCharactersCreateVideo: "Create Your Video",
   fruitCharactersTryTextToVideo: "Try Text-to-Video",
   fruitCharactersUnlimited: "Generate unlimited animated videos with AI",
+
+  // About page
+  aboutHeroTitle: "Empowering Creators with AI",
+  aboutHeroSubtitle: "We're building the future of video creation, making professional content accessible to everyone.",
+  aboutOurStory: "Our Story",
+  aboutStoryPara1: "In 2023, our founders noticed something: creating viral video content was hard. It required expensive software, hours of editing, and years of experience. We knew there had to be a better way.",
+  aboutStoryPara2: "That's why we built Hyreel — an AI-powered platform that lets anyone create stunning videos from simple photos. No editing experience required.",
+  aboutFounded: "Founded",
+  aboutOurValues: "Our Values",
+  aboutValueInnovation: "Innovation",
+  aboutValueInnovationDesc: "Pushing the boundaries of AI to make video creation effortless.",
+  aboutValueAccessibility: "Accessibility",
+  aboutValueAccessibilityDesc: "Making professional tools available to everyone, everywhere.",
+  aboutValueCommunity: "Community",
+  aboutValueCommunityDesc: "Building a platform where creators support and inspire each other.",
+
+  // Contact page
+  contactHeroTitle: "Get in Touch",
+  contactHeroSubtitle: "We'd love to hear from you. Reach out to us through any of the channels below.",
+  contactGeneralSupport: "General Support",
+  contactGeneralSupportDesc: "For help with your account, billing, or technical issues.",
+  contactSales: "Sales",
+  contactSalesDesc: "For enterprise plans, custom solutions, and partnerships.",
+  contactPressMedia: "Press & Media",
+  contactPressMediaDesc: "For press inquiries, interviews, and media resources.",
+  contactFollowUs: "Follow Us",
+
+  // Privacy page
+  privacyTitle: "Privacy Policy",
+  privacyLastUpdated: "Last updated: December 2025",
+  privacySection1Title: "1. Information We Collect",
+  privacySection1Text: "We collect information you provide directly to us, such as when you create an account, upload content, or contact us for support.",
+  privacySection2Title: "2. How We Use Your Information",
+  privacySection2Text: "We use the information we collect to provide, maintain, and improve our services, process transactions, and communicate with you.",
+  privacySection3Title: "3. Information Sharing",
+  privacySection3Text: "We do not share your personal information with third parties except as described in this policy or with your consent.",
+  privacySection4Title: "4. Data Security",
+  privacySection4Text: "We take reasonable measures to help protect your personal information from loss, theft, misuse, and unauthorized access.",
+  privacySection5Title: "5. Contact Us",
+  privacySection5Text: "If you have any questions about this Privacy Policy, please contact us at",
 };
 
 const es: Translations = {
@@ -375,6 +463,7 @@ const es: Translations = {
   tryItFree: "Pruébalo Gratis",
   getStartedFree: "Comenzar Gratis",
   viewPricing: "Ver Precios",
+  seeComparison: "Ver Comparacion",
   downloadForIOS: "Descargar para iOS",
   learnMore: "Saber Más",
   viewAll: "Ver Todo",
@@ -485,6 +574,9 @@ const es: Translations = {
   readyToUseTemplate: "¿Listo para Usar Esta Plantilla?",
   browseAllTemplates: "Ver Todas las Plantillas",
   solutionsFor: "Soluciones para {name}",
+  challengesIn: "Desafios en {name}",
+  videoTypesFor: "Tipos de Video para {name}",
+  benefitsFor: "Beneficios para {name}",
   readyToTransformContent: "¿Listo para Transformar tu Contenido de {name}?",
   keyBenefits: "Beneficios Clave",
   readyToGetStarted: "¿Listo para Comenzar?",
@@ -514,6 +606,46 @@ const es: Translations = {
   fruitCharactersCreateVideo: "Crea Tu Video",
   fruitCharactersTryTextToVideo: "Prueba Texto a Video",
   fruitCharactersUnlimited: "Genera videos animados ilimitados con IA",
+
+  // About page
+  aboutHeroTitle: "Empoderando Creadores con IA",
+  aboutHeroSubtitle: "Estamos construyendo el futuro de la creación de video, haciendo el contenido profesional accesible para todos.",
+  aboutOurStory: "Nuestra Historia",
+  aboutStoryPara1: "En 2023, nuestros fundadores notaron algo: crear contenido de video viral era difícil. Requería software costoso, horas de edición y años de experiencia. Sabíamos que debía haber una mejor manera.",
+  aboutStoryPara2: "Por eso construimos Hyreel — una plataforma impulsada por IA que permite a cualquiera crear videos impresionantes a partir de simples fotos. Sin experiencia en edición requerida.",
+  aboutFounded: "Fundada",
+  aboutOurValues: "Nuestros Valores",
+  aboutValueInnovation: "Innovación",
+  aboutValueInnovationDesc: "Empujando los límites de la IA para hacer la creación de video sin esfuerzo.",
+  aboutValueAccessibility: "Accesibilidad",
+  aboutValueAccessibilityDesc: "Haciendo herramientas profesionales disponibles para todos, en todas partes.",
+  aboutValueCommunity: "Comunidad",
+  aboutValueCommunityDesc: "Construyendo una plataforma donde los creadores se apoyan e inspiran mutuamente.",
+
+  // Contact page
+  contactHeroTitle: "Contáctanos",
+  contactHeroSubtitle: "Nos encantaría saber de ti. Comunícate con nosotros a través de cualquiera de los canales a continuación.",
+  contactGeneralSupport: "Soporte General",
+  contactGeneralSupportDesc: "Para ayuda con tu cuenta, facturación o problemas técnicos.",
+  contactSales: "Ventas",
+  contactSalesDesc: "Para planes empresariales, soluciones personalizadas y asociaciones.",
+  contactPressMedia: "Prensa y Medios",
+  contactPressMediaDesc: "Para consultas de prensa, entrevistas y recursos de medios.",
+  contactFollowUs: "Síguenos",
+
+  // Privacy page
+  privacyTitle: "Política de Privacidad",
+  privacyLastUpdated: "Última actualización: Diciembre 2025",
+  privacySection1Title: "1. Información que Recopilamos",
+  privacySection1Text: "Recopilamos información que nos proporcionas directamente, como cuando creas una cuenta, subes contenido o nos contactas para soporte.",
+  privacySection2Title: "2. Cómo Usamos Tu Información",
+  privacySection2Text: "Usamos la información que recopilamos para proporcionar, mantener y mejorar nuestros servicios, procesar transacciones y comunicarnos contigo.",
+  privacySection3Title: "3. Compartir Información",
+  privacySection3Text: "No compartimos tu información personal con terceros excepto como se describe en esta política o con tu consentimiento.",
+  privacySection4Title: "4. Seguridad de Datos",
+  privacySection4Text: "Tomamos medidas razonables para ayudar a proteger tu información personal contra pérdida, robo, mal uso y acceso no autorizado.",
+  privacySection5Title: "5. Contáctanos",
+  privacySection5Text: "Si tienes alguna pregunta sobre esta Política de Privacidad, por favor contáctanos en",
 };
 
 const de: Translations = {
@@ -539,6 +671,7 @@ const de: Translations = {
   tryItFree: "Kostenlos Testen",
   getStartedFree: "Kostenlos Beginnen",
   viewPricing: "Preise Ansehen",
+  seeComparison: "Vergleich Ansehen",
   downloadForIOS: "Für iOS Herunterladen",
   learnMore: "Mehr Erfahren",
   viewAll: "Alle Ansehen",
@@ -649,6 +782,9 @@ const de: Translations = {
   readyToUseTemplate: "Bereit, Diese Vorlage zu Verwenden?",
   browseAllTemplates: "Alle Vorlagen Ansehen",
   solutionsFor: "Lösungen für {name}",
+  challengesIn: "Herausforderungen in {name}",
+  videoTypesFor: "Videotypen für {name}",
+  benefitsFor: "Vorteile für {name}",
   readyToTransformContent: "Bereit, Ihre {name}-Inhalte zu Transformieren?",
   keyBenefits: "Wichtige Vorteile",
   readyToGetStarted: "Bereit Loszulegen?",
@@ -678,6 +814,46 @@ const de: Translations = {
   fruitCharactersCreateVideo: "Erstelle Dein Video",
   fruitCharactersTryTextToVideo: "Text-zu-Video Testen",
   fruitCharactersUnlimited: "Generiere unbegrenzt animierte Videos mit KI",
+
+  // About page
+  aboutHeroTitle: "Creator mit KI stärken",
+  aboutHeroSubtitle: "Wir bauen die Zukunft der Videoerstellung und machen professionelle Inhalte für jeden zugänglich.",
+  aboutOurStory: "Unsere Geschichte",
+  aboutStoryPara1: "2023 bemerkten unsere Gründer etwas: Virale Videoinhalte zu erstellen war schwer. Es erforderte teure Software, stundenlange Bearbeitung und jahrelange Erfahrung. Wir wussten, dass es einen besseren Weg geben musste.",
+  aboutStoryPara2: "Deshalb haben wir Hyreel gebaut — eine KI-gestützte Plattform, mit der jeder aus einfachen Fotos beeindruckende Videos erstellen kann. Keine Bearbeitungserfahrung erforderlich.",
+  aboutFounded: "Gegründet",
+  aboutOurValues: "Unsere Werte",
+  aboutValueInnovation: "Innovation",
+  aboutValueInnovationDesc: "Die Grenzen der KI erweitern, um Videoerstellung mühelos zu machen.",
+  aboutValueAccessibility: "Zugänglichkeit",
+  aboutValueAccessibilityDesc: "Professionelle Werkzeuge für jeden, überall verfügbar machen.",
+  aboutValueCommunity: "Gemeinschaft",
+  aboutValueCommunityDesc: "Eine Plattform aufbauen, auf der Creator sich gegenseitig unterstützen und inspirieren.",
+
+  // Contact page
+  contactHeroTitle: "Kontaktieren Sie uns",
+  contactHeroSubtitle: "Wir würden gerne von Ihnen hören. Kontaktieren Sie uns über einen der folgenden Kanäle.",
+  contactGeneralSupport: "Allgemeiner Support",
+  contactGeneralSupportDesc: "Für Hilfe mit Ihrem Konto, Abrechnung oder technischen Problemen.",
+  contactSales: "Vertrieb",
+  contactSalesDesc: "Für Unternehmenspläne, individuelle Lösungen und Partnerschaften.",
+  contactPressMedia: "Presse & Medien",
+  contactPressMediaDesc: "Für Presseanfragen, Interviews und Medienressourcen.",
+  contactFollowUs: "Folgen Sie uns",
+
+  // Privacy page
+  privacyTitle: "Datenschutzerklärung",
+  privacyLastUpdated: "Zuletzt aktualisiert: Dezember 2025",
+  privacySection1Title: "1. Informationen, die wir sammeln",
+  privacySection1Text: "Wir sammeln Informationen, die Sie uns direkt zur Verfügung stellen, z.B. wenn Sie ein Konto erstellen, Inhalte hochladen oder uns um Support bitten.",
+  privacySection2Title: "2. Wie wir Ihre Informationen verwenden",
+  privacySection2Text: "Wir verwenden die gesammelten Informationen, um unsere Dienste bereitzustellen, zu warten und zu verbessern, Transaktionen zu verarbeiten und mit Ihnen zu kommunizieren.",
+  privacySection3Title: "3. Informationsweitergabe",
+  privacySection3Text: "Wir geben Ihre persönlichen Informationen nicht an Dritte weiter, außer wie in dieser Richtlinie beschrieben oder mit Ihrer Zustimmung.",
+  privacySection4Title: "4. Datensicherheit",
+  privacySection4Text: "Wir ergreifen angemessene Maßnahmen, um Ihre persönlichen Informationen vor Verlust, Diebstahl, Missbrauch und unbefugtem Zugriff zu schützen.",
+  privacySection5Title: "5. Kontaktieren Sie uns",
+  privacySection5Text: "Wenn Sie Fragen zu dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte unter",
 };
 
 const fr: Translations = {
@@ -703,6 +879,7 @@ const fr: Translations = {
   tryItFree: "Essayer Gratuitement",
   getStartedFree: "Démarrer Gratuitement",
   viewPricing: "Voir les Tarifs",
+  seeComparison: "Voir la Comparaison",
   downloadForIOS: "Télécharger pour iOS",
   learnMore: "En Savoir Plus",
   viewAll: "Voir Tout",
@@ -813,6 +990,9 @@ const fr: Translations = {
   readyToUseTemplate: "Prêt à Utiliser Ce Modèle?",
   browseAllTemplates: "Voir Tous les Modèles",
   solutionsFor: "Solutions pour {name}",
+  challengesIn: "Defis dans {name}",
+  videoTypesFor: "Types de Video pour {name}",
+  benefitsFor: "Avantages pour {name}",
   readyToTransformContent: "Prêt à Transformer Votre Contenu {name}?",
   keyBenefits: "Avantages Clés",
   readyToGetStarted: "Prêt à Commencer?",
@@ -842,6 +1022,46 @@ const fr: Translations = {
   fruitCharactersCreateVideo: "Créez Votre Vidéo",
   fruitCharactersTryTextToVideo: "Essayer Texte-en-Vidéo",
   fruitCharactersUnlimited: "Générez des vidéos animées illimitées avec l'IA",
+
+  // About page
+  aboutHeroTitle: "Autonomiser les Créateurs avec l'IA",
+  aboutHeroSubtitle: "Nous construisons l'avenir de la création vidéo, rendant le contenu professionnel accessible à tous.",
+  aboutOurStory: "Notre Histoire",
+  aboutStoryPara1: "En 2023, nos fondateurs ont remarqué quelque chose : créer du contenu vidéo viral était difficile. Cela nécessitait des logiciels coûteux, des heures de montage et des années d'expérience. Nous savions qu'il devait y avoir une meilleure façon.",
+  aboutStoryPara2: "C'est pourquoi nous avons créé Hyreel — une plateforme alimentée par l'IA qui permet à quiconque de créer des vidéos époustouflantes à partir de simples photos. Aucune expérience de montage requise.",
+  aboutFounded: "Fondée",
+  aboutOurValues: "Nos Valeurs",
+  aboutValueInnovation: "Innovation",
+  aboutValueInnovationDesc: "Repousser les limites de l'IA pour rendre la création vidéo sans effort.",
+  aboutValueAccessibility: "Accessibilité",
+  aboutValueAccessibilityDesc: "Rendre les outils professionnels disponibles pour tous, partout.",
+  aboutValueCommunity: "Communauté",
+  aboutValueCommunityDesc: "Construire une plateforme où les créateurs se soutiennent et s'inspirent mutuellement.",
+
+  // Contact page
+  contactHeroTitle: "Contactez-nous",
+  contactHeroSubtitle: "Nous aimerions avoir de vos nouvelles. Contactez-nous via l'un des canaux ci-dessous.",
+  contactGeneralSupport: "Support Général",
+  contactGeneralSupportDesc: "Pour l'aide avec votre compte, la facturation ou les problèmes techniques.",
+  contactSales: "Ventes",
+  contactSalesDesc: "Pour les plans entreprise, les solutions personnalisées et les partenariats.",
+  contactPressMedia: "Presse et Médias",
+  contactPressMediaDesc: "Pour les demandes de presse, interviews et ressources médiatiques.",
+  contactFollowUs: "Suivez-nous",
+
+  // Privacy page
+  privacyTitle: "Politique de Confidentialité",
+  privacyLastUpdated: "Dernière mise à jour : Décembre 2025",
+  privacySection1Title: "1. Informations que Nous Collectons",
+  privacySection1Text: "Nous collectons les informations que vous nous fournissez directement, par exemple lorsque vous créez un compte, téléchargez du contenu ou nous contactez pour obtenir de l'aide.",
+  privacySection2Title: "2. Comment Nous Utilisons Vos Informations",
+  privacySection2Text: "Nous utilisons les informations collectées pour fournir, maintenir et améliorer nos services, traiter les transactions et communiquer avec vous.",
+  privacySection3Title: "3. Partage d'Informations",
+  privacySection3Text: "Nous ne partageons pas vos informations personnelles avec des tiers sauf comme décrit dans cette politique ou avec votre consentement.",
+  privacySection4Title: "4. Sécurité des Données",
+  privacySection4Text: "Nous prenons des mesures raisonnables pour aider à protéger vos informations personnelles contre la perte, le vol, l'utilisation abusive et l'accès non autorisé.",
+  privacySection5Title: "5. Contactez-nous",
+  privacySection5Text: "Si vous avez des questions concernant cette Politique de Confidentialité, veuillez nous contacter à",
 };
 
 const pt: Translations = {
@@ -867,6 +1087,7 @@ const pt: Translations = {
   tryItFree: "Experimente Grátis",
   getStartedFree: "Comece Grátis",
   viewPricing: "Ver Preços",
+  seeComparison: "Ver Comparacao",
   downloadForIOS: "Baixar para iOS",
   learnMore: "Saiba Mais",
   viewAll: "Ver Tudo",
@@ -977,6 +1198,9 @@ const pt: Translations = {
   readyToUseTemplate: "Pronto para Usar Este Template?",
   browseAllTemplates: "Ver Todos os Templates",
   solutionsFor: "Soluções para {name}",
+  challengesIn: "Desafios em {name}",
+  videoTypesFor: "Tipos de Video para {name}",
+  benefitsFor: "Beneficios para {name}",
   readyToTransformContent: "Pronto para Transformar Seu Conteúdo de {name}?",
   keyBenefits: "Principais Benefícios",
   readyToGetStarted: "Pronto para Começar?",
@@ -1006,6 +1230,46 @@ const pt: Translations = {
   fruitCharactersCreateVideo: "Crie Seu Vídeo",
   fruitCharactersTryTextToVideo: "Experimente Texto-para-Vídeo",
   fruitCharactersUnlimited: "Gere vídeos animados ilimitados com IA",
+
+  // About page
+  aboutHeroTitle: "Capacitando Criadores com IA",
+  aboutHeroSubtitle: "Estamos construindo o futuro da criação de vídeos, tornando o conteúdo profissional acessível a todos.",
+  aboutOurStory: "Nossa História",
+  aboutStoryPara1: "Em 2023, nossos fundadores perceberam algo: criar conteúdo de vídeo viral era difícil. Exigia software caro, horas de edição e anos de experiência. Sabíamos que tinha que haver uma maneira melhor.",
+  aboutStoryPara2: "Por isso construímos o Hyreel — uma plataforma alimentada por IA que permite a qualquer pessoa criar vídeos impressionantes a partir de simples fotos. Sem experiência em edição necessária.",
+  aboutFounded: "Fundada",
+  aboutOurValues: "Nossos Valores",
+  aboutValueInnovation: "Inovação",
+  aboutValueInnovationDesc: "Expandindo os limites da IA para tornar a criação de vídeos sem esforço.",
+  aboutValueAccessibility: "Acessibilidade",
+  aboutValueAccessibilityDesc: "Tornando ferramentas profissionais disponíveis para todos, em qualquer lugar.",
+  aboutValueCommunity: "Comunidade",
+  aboutValueCommunityDesc: "Construindo uma plataforma onde criadores se apoiam e inspiram mutuamente.",
+
+  // Contact page
+  contactHeroTitle: "Entre em Contato",
+  contactHeroSubtitle: "Adoraríamos ouvir de você. Entre em contato conosco através de qualquer um dos canais abaixo.",
+  contactGeneralSupport: "Suporte Geral",
+  contactGeneralSupportDesc: "Para ajuda com sua conta, faturamento ou problemas técnicos.",
+  contactSales: "Vendas",
+  contactSalesDesc: "Para planos empresariais, soluções personalizadas e parcerias.",
+  contactPressMedia: "Imprensa e Mídia",
+  contactPressMediaDesc: "Para consultas de imprensa, entrevistas e recursos de mídia.",
+  contactFollowUs: "Siga-nos",
+
+  // Privacy page
+  privacyTitle: "Política de Privacidade",
+  privacyLastUpdated: "Última atualização: Dezembro 2025",
+  privacySection1Title: "1. Informações que Coletamos",
+  privacySection1Text: "Coletamos informações que você nos fornece diretamente, como quando cria uma conta, carrega conteúdo ou nos contacta para suporte.",
+  privacySection2Title: "2. Como Usamos Suas Informações",
+  privacySection2Text: "Usamos as informações coletadas para fornecer, manter e melhorar nossos serviços, processar transações e nos comunicar com você.",
+  privacySection3Title: "3. Compartilhamento de Informações",
+  privacySection3Text: "Não compartilhamos suas informações pessoais com terceiros, exceto conforme descrito nesta política ou com seu consentimento.",
+  privacySection4Title: "4. Segurança de Dados",
+  privacySection4Text: "Tomamos medidas razoáveis para ajudar a proteger suas informações pessoais contra perda, roubo, uso indevido e acesso não autorizado.",
+  privacySection5Title: "5. Contate-nos",
+  privacySection5Text: "Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco em",
 };
 
 const ru: Translations = {
@@ -1031,6 +1295,7 @@ const ru: Translations = {
   tryItFree: "Попробовать бесплатно",
   getStartedFree: "Начать бесплатно",
   viewPricing: "Смотреть цены",
+  seeComparison: "Смотреть сравнение",
   downloadForIOS: "Скачать для iOS",
   learnMore: "Подробнее",
   viewAll: "Смотреть все",
@@ -1141,6 +1406,9 @@ const ru: Translations = {
   readyToUseTemplate: "Готовы использовать этот шаблон?",
   browseAllTemplates: "Смотреть все шаблоны",
   solutionsFor: "Решения для {name}",
+  challengesIn: "Проблемы в {name}",
+  videoTypesFor: "Типы видео для {name}",
+  benefitsFor: "Преимущества для {name}",
   readyToTransformContent: "Готовы преобразить контент для {name}?",
   keyBenefits: "Ключевые преимущества",
   readyToGetStarted: "Готовы начать?",
@@ -1170,6 +1438,46 @@ const ru: Translations = {
   fruitCharactersCreateVideo: "Создать Видео",
   fruitCharactersTryTextToVideo: "Попробовать Текст-в-Видео",
   fruitCharactersUnlimited: "Создавайте неограниченное количество анимаций с ИИ",
+
+  // About page
+  aboutHeroTitle: "Расширяем возможности создателей с помощью ИИ",
+  aboutHeroSubtitle: "Мы создаём будущее видеопроизводства, делая профессиональный контент доступным для всех.",
+  aboutOurStory: "Наша история",
+  aboutStoryPara1: "В 2023 году наши основатели заметили кое-что: создавать вирусный видеоконтент было сложно. Это требовало дорогого программного обеспечения, часов редактирования и многолетнего опыта. Мы знали, что должен быть лучший способ.",
+  aboutStoryPara2: "Поэтому мы создали Hyreel — платформу на базе ИИ, которая позволяет любому создавать потрясающие видео из простых фотографий. Без опыта редактирования.",
+  aboutFounded: "Основана",
+  aboutOurValues: "Наши ценности",
+  aboutValueInnovation: "Инновации",
+  aboutValueInnovationDesc: "Расширяем границы ИИ, чтобы сделать создание видео лёгким.",
+  aboutValueAccessibility: "Доступность",
+  aboutValueAccessibilityDesc: "Делаем профессиональные инструменты доступными для всех, везде.",
+  aboutValueCommunity: "Сообщество",
+  aboutValueCommunityDesc: "Создаём платформу, где создатели поддерживают и вдохновляют друг друга.",
+
+  // Contact page
+  contactHeroTitle: "Свяжитесь с нами",
+  contactHeroSubtitle: "Мы будем рады услышать вас. Свяжитесь с нами через любой из каналов ниже.",
+  contactGeneralSupport: "Общая поддержка",
+  contactGeneralSupportDesc: "Для помощи с аккаунтом, оплатой или техническими вопросами.",
+  contactSales: "Продажи",
+  contactSalesDesc: "Для корпоративных планов, индивидуальных решений и партнёрства.",
+  contactPressMedia: "Пресса и СМИ",
+  contactPressMediaDesc: "Для пресс-запросов, интервью и медиа-ресурсов.",
+  contactFollowUs: "Подписывайтесь",
+
+  // Privacy page
+  privacyTitle: "Политика конфиденциальности",
+  privacyLastUpdated: "Последнее обновление: Декабрь 2025",
+  privacySection1Title: "1. Информация, которую мы собираем",
+  privacySection1Text: "Мы собираем информацию, которую вы предоставляете нам напрямую, например, когда создаёте аккаунт, загружаете контент или обращаетесь за поддержкой.",
+  privacySection2Title: "2. Как мы используем вашу информацию",
+  privacySection2Text: "Мы используем собранную информацию для предоставления, поддержки и улучшения наших услуг, обработки транзакций и связи с вами.",
+  privacySection3Title: "3. Передача информации",
+  privacySection3Text: "Мы не передаём вашу личную информацию третьим лицам, кроме случаев, описанных в этой политике, или с вашего согласия.",
+  privacySection4Title: "4. Безопасность данных",
+  privacySection4Text: "Мы принимаем разумные меры для защиты вашей личной информации от потери, кражи, неправомерного использования и несанкционированного доступа.",
+  privacySection5Title: "5. Свяжитесь с нами",
+  privacySection5Text: "Если у вас есть вопросы по данной Политике конфиденциальности, свяжитесь с нами по адресу",
 };
 
 const it: Translations = {
@@ -1195,6 +1503,7 @@ const it: Translations = {
   tryItFree: "Prova Gratis",
   getStartedFree: "Inizia Gratis",
   viewPricing: "Vedi Prezzi",
+  seeComparison: "Vedi Confronto",
   downloadForIOS: "Scarica per iOS",
   learnMore: "Scopri di Più",
   viewAll: "Vedi Tutto",
@@ -1305,6 +1614,9 @@ const it: Translations = {
   readyToUseTemplate: "Pronto a Usare Questo Template?",
   browseAllTemplates: "Vedi Tutti i Template",
   solutionsFor: "Soluzioni per {name}",
+  challengesIn: "Sfide in {name}",
+  videoTypesFor: "Tipi di Video per {name}",
+  benefitsFor: "Vantaggi per {name}",
   readyToTransformContent: "Pronto a Trasformare i Tuoi Contenuti {name}?",
   keyBenefits: "Vantaggi Chiave",
   readyToGetStarted: "Pronto per Iniziare?",
@@ -1334,6 +1646,46 @@ const it: Translations = {
   fruitCharactersCreateVideo: "Crea il Tuo Video",
   fruitCharactersTryTextToVideo: "Prova Testo-in-Video",
   fruitCharactersUnlimited: "Genera video animati illimitati con l'IA",
+
+  // About page
+  aboutHeroTitle: "Potenziare i Creatori con l'IA",
+  aboutHeroSubtitle: "Stiamo costruendo il futuro della creazione video, rendendo i contenuti professionali accessibili a tutti.",
+  aboutOurStory: "La Nostra Storia",
+  aboutStoryPara1: "Nel 2023, i nostri fondatori hanno notato qualcosa: creare contenuti video virali era difficile. Richiedeva software costosi, ore di editing e anni di esperienza. Sapevamo che doveva esserci un modo migliore.",
+  aboutStoryPara2: "Ecco perché abbiamo creato Hyreel — una piattaforma alimentata dall'IA che permette a chiunque di creare video straordinari da semplici foto. Nessuna esperienza di editing richiesta.",
+  aboutFounded: "Fondata",
+  aboutOurValues: "I Nostri Valori",
+  aboutValueInnovation: "Innovazione",
+  aboutValueInnovationDesc: "Spingere i limiti dell'IA per rendere la creazione video senza sforzo.",
+  aboutValueAccessibility: "Accessibilità",
+  aboutValueAccessibilityDesc: "Rendere gli strumenti professionali disponibili a tutti, ovunque.",
+  aboutValueCommunity: "Comunità",
+  aboutValueCommunityDesc: "Costruire una piattaforma dove i creatori si supportano e ispirano a vicenda.",
+
+  // Contact page
+  contactHeroTitle: "Contattaci",
+  contactHeroSubtitle: "Ci piacerebbe sentire da te. Contattaci attraverso uno dei canali qui sotto.",
+  contactGeneralSupport: "Supporto Generale",
+  contactGeneralSupportDesc: "Per aiuto con il tuo account, fatturazione o problemi tecnici.",
+  contactSales: "Vendite",
+  contactSalesDesc: "Per piani aziendali, soluzioni personalizzate e partnership.",
+  contactPressMedia: "Stampa e Media",
+  contactPressMediaDesc: "Per richieste stampa, interviste e risorse media.",
+  contactFollowUs: "Seguici",
+
+  // Privacy page
+  privacyTitle: "Informativa sulla Privacy",
+  privacyLastUpdated: "Ultimo aggiornamento: Dicembre 2025",
+  privacySection1Title: "1. Informazioni che Raccogliamo",
+  privacySection1Text: "Raccogliamo informazioni che ci fornisci direttamente, come quando crei un account, carichi contenuti o ci contatti per supporto.",
+  privacySection2Title: "2. Come Utilizziamo le Tue Informazioni",
+  privacySection2Text: "Utilizziamo le informazioni raccolte per fornire, mantenere e migliorare i nostri servizi, elaborare transazioni e comunicare con te.",
+  privacySection3Title: "3. Condivisione delle Informazioni",
+  privacySection3Text: "Non condividiamo le tue informazioni personali con terze parti tranne come descritto in questa politica o con il tuo consenso.",
+  privacySection4Title: "4. Sicurezza dei Dati",
+  privacySection4Text: "Adottiamo misure ragionevoli per aiutare a proteggere le tue informazioni personali da perdita, furto, uso improprio e accesso non autorizzato.",
+  privacySection5Title: "5. Contattaci",
+  privacySection5Text: "Se hai domande su questa Informativa sulla Privacy, contattaci all'indirizzo",
 };
 
 const nl: Translations = {
@@ -1359,6 +1711,7 @@ const nl: Translations = {
   tryItFree: "Probeer Gratis",
   getStartedFree: "Begin Gratis",
   viewPricing: "Bekijk Prijzen",
+  seeComparison: "Bekijk Vergelijking",
   downloadForIOS: "Download voor iOS",
   learnMore: "Meer Info",
   viewAll: "Bekijk Alles",
@@ -1469,6 +1822,9 @@ const nl: Translations = {
   readyToUseTemplate: "Klaar om Dit Sjabloon te Gebruiken?",
   browseAllTemplates: "Bekijk Alle Sjablonen",
   solutionsFor: "Oplossingen voor {name}",
+  challengesIn: "Uitdagingen in {name}",
+  videoTypesFor: "Videotypes voor {name}",
+  benefitsFor: "Voordelen voor {name}",
   readyToTransformContent: "Klaar om Je {name} Content te Transformeren?",
   keyBenefits: "Belangrijkste Voordelen",
   readyToGetStarted: "Klaar om te Beginnen?",
@@ -1498,6 +1854,46 @@ const nl: Translations = {
   fruitCharactersCreateVideo: "Maak Je Video",
   fruitCharactersTryTextToVideo: "Probeer Tekst-naar-Video",
   fruitCharactersUnlimited: "Genereer onbeperkt animatievideo's met AI",
+
+  // About page
+  aboutHeroTitle: "Creators Versterken met AI",
+  aboutHeroSubtitle: "We bouwen de toekomst van videocreatie en maken professionele content toegankelijk voor iedereen.",
+  aboutOurStory: "Ons Verhaal",
+  aboutStoryPara1: "In 2023 merkten onze oprichters iets op: virale videocontent maken was moeilijk. Het vereiste dure software, uren bewerking en jaren ervaring. We wisten dat er een betere manier moest zijn.",
+  aboutStoryPara2: "Daarom hebben we Hyreel gebouwd — een AI-aangedreven platform waarmee iedereen verbluffende video's kan maken van eenvoudige foto's. Geen bewerkingservaring vereist.",
+  aboutFounded: "Opgericht",
+  aboutOurValues: "Onze Waarden",
+  aboutValueInnovation: "Innovatie",
+  aboutValueInnovationDesc: "De grenzen van AI verleggen om videocreatie moeiteloos te maken.",
+  aboutValueAccessibility: "Toegankelijkheid",
+  aboutValueAccessibilityDesc: "Professionele tools beschikbaar maken voor iedereen, overal.",
+  aboutValueCommunity: "Gemeenschap",
+  aboutValueCommunityDesc: "Een platform bouwen waar creators elkaar ondersteunen en inspireren.",
+
+  // Contact page
+  contactHeroTitle: "Neem Contact Op",
+  contactHeroSubtitle: "We horen graag van je. Neem contact met ons op via een van de onderstaande kanalen.",
+  contactGeneralSupport: "Algemene Ondersteuning",
+  contactGeneralSupportDesc: "Voor hulp met je account, facturering of technische problemen.",
+  contactSales: "Verkoop",
+  contactSalesDesc: "Voor zakelijke plannen, maatwerkoplossingen en partnerschappen.",
+  contactPressMedia: "Pers & Media",
+  contactPressMediaDesc: "Voor persaanvragen, interviews en mediabronnen.",
+  contactFollowUs: "Volg Ons",
+
+  // Privacy page
+  privacyTitle: "Privacybeleid",
+  privacyLastUpdated: "Laatst bijgewerkt: December 2025",
+  privacySection1Title: "1. Informatie die We Verzamelen",
+  privacySection1Text: "We verzamelen informatie die je rechtstreeks aan ons verstrekt, zoals wanneer je een account aanmaakt, content uploadt of contact met ons opneemt voor ondersteuning.",
+  privacySection2Title: "2. Hoe We Je Informatie Gebruiken",
+  privacySection2Text: "We gebruiken de verzamelde informatie om onze diensten te leveren, onderhouden en verbeteren, transacties te verwerken en met je te communiceren.",
+  privacySection3Title: "3. Delen van Informatie",
+  privacySection3Text: "We delen je persoonlijke informatie niet met derden, behalve zoals beschreven in dit beleid of met jouw toestemming.",
+  privacySection4Title: "4. Gegevensbeveiliging",
+  privacySection4Text: "We nemen redelijke maatregelen om je persoonlijke informatie te beschermen tegen verlies, diefstal, misbruik en ongeautoriseerde toegang.",
+  privacySection5Title: "5. Neem Contact Op",
+  privacySection5Text: "Als je vragen hebt over dit Privacybeleid, neem dan contact met ons op via",
 };
 
 const pl: Translations = {
@@ -1523,6 +1919,7 @@ const pl: Translations = {
   tryItFree: "Wypróbuj Za Darmo",
   getStartedFree: "Rozpocznij Za Darmo",
   viewPricing: "Zobacz Cennik",
+  seeComparison: "Zobacz Porownanie",
   downloadForIOS: "Pobierz na iOS",
   learnMore: "Dowiedz się Więcej",
   viewAll: "Zobacz Wszystko",
@@ -1633,6 +2030,9 @@ const pl: Translations = {
   readyToUseTemplate: "Gotowy, by Użyć Tego Szablonu?",
   browseAllTemplates: "Zobacz Wszystkie Szablony",
   solutionsFor: "Rozwiązania dla {name}",
+  challengesIn: "Wyzwania w {name}",
+  videoTypesFor: "Typy wideo dla {name}",
+  benefitsFor: "Korzysci dla {name}",
   readyToTransformContent: "Gotowy, by Przekształcić Treści {name}?",
   keyBenefits: "Kluczowe Korzyści",
   readyToGetStarted: "Gotowy, by Zacząć?",
@@ -1662,6 +2062,46 @@ const pl: Translations = {
   fruitCharactersCreateVideo: "Stwórz Swój Film",
   fruitCharactersTryTextToVideo: "Wypróbuj Tekst-na-Wideo",
   fruitCharactersUnlimited: "Generuj nieograniczoną liczbę animowanych filmów z AI",
+
+  // About page
+  aboutHeroTitle: "Wspieranie Twórców z AI",
+  aboutHeroSubtitle: "Budujemy przyszłość tworzenia wideo, czyniąc profesjonalne treści dostępnymi dla wszystkich.",
+  aboutOurStory: "Nasza Historia",
+  aboutStoryPara1: "W 2023 roku nasi założyciele zauważyli coś: tworzenie wirusowych treści wideo było trudne. Wymagało drogiego oprogramowania, godzin edycji i lat doświadczenia. Wiedzieliśmy, że musi być lepszy sposób.",
+  aboutStoryPara2: "Dlatego zbudowaliśmy Hyreel — platformę napędzaną AI, która pozwala każdemu tworzyć oszałamiające filmy z prostych zdjęć. Bez doświadczenia w edycji.",
+  aboutFounded: "Założona",
+  aboutOurValues: "Nasze Wartości",
+  aboutValueInnovation: "Innowacja",
+  aboutValueInnovationDesc: "Przesuwanie granic AI, aby tworzenie wideo było bezwysiłkowe.",
+  aboutValueAccessibility: "Dostępność",
+  aboutValueAccessibilityDesc: "Udostępnianie profesjonalnych narzędzi wszystkim, wszędzie.",
+  aboutValueCommunity: "Społeczność",
+  aboutValueCommunityDesc: "Budowanie platformy, gdzie twórcy wspierają i inspirują się nawzajem.",
+
+  // Contact page
+  contactHeroTitle: "Skontaktuj Się",
+  contactHeroSubtitle: "Chętnie usłyszymy od Ciebie. Skontaktuj się z nami przez jeden z poniższych kanałów.",
+  contactGeneralSupport: "Wsparcie Ogólne",
+  contactGeneralSupportDesc: "Pomoc z kontem, rozliczeniami lub problemami technicznymi.",
+  contactSales: "Sprzedaż",
+  contactSalesDesc: "Plany dla firm, rozwiązania na zamówienie i partnerstwa.",
+  contactPressMedia: "Prasa i Media",
+  contactPressMediaDesc: "Zapytania prasowe, wywiady i materiały dla mediów.",
+  contactFollowUs: "Obserwuj Nas",
+
+  // Privacy page
+  privacyTitle: "Polityka Prywatności",
+  privacyLastUpdated: "Ostatnia aktualizacja: Grudzień 2025",
+  privacySection1Title: "1. Informacje, Które Zbieramy",
+  privacySection1Text: "Zbieramy informacje, które przekazujesz nam bezpośrednio, na przykład podczas tworzenia konta, przesyłania treści lub kontaktowania się z pomocą techniczną.",
+  privacySection2Title: "2. Jak Wykorzystujemy Twoje Informacje",
+  privacySection2Text: "Wykorzystujemy zebrane informacje do świadczenia, utrzymywania i ulepszania naszych usług, przetwarzania transakcji i komunikacji z Tobą.",
+  privacySection3Title: "3. Udostępnianie Informacji",
+  privacySection3Text: "Nie udostępniamy Twoich danych osobowych osobom trzecim, z wyjątkiem przypadków opisanych w tej polityce lub za Twoją zgodą.",
+  privacySection4Title: "4. Bezpieczeństwo Danych",
+  privacySection4Text: "Podejmujemy uzasadnione środki, aby chronić Twoje dane osobowe przed utratą, kradzieżą, nadużyciem i nieautoryzowanym dostępem.",
+  privacySection5Title: "5. Kontakt",
+  privacySection5Text: "Jeśli masz pytania dotyczące tej Polityki Prywatności, skontaktuj się z nami pod adresem",
 };
 
 const ja: Translations = {
@@ -1687,6 +2127,7 @@ const ja: Translations = {
   tryItFree: "無料で試す",
   getStartedFree: "無料で開始",
   viewPricing: "料金を見る",
+  seeComparison: "比較を見る",
   downloadForIOS: "iOSでダウンロード",
   learnMore: "詳細を見る",
   viewAll: "すべて見る",
@@ -1797,6 +2238,9 @@ const ja: Translations = {
   readyToUseTemplate: "このテンプレートを使う準備はできましたか？",
   browseAllTemplates: "すべてのテンプレートを見る",
   solutionsFor: "{name}向けソリューション",
+  challengesIn: "{name}の課題",
+  videoTypesFor: "{name}向け動画タイプ",
+  benefitsFor: "{name}のメリット",
   readyToTransformContent: "{name}コンテンツを変革する準備はできましたか？",
   keyBenefits: "主なメリット",
   readyToGetStarted: "始める準備はできましたか？",
@@ -1826,6 +2270,46 @@ const ja: Translations = {
   fruitCharactersCreateVideo: "動画を作成",
   fruitCharactersTryTextToVideo: "テキストから動画を試す",
   fruitCharactersUnlimited: "AIで無制限のアニメーション動画を生成",
+
+  // About page
+  aboutHeroTitle: "AIでクリエイターを支援",
+  aboutHeroSubtitle: "私たちは動画制作の未来を築き、プロフェッショナルなコンテンツを誰もが利用できるようにしています。",
+  aboutOurStory: "私たちのストーリー",
+  aboutStoryPara1: "2023年、創業者たちは気づきました。バイラル動画コンテンツを作成するのは難しいと。高価なソフトウェア、何時間もの編集、何年もの経験が必要でした。もっと良い方法があるはずだと確信しました。",
+  aboutStoryPara2: "だからHyreelを作りました — シンプルな写真から誰でも素晴らしい動画を作成できるAI搭載プラットフォーム。編集経験は不要です。",
+  aboutFounded: "設立",
+  aboutOurValues: "私たちの価値観",
+  aboutValueInnovation: "イノベーション",
+  aboutValueInnovationDesc: "AIの限界を押し広げ、動画制作を簡単に。",
+  aboutValueAccessibility: "アクセシビリティ",
+  aboutValueAccessibilityDesc: "プロのツールを誰でも、どこでも利用可能に。",
+  aboutValueCommunity: "コミュニティ",
+  aboutValueCommunityDesc: "クリエイターが互いにサポートし、刺激し合えるプラットフォームを構築。",
+
+  // Contact page
+  contactHeroTitle: "お問い合わせ",
+  contactHeroSubtitle: "ご連絡をお待ちしています。以下のいずれかのチャネルからお問い合わせください。",
+  contactGeneralSupport: "一般サポート",
+  contactGeneralSupportDesc: "アカウント、請求、技術的な問題についてのサポート。",
+  contactSales: "セールス",
+  contactSalesDesc: "エンタープライズプラン、カスタムソリューション、パートナーシップについて。",
+  contactPressMedia: "プレス・メディア",
+  contactPressMediaDesc: "プレスのお問い合わせ、インタビュー、メディアリソースについて。",
+  contactFollowUs: "フォローする",
+
+  // Privacy page
+  privacyTitle: "プライバシーポリシー",
+  privacyLastUpdated: "最終更新日：2025年12月",
+  privacySection1Title: "1. 収集する情報",
+  privacySection1Text: "アカウント作成時、コンテンツのアップロード時、サポートへのお問い合わせ時など、お客様から直接提供される情報を収集します。",
+  privacySection2Title: "2. 情報の利用方法",
+  privacySection2Text: "収集した情報は、サービスの提供、維持、改善、取引の処理、およびお客様とのコミュニケーションに使用します。",
+  privacySection3Title: "3. 情報の共有",
+  privacySection3Text: "このポリシーに記載されている場合またはお客様の同意がある場合を除き、個人情報を第三者と共有することはありません。",
+  privacySection4Title: "4. データセキュリティ",
+  privacySection4Text: "お客様の個人情報を紛失、盗難、悪用、不正アクセスから保護するための合理的な措置を講じています。",
+  privacySection5Title: "5. お問い合わせ",
+  privacySection5Text: "このプライバシーポリシーについてご質問がある場合は、こちらまでお問い合わせください：",
 };
 
 const ko: Translations = {
@@ -1851,6 +2335,7 @@ const ko: Translations = {
   tryItFree: "무료 체험",
   getStartedFree: "무료로 시작하기",
   viewPricing: "가격 보기",
+  seeComparison: "비교 보기",
   downloadForIOS: "iOS 다운로드",
   learnMore: "자세히 보기",
   viewAll: "모두 보기",
@@ -1961,6 +2446,9 @@ const ko: Translations = {
   readyToUseTemplate: "이 템플릿을 사용할 준비가 되셨나요?",
   browseAllTemplates: "모든 템플릿 보기",
   solutionsFor: "{name}용 솔루션",
+  challengesIn: "{name}의 과제",
+  videoTypesFor: "{name}용 비디오 유형",
+  benefitsFor: "{name}의 이점",
   readyToTransformContent: "{name} 콘텐츠를 혁신할 준비가 되셨나요?",
   keyBenefits: "주요 혜택",
   readyToGetStarted: "시작할 준비가 되셨나요?",
@@ -1990,6 +2478,46 @@ const ko: Translations = {
   fruitCharactersCreateVideo: "영상 만들기",
   fruitCharactersTryTextToVideo: "텍스트-투-비디오 체험하기",
   fruitCharactersUnlimited: "AI로 무제한 애니메이션 영상 생성",
+
+  // About page
+  aboutHeroTitle: "AI로 크리에이터 지원",
+  aboutHeroSubtitle: "우리는 영상 제작의 미래를 구축하여 전문 콘텐츠를 모든 사람이 접근할 수 있도록 만듭니다.",
+  aboutOurStory: "우리의 이야기",
+  aboutStoryPara1: "2023년, 창립자들은 무언가를 깨달았습니다: 바이럴 영상 콘텐츠를 만드는 것은 어려웠습니다. 비싼 소프트웨어, 몇 시간의 편집, 수년간의 경험이 필요했습니다. 더 나은 방법이 있을 것이라고 확신했습니다.",
+  aboutStoryPara2: "그래서 Hyreel을 만들었습니다 — 누구나 간단한 사진에서 멋진 영상을 만들 수 있는 AI 기반 플랫폼. 편집 경험이 필요 없습니다.",
+  aboutFounded: "설립",
+  aboutOurValues: "우리의 가치",
+  aboutValueInnovation: "혁신",
+  aboutValueInnovationDesc: "AI의 한계를 넓혀 영상 제작을 쉽게 만듭니다.",
+  aboutValueAccessibility: "접근성",
+  aboutValueAccessibilityDesc: "전문 도구를 모든 사람이, 어디서나 사용할 수 있게 합니다.",
+  aboutValueCommunity: "커뮤니티",
+  aboutValueCommunityDesc: "크리에이터들이 서로를 지원하고 영감을 주는 플랫폼을 구축합니다.",
+
+  // Contact page
+  contactHeroTitle: "문의하기",
+  contactHeroSubtitle: "여러분의 연락을 기다립니다. 아래 채널 중 하나를 통해 연락해 주세요.",
+  contactGeneralSupport: "일반 지원",
+  contactGeneralSupportDesc: "계정, 청구 또는 기술적 문제에 대한 도움.",
+  contactSales: "영업",
+  contactSalesDesc: "엔터프라이즈 플랜, 맞춤 솔루션 및 파트너십.",
+  contactPressMedia: "언론 및 미디어",
+  contactPressMediaDesc: "언론 문의, 인터뷰 및 미디어 리소스.",
+  contactFollowUs: "팔로우하기",
+
+  // Privacy page
+  privacyTitle: "개인정보 처리방침",
+  privacyLastUpdated: "최종 업데이트: 2025년 12월",
+  privacySection1Title: "1. 수집하는 정보",
+  privacySection1Text: "계정 생성, 콘텐츠 업로드 또는 지원 요청 시 직접 제공하는 정보를 수집합니다.",
+  privacySection2Title: "2. 정보 사용 방법",
+  privacySection2Text: "수집한 정보를 서비스 제공, 유지, 개선, 거래 처리 및 소통에 사용합니다.",
+  privacySection3Title: "3. 정보 공유",
+  privacySection3Text: "이 정책에 설명된 경우 또는 귀하의 동의가 있는 경우를 제외하고 개인 정보를 제3자와 공유하지 않습니다.",
+  privacySection4Title: "4. 데이터 보안",
+  privacySection4Text: "개인 정보를 분실, 도난, 오용 및 무단 액세스로부터 보호하기 위한 합리적인 조치를 취합니다.",
+  privacySection5Title: "5. 문의하기",
+  privacySection5Text: "이 개인정보 처리방침에 대한 질문이 있으시면 다음 주소로 문의해 주세요:",
 };
 
 const zh: Translations = {
@@ -2015,6 +2543,7 @@ const zh: Translations = {
   tryItFree: "免费试用",
   getStartedFree: "免费开始",
   viewPricing: "查看定价",
+  seeComparison: "查看比较",
   downloadForIOS: "iOS下载",
   learnMore: "了解更多",
   viewAll: "查看全部",
@@ -2125,6 +2654,9 @@ const zh: Translations = {
   readyToUseTemplate: "准备好使用此模板了吗？",
   browseAllTemplates: "浏览所有模板",
   solutionsFor: "{name}解决方案",
+  challengesIn: "{name}的挑战",
+  videoTypesFor: "{name}视频类型",
+  benefitsFor: "{name}的优势",
   readyToTransformContent: "准备好改变您的{name}内容了吗？",
   keyBenefits: "主要优势",
   readyToGetStarted: "准备好开始了吗？",
@@ -2154,6 +2686,46 @@ const zh: Translations = {
   fruitCharactersCreateVideo: "创建您的视频",
   fruitCharactersTryTextToVideo: "试用文字转视频",
   fruitCharactersUnlimited: "用AI生成无限量动画视频",
+
+  // About page
+  aboutHeroTitle: "用AI赋能创作者",
+  aboutHeroSubtitle: "我们正在构建视频创作的未来，让专业内容对每个人都触手可及。",
+  aboutOurStory: "我们的故事",
+  aboutStoryPara1: "2023年，我们的创始人发现了一个问题：创作病毒式视频内容很困难。它需要昂贵的软件、数小时的编辑和多年的经验。我们知道一定有更好的方法。",
+  aboutStoryPara2: "这就是我们创建Hyreel的原因 — 一个AI驱动的平台，让任何人都能从简单的照片创建令人惊叹的视频。无需编辑经验。",
+  aboutFounded: "成立",
+  aboutOurValues: "我们的价值观",
+  aboutValueInnovation: "创新",
+  aboutValueInnovationDesc: "突破AI的边界，让视频创作变得轻松。",
+  aboutValueAccessibility: "可及性",
+  aboutValueAccessibilityDesc: "让专业工具随时随地为每个人所用。",
+  aboutValueCommunity: "社区",
+  aboutValueCommunityDesc: "建立一个创作者相互支持和激励的平台。",
+
+  // Contact page
+  contactHeroTitle: "联系我们",
+  contactHeroSubtitle: "我们很乐意收到您的来信。通过以下任何渠道与我们联系。",
+  contactGeneralSupport: "一般支持",
+  contactGeneralSupportDesc: "账户、计费或技术问题的帮助。",
+  contactSales: "销售",
+  contactSalesDesc: "企业计划、定制解决方案和合作伙伴关系。",
+  contactPressMedia: "媒体与新闻",
+  contactPressMediaDesc: "媒体查询、采访和媒体资源。",
+  contactFollowUs: "关注我们",
+
+  // Privacy page
+  privacyTitle: "隐私政策",
+  privacyLastUpdated: "最后更新：2025年12月",
+  privacySection1Title: "1. 我们收集的信息",
+  privacySection1Text: "我们收集您直接提供给我们的信息，例如当您创建账户、上传内容或联系我们寻求支持时。",
+  privacySection2Title: "2. 我们如何使用您的信息",
+  privacySection2Text: "我们使用收集的信息来提供、维护和改进我们的服务，处理交易以及与您沟通。",
+  privacySection3Title: "3. 信息共享",
+  privacySection3Text: "除非本政策中另有说明或经您同意，否则我们不会与第三方共享您的个人信息。",
+  privacySection4Title: "4. 数据安全",
+  privacySection4Text: "我们采取合理措施保护您的个人信息免受丢失、盗窃、滥用和未授权访问。",
+  privacySection5Title: "5. 联系我们",
+  privacySection5Text: "如果您对本隐私政策有任何疑问，请通过以下方式联系我们：",
 };
 
 const translations: Record<Locale, Translations> = {

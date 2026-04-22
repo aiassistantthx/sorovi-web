@@ -1,11 +1,5 @@
-import type { Metadata } from "next";
 import { i18n, type Locale } from "@/lib/i18n/config";
 import { notFound } from "next/navigation";
-
-export const metadata: Metadata = {
-  title: "Hyreel - AI Video Generator",
-  description: "Create viral videos from photos with AI",
-};
 
 export async function generateStaticParams() {
   return i18n.locales

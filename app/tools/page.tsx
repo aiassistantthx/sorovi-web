@@ -8,6 +8,8 @@ import { tools, getAllCategories } from "@/lib/tools";
 import { generateAlternates } from "@/lib/seo/alternates";
 import { generateToolsListSchema, generateBreadcrumbSchema } from "@/lib/schema";
 
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
+
 export const metadata = {
   title: "AI Video Tools - Hyreel",
   description:
@@ -57,7 +59,9 @@ export default function ToolsPage() {
           <Text variant="large" className="mb-8">
             Everything you need to create professional videos with AI. Choose from our suite of powerful tools.
           </Text>
-          <Button size="lg">Start Creating Free</Button>
+          <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+            <Button size="lg">Start Creating Free</Button>
+          </Link>
         </div>
       </Section>
 
@@ -144,7 +148,9 @@ export default function ToolsPage() {
             Start using our AI tools today. No credit card required.
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Get Started Free</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">Get Started Free</Button>
+            </Link>
             <Link href="/pricing">
               <Button size="lg" variant="secondary">
                 View Pricing

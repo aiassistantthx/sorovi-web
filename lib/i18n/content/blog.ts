@@ -1,10 +1,12 @@
 import type { Locale } from "../config";
+import { localizedBlogMarkdown, type NonEnLocale } from "./localized-fallbacks";
 
 interface BlogTranslation {
   title: string;
   excerpt: string;
   metaTitle: string;
   metaDescription: string;
+  content?: string;
 }
 
 type BlogTranslations = Partial<Record<Locale, BlogTranslation>>;
@@ -1119,5 +1121,17 @@ export function getLocalizedBlogContent(
   const translations = blogTranslations[slug];
   if (!translations) return null;
 
-  return translations[locale] || null;
+  const translation = translations[locale];
+  if (!translation) return null;
+
+  return {
+    ...translation,
+    content:
+      translation.content ||
+      localizedBlogMarkdown(
+        translation.title,
+        translation.excerpt,
+        locale as NonEnLocale
+      ),
+  };
 }

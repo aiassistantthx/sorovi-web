@@ -18,6 +18,8 @@ import {
 } from "@/lib/schema";
 import { generateAlternates } from "@/lib/seo/alternates";
 
+const APP_STORE_URL = "https://apps.apple.com/us/app/sorovi-ai-photo-to-video/id6746805170";
+
 // Generate static params for all blog posts
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
@@ -290,7 +292,9 @@ export default async function BlogPostPage({
             today.
           </Text>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg">Start Creating Free</Button>
+            <Link href={APP_STORE_URL} target="_blank" rel="noopener noreferrer">
+              <Button size="lg">Start Creating Free</Button>
+            </Link>
             <Link href="/blog">
               <Button size="lg" variant="secondary">
                 Back to Blog
